@@ -6,7 +6,7 @@ body {
     margin: 0;
     background-color: white;
     color: black;
-    font-family: "맑은 고딕", sams-serif;
+    font-family: "맑은 고딕", sans-serif;
     /* 폰트 추후 확정되면 변경 */
 }
 
@@ -19,10 +19,10 @@ select {
 main {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 32px o 50px;
+    padding: 32px 0 50px;
 }
 
-.stay-bammer {
+.stay-banner {
     height: 260px;
     padding: 40px;
     border: 1px solid #EEEEEF;
