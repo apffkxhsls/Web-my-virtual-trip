@@ -1,0 +1,22 @@
+.stay-card {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: white;
+    color: black;
+    font-family: "맑은 고딕", sams-serif;  /* 폰트 추후 확정되면 변경 */
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px o 50px;
+}
