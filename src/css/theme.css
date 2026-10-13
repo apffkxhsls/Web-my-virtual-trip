@@ -1,0 +1,305 @@
+/* =================================
+   theme.css
+   테마별 여행지 탐색 페이지
+================================= */
+
+
+/* 0. 기본 레이아웃 */
+
+.theme-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 30px 80px;
+
+    font-family: Arial, "Malgun Gothic", sans-serif;
+    color: #333333;
+}
+
+.theme-container * {
+    box-sizing: border-box;
+}
+
+.theme-container a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.theme-container h1,
+.theme-container h2,
+.theme-container h3,
+.theme-container h4,
+.theme-container p {
+    margin-top: 0;
+}
+
+.theme-container h1 {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.theme-container h2 {
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.section-description {
+    font-size: 15px;
+    color: #777777;
+    margin-bottom: 30px;
+}
+
+
+/* =================================
+   1. 여행 테마 선택
+================================= */
+
+.theme-section {
+    margin-bottom: 65px;
+}
+
+/* 3열 × 2행 */
+
+.theme-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.theme-item {
+    width: calc((100% - 48px) / 3);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 28px 15px;
+
+    background-color: #FAFCFB;
+    border: 1px solid #E5EAE8;
+    border-radius: 14px;
+}
+
+/* 원형 테마 아이콘 */
+
+.theme-icon {
+    width: 90px;
+    height: 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 39px;
+    background-color: #E7F4EF;
+    border-radius: 50%;
+
+    margin-bottom: 15px;
+}
+
+.theme-name {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+/* 마우스를 올렸을 때 */
+
+.theme-item:hover {
+    background-color: #F0F8F5;
+    border-color: #36756A;
+}
+
+.theme-item:hover .theme-icon {
+    background-color: #C3E4D9;
+}
+
+
+/* =================================
+   2. 요즘 테마 소개 배너
+================================= */
+
+.banner-section {
+    margin-bottom: 80px;
+}
+
+.theme-banner {
+    height: 380px;
+
+    display: flex;
+    align-items: center;
+
+    border-radius: 15px;
+
+    background-color: #36756A;
+    background-image: url("../res/images/shanghai.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* 배너 안의 글씨 */
+
+.banner-content {
+    margin-left: 55px;
+    padding: 25px;
+
+    max-width: 560px;
+
+    background-color: rgba(0, 0, 0, 0.50);
+    border-radius: 12px;
+
+    color: white;
+}
+
+.banner-label {
+    display: inline-block;
+    padding: 7px 13px;
+    margin-bottom: 17px;
+
+    background-color: #36756A;
+    border-radius: 5px;
+
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.banner-content h2 {
+    font-size: 32px;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.banner-content p {
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+}
+
+/* 테마관 바로가기 버튼 */
+
+.banner-button {
+    display: inline-block;
+
+    padding: 13px 22px;
+
+    background-color: white;
+    border-radius: 7px;
+
+    color: #333333 !important;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.banner-button:hover {
+    background-color: #C3E4D9;
+}
+
+
+/* =================================
+   3. 테마별 여행지 추천
+================================= */
+
+.places-section {
+    border-top: 1px solid #E5E5E5;
+    padding-top: 45px;
+}
+
+/* 각 테마 사이의 간격 */
+
+.category-section {
+    margin-top: 55px;
+    scroll-margin-top: 90px;
+}
+
+/* 테마 이름과 소개 */
+
+.category-title {
+    margin-bottom: 24px;
+    padding-bottom: 15px;
+
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.category-title h3 {
+    font-size: 23px;
+    margin-bottom: 8px;
+}
+
+.category-title p {
+    font-size: 14px;
+    color: #777777;
+    margin-bottom: 0;
+}
+
+
+/* =================================
+   4. 여행지 카드 (Flexbox)
+================================= */
+
+.places-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+/* 카드 3개가 한 줄에 배치 */
+
+.place-card {
+    display: block;
+
+    width: calc((100% - 48px) / 3);
+
+    border: 1px solid #EAEAEA;
+    border-radius: 12px;
+
+    background-color: white;
+    overflow: hidden;
+}
+
+/* 카드에 마우스를 올렸을 때 */
+
+.place-card:hover {
+    border-color: #36756A;
+}
+
+/* 여행지 이미지 */
+
+.place-card img {
+    display: block;
+
+    width: 100%;
+    height: 200px;
+
+    object-fit: cover;
+}
+
+/* 여행지 이름 및 설명 */
+
+.place-info {
+    padding: 18px;
+}
+
+.place-info h4 {
+    font-size: 19px;
+    margin-bottom: 7px;
+}
+
+.place-info .country {
+    display: inline-block;
+
+    padding: 5px 9px;
+    margin-bottom: 12px;
+
+    background-color: #E7F4EF;
+    border-radius: 5px;
+
+    color: #36756A;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.place-info p {
+    font-size: 13px;
+    color: #666666;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
