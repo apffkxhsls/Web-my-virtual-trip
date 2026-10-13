@@ -159,3 +159,16 @@ main {
     background-color: white;
     color: black;
 }
+
+.stay-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.stay-card {
+    width: calc((100% - 40px) / 3);
+    border: 1px solid #EEEEEF;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
