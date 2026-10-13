@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <!-- 공통 헤더 -->
+    <!-- 공통 헤더 추후 추가 -->
 
     <main>
         <section class="stay-banner">
@@ -58,7 +58,56 @@
             <button type="button" class="search-button">검색</button>
         </form>
 
-        <!-- 필터 및 숙소 목록 -->
+        <div class="stay-layout">
+            <aside class="stay-filter">
+                <h2>필터</h2>
+
+                <fieldset>
+                    <legend>숙소 유형</legend>
+
+                    <label>
+                        <input type="checkbox" name="type" value="hotel">
+                        호텔
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="type" value="guesthouse">
+                        게스트하우스
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="type" value="resort">
+                        리조트
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="type" value="pension">
+                        펜션
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>가격 / 1박</legend>
+
+                    <label>
+                        <input type="checkbox" name="price" value="under-100000">
+                        10만원 미만
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="price" value="100000to200000">
+                        10만원 이상 ~ 20만원 미만
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="price" value="over200000">
+                        20만원 이상
+                    </label>
+                </fieldset>
+            </aside>
+
+            <!-- 숙소 목록 추후 추가 -->
+        </div>
     </main>
 
     <!-- 공통 푸터 -->
