@@ -202,3 +202,50 @@ main {
 .favorite-button:hover {
     border-color: #e96c8b;
 }
+
+.stay-info {
+    padding: 16px;
+}
+
+.stay-info p {
+    margin: 0 0 10px;
+}
+
+.stay-location {
+    font-size: 13px;
+}
+
+.stay-info h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+}
+
+.stay-rating {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+}
+
+.stay-rating img {
+    width: 18px;
+    height: 18px;
+}
+
+.stay-features,
+.stay-capacity {
+    font-size: 13px;
+}
+
+/* 가격 */
+.stay-info .stay-price {
+    margin: 16px 0 0;
+}
+
+.stay-price strong {
+    font-size: 20px;
+}
+
+.stay-price span {
+    font-size: 13px;
+}
