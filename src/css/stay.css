@@ -6,7 +6,8 @@ body {
     margin: 0;
     background-color: white;
     color: black;
-    font-family: "맑은 고딕", sams-serif;  /* 폰트 추후 확정되면 변경 */
+    font-family: "맑은 고딕", sams-serif;
+    /* 폰트 추후 확정되면 변경 */
 }
 
 button,
@@ -19,4 +20,25 @@ main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 32px o 50px;
+}
+
+.stay-bammer {
+    height: 260px;
+    padding: 40px;
+    border: 1px solid #EEEEEF;
+    border-radius: 16px;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+}
+
+.banner-text h1 {
+    margin: 0 0 12px;
+    font-size: 28px;
+}
+
+.banner-text p {
+    margin: 0;
+    font-size: 16px;
 }
