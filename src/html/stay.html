@@ -12,6 +12,7 @@
 
 <body>
     <!-- 공통 헤더 -->
+
     <main>
         <section class="stay-banner">
             <!-- 배너 이미지 추후 추가 -->
@@ -21,4 +22,46 @@
                 <p>나에게 맞는 편안한 머무름을 찾아보세요.</p>
             </div>
         </section>
+
+        <form class="stay-search">
+            <div class="search-field">
+                <label for="region">지역</label>
+                <select id="region" name="region">
+                    <option value="">전체</option>
+                    <option value="seoul">서울</option>
+                    <option value="busan">부산</option>
+                    <option value="jeju">제주</option>
+                </select>
+            </div>
+
+            <div class="search-field">
+                <label for="checkin">체크인</label>
+                <input type="date" id="checkin" name="checkin">
+            </div>
+
+            <div class="search-field">
+                <label for="checkout">체크아웃</label>
+                <input type="date" id="checkout" name="checkout">
+            </div>
+
+            <div class="search-field">
+                <label for="guests">인원</label>
+                <select id="guests" name="guests">
+                    <option value="1">1명</option>
+                    <option value="2">2명</option>
+                    <option value="3">3명</option>
+                    <option value="4">4명</option>
+                    <option value="5">5명 이상</option>
+                </select>
+            </div>
+
+            <button type="button" class="search-button">검색</button>
+        </form>
+
+        <!-- 필터 및 숙소 목록 -->
     </main>
+
+    <!-- 공통 푸터 -->
+</body>
+
+</html>
