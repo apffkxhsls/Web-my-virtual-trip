@@ -3,9 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- 팀원 정보 -->
     <meta name="author" content="김지호">
     <meta name="description" content="My Virtual Trip 테마별 해외 여행지 탐색 페이지">
 
@@ -18,13 +15,9 @@
 
 <body>
 
-    <!-- 공통 상단바 추가 예정 -->
+    <!-- 공통 상단바 -->
 
-    <main class="theme-container">
-
-        <!-- ===================== -->
-        <!-- 1. 여행 테마 선택 -->
-        <!-- ===================== -->
+    <div class="theme-container">
 
         <section class="theme-section">
 
@@ -68,11 +61,6 @@
             </div>
         </section>
 
-
-        <!-- ===================== -->
-        <!-- 2. 요즘 테마 소개 배너 -->
-        <!-- ===================== -->
-
         <section class="banner-section">
 
             <div class="theme-banner">
@@ -88,7 +76,6 @@
                         찾고 있다면?
                     </h2>
 
-
                     <a href="#trendy" class="banner-button">
                         테마관 바로가기 →
                     </a>
@@ -99,11 +86,6 @@
 
         </section>
 
-
-        <!-- ===================== -->
-        <!-- 3. 테마별 여행지 추천 -->
-        <!-- ===================== -->
-
         <section class="places-section">
 
             <h2>테마별 추천 여행지</h2>
@@ -111,8 +93,6 @@
                 오늘 나의 취향에 맞는 여행지를 만나보세요 🎈
             </p>
 
-
-            <!-- 3-1. 자연 -->
             <section class="category-section" id="nature">
 
                 <div class="category-title">
@@ -124,6 +104,7 @@
 
                     <div class="place-card">
                         <img src="../res/images/interlaken.jpg" alt="스위스 인터라켄의 알프스 산과 호수">
+
                         <div class="place-info">
                             <h4>인터라켄</h4>
                             <span class="country">스위스</span>
@@ -133,6 +114,7 @@
 
                     <div class="place-card">
                         <img src="../res/images/reykjavik.jpg" alt="아이슬란드의 오로라 풍경">
+
                         <div class="place-info">
                             <h4>레이캬비크</h4>
                             <span class="country">아이슬란드</span>
@@ -142,6 +124,7 @@
 
                     <div class="place-card">
                         <img src="../res/images/queenstown.jpg" alt="뉴질랜드 퀸스타운의 산과 호수">
+
                         <div class="place-info">
                             <h4>퀸스타운</h4>
                             <span class="country">뉴질랜드</span>
@@ -152,8 +135,6 @@
                 </div>
             </section>
 
-
-            <!-- 3-2. 역사 -->
             <section class="category-section" id="history">
 
                 <div class="category-title">
@@ -163,9 +144,9 @@
 
                 <div class="places-grid">
 
-                    <!-- 교토만 실제 상세 페이지로 이동 -->
                     <a href="detail.html" class="place-card">
                         <img src="../res/images/kyoto.jpg" alt="일본 교토의 전통 사찰과 거리">
+
                         <div class="place-info">
                             <h4>교토</h4>
                             <span class="country">일본</span>
@@ -175,6 +156,7 @@
 
                     <div class="place-card">
                         <img src="../res/images/rome.jpg" alt="이탈리아 로마의 콜로세움">
+
                         <div class="place-info">
                             <h4>로마</h4>
                             <span class="country">이탈리아</span>
@@ -184,6 +166,7 @@
 
                     <div class="place-card">
                         <img src="../res/images/athens.jpg" alt="그리스 아테네의 아크로폴리스">
+
                         <div class="place-info">
                             <h4>아테네</h4>
                             <span class="country">그리스</span>
@@ -194,8 +177,6 @@
                 </div>
             </section>
 
-
-            <!-- 3-3. 먹방 -->
             <section class="category-section" id="food">
 
                 <div class="category-title">
@@ -207,6 +188,7 @@
 
                     <div class="place-card">
                         <img src="../res/images/osaka.jpg" alt="일본 오사카 도톤보리의 먹거리 거리">
+
                         <div class="place-info">
                             <h4>오사카</h4>
                             <span class="country">일본</span>
@@ -216,6 +198,7 @@
 
                     <div class="place-card">
                         <img src="../res/images/taipei.jpg" alt="대만 타이베이의 야시장">
+
                         <div class="place-info">
                             <h4>타이베이</h4>
                             <span class="country">대만</span>
@@ -226,8 +209,6 @@
                 </div>
             </section>
 
-
-            <!-- 3-4. 바다 -->
             <section class="category-section" id="sea">
 
                 <div class="category-title">
@@ -239,6 +220,7 @@
 
                     <div class="place-card">
                         <img src="../res/images/miyakojima.jpg" alt="일본 미야코지마의 에메랄드빛 바다">
+
                         <div class="place-info">
                             <h4>미야코지마</h4>
                             <span class="country">일본</span>
@@ -248,6 +230,7 @@
 
                     <div class="place-card">
                         <img src="../res/images/phuket.jpg" alt="태국 푸켓의 열대 해변">
+
                         <div class="place-info">
                             <h4>푸켓</h4>
                             <span class="country">태국</span>
@@ -258,8 +241,6 @@
                 </div>
             </section>
 
-
-            <!-- 3-5. 요즘 -->
             <section class="category-section" id="trendy">
 
                 <div class="category-title">
@@ -271,6 +252,7 @@
 
                     <div class="place-card">
                         <img src="../res/images/shanghai.jpg" alt="중국 상하이의 화려한 도시 야경">
+
                         <div class="place-info">
                             <h4>상하이</h4>
                             <span class="country">중국</span>
@@ -280,6 +262,7 @@
 
                     <div class="place-card">
                         <img src="../res/images/fukuoka.jpg" alt="일본 후쿠오카의 도심 풍경">
+
                         <div class="place-info">
                             <h4>후쿠오카</h4>
                             <span class="country">일본</span>
@@ -290,8 +273,6 @@
                 </div>
             </section>
 
-
-            <!-- 3-6. 혼여행 -->
             <section class="category-section" id="solo">
 
                 <div class="category-title">
@@ -303,6 +284,7 @@
 
                     <div class="place-card">
                         <img src="../res/images/tokyo.jpg" alt="일본 도쿄의 거리 풍경">
+
                         <div class="place-info">
                             <h4>도쿄</h4>
                             <span class="country">일본</span>
@@ -312,6 +294,7 @@
 
                     <div class="place-card">
                         <img src="../res/images/singapore.jpg" alt="싱가포르의 마리나베이 풍경">
+
                         <div class="place-info">
                             <h4>싱가포르</h4>
                             <span class="country">싱가포르</span>
@@ -321,6 +304,7 @@
 
                     <div class="place-card">
                         <img src="../res/images/porto.jpg" alt="포르투갈 포르투의 강변과 건물들">
+
                         <div class="place-info">
                             <h4>포르투</h4>
                             <span class="country">포르투갈</span>
@@ -333,9 +317,9 @@
 
         </section>
 
-    </main>
+    </div>
 
-    <!-- 공통 푸터 추가 예정 -->
+    <!-- 공통 푸터 -->
 
 </body>
 
