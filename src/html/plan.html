@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- 팀원 정보 -->
     <meta name="author" content="김지호">
     <meta name="description" content="My Virtual Trip 여행 계획 작성 페이지">
 
@@ -17,11 +16,10 @@
 </head>
 
 <body>
-    <!-- 공통 상단바 추가 예정 -->
+    <!-- 공통 상단바 -->
 
     <main class="plan-container">
 
-        <!-- 1. 여행 계획 작성 -->
         <section class="plan-section">
             <h1>여행 계획 작성하기</h1>
             <p class="section-description">
@@ -30,7 +28,6 @@
 
             <form class="plan-form">
 
-                <!-- 기본 정보 -->
                 <h2>기본 정보</h2>
 
                 <div class="form-row">
@@ -62,7 +59,6 @@
                     </div>
                 </div>
 
-                <!-- 여행 테마 선택 -->
                 <fieldset class="theme-fieldset">
                     <legend>여행 테마 선택</legend>
                     <p class="field-description">
@@ -71,55 +67,53 @@
 
                     <div class="theme-options">
                         <div class="theme-option">
-                            <input type="radio" name="trip-theme" id="nature" value="nature">
+                            <input type="checkbox" name="trip-theme" id="nature" value="nature">
                             <label for="nature">🌿 자연</label>
                         </div>
 
                         <div class="theme-option">
-                            <input type="radio" name="trip-theme" id="history" value="history">
+                            <input type="checkbox" name="trip-theme" id="history" value="history">
                             <label for="history">🏛️ 역사</label>
                         </div>
 
                         <div class="theme-option">
-                            <input type="radio" name="trip-theme" id="food" value="food">
+                            <input type="checkbox" name="trip-theme" id="food" value="food">
                             <label for="food">🍜 먹방</label>
                         </div>
 
                         <div class="theme-option">
-                            <input type="radio" name="trip-theme" id="sea" value="sea">
+                            <input type="checkbox" name="trip-theme" id="sea" value="sea">
                             <label for="sea">🏖️ 바다</label>
                         </div>
 
                         <div class="theme-option">
-                            <input type="radio" name="trip-theme" id="activity" value="activity">
+                            <input type="checkbox" name="trip-theme" id="activity" value="activity">
                             <label for="activity">🚴 액티비티</label>
                         </div>
 
                         <div class="theme-option">
-                            <input type="radio" name="trip-theme" id="trendy" value="trendy">
+                            <input type="checkbox" name="trip-theme" id="trendy" value="trendy">
                             <label for="trendy">✨ 요즘</label>
                         </div>
 
                         <div class="theme-option">
-                            <input type="radio" name="trip-theme" id="friends" value="friends">
+                            <input type="checkbox" name="trip-theme" id="friends" value="friends">
                             <label for="friends">👫 친구</label>
                         </div>
 
                         <div class="theme-option">
-                            <input type="radio" name="trip-theme" id="solo" value="solo">
+                            <input type="checkbox" name="trip-theme" id="solo" value="solo">
                             <label for="solo">🎒 혼여행</label>
                         </div>
                     </div>
                 </fieldset>
 
-                <!-- 날짜별 여행 일정 -->
                 <section class="schedule-section">
                     <h2>날짜별 여행 일정</h2>
                     <p class="field-description">
                         날짜별로 방문할 장소와 일정을 작성해보세요
                     </p>
 
-                    <!-- DAY 1 -->
                     <div class="day-section">
                         <h3>DAY 1</h3>
 
@@ -146,14 +140,12 @@
                             </tbody>
                         </table>
 
-                        <!-- 일정 추가 버튼 (디자인만 구현) -->
                         <button type="button" class="add-schedule-button">
                             <img src="../res/icons/ic_add.svg" alt=""> 일정 추가하기
                         </button>
 
                     </div>
 
-                    <!-- DAY 2 -->
                     <div class="day-section">
                         <h3>DAY 2</h3>
 
@@ -180,14 +172,12 @@
                             </tbody>
                         </table>
 
-                        <!-- 일정 추가 버튼 (디자인만 구현) -->
                         <button type="button" class="add-schedule-button">
                             <img src="../res/icons/ic_add.svg" alt=""> 일정 추가하기
                         </button>
 
                     </div>
 
-                    <!-- DAY 3 -->
                     <div class="day-section">
                         <h3>DAY 3</h3>
 
@@ -214,7 +204,6 @@
                             </tbody>
                         </table>
 
-                        <!-- 일정 추가 버튼 (디자인만 구현) -->
                         <button type="button" class="add-schedule-button">
                             <img src="../res/icons/ic_add.svg" alt=""> 일정 추가하기
                         </button>
@@ -222,8 +211,6 @@
                     </div>
                 </section>
 
-
-                <!-- 예상 지출 -->
                 <section class="expense-section">
                     <h2>예상 지출</h2>
                     <p class="field-description">
@@ -267,8 +254,6 @@
                     </div>
                 </section>
 
-
-                <!-- 저장 기능은 구현하지 않음 -->
                 <div class="save-area">
                     <button type="button" class="save-button">
                         계획 저장
@@ -278,8 +263,6 @@
             </form>
         </section>
 
-
-        <!-- 2. 작성한 계획 목록 -->
         <section class="saved-section">
             <h2>작성한 계획 목록 보기</h2>
             <p class="section-description">
@@ -288,7 +271,6 @@
 
             <div class="saved-list">
 
-                <!-- 상하이 여행 계획 카드 -->
                 <div class="saved-card">
                     <img src="../res/images/shanghai.jpg" alt="중국 상하이의 도시 야경">
 
@@ -302,10 +284,9 @@
             </div>
         </section>
 
-
     </main>
 
-    <!-- 공통 푸터 추가 예정 -->
+    <!-- 공통 푸터  -->
 </body>
 
 </html>
