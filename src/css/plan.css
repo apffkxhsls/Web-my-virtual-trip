@@ -1,0 +1,181 @@
+/* =================================
+   plan.css
+   여행 계획 작성 페이지
+================================= */
+
+
+/* 0. 기본 레이아웃 */
+
+.plan-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 30px 80px;
+
+    font-family: Arial, "Malgun Gothic", sans-serif;
+    color: #333333;
+}
+
+.plan-container * {
+    box-sizing: border-box;
+}
+
+.plan-container h1,
+.plan-container h2,
+.plan-container h3,
+.plan-container p {
+    margin-top: 0;
+}
+
+.plan-container h1 {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.plan-container h2 {
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.section-description {
+    font-size: 15px;
+    color: #777777;
+    margin-bottom: 30px;
+}
+
+
+/* =================================
+   1. 여행 계획 작성 폼
+================================= */
+
+.plan-section {
+    margin-bottom: 80px;
+}
+
+.plan-form {
+    padding: 35px;
+
+    background-color: #FAFCFB;
+    border: 1px solid #E5EAE8;
+    border-radius: 14px;
+}
+
+.plan-form h2 {
+    font-size: 23px;
+    margin-bottom: 25px;
+}
+
+
+/* 기본 정보 입력창 */
+
+.form-row {
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    flex-grow: 1;
+    min-width: 0;
+    margin-right: 24px;
+}
+
+.form-group:last-child {
+    margin-right: 0;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    height: 45px;
+
+    padding: 12px;
+
+    background-color: white;
+    border: 1px solid #B1B3B4;
+    border-radius: 7px;
+
+    font-size: 14px;
+    font-family: Arial, "Malgun Gothic", sans-serif;
+}
+
+
+/* 입력창 공통 스타일 */
+
+.plan-container input:focus {
+    border: 2px solid #337768;
+}
+
+.plan-container input:hover {
+    border-color: #69A998;
+}
+
+
+/* =================================
+   2. 여행 테마 선택
+================================= */
+
+.theme-fieldset {
+    margin: 35px 0 0;
+    padding: 0;
+    border: none;
+}
+
+.theme-fieldset legend {
+    font-size: 23px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.field-description {
+    font-size: 14px;
+    color: #777777;
+    margin-bottom: 22px;
+}
+
+.theme-options {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* 테마별 선택 영역 */
+
+.theme-option {
+    margin-right: 12px;
+    margin-bottom: 12px;
+    padding: 13px 20px;
+
+    background-color: white;
+    border: 1px solid #E5EAE8;
+    border-radius: 25px;
+
+    font-size: 15px;
+}
+
+.theme-option input {
+    margin-right: 7px;
+}
+
+/* 테마 이름 */
+
+.theme-option label {
+    font-size: 15px;
+}
+
+/* 마우스를 올렸을 때 */
+
+.theme-option:hover {
+    background-color: #E7F4EF;
+    border-color: #69A998;
+}
+
+/* 라디오 버튼을 선택했을 때 */
+
+.theme-option input:checked {
+    opacity: 1;
+}

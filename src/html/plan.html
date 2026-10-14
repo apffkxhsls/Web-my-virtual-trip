@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 팀원 정보 -->
+    <meta name="author" content="김지호">
+    <meta name="description" content="My Virtual Trip 여행 계획 작성 페이지">
+
+    <title>여행 계획 | My Virtual Trip</title>
+
+    <!-- 공통 CSS는 팀원 작업 완료 후 연결 -->
+    <!-- <link rel="stylesheet" href="../css/common.css"> -->
+    <link rel="stylesheet" href="../css/plan.css">
+</head>
+
+<body>
+    <!-- 공통 상단바 추가 예정 -->
+
+    <main class="plan-container">
+
+        <!-- 1. 여행 계획 작성 -->
+        <section class="plan-section">
+            <h1>여행 계획 작성하기</h1>
+            <p class="section-description">
+                나만의 여행을 계획해보세요
+            </p>
+
+            <form class="plan-form">
+
+                <!-- 기본 정보 -->
+                <h2>기본 정보</h2>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="trip-title">여행 제목</label>
+                        <input type="text" id="trip-title" name="trip-title" placeholder="예: 인생 첫 혼자 여행">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="trip-region">여행 지역</label>
+                        <input type="text" id="trip-region" name="trip-region" placeholder="예: 일본 교토">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="start-date">출발일</label>
+                        <input type="date" id="start-date" name="start-date">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="end-date">도착일</label>
+                        <input type="date" id="end-date" name="end-date">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="travelers">동행 인원</label>
+                        <input type="number" id="travelers" name="travelers" min="1" placeholder="1">
+                    </div>
+                </div>
+
+                <!-- 여행 테마 선택 -->
+                <fieldset class="theme-fieldset">
+                    <legend>여행 테마 선택</legend>
+                    <p class="field-description">
+                        이번 여행에 어울리는 테마를 선택해보세요
+                    </p>
+
+                    <div class="theme-options">
+                        <div class="theme-option">
+                            <input type="radio" name="trip-theme" id="nature" value="nature">
+                            <label for="nature">🌿 자연</label>
+                        </div>
+
+                        <div class="theme-option">
+                            <input type="radio" name="trip-theme" id="history" value="history">
+                            <label for="history">🏛️ 역사</label>
+                        </div>
+
+                        <div class="theme-option">
+                            <input type="radio" name="trip-theme" id="food" value="food">
+                            <label for="food">🍜 먹방</label>
+                        </div>
+
+                        <div class="theme-option">
+                            <input type="radio" name="trip-theme" id="sea" value="sea">
+                            <label for="sea">🏖️ 바다</label>
+                        </div>
+
+                        <div class="theme-option">
+                            <input type="radio" name="trip-theme" id="activity" value="activity">
+                            <label for="activity">🚴 액티비티</label>
+                        </div>
+
+                        <div class="theme-option">
+                            <input type="radio" name="trip-theme" id="trendy" value="trendy">
+                            <label for="trendy">✨ 요즘</label>
+                        </div>
+
+                        <div class="theme-option">
+                            <input type="radio" name="trip-theme" id="friends" value="friends">
+                            <label for="friends">👫 친구</label>
+                        </div>
+
+                        <div class="theme-option">
+                            <input type="radio" name="trip-theme" id="solo" value="solo">
+                            <label for="solo">🎒 혼여행</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+            </form>
+        </section>
+
+    </main>
+
+    <!-- 공통 푸터 추가 예정 -->
+</body>
+
+</html>
