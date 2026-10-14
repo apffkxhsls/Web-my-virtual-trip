@@ -262,6 +262,52 @@
 }
 
 
+/* 일정 추가하기 버튼 */
+
+.add-schedule-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    margin-top: 12px;
+    padding: 12px;
+
+    background-color: white;
+    border: 1px dashed #69A998;
+    border-radius: 7px;
+
+    color: #337768;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* 일정 추가 아이콘 */
+
+.add-schedule-button img {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+}
+
+
+/* 마우스를 올렸을 때 */
+
+.add-schedule-button:hover {
+    background-color: #E7F4EF;
+    border-color: #337768;
+}
+
+
+/* 버튼에 포커스가 있을 때 */
+
+.add-schedule-button:focus {
+    background-color: #C3E4D9;
+    border: 2px solid #337768;
+}
+
+
 /* =================================
    4. 예상 지출
 ================================= */
