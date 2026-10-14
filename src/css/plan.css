@@ -107,7 +107,7 @@
 
 /* 입력창 공통 스타일 */
 
-.plan-container input:focus {
+.plan-container input:active {
     border: 2px solid #337768;
 }
 
@@ -302,7 +302,7 @@
 
 /* 버튼에 포커스가 있을 때 */
 
-.add-schedule-button:focus {
+.add-schedule-button:active {
     background-color: #C3E4D9;
     border: 2px solid #337768;
 }
