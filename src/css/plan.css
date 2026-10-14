@@ -351,3 +351,77 @@
     background-color: #337768;
     color: white;
 }
+
+
+/* =================================
+   6. 작성한 여행 계획 목록
+================================= */
+
+.saved-section {
+    padding-top: 45px;
+    border-top: 1px solid #E5E5E5;
+}
+
+.saved-list {
+    display: flex;
+}
+
+
+/* 여행 계획 카드 */
+
+.saved-card {
+    display: flex;
+
+    width: 48%;
+
+    border: 1px solid #EAEAEA;
+    border-radius: 12px;
+
+    background-color: white;
+    overflow: hidden;
+}
+
+
+/* 마우스를 올렸을 때 */
+
+.saved-card:hover {
+    border-color: #337768;
+    background-color: #FAFCFB;
+}
+
+
+/* 마우스로 누르고 있는 동안 */
+
+.saved-card:active {
+    border-color: #337768;
+    background-color: #C3E4D9;
+}
+
+
+/* 여행 계획 이미지 */
+
+.saved-card img {
+    display: block;
+
+    width: 40%;
+    object-fit: cover;
+}
+
+
+/* 카드 내부 정보 */
+
+.saved-info {
+    padding: 22px;
+}
+
+.saved-info h3 {
+    font-size: 19px;
+    margin-bottom: 15px;
+}
+
+.saved-info p {
+    font-size: 13px;
+    color: #666666;
+    line-height: 1.6;
+    margin-bottom: 9px;
+}
