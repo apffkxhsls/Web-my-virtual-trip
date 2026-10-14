@@ -112,6 +112,151 @@
                     </div>
                 </fieldset>
 
+                <!-- 날짜별 여행 일정 -->
+                <section class="schedule-section">
+                    <h2>날짜별 여행 일정</h2>
+                    <p class="field-description">
+                        날짜별로 방문할 장소와 일정을 작성해보세요
+                    </p>
+
+                    <!-- DAY 1 -->
+                    <div class="day-section">
+                        <h3>DAY 1</h3>
+
+                        <table class="schedule-table">
+                            <thead>
+                                <tr>
+                                    <th>시간</th>
+                                    <th>방문 장소</th>
+                                    <th>일정 내용</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td><input type="time"></td>
+                                    <td><input type="text" placeholder="방문 장소"></td>
+                                    <td><input type="text" placeholder="일정 입력"></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="time"></td>
+                                    <td><input type="text" placeholder="방문 장소"></td>
+                                    <td><input type="text" placeholder="일정 입력"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- DAY 2 -->
+                    <div class="day-section">
+                        <h3>DAY 2</h3>
+
+                        <table class="schedule-table">
+                            <thead>
+                                <tr>
+                                    <th>시간</th>
+                                    <th>방문 장소</th>
+                                    <th>일정 내용</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td><input type="time"></td>
+                                    <td><input type="text" placeholder="방문 장소"></td>
+                                    <td><input type="text" placeholder="일정 입력"></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="time"></td>
+                                    <td><input type="text" placeholder="방문 장소"></td>
+                                    <td><input type="text" placeholder="일정 입력"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- DAY 3 -->
+                    <div class="day-section">
+                        <h3>DAY 3</h3>
+
+                        <table class="schedule-table">
+                            <thead>
+                                <tr>
+                                    <th>시간</th>
+                                    <th>방문 장소</th>
+                                    <th>일정 내용</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td><input type="time"></td>
+                                    <td><input type="text" placeholder="방문 장소"></td>
+                                    <td><input type="text" placeholder="일정 입력"></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="time"></td>
+                                    <td><input type="text" placeholder="방문 장소"></td>
+                                    <td><input type="text" placeholder="일정 입력"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+
+                <!-- 예상 지출 -->
+                <section class="expense-section">
+                    <h2>예상 지출</h2>
+                    <p class="field-description">
+                        여행에 필요한 예상 비용을 입력해보세요
+                    </p>
+
+                    <div class="expense-list">
+
+                        <div class="expense-item">
+                            <label for="transport">🚆 교통비</label>
+                            <div class="expense-input">
+                                <input type="number" id="transport" min="0" placeholder="0">
+                                <span>원</span>
+                            </div>
+                        </div>
+
+                        <div class="expense-item">
+                            <label for="food-cost">🍽️ 식비</label>
+                            <div class="expense-input">
+                                <input type="number" id="food-cost" min="0" placeholder="0">
+                                <span>원</span>
+                            </div>
+                        </div>
+
+                        <div class="expense-item">
+                            <label for="stay-cost">🏨 숙박비</label>
+                            <div class="expense-input">
+                                <input type="number" id="stay-cost" min="0" placeholder="0">
+                                <span>원</span>
+                            </div>
+                        </div>
+
+                        <div class="expense-item">
+                            <label for="other-cost">🧳 기타</label>
+                            <div class="expense-input">
+                                <input type="number" id="other-cost" min="0" placeholder="0">
+                                <span>원</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+
+                <!-- 저장 기능은 구현하지 않음 -->
+                <div class="save-area">
+                    <button type="button" class="save-button">
+                        계획 저장
+                    </button>
+                </div>
+
             </form>
         </section>
 

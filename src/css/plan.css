@@ -179,3 +179,175 @@
 .theme-option input:checked {
     opacity: 1;
 }
+
+
+/* =================================
+   3. 날짜별 여행 일정
+================================= */
+
+.schedule-section {
+    margin-top: 45px;
+    padding-top: 35px;
+
+    border-top: 1px solid #E5E5E5;
+}
+
+.day-section {
+    margin-bottom: 35px;
+}
+
+.day-section h3 {
+    display: inline-block;
+
+    padding: 9px 17px;
+    margin-bottom: 15px;
+
+    background-color: #337768;
+    border-radius: 6px;
+
+    color: white;
+    font-size: 16px;
+}
+
+
+/* 일정표 */
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+
+    background-color: white;
+}
+
+.schedule-table th,
+.schedule-table td {
+    padding: 12px;
+    border: 1px solid #E5EAE8;
+}
+
+.schedule-table th {
+    background-color: #E7F4EF;
+
+    color: #337768;
+    font-size: 14px;
+    text-align: left;
+}
+
+.schedule-table th:first-child {
+    width: 22%;
+}
+
+.schedule-table th:nth-child(2) {
+    width: 30%;
+}
+
+.schedule-table th:nth-child(3) {
+    width: 48%;
+}
+
+
+/* 일정표 내부 입력창 */
+
+.schedule-table input {
+    width: 100%;
+    min-width: 0;
+
+    padding: 11px;
+
+    border: 1px solid #B1B3B4;
+    border-radius: 6px;
+
+    font-size: 14px;
+    font-family: Arial, "Malgun Gothic", sans-serif;
+}
+
+
+/* =================================
+   4. 예상 지출
+================================= */
+
+.expense-section {
+    margin-top: 45px;
+    padding-top: 35px;
+
+    border-top: 1px solid #E5E5E5;
+}
+
+.expense-list {
+    padding: 10px 25px;
+
+    background-color: white;
+    border: 1px solid #E5EAE8;
+    border-radius: 10px;
+}
+
+.expense-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 17px 0;
+}
+
+.expense-item+.expense-item {
+    border-top: 1px solid #EAEAEA;
+}
+
+.expense-item label {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.expense-input {
+    display: flex;
+    align-items: center;
+}
+
+.expense-input input {
+    width: 190px;
+
+    margin-right: 12px;
+    padding: 12px;
+
+    border: 1px solid #B1B3B4;
+    border-radius: 7px;
+
+    font-size: 14px;
+    text-align: right;
+}
+
+.expense-input span {
+    font-size: 14px;
+}
+
+
+/* =================================
+   5. 계획 저장 버튼
+================================= */
+
+.save-area {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.save-button {
+    padding: 15px 65px;
+
+    background-color: #8DC5AC;
+    border: 1px solid #8DC5AC;
+    border-radius: 7px;
+
+    color: #173F36;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.save-button:hover {
+    background-color: #69A998;
+    color: white;
+}
+
+.save-button:active {
+    background-color: #337768;
+    color: white;
+}
