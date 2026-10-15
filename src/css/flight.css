@@ -31,7 +31,6 @@ main {
     font-size: 16px;
 }
 
-/* 항공 검색 영역 */
 .flight-search {
     margin-bottom: 36px;
     padding: 24px;
@@ -85,4 +84,50 @@ main {
 
 .search-button:hover {
     background-color: #69A998;
+}
+
+.flight-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 28px;
+}
+
+.flight-filter {
+    width: 220px;
+    flex-shrink: 0;
+    padding: 20px;
+    border: 1px solid #EEEEEF;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+.flight-filter h2 {
+    margin: 0 0 24px;
+    font-size: 20px;
+}
+
+.flight-filter fieldset {
+    margin: 0 0 24px;
+    padding: 0;
+    border: none;
+}
+
+.flight-filter legend {
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+.flight-filter label {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.flight-filter input {
+    margin-right: 6px;
+}
+
+.flight-recommendation {
+    flex-grow: 1;
+    min-width: 0;
 }
