@@ -1,14 +1,41 @@
+body {
+    margin: 0;
+    background-color: white;
+    color: black;
+    font-family: "Asta Sans", sans-serif;
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
 .plan-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 50px 30px 80px;
-
-    font-family: Arial, "Malgun Gothic", sans-serif;
-    color: black;
+    padding: 32px 0 50px;
 }
 
 .plan-container * {
     box-sizing: border-box;
+}
+
+.plan-layout {
+    display: flex;
+    align-items: stretch;
+}
+
+.plan-sidebar {
+    width: 240px;
+    flex-shrink: 0;
+    margin-right: 28px;
+    display: flex;
+}
+
+.plan-content {
+    flex-grow: 1;
+    min-width: 0;
 }
 
 .plan-container h1,
@@ -35,12 +62,11 @@
 }
 
 .plan-section {
-    margin-bottom: 80px;
+    margin-bottom: 0;
 }
 
 .plan-form {
     padding: 35px;
-
     background-color: white;
     border: 1px solid #EEEEEE;
     border-radius: 14px;
@@ -68,7 +94,6 @@
 
 .form-group label {
     display: block;
-
     margin-bottom: 10px;
     font-size: 15px;
     font-weight: bold;
@@ -77,15 +102,11 @@
 .form-group input {
     width: 100%;
     height: 45px;
-
     padding: 12px;
-
     background-color: white;
     border: 1px solid #B1B3B4;
     border-radius: 7px;
-
     font-size: 14px;
-    font-family: Arial, "Malgun Gothic", sans-serif;
 }
 
 .plan-container input:active {
@@ -101,6 +122,7 @@
     padding: 0;
     border: none;
 }
+
 
 .theme-fieldset legend {
     font-size: 23px;
@@ -123,7 +145,6 @@
     margin-right: 12px;
     margin-bottom: 12px;
     padding: 13px 20px;
-
     background-color: white;
     border: 1px solid #EEEEEE;
     border-radius: 25px;
@@ -140,7 +161,6 @@
 .schedule-section {
     margin-top: 45px;
     padding-top: 35px;
-
     border-top: 1px solid #EEEEEE;
 }
 
@@ -150,13 +170,10 @@
 
 .day-section h3 {
     display: inline-block;
-
     padding: 9px 17px;
     margin-bottom: 15px;
-
     background-color: #337768;
     border-radius: 6px;
-
     color: white;
     font-size: 16px;
 }
@@ -164,7 +181,6 @@
 .schedule-table {
     width: 100%;
     border-collapse: collapse;
-
     background-color: white;
 }
 
@@ -176,7 +192,6 @@
 
 .schedule-table th {
     background-color: #C3E4D9;
-
     color: #337768;
     font-size: 14px;
     text-align: left;
@@ -197,29 +212,22 @@
 .schedule-table input {
     width: 100%;
     min-width: 0;
-
     padding: 11px;
-
     border: 1px solid #B1B3B4;
     border-radius: 6px;
-
     font-size: 14px;
-    font-family: Arial, "Malgun Gothic", sans-serif;
 }
 
 .add-schedule-button {
     display: flex;
     align-items: center;
     justify-content: center;
-
     width: 100%;
     margin-top: 12px;
     padding: 12px;
-
     background-color: white;
     border: 1px dashed #69A998;
     border-radius: 7px;
-
     color: #337768;
     font-size: 14px;
     font-weight: bold;
@@ -244,13 +252,11 @@
 .expense-section {
     margin-top: 45px;
     padding-top: 35px;
-
     border-top: 1px solid #EEEEEE;
 }
 
 .expense-list {
     padding: 5px 20px;
-
     background-color: white;
     border: 1px solid #EEEEEE;
     border-radius: 10px;
@@ -260,7 +266,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     padding: 8px 0;
 }
 
@@ -281,13 +286,10 @@
 .expense-input input {
     width: 150px;
     height: 35px;
-
     margin-right: 12px;
     padding: 8px;
-
     border: 1px solid #B1B3B4;
     border-radius: 7px;
-
     font-size: 14px;
     text-align: right;
 }
@@ -301,14 +303,11 @@
     text-align: center;
 }
 
-
 .save-button {
     padding: 15px 65px;
-
     background-color: #8DC5AC;
     border: 1px solid #8DC5AC;
     border-radius: 7px;
-
     color: black;
     font-size: 16px;
     font-weight: bold;
@@ -324,23 +323,31 @@
     border: 1px solid #337768;
 }
 
+/* 작성한 계획 목록을 왼쪽 사이드바에 표시 */
 .saved-section {
-    padding-top: 45px;
-    border-top: 1px solid #EEEEEE;
+    padding: 22px 16px;
+    background-color: white;
+    border: 1px solid #EEEEEE;
+    border-radius: 12px;
+}
+
+.saved-section h2 {
+    font-size: 20px;
+    margin-bottom: 22px;
 }
 
 .saved-list {
     display: flex;
+    flex-direction: column;
 }
 
 .saved-card {
     display: flex;
-
-    width: 48%;
-
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 16px;
     border: 1px solid #EEEEEE;
     border-radius: 12px;
-
     background-color: white;
     overflow: hidden;
 }
@@ -357,23 +364,23 @@
 
 .saved-card img {
     display: block;
-
-    width: 40%;
+    width: 100%;
+    height: 115px;
     object-fit: cover;
 }
 
 .saved-info {
-    padding: 22px;
+    padding: 14px;
 }
 
 .saved-info h3 {
-    font-size: 19px;
-    margin-bottom: 15px;
+    font-size: 17px;
+    margin-bottom: 12px;
 }
 
 .saved-info p {
-    font-size: 13px;
+    font-size: 12px;
     color: black;
     line-height: 1.6;
-    margin-bottom: 9px;
+    margin-bottom: 7px;
 }
