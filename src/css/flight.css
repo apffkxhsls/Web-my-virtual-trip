@@ -47,9 +47,7 @@ main {
     height: 42px;
 }
 
-.trip-type label:first-child {
-    margin-right: 20px;
-}
+
 
 .search-fields {
     display: flex;
@@ -294,7 +292,8 @@ main {
 }
 
 .flight-notice {
-    margin-top: 36px;
+    flex-grow: 1;
+    margin-right: 28px;
     padding: 24px;
     border: 1px solid #EEEEEF;
     border-radius: 12px;
@@ -313,4 +312,14 @@ main {
 .flight-notice li {
     margin-bottom: 8px;
     font-size: 14px;
+}
+.flight-bottom {
+    display: flex;
+    align-items: center;
+    margin-top: 36px;
+}
+
+.flight-video iframe {
+    display: block;
+    border: none;
 }
