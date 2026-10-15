@@ -233,12 +233,12 @@
 
 .add-schedule-button:hover {
     background-color: #9ACEB7;
-    border-color: #69A998;
+    border: 1px dashed #69A998;
 }
 
 .add-schedule-button:active {
     background-color: #C3E4D9;
-    border: 2px solid #337768;
+    border: 1px dashed #337768;
 }
 
 .expense-section {
@@ -249,7 +249,7 @@
 }
 
 .expense-list {
-    padding: 10px 25px;
+    padding: 5px 20px;
 
     background-color: white;
     border: 1px solid #EEEEEE;
@@ -261,7 +261,7 @@
     align-items: center;
     justify-content: space-between;
 
-    padding: 17px 0;
+    padding: 8px 0;
 }
 
 .expense-item+.expense-item {
@@ -279,10 +279,11 @@
 }
 
 .expense-input input {
-    width: 190px;
+    width: 150px;
+    height: 35px;
 
     margin-right: 12px;
-    padding: 12px;
+    padding: 8px;
 
     border: 1px solid #B1B3B4;
     border-radius: 7px;
@@ -300,6 +301,7 @@
     text-align: center;
 }
 
+
 .save-button {
     padding: 15px 65px;
 
@@ -313,13 +315,13 @@
 }
 
 .save-button:hover {
-    background-color: #69A998;
-    color: white;
+    background-color: #9ACEB7;
+    border: 1px solid #69A998;
 }
 
 .save-button:active {
-    background-color: #337768;
-    color: white;
+    background-color: #C3E4D9;
+    border: 1px solid #337768;
 }
 
 .saved-section {
