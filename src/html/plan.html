@@ -126,11 +126,19 @@
                             </div>
                         </fieldset>
 
+
                         <section class="schedule-section">
                             <h2>날짜별 여행 일정</h2>
 
                             <div class="day-section">
-                                <h3>DAY 1</h3>
+                                <div class="day-header">
+                                    <h3>DAY 1</h3>
+
+                                    <div class="day-date">
+                                        <label for="day1-date">여행 날짜</label>
+                                        <input type="date" id="day1-date" name="day1-date">
+                                    </div>
+                                </div>
 
                                 <table class="schedule-table">
                                     <thead>
@@ -140,85 +148,46 @@
                                             <th>일정 내용</th>
                                         </tr>
                                     </thead>
+
                                     <tbody>
                                         <tr>
-                                            <td><input type="time"></td>
-                                            <td><input type="text" placeholder="방문 장소"></td>
-                                            <td><input type="text" placeholder="일정 입력"></td>
+                                            <td>
+                                                <input type="time" name="day1-time1">
+                                            </td>
+                                            <td>
+                                                <input type="text" name="day1-place1" placeholder="방문 장소">
+                                            </td>
+                                            <td>
+                                                <input type="text" name="day1-memo1" placeholder="일정 내용">
+                                            </td>
                                         </tr>
+
                                         <tr>
-                                            <td><input type="time"></td>
-                                            <td><input type="text" placeholder="방문 장소"></td>
-                                            <td><input type="text" placeholder="일정 입력"></td>
+                                            <td>
+                                                <input type="time" name="day1-time2">
+                                            </td>
+                                            <td>
+                                                <input type="text" name="day1-place2" placeholder="방문 장소">
+                                            </td>
+                                            <td>
+                                                <input type="text" name="day1-memo2" placeholder="일정 내용">
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
 
                                 <button type="button" class="add-schedule-button">
-                                    <img src="../res/icons/ic_add.svg" alt=""> 일정 추가하기
+                                    <img src="../res/icons/ic_add.svg" alt="">
+                                    일정 추가하기
                                 </button>
                             </div>
 
-                            <div class="day-section">
-                                <h3>DAY 2</h3>
-
-                                <table class="schedule-table">
-                                    <thead>
-                                        <tr>
-                                            <th>시간</th>
-                                            <th>방문 장소</th>
-                                            <th>일정 내용</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td><input type="time"></td>
-                                            <td><input type="text" placeholder="방문 장소"></td>
-                                            <td><input type="text" placeholder="일정 입력"></td>
-                                        </tr>
-                                        <tr>
-                                            <td><input type="time"></td>
-                                            <td><input type="text" placeholder="방문 장소"></td>
-                                            <td><input type="text" placeholder="일정 입력"></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-
-                                <button type="button" class="add-schedule-button">
-                                    <img src="../res/icons/ic_add.svg" alt=""> 일정 추가하기
-                                </button>
-                            </div>
-
-                            <div class="day-section">
-                                <h3>DAY 3</h3>
-
-                                <table class="schedule-table">
-                                    <thead>
-                                        <tr>
-                                            <th>시간</th>
-                                            <th>방문 장소</th>
-                                            <th>일정 내용</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td><input type="time"></td>
-                                            <td><input type="text" placeholder="방문 장소"></td>
-                                            <td><input type="text" placeholder="일정 입력"></td>
-                                        </tr>
-                                        <tr>
-                                            <td><input type="time"></td>
-                                            <td><input type="text" placeholder="방문 장소"></td>
-                                            <td><input type="text" placeholder="일정 입력"></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-
-                                <button type="button" class="add-schedule-button">
-                                    <img src="../res/icons/ic_add.svg" alt=""> 일정 추가하기
-                                </button>
-                            </div>
+                            <button type="button" class="add-day-button">
+                                <img src="../res/icons/ic_add.svg" alt="">
+                                날짜 추가하기
+                            </button>
                         </section>
+
 
                         <section class="expense-section">
                             <h2>예상 지출</h2>
