@@ -99,7 +99,57 @@
                 </fieldset>
             </aside>
 
-            <!-- 항공편 목록 추후 추가 -->
+            <section class="flight-recommendation">
+                <div class="recommendation-header">
+                    <h2>김포 → 제주</h2>
+
+                    <div class="sort-box">
+                        <label for="sort">정렬</label>
+                        <select id="sort" name="sort">
+                            <option value="recommended">추천순</option>
+                            <option value="price-low">낮은 가격순</option>
+                            <option value="duration-short">짧은 소요 시간순</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="flight-list">
+                    <article class="flight-card">
+                        <div class="flight-airline">
+                            <h3>대한항공</h3>
+                        </div>
+
+                        <div class="flight-info">
+                            <div class="flight-route">
+                                <div class="departure-info">
+                                    <p class="flight-time">09:00</p>
+                                    <p class="flight-airport">김포</p>
+                                </div>
+
+                                <div class="flight-duration">
+                                    <p>직항</p>
+                                    <p>1시간 10분</p>
+                                </div>
+
+                                <div class="arrival-info">
+                                    <p class="flight-time">10:10</p>
+                                    <p class="flight-airport">제주</p>
+                                </div>
+                            </div>
+
+                            <p class="flight-baggage">위탁 수하물 포함 여부 확인 필요</p>
+                        </div>
+
+                        <div class="flight-price">
+                            <p>
+                                <strong>58,000원</strong>
+                                <span>/ 1인 편도</span>
+                            </p>
+                            <button type="button" class="select-button">선택</button>
+                        </div>
+                    </article>
+                </div>
+            </section>
         </div>
 
         <!-- 이용 시 주의사항 -->
