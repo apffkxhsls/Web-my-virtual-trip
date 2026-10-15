@@ -3,29 +3,27 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="김지호">
     <meta name="description" content="My Virtual Trip 테마별 해외 여행지 탐색 페이지">
-
     <title>테마별 탐색 | My Virtual Trip</title>
 
-    <!-- 공통 CSS는 팀원 작업 완료 후 연결 -->
-    <!-- <link rel="stylesheet" href="../css/common.css"> -->
+    <!-- 공통 CSS-->
+
+    <link href="https://fonts.googleapis.com/css2?family=Asta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/theme.css">
 </head>
 
 <body>
+    <!-- 공통 헤더 -->
 
-    <!-- 공통 상단바 -->
-
-    <div class="theme-container">
+    <main>
 
         <section class="theme-section">
-
             <h1>여행 테마로 찾아보기</h1>
             <p class="section-description">
                 취향에 맞는 여행 테마를 선택해보세요
             </p>
-
 
             <div class="theme-grid">
 
@@ -63,14 +61,10 @@
         </section>
 
         <section class="banner-section">
-
             <div class="theme-banner">
 
                 <div class="banner-content">
-
-                    <span class="banner-label">
-                        요즘 뜨는 여행지
-                    </span>
+                    <span class="banner-label">요즘 뜨는 여행지</span>
 
                     <h2>
                         가장 트렌디한 여행지를<br>
@@ -80,22 +74,18 @@
                     <a href="#trendy" class="banner-button">
                         테마관 바로가기 →
                     </a>
-
                 </div>
 
             </div>
-
         </section>
 
         <section class="places-section">
-
             <h2>테마별 추천 여행지</h2>
             <p class="section-description">
                 오늘 나의 취향에 맞는 여행지를 만나보세요 🎈
             </p>
 
             <section class="category-section" id="nature">
-
                 <div class="category-title">
                     <h3>🌿 자연</h3>
                     <p>아름다운 풍경 속에서 즐기는 여유로운 여행</p>
@@ -103,41 +93,40 @@
 
                 <div class="places-grid">
 
-                    <div class="place-card">
+                    <article class="place-card">
                         <img src="../res/images/interlaken.jpg" alt="스위스 인터라켄의 알프스 산과 호수">
 
                         <div class="place-info">
-                            <h4>인터라켄</h4>
+                            <h3>인터라켄</h3>
                             <span class="country">스위스</span>
                             <p>알프스와 푸른 호수가 어우러진 자연 휴양지</p>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="place-card">
+                    <article class="place-card">
                         <img src="../res/images/reykjavik.jpg" alt="아이슬란드의 오로라 풍경">
 
                         <div class="place-info">
-                            <h4>레이캬비크</h4>
+                            <h3>레이캬비크</h3>
                             <span class="country">아이슬란드</span>
                             <p>오로라와 대자연을 만나는 여행의 거점</p>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="place-card">
+                    <article class="place-card">
                         <img src="../res/images/queenstown.jpg" alt="뉴질랜드 퀸스타운의 산과 호수">
 
                         <div class="place-info">
-                            <h4>퀸스타운</h4>
+                            <h3>퀸스타운</h3>
                             <span class="country">뉴질랜드</span>
                             <p>웅장한 산과 호수가 펼쳐지는 아름다운 도시</p>
                         </div>
-                    </div>
+                    </article>
 
                 </div>
             </section>
 
             <section class="category-section" id="history">
-
                 <div class="category-title">
                     <h3>🏛️ 역사</h3>
                     <p>오래된 도시에서 발견하는 특별한 이야기</p>
@@ -145,41 +134,42 @@
 
                 <div class="places-grid">
 
-                    <a href="detail.html" class="place-card">
-                        <img src="../res/images/kyoto.jpg" alt="일본 교토의 전통 사찰과 거리">
+                    <article class="place-card">
+                        <a href="detail.html" class="place-link">
+                            <img src="../res/images/kyoto.jpg" alt="일본 교토의 전통 사찰과 거리">
 
-                        <div class="place-info">
-                            <h4>교토</h4>
-                            <span class="country">일본</span>
-                            <p>고즈넉한 사찰과 전통 거리가 살아 있는 도시</p>
-                        </div>
-                    </a>
+                            <div class="place-info">
+                                <h3>교토</h3>
+                                <span class="country">일본</span>
+                                <p>고즈넉한 사찰과 전통 거리가 살아 있는 도시</p>
+                            </div>
+                        </a>
+                    </article>
 
-                    <div class="place-card">
+                    <article class="place-card">
                         <img src="../res/images/rome.jpg" alt="이탈리아 로마의 콜로세움">
 
                         <div class="place-info">
-                            <h4>로마</h4>
+                            <h3>로마</h3>
                             <span class="country">이탈리아</span>
                             <p>고대 로마 문명의 흔적을 간직한 역사 도시</p>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="place-card">
+                    <article class="place-card">
                         <img src="../res/images/athens.jpg" alt="그리스 아테네의 아크로폴리스">
 
                         <div class="place-info">
-                            <h4>아테네</h4>
+                            <h3>아테네</h3>
                             <span class="country">그리스</span>
                             <p>고대 그리스의 유적과 문화를 만나는 도시</p>
                         </div>
-                    </div>
+                    </article>
 
                 </div>
             </section>
 
             <section class="category-section" id="food">
-
                 <div class="category-title">
                     <h3>🍜 먹방</h3>
                     <p>맛있는 음식으로 기억되는 특별한 여행</p>
@@ -187,31 +177,30 @@
 
                 <div class="places-grid">
 
-                    <div class="place-card">
+                    <article class="place-card">
                         <img src="../res/images/osaka.jpg" alt="일본 오사카 도톤보리의 먹거리 거리">
 
                         <div class="place-info">
-                            <h4>오사카</h4>
+                            <h3>오사카</h3>
                             <span class="country">일본</span>
                             <p>다양한 길거리 음식을 즐기는 미식 여행</p>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="place-card">
+                    <article class="place-card">
                         <img src="../res/images/taipei.jpg" alt="대만 타이베이의 야시장">
 
                         <div class="place-info">
-                            <h4>타이베이</h4>
+                            <h3>타이베이</h3>
                             <span class="country">대만</span>
                             <p>다채로운 야시장 음식이 가득한 미식 도시</p>
                         </div>
-                    </div>
+                    </article>
 
                 </div>
             </section>
 
             <section class="category-section" id="sea">
-
                 <div class="category-title">
                     <h3>🏖️ 바다</h3>
                     <p>푸른 바다와 함께하는 여유로운 휴양</p>
@@ -219,31 +208,30 @@
 
                 <div class="places-grid">
 
-                    <div class="place-card">
+                    <article class="place-card">
                         <img src="../res/images/miyakojima.jpg" alt="일본 미야코지마의 에메랄드빛 바다">
 
                         <div class="place-info">
-                            <h4>미야코지마</h4>
+                            <h3>미야코지마</h3>
                             <span class="country">일본</span>
                             <p>투명한 바다와 하얀 모래사장이 펼쳐진 섬</p>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="place-card">
+                    <article class="place-card">
                         <img src="../res/images/phuket.jpg" alt="태국 푸켓의 열대 해변">
 
                         <div class="place-info">
-                            <h4>푸켓</h4>
+                            <h3>푸켓</h3>
                             <span class="country">태국</span>
                             <p>열대 해변과 아름다운 석양을 즐기는 휴양지</p>
                         </div>
-                    </div>
+                    </article>
 
                 </div>
             </section>
 
             <section class="category-section" id="trendy">
-
                 <div class="category-title">
                     <h3>✨ 요즘</h3>
                     <p>새로운 감성과 트렌드를 발견하는 여행</p>
@@ -251,31 +239,30 @@
 
                 <div class="places-grid">
 
-                    <div class="place-card">
+                    <article class="place-card">
                         <img src="../res/images/shanghai.jpg" alt="중국 상하이의 화려한 도시 야경">
 
                         <div class="place-info">
-                            <h4>상하이</h4>
+                            <h3>상하이</h3>
                             <span class="country">중국</span>
                             <p>화려한 야경과 감각적인 공간이 가득한 도시</p>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="place-card">
+                    <article class="place-card">
                         <img src="../res/images/fukuoka.jpg" alt="일본 후쿠오카의 도심 풍경">
 
                         <div class="place-info">
-                            <h4>후쿠오카</h4>
+                            <h3>후쿠오카</h3>
                             <span class="country">일본</span>
                             <p>쇼핑과 카페 탐방을 함께 즐기는 여행지</p>
                         </div>
-                    </div>
+                    </article>
 
                 </div>
             </section>
 
             <section class="category-section" id="solo">
-
                 <div class="category-title">
                     <h3>🎒 혼여행</h3>
                     <p>나만의 속도로 자유롭게 떠나는 여행</p>
@@ -283,45 +270,43 @@
 
                 <div class="places-grid">
 
-                    <div class="place-card">
+                    <article class="place-card">
                         <img src="../res/images/tokyo.jpg" alt="일본 도쿄의 거리 풍경">
 
                         <div class="place-info">
-                            <h4>도쿄</h4>
+                            <h3>도쿄</h3>
                             <span class="country">일본</span>
                             <p>혼자서도 쇼핑과 관광을 즐기기 좋은 도시</p>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="place-card">
+                    <article class="place-card">
                         <img src="../res/images/singapore.jpg" alt="싱가포르의 마리나베이 풍경">
 
                         <div class="place-info">
-                            <h4>싱가포르</h4>
+                            <h3>싱가포르</h3>
                             <span class="country">싱가포르</span>
                             <p>편리한 교통과 다양한 볼거리를 갖춘 도시</p>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="place-card">
+                    <article class="place-card">
                         <img src="../res/images/porto.jpg" alt="포르투갈 포르투의 강변과 건물들">
 
                         <div class="place-info">
-                            <h4>포르투</h4>
+                            <h3>포르투</h3>
                             <span class="country">포르투갈</span>
                             <p>아름다운 골목과 강변을 여유롭게 걷는 여행</p>
                         </div>
-                    </div>
+                    </article>
 
                 </div>
             </section>
 
         </section>
-
-    </div>
+    </main>
 
     <!-- 공통 푸터 -->
-
 </body>
 
 </html>

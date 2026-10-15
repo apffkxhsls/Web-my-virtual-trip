@@ -1,35 +1,34 @@
-.theme-container {
+body {
+    margin: 0;
+    background-color: white;
+    color: black;
+    font-family: "Asta Sans", sans-serif;
+}
+
+main {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 50px 30px 80px;
-
-    font-family: Arial, "Malgun Gothic", sans-serif;
-    color: black;
+    padding: 32px 0 50px;
 }
 
-.theme-container * {
-    box-sizing: border-box;
-}
-
-.theme-container a {
+main a {
     color: inherit;
     text-decoration: none;
 }
 
-.theme-container h1,
-.theme-container h2,
-.theme-container h3,
-.theme-container h4,
-.theme-container p {
+main h1,
+main h2,
+main h3,
+main p {
     margin-top: 0;
 }
 
-.theme-container h1 {
+main h1 {
     font-size: 30px;
     margin-bottom: 12px;
 }
 
-.theme-container h2 {
+main h2 {
     font-size: 25px;
     margin-bottom: 12px;
 }
@@ -43,7 +42,6 @@
 .theme-section {
     margin-bottom: 65px;
 }
-
 
 .theme-grid {
     display: flex;
@@ -61,15 +59,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
     width: 110px;
     height: 110px;
     margin: 0 auto 14px;
-
     background-color: white;
     border: 3px solid #C3E4D9;
     border-radius: 50%;
-
+    box-sizing: border-box;
     font-size: 42px;
 }
 
@@ -108,19 +104,15 @@
     background-color: #C3E4D9;
 }
 
-
 .banner-section {
     margin-bottom: 80px;
 }
 
 .theme-banner {
-    height: 380px;
-
     display: flex;
     align-items: center;
-
+    height: 380px;
     border-radius: 15px;
-
     background-color: #337768;
     background-image: url("../res/images/shanghai.jpg");
     background-repeat: no-repeat;
@@ -128,14 +120,12 @@
 }
 
 .banner-content {
+    max-width: 560px;
     margin-left: 55px;
     padding: 25px;
-
-    max-width: 560px;
-
     background-color: #337768;
     border-radius: 12px;
-
+    box-sizing: border-box;
     color: white;
 }
 
@@ -143,10 +133,8 @@
     display: inline-block;
     padding: 7px 13px;
     margin-bottom: 17px;
-
     background-color: #69A998;
     border-radius: 5px;
-
     font-size: 13px;
     font-weight: bold;
 }
@@ -157,26 +145,14 @@
     margin-bottom: 15px;
 }
 
-.banner-content p {
-    font-size: 15px;
-    line-height: 1.8;
-    margin-bottom: 22px;
-}
-
 .banner-button {
     display: inline-block;
-
     padding: 13px 22px;
-
     background-color: #8DC5AC;
     border-radius: 7px;
-
+    color: black;
     font-size: 15px;
     font-weight: bold;
-}
-
-.theme-container .banner-button {
-    color: black;
 }
 
 .banner-button:hover {
@@ -195,11 +171,9 @@
 .category-title {
     margin-bottom: 24px;
     padding: 20px;
-
     border: 2px solid #EEEEEE;
     border-radius: 12px;
 }
-
 
 #nature .category-title {
     border-color: yellowgreen;
@@ -225,7 +199,6 @@
     border-color: hotpink;
 }
 
-
 .category-title h3 {
     font-size: 23px;
     margin-bottom: 8px;
@@ -240,18 +213,16 @@
 .places-grid {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .place-card {
     display: block;
-
-    width: 31%;
-    margin-right: 2%;
+    width: 32%;
     margin-bottom: 24px;
-
     border: 1px solid #EEEEEE;
     border-radius: 12px;
-
+    box-sizing: border-box;
     background-color: white;
     overflow: hidden;
 }
@@ -260,12 +231,15 @@
     border-color: #69A998;
 }
 
+.place-link {
+    display: block;
+    height: 100%;
+}
+
 .place-card img {
     display: block;
-
     width: 100%;
     height: 200px;
-
     object-fit: cover;
 }
 
@@ -273,20 +247,17 @@
     padding: 18px;
 }
 
-.place-info h4 {
+.place-info h3 {
     font-size: 19px;
-    margin-bottom: 7px;
+    margin: 0 0 7px;
 }
 
 .place-info .country {
     display: inline-block;
-
     padding: 5px 9px;
     margin-bottom: 12px;
-
     background-color: #C3E4D9;
     border-radius: 5px;
-
     color: #337768;
     font-size: 12px;
     font-weight: bold;
