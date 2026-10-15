@@ -1,7 +1,3 @@
-.stay-card {
-    box-sizing: border-box;
-}
-
 body {
     margin: 0;
     background-color: white;
@@ -13,7 +9,8 @@ body {
 button,
 input,
 select {
-    font: inherit;
+    font-family: "Asta Sans", sans-serif;
+    font-size: 16px;
 }
 
 main {
@@ -35,7 +32,7 @@ main {
     align-items: center;
 }
 
-.stay-banner > img {
+.stay-banner>img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -62,7 +59,6 @@ main {
 .stay-search {
     display: flex;
     align-items: flex-end;
-    gap: 20px;
 
     margin: 28px 0 36px;
     padding: 20px 24px;
@@ -72,6 +68,7 @@ main {
 
 .search-field {
     flex-grow: 1;
+    margin-right: 20px;
 }
 
 .search-field label {
@@ -108,12 +105,12 @@ main {
 .stay-layout {
     display: flex;
     align-items: flex-start;
-    gap: 28px;
 }
 
 .stay-filter {
     width: 220px;
-    flex-shrink: 0;
+    min-width: 220px;
+    margin-right: 28px;
     padding: 20px;
     border: 1px solid #EEEEEF;
     border-radius: 12px;
@@ -179,7 +176,7 @@ main {
 .stay-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    justify-content: space-between;
 }
 
 .stay {
@@ -190,7 +187,8 @@ main {
 }
 
 .stay-card {
-    width: calc((100% - 40px) / 3);
+    width: 32%;
+    margin-bottom: 20px;
     border: 1px solid #EEEEEF;
     border-radius: 12px;
     box-sizing: border-box;
@@ -246,13 +244,13 @@ main {
 .stay-rating {
     display: flex;
     align-items: center;
-    gap: 4px;
     font-size: 14px;
 }
 
 .stay-rating img {
     width: 18px;
     height: 18px;
+    margin-right: 4px;
 }
 
 .stay-features,
@@ -260,7 +258,6 @@ main {
     font-size: 13px;
 }
 
-/* 가격 */
 .stay-info .stay-price {
     margin: 16px 0 0;
 }
