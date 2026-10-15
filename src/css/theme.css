@@ -43,17 +43,18 @@ main h2 {
     margin-bottom: 65px;
 }
 
+
 .theme-grid {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
 }
 
 .theme-box {
-    width: 33%;
+    width: 16.66%;
     margin-bottom: 35px;
     text-align: center;
 }
+
 
 .theme-item {
     display: flex;
@@ -87,15 +88,39 @@ main h2 {
     border-color: red;
 }
 
-.sea-item {
+.activity-item {
     border-color: dodgerblue;
 }
 
-.trendy-item {
+.resort-item {
     border-color: orange;
 }
 
-.solo-item {
+.trendy-item {
+    border-color: hotpink;
+}
+
+#nature .category-title {
+    border-color: yellowgreen;
+}
+
+#history .category-title {
+    border-color: darkorange;
+}
+
+#food .category-title {
+    border-color: red;
+}
+
+#activity .category-title {
+    border-color: dodgerblue;
+}
+
+#resort .category-title {
+    border-color: orange;
+}
+
+#trendy .category-title {
     border-color: hotpink;
 }
 
@@ -210,6 +235,7 @@ main h2 {
     margin-bottom: 0;
 }
 
+
 .places-grid {
     display: flex;
     flex-wrap: wrap;
@@ -226,6 +252,11 @@ main h2 {
     background-color: white;
     overflow: hidden;
 }
+
+.two-cards .place-card {
+    width: 49%;
+}
+
 
 .place-card:hover {
     border-color: #69A998;
