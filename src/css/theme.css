@@ -101,29 +101,6 @@ main h2 {
     border-color: hotpink;
 }
 
-#nature .category-title {
-    border-color: yellowgreen;
-}
-
-#history .category-title {
-    border-color: darkorange;
-}
-
-#food .category-title {
-    border-color: red;
-}
-
-#activity .category-title {
-    border-color: dodgerblue;
-}
-
-#resort .category-title {
-    border-color: orange;
-}
-
-#trendy .category-title {
-    border-color: hotpink;
-}
 
 .theme-item:hover {
     border-color: #337768;
@@ -198,32 +175,31 @@ main h2 {
 .category-title {
     margin-bottom: 24px;
     padding: 20px;
-    border: 2px solid #EEEEEE;
     border-radius: 12px;
 }
 
 #nature .category-title {
-    border-color: yellowgreen;
+    background-color: rgba(153, 205, 50, 0.178);
 }
 
 #history .category-title {
-    border-color: darkorange;
+    background-color: rgba(255, 140, 0, 0.147);
 }
 
 #food .category-title {
-    border-color: red;
+    background-color: rgba(255, 0, 0, 0.089);
 }
 
-#sea .category-title {
-    border-color: dodgerblue;
+#activity .category-title {
+    background-color: rgba(30, 143, 255, 0.144);
+}
+
+#resort .category-title {
+    background-color: rgba(255, 166, 0, 0.188);
 }
 
 #trendy .category-title {
-    border-color: orange;
-}
-
-#solo .category-title {
-    border-color: hotpink;
+    background-color: rgba(255, 105, 180, 0.103);
 }
 
 .category-title h3 {
