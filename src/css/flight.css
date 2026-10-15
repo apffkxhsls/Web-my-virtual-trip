@@ -1,0 +1,18 @@
+body {
+    margin: 0;
+    background-color: white;
+    color: black;
+    font-family: "Asts Sans", sans-serif;
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 0 50px;
+}
