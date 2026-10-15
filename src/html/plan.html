@@ -8,27 +8,26 @@
     <meta name="description" content="My Virtual Trip 여행 계획 작성 페이지">
     <title>여행 계획 | My Virtual Trip</title>
 
-    <!-- 공통 CSS는 팀원 작업 완료 후 연결 -->
+    <!-- 공통 CSS -->
     <!-- <link rel="stylesheet" href="../css/common.css"> -->
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Asta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/plan.css">
 </head>
 
 <body>
-    <!-- 공통 상단바 -->
+    <!-- 공통 헤더 -->
 
-    <main class="plan-container">
+    <main>
         <div class="plan-layout">
 
+            <!-- 작성한 계획 목록 -->
             <aside class="plan-sidebar">
                 <section class="saved-section">
                     <h2>작성한 계획 목록 보기</h2>
 
                     <div class="saved-list">
-                        <div class="saved-card">
+                        <article class="saved-card">
                             <img src="../res/images/shanghai.jpg" alt="상하이의 야경">
 
                             <div class="saved-info">
@@ -36,11 +35,12 @@
                                 <p>📅 2026.12.22 ~ 2026.12.25</p>
                                 <p>📍 중국 상하이</p>
                             </div>
-                        </div>
+                        </article>
                     </div>
                 </section>
             </aside>
 
+            <!-- 여행 계획 작성 -->
             <div class="plan-content">
                 <section class="plan-section">
                     <h1>여행 계획 작성하기</h1>
@@ -81,7 +81,7 @@
                         </div>
 
                         <fieldset class="theme-fieldset">
-                            <h3>여행 테마 선택</h3>
+                            <legend>여행 테마 선택</legend>
 
                             <div class="theme-options">
                                 <div class="theme-option">
@@ -140,7 +140,6 @@
                                             <th>일정 내용</th>
                                         </tr>
                                     </thead>
-
                                     <tbody>
                                         <tr>
                                             <td><input type="time"></td>
@@ -171,7 +170,6 @@
                                             <th>일정 내용</th>
                                         </tr>
                                     </thead>
-
                                     <tbody>
                                         <tr>
                                             <td><input type="time"></td>
@@ -202,7 +200,6 @@
                                             <th>일정 내용</th>
                                         </tr>
                                     </thead>
-
                                     <tbody>
                                         <tr>
                                             <td><input type="time"></td>
@@ -266,9 +263,11 @@
                                 계획 저장
                             </button>
                         </div>
+
                     </form>
                 </section>
             </div>
+
         </div>
     </main>
 

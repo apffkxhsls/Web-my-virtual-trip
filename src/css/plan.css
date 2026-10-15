@@ -8,16 +8,18 @@ body {
 button,
 input,
 select {
-    font: inherit;
+    font-family: "Asta Sans", sans-serif;
+    font-size: 16px;
 }
 
-.plan-container {
+/* 전체 페이지 */
+main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 32px 0 50px;
 }
 
-.plan-container * {
+main * {
     box-sizing: border-box;
 }
 
@@ -28,7 +30,7 @@ select {
 
 .plan-sidebar {
     width: 240px;
-    flex-shrink: 0;
+    min-width: 240px;
     margin-right: 28px;
     display: flex;
 }
@@ -38,19 +40,19 @@ select {
     min-width: 0;
 }
 
-.plan-container h1,
-.plan-container h2,
-.plan-container h3,
-.plan-container p {
+.plan-content h1,
+.plan-content h2,
+.plan-content h3,
+.plan-content p {
     margin-top: 0;
 }
 
-.plan-container h1 {
+.plan-content h1 {
     font-size: 30px;
     margin-bottom: 12px;
 }
 
-.plan-container h2 {
+.plan-content h2 {
     font-size: 25px;
     margin-bottom: 12px;
 }
@@ -77,6 +79,7 @@ select {
     margin-bottom: 25px;
 }
 
+/* 기본 정보 입력 */
 .form-row {
     display: flex;
     margin-bottom: 25px;
@@ -109,11 +112,11 @@ select {
     font-size: 14px;
 }
 
-.plan-container input:active {
+.plan-content input:active {
     border: 2px solid #337768;
 }
 
-.plan-container input:hover {
+.plan-content input:hover {
     border-color: #69A998;
 }
 
@@ -123,17 +126,10 @@ select {
     border: none;
 }
 
-
 .theme-fieldset legend {
     font-size: 23px;
     font-weight: bold;
     margin-bottom: 12px;
-}
-
-.field-description {
-    font-size: 14px;
-    color: black;
-    margin-bottom: 22px;
 }
 
 .theme-options {
@@ -323,8 +319,9 @@ select {
     border: 1px solid #337768;
 }
 
-/* 작성한 계획 목록을 왼쪽 사이드바에 표시 */
 .saved-section {
+    flex-grow: 1;
+    width: 100%;
     padding: 22px 16px;
     background-color: white;
     border: 1px solid #EEEEEE;
@@ -333,7 +330,7 @@ select {
 
 .saved-section h2 {
     font-size: 20px;
-    margin-bottom: 22px;
+    margin: 0 0 22px;
 }
 
 .saved-list {
@@ -375,12 +372,12 @@ select {
 
 .saved-info h3 {
     font-size: 17px;
-    margin-bottom: 12px;
+    margin: 0 0 12px;
 }
 
 .saved-info p {
     font-size: 12px;
     color: black;
     line-height: 1.6;
-    margin-bottom: 7px;
+    margin: 0 0 7px;
 }
