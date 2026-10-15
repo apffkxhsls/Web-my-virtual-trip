@@ -19,7 +19,47 @@
             <p>일정에 맞는 항공편을 한눈에 비교해보세요.</p>
         </section>
 
-        <!-- 항공 검색 -->
+        <form class="flight-search">
+            <div class="trip-type">
+                <label>
+                    <input type="radio" name="trip-type" value="round-trip" checked>
+                    왕복
+                </label>
+
+                <label>
+                    <input type="radio" name="trip-type" value="one-way">
+                    편도
+                </label>
+
+                <div class="search-field">
+                    <label for="arrival">도착지</label>
+                    <input type="text" id="arrival" name="arrival" placeholder="도시 또는 공항">
+                </div>
+
+                <div class="search-field">
+                    <label for="departure-date">출발일</label>
+                    <input type="date" id="departure-date" name="departure-date">
+                </div>
+
+                <div class="search-field">
+                    <label for="return-date">귀국일</label>
+                    <input type="date" id="return-date" name="return-date">
+                </div>
+
+                <div class="search-field">
+                    <label for="passengers">인원</label>
+                    <select id="passengers" name="passengers">
+                        <option value="1">1명</option>
+                        <option value="2">2명</option>
+                        <option value="3">3명</option>
+                        <option value="4">4명</option>
+                        <option value="5">5명 이상</option>
+                    </select>
+                </div>
+
+                <button type="button" class="search-button">검색</button>
+            </div>
+        </form>
 
         <!-- 필터 및 항공편 목록 -->
 
