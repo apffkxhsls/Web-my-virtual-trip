@@ -40,13 +40,14 @@ main h2 {
 }
 
 .theme-section {
-    margin-bottom: 65px;
+    margin-bottom: 30px;
 }
 
 
 .theme-grid {
     display: flex;
     justify-content: center;
+    margin-top: 100px;
 }
 
 .theme-box {
