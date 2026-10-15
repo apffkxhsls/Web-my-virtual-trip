@@ -131,3 +131,28 @@ main {
     flex-grow: 1;
     min-width: 0;
 }
+
+.recommendation-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.recommendation-header h2 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.sort-box label {
+    margin-right: 8px;
+    font-size: 14px;
+}
+
+.sort-box select {
+    padding: 8px 12px;
+    border: 1px solid #B1B3B4;
+    border-radius: 6px;
+    background-color: white;
+    color: black;
+}
