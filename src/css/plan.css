@@ -12,15 +12,10 @@ select {
     font-size: 16px;
 }
 
-/* 전체 페이지 */
 main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 32px 0 50px;
-}
-
-main * {
-    box-sizing: border-box;
 }
 
 .plan-layout {
@@ -63,15 +58,12 @@ main * {
     margin-bottom: 30px;
 }
 
-.plan-section {
-    margin-bottom: 0;
-}
-
 .plan-form {
     padding: 35px;
     background-color: white;
     border: 1px solid #EEEEEE;
     border-radius: 14px;
+    box-sizing: border-box;
 }
 
 .plan-form h2 {
@@ -79,7 +71,6 @@ main * {
     margin-bottom: 25px;
 }
 
-/* 기본 정보 입력 */
 .form-row {
     display: flex;
     margin-bottom: 25px;
@@ -109,11 +100,12 @@ main * {
     background-color: white;
     border: 1px solid #B1B3B4;
     border-radius: 7px;
+    box-sizing: border-box;
     font-size: 14px;
 }
 
 .plan-content input:active {
-    border: 2px solid #337768;
+    border-color: #337768;
 }
 
 .plan-content input:hover {
@@ -167,7 +159,7 @@ main * {
 .day-section h3 {
     display: inline-block;
     padding: 9px 17px;
-    margin-bottom: 15px;
+    margin-bottom: 0;
     background-color: #337768;
     border-radius: 6px;
     color: white;
@@ -211,6 +203,7 @@ main * {
     padding: 11px;
     border: 1px solid #B1B3B4;
     border-radius: 6px;
+    box-sizing: border-box;
     font-size: 14px;
 }
 
@@ -245,16 +238,11 @@ main * {
     border: 1px dashed #337768;
 }
 
-
 .day-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 15px;
-}
-
-.day-header h3 {
-    margin-bottom: 0;
 }
 
 .day-date {
@@ -276,7 +264,6 @@ main * {
     box-sizing: border-box;
     font-size: 14px;
 }
-
 
 .add-day-button {
     display: flex;
@@ -308,7 +295,6 @@ main * {
     border-color: #337768;
 }
 
-
 .expense-section {
     margin-top: 45px;
     padding-top: 35px;
@@ -327,10 +313,11 @@ main * {
     align-items: center;
     justify-content: space-between;
     padding: 8px 0;
+    border-top: 1px solid #EEEEEE;
 }
 
-.expense-item+.expense-item {
-    border-top: 1px solid #EEEEEE;
+.expense-item:first-child {
+    border-top: none;
 }
 
 .expense-item label {
@@ -350,6 +337,7 @@ main * {
     padding: 8px;
     border: 1px solid #B1B3B4;
     border-radius: 7px;
+    box-sizing: border-box;
     font-size: 14px;
     text-align: right;
 }
@@ -390,6 +378,7 @@ main * {
     background-color: white;
     border: 1px solid #EEEEEE;
     border-radius: 12px;
+    box-sizing: border-box;
 }
 
 .saved-section h2 {
@@ -409,6 +398,7 @@ main * {
     margin-bottom: 16px;
     border: 1px solid #EEEEEE;
     border-radius: 12px;
+    box-sizing: border-box;
     background-color: white;
     overflow: hidden;
 }
