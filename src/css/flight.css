@@ -16,3 +16,17 @@ main {
     margin: 0 auto;
     padding: 32px 0 50px;
 }
+
+.flight-intro {
+    margin-bottom: 28px;
+}
+
+.flight-intro h1 {
+    margin: 0 0 12px;
+    font-size: 28px;
+}
+
+.flight-intro p {
+    margin: 0;
+    font-size: 16px;
+}
