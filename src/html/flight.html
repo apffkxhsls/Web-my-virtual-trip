@@ -61,7 +61,46 @@
             </div>
         </form>
 
-        <!-- 필터 및 항공편 목록 -->
+        <div class="flight-layout">
+            <aside class="flight-filter">
+                <h2>필터</h2>
+
+                <fieldset>
+                    <legend>경유 여부</legend>
+
+                    <label>
+                        <input type="checkbox" name="stops" value="direct">
+                        직항
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="stops" value="connecting">
+                        경유
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>항공사</legend>
+
+                    <label>
+                        <input type="checkbox" name="airline" value="korean-air">
+                        대한항공
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="airline" value="asiana-air">
+                        아시아나항공
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="airline" value="emirates">
+                        에미레이트항공
+                    </label>
+                </fieldset>
+            </aside>
+
+            <!-- 항공편 목록 추후 추가 -->
+        </div>
 
         <!-- 이용 시 주의사항 -->
     </main>
