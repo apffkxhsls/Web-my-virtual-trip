@@ -2,13 +2,14 @@ body {
     margin: 0;
     background-color: white;
     color: black;
-    font-family: "Asts Sans", sans-serif;
+    font-family: "Asta Sans", sans-serif;
 }
 
 button,
 input,
 select {
-    font: inherit;
+    font-family: "Asta Sans", sans-serif;
+    font-size: 16px;
 }
 
 main {
@@ -41,20 +42,24 @@ main {
 .trip-type {
     display: flex;
     align-items: center;
-    gap: 20px;
+    min-width: 150px;
+    margin-right: 20px;
     height: 42px;
-    flex-shrink: 0;
+}
+
+.trip-type label:first-child {
+    margin-right: 20px;
 }
 
 .search-fields {
     display: flex;
-    align-items: flex-center;
-    justify-content: space-between;
+    align-items: flex-end;
 }
 
 .search-field {
     flex-grow: 1;
     width: 0;
+    margin-right: 20px;
 }
 
 .search-field label {
@@ -91,16 +96,16 @@ main {
 .flight-layout {
     display: flex;
     align-items: flex-start;
-    gap: 28px;
 }
 
 .flight-filter {
     width: 220px;
-    flex-shrink: 0;
+    min-width: 220px;
     padding: 20px;
     border: 1px solid #EEEEEF;
     border-radius: 12px;
     box-sizing: border-box;
+    margin-right: 28px;
 }
 
 .flight-filter h2 {
@@ -162,7 +167,6 @@ main {
 .flight-list {
     display: flex;
     flex-direction: column;
-    gap: 20px;
 }
 
 .flight-card {
@@ -172,11 +176,16 @@ main {
     border: 1px solid #EEEEEF;
     border-radius: 16px;
     box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.flight-card:last-child {
+    margin-bottom: 0;
 }
 
 .flight-airline {
     width: 140px;
-    flex-shrink: 0;
+    min-width: 140px;
     display: flex;
     align-items: center;
     border-right: 1px solid #EEEEEF;
@@ -195,7 +204,7 @@ main {
 
 .flight-price {
     width: 160px;
-    flex-shrink: 0;
+    min-width: 160px;
     padding-left: 24px;
     border-left: 1px dashed #B1B3B4;
     box-sizing: border-box;
@@ -205,12 +214,16 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 16px;
 }
 
-.departure-info,
+.departure-info {
+    text-align: center;
+    margin-right: 16px;
+}
+
 .arrival-info {
     text-align: center;
+    margin-left: 16px;
 }
 
 .flight-time {
@@ -280,7 +293,6 @@ main {
     background-color: #69A998;
 }
 
-/* 항공 이용 시 주의사항 */
 .flight-notice {
     margin-top: 36px;
     padding: 24px;
