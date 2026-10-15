@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="김예지">
+    <meta name="description" content="My Virtual Trip 항공 페이지">
+    <title>항공 | My Virtual Trip</title>
+    <link href="https://fonts.googleapis.com/css2?family=Asta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/flight.css">
+</head>
+
+<body>
+    <!-- 공통 헤더 추후 추가 -->
+
+    <main>
+        <section class="flight-intro">
+            <div class="intro-text">
+                <h1>새로운 여행의 시작, 항공편 찾기</h1>
+                <p>일정에 맞는 항공편을 한눈에 비교해보세요.</p>
+            </div>
+        </section>
+
+        <form class="flight-search">
+            <div class="search-fields">
+                <div class="trip-type">
+                    <label>
+                        <input type="radio" name="trip-type" value="round-trip" checked>
+                        왕복
+                    </label>
+
+                    <label>
+                        <input type="radio" name="trip-type" value="one-way">
+                        편도
+                    </label>
+                </div>
+
+                <div class="search-field">
+                    <label for="departure">출발지</label>
+                    <input type="text" id="departure" name="departure" placeholder="도시 또는 공항">
+                </div>
+
+                <div class="search-field">
+                    <label for="arrival">도착지</label>
+                    <input type="text" id="arrival" name="arrival" placeholder="도시 또는 공항">
+                </div>
+
+                <div class="search-field">
+                    <label for="departure-date">출발일</label>
+                    <input type="date" id="departure-date" name="departure-date">
+                </div>
+
+                <div class="search-field">
+                    <label for="return-date">귀국일</label>
+                    <input type="date" id="return-date" name="return-date">
+                </div>
+
+                <div class="search-field">
+                    <label for="passengers">인원</label>
+                    <select id="passengers" name="passengers">
+                        <option value="1">1명</option>
+                        <option value="2">2명</option>
+                        <option value="3">3명</option>
+                        <option value="4">4명</option>
+                        <option value="5">5명 이상</option>
+                    </select>
+                </div>
+
+                <button type="button" class="search-button">검색</button>
+            </div>
+        </form>
+
+        <div class="flight-layout">
+            <aside class="flight-filter">
+                <h2>필터</h2>
+
+                <fieldset>
+                    <legend>경유 여부</legend>
+
+                    <label>
+                        <input type="checkbox" name="stops" value="direct">
+                        직항
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="stops" value="connecting">
+                        경유
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>항공사</legend>
+
+                    <label>
+                        <input type="checkbox" name="airline" value="korean-air">
+                        대한항공
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="airline" value="asiana-air">
+                        아시아나항공
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="airline" value="emirates">
+                        에어프레미아
+                    </label>
+                </fieldset>
+            </aside>
+
+            <section class="flight-recommendation">
+                <div class="recommendation-header">
+                    <h2>인천 → 뉴욕</h2>
+
+                    <div class="sort-box">
+                        <label for="sort">정렬</label>
+                        <select id="sort" name="sort">
+                            <option value="recommended">추천순</option>
+                            <option value="price-low">낮은 가격순</option>
+                            <option value="duration-short">짧은 소요 시간순</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="flight-list">
+                    <article class="flight-card">
+                        <div class="flight-airline">
+                            <h3>에어프레미아</h3>
+                        </div>
+
+                        <div class="flight-info">
+                            <div class="flight-route">
+                                <div class="departure-info">
+                                    <p class="flight-time">21:25</p>
+                                    <p class="flight-airport">인천</p>
+                                </div>
+
+                                <div class="flight-duration">
+                                    <p>직항</p>
+                                    <p>14시간 05분</p>
+                                </div>
+
+                                <div class="arrival-info">
+                                    <p class="flight-time">22:30</p>
+                                    <p class="flight-airport">뉴욕</p>
+                                </div>
+                            </div>
+
+                            <p class="flight-baggage">위탁 수하물 포함 여부 확인 필요</p>
+                        </div>
+
+                        <div class="flight-price">
+                            <p>
+                                <strong>2,617,800원</strong>
+                                <span>/ 2인 왕복</span>
+                            </p>
+                            <button type="button" class="select-button">선택</button>
+                        </div>
+                    </article>
+
+                    <article class="flight-card">
+                        <div class="flight-airline">
+                            <h3>아시아나항공</h3>
+                        </div>
+
+                        <div class="flight-info">
+                            <div class="flight-route">
+                                <div class="departure-info">
+                                    <p class="flight-time">21:05</p>
+                                    <p class="flight-airport">인천</p>
+                                </div>
+
+                                <div class="flight-duration">
+                                    <p>직항</p>
+                                    <p>14시간 55분</p>
+                                </div>
+
+                                <div class="arrival-info">
+                                    <p class="flight-time">23:00</p>
+                                    <p class="flight-airport">뉴욕</p>
+                                </div>
+                            </div>
+
+                            <p class="flight-baggage">위탁 수하물 포함 여부 확인 필요</p>
+                        </div>
+
+                        <div class="flight-price">
+                            <p>
+                                <strong>1,298,200원</strong>
+                                <span>/ 1인 왕복</span>
+                            </p>
+                            <button type="button" class="select-button">선택</button>
+                        </div>
+                    </article>
+
+                    <article class="flight-card">
+                        <div class="flight-airline">
+                            <h3>아시아나항공</h3>
+                        </div>
+
+                        <div class="flight-info">
+                            <div class="flight-route">
+                                <div class="departure-info">
+                                    <p class="flight-time">21:40</p>
+                                    <p class="flight-airport">인천</p>
+                                </div>
+
+                                <div class="flight-duration">
+                                    <p>1회 경유</p>
+                                    <p>20시간 33분</p>
+                                </div>
+
+                                <div class="arrival-info">
+                                    <p class="flight-time">05:13</p>
+                                    <p class="flight-airport">뉴욕</p>
+                                </div>
+                            </div>
+
+                            <p class="flight-baggage">위탁 수하물 포함 여부 확인 필요</p>
+                        </div>
+
+                        <div class="flight-price">
+                            <p>
+                                <strong>3,574,600원</strong>
+                                <span>/ 2인 왕복</span>
+                            </p>
+                            <button type="button" class="select-button">선택</button>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+        </div>
+
+        <div class="flight-bottom">
+            <section class="flight-notice">
+                <h2>항공 이용 시 주의사항</h2>
+
+                <ul>
+                    <li>수하물 포함 여부와 허용 무게는 항공편별로 확인해주세요.</li>
+                    <li>항공권 변경 및 취소 시 수수료가 발생할 수 있습니다.</li>
+                    <li>출발 전 공항과 탑승 시간을 확인해주세요.</li>
+                </ul>
+            </section>
+
+            <div class="flight-video">
+                <iframe width="400" height="225" src="https://www.youtube.com/embed/Mjq8iNkhGYo?autoplay=1&amp;mute=1""
+                    title=" 대한항공 기내 안전 영상" allow="autoplay; fullscreen" allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </main>
+
+    <!-- 공통 푸터 추후 추가 -->
+
+</body>
+
+</html>
