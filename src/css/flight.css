@@ -243,3 +243,37 @@ main {
     font-size: 12px;
     text-align: center;
 }
+
+.flight-price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.flight-price p {
+    margin: 0 0 16px;
+    text-align: right;
+}
+
+.flight-price strong {
+    display: block;
+    font-size: 22px;
+}
+
+.flight-price span {
+    display: block;
+    margin-top: 4px;
+    font-size: 13px;
+}
+
+.select-button {
+    height: 42px;
+    border: none;
+    border-radius: 8px;
+    background-color: #8DC5AC;
+    color: black;
+}
+
+.select-button:hover {
+    background-color: #69A998;
+}
