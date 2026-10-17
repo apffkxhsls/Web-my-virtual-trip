@@ -382,6 +382,8 @@ header {
     width: 0;
     flex-grow: 1;
     position: relative;
+    text-decoration: none;
+    color: black;
 }
 
 .stay-img {
@@ -421,7 +423,7 @@ header {
 }
 
 .stay-info {
-    padding: 4px 0;
+    padding: 4px 5px;
 }
 
 .stay-name {
