@@ -3,7 +3,7 @@
 
 body {
     font-family: "Asta Sans", sans-serif;
-    margin: 0px;
+    margin: 0;
 }
 
 /* ==== 로고 및 네비게이션 바 ====  */
@@ -15,12 +15,14 @@ header {
 
 .navigation {
     justify-content: center;
+    background-color: white;
     border-bottom: 1px solid #EEEEEF;
     display: flex;
     align-items: stretch;
     padding: 0 24px;
     height: 72px;
-    gap:24px;
+    gap: 24px;
+    /*아이템 사이의 간격 지정 */
 }
 
 #logo {
@@ -44,9 +46,7 @@ header {
 }
 
 .cat-item {
-    align-items: center;
     flex-direction: row;
-    /* cat-item 요소 안의 글자를 세로 가운데 정렬 */
     display: flex;
     align-items: center;
     gap: 4px;
@@ -55,12 +55,14 @@ header {
     font-weight: 500;
     white-space: nowrap;
     text-decoration: none;
-    color: black;   
-    border-bottom: 4px solid transparent; /*transparent는 투명색*/
+    color: black;
+    border-bottom: 4px solid transparent;
+    /*transparent는 투명색*/
     margin-bottom: -1px;
 }
 
-.cat-item:hover, .cat-item:active{
+.cat-item:hover,
+.cat-item:active {
     border-bottom: 4px solid #3377689b;
     font-weight: 600;
 }
@@ -79,8 +81,9 @@ header {
 
 .search img {
     width: 15px;
-    cursor: pointer  /* 이미지에 커서를 올렸을 때 손가락 모양으로 변경 */
-} 
+    cursor: pointer
+        /* 이미지에 커서를 올렸을 때 손가락 모양으로 변경 */
+}
 
 .search input {
     border: none;
@@ -116,12 +119,12 @@ header {
 
 /* ===== 히어로 섹션 ===== */
 .home-container {
+    max-width: 1200px;
+    margin: 32px auto;
     position: relative;
-    background-image: url(../res/images/hero_background.jpg);    
+    background-image: url(../res/images/hero_background.jpg);
     background-repeat: no-repeat;
     min-height: 400px;
-    width: 1200px;
-    margin: 32px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -137,6 +140,7 @@ header {
 }
 
 .search-card {
+    width: 70%;
     background: white;
     border: 1px solid #B1B3B4;
     border-radius: 16px;
@@ -150,6 +154,7 @@ header {
 }
 
 .explore-field {
+    flex-grow: 1;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -164,22 +169,25 @@ header {
 
 .explore-field span {
     font-size: 15px;
+    white-space: nowrap;
 }
 
 .explore-field input {
+    width: 70%;
+    flex-grow: 1;
+    min-width: 0;
     border: none;
     outline: none;
     font-size: 15px;
-    width: 130px;
-    font-family: "Asta Sans", sans-serif; /*body 속성을 자동으로 상속받지 않으므로 지정 필요*/
+    font-family: "Asta Sans", sans-serif;
+    /*body 속성을 자동으로 상속받지 않으므로 지정 필요*/
     background: transparent;
 }
 
-.explore-field input[type="number"] { /*인원 숫자의 위치를 변경*/
-    text-align: right; 
+.explore-field input[type="number"] {
+    /*인원 숫자의 위치를 변경*/
+    text-align: right;
 }
-
-
 
 .explore-divider {
     width: 1px;
@@ -191,7 +199,7 @@ header {
     background: #8DC5AC;
     color: black;
     border: none;
-
+    white-space: nowrap;
     border-radius: 10px;
     padding: 12px 24px;
     font-size: 15px;
@@ -203,3 +211,96 @@ header {
     background: #69A998;
 }
 
+/* ===== 테마별 여행지 탐색 섹션 ===== */
+
+.theme-section {
+    max-width: 1200px;
+    margin: 32px auto;
+}
+
+.theme-card-list {
+    display: flex;
+    gap: 16px;
+}
+
+.theme-card {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #EEEEEF;
+    width: 0;
+    flex-grow: 1;
+    position: relative;
+}
+
+.card-img-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    background: rgba(128, 128, 128, 0.411);
+    backdrop-filter: blur(8px);
+    /*유리 효과*/
+    border-radius: 20px;
+    padding: 1px 7px;
+    color: white;
+    font-size: 13px;
+}
+
+.card-badge {
+    margin: 0px;
+}
+
+.card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-title {
+    margin: 10px auto;
+    padding: 3px 7px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+/* 테마별로 다르게 배경색 지정 */
+#nature {
+    background-color: rgba(153, 205, 50, 0.178);
+}
+
+#history {
+    background-color: rgba(255, 140, 0, 0.147);
+}
+
+#food {
+    background-color: rgba(255, 0, 0, 0.089);
+}
+
+#activity {
+    background-color: rgba(30, 143, 255, 0.144)
+}
+
+#resort {
+    background-color: rgba(255, 166, 0, 0.188);
+}
+
+.card-info {
+    padding: 8px 12px;
+    margin: 8px auto;
+}
+
+.card-btn {
+    display: block;
+    border: 1.5px solid #EEEEEF;
+    text-align: center;
+    padding: 8px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: black;
+}
+
+.card-btn:hover {
+    background-color: #EEEEEF;
+}
