@@ -210,7 +210,63 @@ header {
 .explore-btn:hover {
     background: #69A998;
 }
+/* ===== 지역별 여행지 탐색 섹션 ===== */
 
+.region-section {
+    max-width: 1200px;
+    margin: 35px auto;
+}
+
+.region-card-list {
+    display: flex;
+    gap: 16px;
+}
+
+.region-card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.region-img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+.region-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.35);
+    padding: 12px 14px;
+    color: white;
+}
+
+.region-meta {
+    margin: 10px auto;
+    padding: 2px 5px;
+    border-radius: 6px;
+    font-weight: 400;
+    font-size: 10px;
+    color: black;
+    background-color: #b1b3b4de;
+    color: balck;
+}
+
+.region-name {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 4px 0;
+}
+
+.region-rating {
+    font-size: 13px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8);
+}
 /* ===== 테마별 여행지 탐색 섹션 ===== */
 
 .theme-section {
@@ -240,8 +296,6 @@ header {
     right: 8px;
     top: 8px;
     background: rgba(128, 128, 128, 0.411);
-    backdrop-filter: blur(8px);
-    /*유리 효과*/
     border-radius: 20px;
     padding: 1px 7px;
     color: white;
