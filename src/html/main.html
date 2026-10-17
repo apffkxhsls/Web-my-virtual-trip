@@ -1,0 +1,88 @@
+<!-- 웹프 중간고사 메인 페이지 / 2516078 심현희 -->
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyVirtualTrip</title>
+    <meta name="author" content="심현희">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+    <!-- 로고 및 네비게이션 바 -->
+    <header>
+        <nav class="navigation">
+            <img src="../res/images/logo(1).png" id="logo" alt="MyVirtualTrip 로고">
+            <div class="nav-right">
+                <div class="category-nav">
+                    <a class="cat-item" href="../html/theme.html">
+                        <span>🎞️ 테마별</span>
+                    </a>
+                    <a class="cat-item" href="../html/region.html">
+                        <span>🗺️ 지역별</span>
+                    </a>
+                    <a class="cat-item" href="../html/stay.html">
+                        <span>🏩 숙박</span>
+                    </a>
+                    <a class="cat-item" href="../html/flight.html">
+                        <span>✈️ 항공</span>
+                    </a>
+                    <a class="cat-item" href="../html/plan.html">
+                        <span>✍🏻 여행 계획</span>
+                    </a>
+                    <a class="cat-item" href="../html/plan.html">
+                        <span>🗂️ 여행 기록</span>
+                    </a>
+                </div>
+                <form class="search" action="#" method="get">
+                    <input type="search" name="all search" placeholder="여행지, 명소, 숙소 등">
+                    <button type="submit">
+                        <img src="../res/icons/ic_search.svg" alt="검색 아이콘">
+                    </button>
+                </form>
+                <button type="button" class="logout">로그아웃</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 히어로 섹션 / 여행지 탐색 : 사용자에게 맞는 여행지 검색 컨테이너 -->
+        <div class="home-container">
+            <h2>지금, 나만의 여행지로 떠나보세요</h2>
+            <div class="search-card">
+                <form class="explore">
+                    <div class="explore-field">
+                        <img src="../res/icons/ic_location.svg" alt="장소 아이콘">
+                        <input type="text" list="explore-data" placeholder="장소" name="place">
+                        <datalist id="explore-data">
+                            <option value="국내"></option>
+                            <option value="일본"></option>
+                            <option value="중화권"></option>
+                            <option value="아시아"></option>
+                            <option value="대양주"></option>
+                            <option value="유럽"></option>
+                            <option value="미주"></option>
+                            <option value="중동·아프리카"></option>
+                        </datalist>
+                    </div>
+                    <div class="explore-divider"></div>
+                    <div class="explore-field">
+                        <img src="../res/icons/ic_date.svg" alt="날짜 아이콘">
+                        <input type="date" name="date">
+                    </div>
+                    <div class="explore-divider"></div>
+                    <div class="explore-field">
+                        <img src="../res/icons/ic_personnel.svg" alt="인원 아이콘">
+                        <span>인원</span>
+                        <input type="number" name="people" placeholder="인원" min="1" value="1">
+                        <spna>명</spna>
+                    </div>
+                    <button type="submit" class="explore-btn">검색</button>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
