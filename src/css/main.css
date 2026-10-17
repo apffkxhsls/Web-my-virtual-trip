@@ -82,7 +82,7 @@ header {
 .search img {
     width: 15px;
     cursor: pointer
-    /* 이미지에 커서를 올렸을 때 손가락 모양으로 변경 */
+        /* 이미지에 커서를 올렸을 때 손가락 모양으로 변경 */
 }
 
 .search input {
@@ -213,8 +213,9 @@ header {
 }
 
 .section-title {
-    padding : 0px 7px;
+    padding: 0px 7px;
 }
+
 /* ===== 지역별 여행지 탐색 섹션 ===== */
 
 .region-section {
@@ -273,6 +274,7 @@ header {
     margin: 0;
     color: rgba(255, 255, 255, 0.8);
 }
+
 /* ===== 테마별 여행지 탐색 섹션 ===== */
 
 .theme-section {
@@ -409,12 +411,15 @@ header {
 }
 
 
-.heart-btn:hover .favorite { 
-    display: none; 
+.heart-btn:hover .favorite {
+    display: none;
 }
-.heart-btn:hover .favorite-filled, .heart-btn:active .favorite-filled { 
-    display: block; 
+
+.heart-btn:hover .favorite-filled,
+.heart-btn:active .favorite-filled {
+    display: block;
 }
+
 .stay-info {
     padding: 4px 0;
 }
@@ -424,7 +429,8 @@ header {
     margin: 8px 0 4px;
 }
 
-.stay-price, .stay-rating {
+.stay-price,
+.stay-rating {
     color: gray;
     margin: 2px 0;
     display: inline;
@@ -432,4 +438,116 @@ header {
 
 .stay-price {
     margin-right: 8px;
+}
+
+/* ===== 푸터 ===== */
+footer {
+    color: gray;
+    border-top: 1px solid #EEEEEF;
+    padding: 40px 0 24px;
+}
+
+.footer-up {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 80px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #EEEEEF;
+}
+
+.footer-support {
+    margin-right: 600px;
+}
+
+.footer-support h3 {
+    font-size: 18px;
+    margin: 0 0 12px;
+    font-weight: 700;
+}
+
+.footer-support p {
+    font-size: 14px;
+    margin: 4px 0;
+}
+
+.footer-support button {
+    margin-top: 16px;
+    padding: 8px 20px;
+    border: 1px solid #B1B3B4;
+    border-radius: 4px;
+    background: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.footer-support button:hover {
+    background:  #EEEEEF;
+}
+
+.footer-item h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 12px;
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-list a {
+    font-size: 14px;
+    text-decoration: none;
+    color: gray;
+}
+
+.footer-list a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.footer-down {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.footer-legal {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 24px;
+}
+
+.footer-legal a {
+    font-size: 14px;
+    color: gray;
+    text-decoration: none;
+}
+
+.footer-legal a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.language {
+    font-size: 13px;
+    color: gray;
+}
+
+.language select {
+    border: 1px solid #B1B3B4;
+    border-radius: 6px;
+    padding: 8px 14px;
+    font-size: 13px;
+    cursor: pointer;
 }
