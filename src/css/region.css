@@ -159,7 +159,7 @@ footer {
 }
 
 .footer-support button:hover {
-    background:  #EEEEEF;
+    background: #EEEEEF;
 }
 
 .footer-item h4 {
@@ -227,4 +227,64 @@ footer {
     padding: 8px 14px;
     font-size: 13px;
     cursor: pointer;
+}
+
+/* ==== 대륙별 탐색 섹션 ==== */
+.continent-select {
+    max-width: 1200px;
+    padding: 40px 48px;
+    margin: 0 auto;
+}
+
+.continent-list {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 12px;
+    align-items: center; 
+    
+}
+
+.continent-card {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    
+}
+
+#asiacard {
+    border-color: #337768;
+    width: 110px;
+    height: 110px;
+    border-radius: 55px;
+}
+
+.continent-circle {
+    box-sizing: border-box;
+    width: 90px;
+    height: 90px;
+    border-radius: 45px;
+    padding: 8px;
+    border: 3px solid #8DC5AC;
+    background-color: #C3E4D9;
+    font-size: 36px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.continent-circle:hover {
+    border-color: #337768;
+}
+
+.continent-img {
+    margin-bottom: 10px;
+}
+
+.continent-label {
+    color: black;
+    font-size: 17px;
+    font-weight: 600;
 }
