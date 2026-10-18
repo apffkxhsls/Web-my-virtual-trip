@@ -446,3 +446,57 @@ footer {
 .heart-btn:active .favorite-filled {
     display: block;
 }
+
+
+/* ===== 숙소 및 항공권 바로가기 섹션 ===== */
+.hotel-air {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 48px 48px;
+}
+
+.hotel-air-banner {
+    display: flex;
+    gap: 24px;
+}
+
+.shortcut-card {
+    width: 0;
+    flex-grow: 1;
+    height: 120px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+}
+
+#hotelcard{
+    background-image: url(../res/images/stay.jpg);
+    background-size: cover;
+    background-position: center 70%
+}
+
+#aircard{
+    background-image: url(../res/images/flight.jpg);
+    background-size: cover;
+    background-position: center 40%
+}
+
+.shortcut-desc, .shortcut-text {
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+.shortcut-desc {
+    font-size: 14px;
+    margin: 60px 0 5px 24px;
+    opacity: 0.9;
+}
+
+.shortcut-text {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 24px;
+}
