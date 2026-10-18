@@ -288,3 +288,132 @@ footer {
     font-size: 17px;
     font-weight: 600;
 }
+
+/* ==== 나라 선택 및 인기/추천 도시 섹션 ==== */
+
+.country-select {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 48px 48px;
+}
+
+.country-desc {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 0 16px;
+    line-height: 1.4;
+}
+/* 좌우 2단 레이아웃 */
+.country-layout {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* = 왼쪽: 나라 선택 패널 =*/
+.country-panel {
+    width: 260px;
+}
+
+.panel-desc {
+    font-size: 17px;
+    color: gray;
+    margin: 0 auto 15px;
+    line-height: 1.5;
+}
+
+.chip-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.chip {
+    padding: 6px 16px;
+    border: 1px solid #B1B3B4;
+    border-radius: 15px;
+    font-size: 17px;
+    text-decoration: none;
+    color: black;
+    white-space: nowrap;
+}
+
+.chip:hover {
+    border-color: #337768;
+    color: #337768;
+}
+
+/* 선택된 칩 (active 상태에 class="chip active" 추가 시) */
+#japanchip {
+    background-color: #8DC5AC;
+    border-color: #337768;
+}
+
+/* ==== 오른쪽: 도시 카드 패널 ==== */
+.city-panel {
+    width: 0;
+    flex-grow: 1;
+}
+
+.city-panel-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #C3E4D9;
+}
+
+/* 카드 3열 그리드 */
+.city-card-list {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 32px;
+}
+
+/* 개별 카드 */
+.city-card {
+    width: 0;
+    flex-grow: 1;
+    border: 1px solid #EEEEEE;
+    border-radius: 12px;
+    text-decoration: none;
+    color: black;
+}
+
+.city-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.city-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px 12px 0 0;
+}
+
+.city-info {
+    padding: 12px 12px 20px;
+}
+
+.city-name {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 4px;
+}
+
+.city-location {
+    font-size: 13px;
+    color: gray;
+    margin: 0 0 8px;
+}
+
+.city-tags {
+    background-color: #C3E4D9;
+    border: 1px solid #EEEEEF;
+    border-radius: 15px;
+    font-size: 13px;
+    color: rgb(62, 61, 61);
+    padding : 2px 8px;
+    margin-right: 6px;
+}
