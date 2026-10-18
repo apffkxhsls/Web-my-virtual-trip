@@ -363,15 +363,14 @@ footer {
     border-bottom: 2px solid #C3E4D9;
 }
 
-/* 카드 3열 그리드 */
 .city-card-list {
     display: flex;
     gap: 32px;
     margin-bottom: 32px;
 }
 
-/* 개별 카드 */
 .city-card {
+    position: relative;
     width: 0;
     flex-grow: 1;
     border: 1px solid #EEEEEE;
@@ -416,4 +415,34 @@ footer {
     color: rgb(62, 61, 61);
     padding : 2px 8px;
     margin-right: 6px;
+}
+
+/* 하트 버튼  */
+.heart-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.favorite {
+    width: 24px;
+}
+
+/* hover 또는 active되지 않았을 때는 보이지 않음 */
+.favorite-filled {
+    display: none;
+}
+
+
+.heart-btn:hover .favorite {
+    display: none;
+}
+
+.heart-btn:hover .favorite-filled,
+.heart-btn:active .favorite-filled {
+    display: block;
 }
