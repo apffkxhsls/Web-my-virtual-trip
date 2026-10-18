@@ -240,8 +240,8 @@ footer {
     display: flex;
     overflow-x: auto;
     padding-bottom: 12px;
-    align-items: center; 
-    
+    align-items: center;
+
 }
 
 .continent-card {
@@ -250,7 +250,7 @@ footer {
     flex-direction: column;
     align-items: center;
     text-decoration: none;
-    
+
 }
 
 #asiacard {
@@ -303,6 +303,7 @@ footer {
     margin: 0 0 16px;
     line-height: 1.4;
 }
+
 /* 좌우 2단 레이아웃 */
 .country-layout {
     display: flex;
@@ -380,7 +381,7 @@ footer {
 }
 
 .city-card:hover {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .city-img {
@@ -413,7 +414,7 @@ footer {
     border-radius: 15px;
     font-size: 13px;
     color: rgb(62, 61, 61);
-    padding : 2px 8px;
+    padding: 2px 8px;
     margin-right: 6px;
 }
 
@@ -470,19 +471,20 @@ footer {
     text-decoration: none;
 }
 
-#hotelcard{
+#hotelcard {
     background-image: url(../res/images/stay.jpg);
     background-size: cover;
     background-position: center 70%
 }
 
-#aircard{
+#aircard {
     background-image: url(../res/images/flight.jpg);
     background-size: cover;
     background-position: center 40%
 }
 
-.shortcut-desc, .shortcut-text {
+.shortcut-desc,
+.shortcut-text {
     position: relative;
     z-index: 1;
     color: white;
@@ -499,4 +501,46 @@ footer {
     font-size: 20px;
     font-weight: 700;
     margin-left: 24px;
+}
+
+.shortcut-text:hover {
+    text-decoration: underline;
+}
+
+/* ==== 여행 계획 바로가기 배너 ==== */
+.plan {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 48px 48px;
+}
+
+.plan-banner {
+    padding: 28px 48px;
+    background: linear-gradient(to right, #9ACEB7, #337768); /*배경 그라데이션 추가*/
+    border-radius: 12px;
+}
+
+.plan-card {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.plan-desc {
+    font-size: 15px;
+    color: white;
+    font-weight: 600;
+    margin: 0;
+}
+
+.plan-text {
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+}
+
+.plan-text:hover {
+    text-decoration: underline;
 }
