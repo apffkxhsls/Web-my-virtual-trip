@@ -1,3 +1,14 @@
+.diary-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 0 50px;
+}
+
+.diary-main .page-width {
+    width: 100%;
+    max-width: none;
+}
+
 a {
     color: #252525;
     text-decoration: none;
@@ -8,6 +19,7 @@ a {
     overflow: hidden;
     padding: 54px 0 34px;
     background-color: #d7dcd9;
+    border-radius: 15px;
 }
 
 .banner-background, .banner-glass, .banner-tint, .side-shade, .feature-image {

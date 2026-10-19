@@ -1,4 +1,4 @@
-a, article, body, div, h1, h2, h3, header, img, main, p, section, span, nav, form, input, button {
+a, article, body, div, h1, h2, h3, header, img, main, p, section, span, nav, form, input, button, footer, h4, ul, li, select {
     box-sizing: border-box;
 }
 
@@ -105,7 +105,7 @@ img {
     margin-right: 0;
 }
 
-.cat-item:hover, .cat-item:active {
+.cat-item:hover, .cat-item:active, .cat-item-active {
     border-bottom: 4px solid rgba(51, 119, 104, 0.61);
     font-weight: 600;
 }
@@ -157,4 +157,129 @@ img {
 
 .logout:hover {
     background: #69a998;
+}
+
+.site-footer {
+    color: gray;
+    border-top: 1px solid #eeeeef;
+    padding: 40px 0 24px;
+}
+
+.footer-up {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #eeeeef;
+}
+
+.footer-support {
+    margin-right: auto;
+}
+
+.footer-support h3 {
+    font-size: 18px;
+    margin: 0 0 12px;
+    font-weight: 700;
+}
+
+.footer-support p {
+    font-size: 14px;
+    margin: 4px 0;
+}
+
+.footer-support button {
+    margin-top: 16px;
+    padding: 8px 20px;
+    border: 1px solid #b1b3b4;
+    border-radius: 4px;
+    background: #ffffff;
+    cursor: pointer;
+    font-family: "Asta Sans", sans-serif;
+    font-size: 14px;
+}
+
+.footer-support button:hover {
+    background: #eeeeef;
+}
+
+.footer-item {
+    margin-left: 80px;
+}
+
+.footer-item h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 12px;
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-list li {
+    margin-bottom: 10px;
+}
+
+.footer-list li:last-child {
+    margin-bottom: 0;
+}
+
+.footer-list a {
+    font-size: 14px;
+    text-decoration: none;
+    color: gray;
+}
+
+.footer-list a:hover, .footer-legal a:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+
+.footer-down {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.footer-legal {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.footer-legal li {
+    margin-right: 24px;
+}
+
+.footer-legal li:last-child {
+    margin-right: 0;
+}
+
+.footer-legal a {
+    font-size: 14px;
+    color: gray;
+    text-decoration: none;
+}
+
+.language {
+    font-size: 13px;
+    color: gray;
+}
+
+.language select {
+    border: 1px solid #b1b3b4;
+    border-radius: 6px;
+    padding: 8px 14px;
+    font-family: "Asta Sans", sans-serif;
+    font-size: 13px;
+    cursor: pointer;
 }
