@@ -220,7 +220,7 @@ header {
 
 .region-section {
     max-width: 1200px;
-    margin: 35px auto;
+    margin: 60px auto;
 }
 
 .region-card-list {
@@ -279,7 +279,7 @@ header {
 
 .theme-section {
     max-width: 1200px;
-    margin: 35px auto;
+    margin: 60px auto;
 }
 
 .theme-card-list {
@@ -370,7 +370,7 @@ header {
 /* ===== 숙소 섹션 ===== */
 .stay-section {
     max-width: 1200px;
-    margin: 35px auto;
+    margin: 60px auto;
 }
 
 .stay-card-list {
