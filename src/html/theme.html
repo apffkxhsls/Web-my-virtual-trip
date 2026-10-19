@@ -15,7 +15,40 @@
 </head>
 
 <body>
-    <!-- 공통 헤더 -->
+    <header>
+        <nav class="navigation">
+            <img src="../res/images/logo(1).png" id="logo" alt="MyVirtualTrip 로고">
+            <div class="nav-right">
+                <div class="category-nav">
+                    <a class="cat-item" href="../html/region.html">
+                        <span>🗺️ 지역별</span>
+                    </a>
+                    <a class="cat-item" href="../html/theme.html">
+                        <span>🎞️ 테마별</span>
+                    </a>
+                    <a class="cat-item" href="../html/stay.html">
+                        <span>🏩 숙박</span>
+                    </a>
+                    <a class="cat-item" href="../html/flight.html">
+                        <span>✈️ 항공</span>
+                    </a>
+                    <a class="cat-item" href="../html/plan.html">
+                        <span>✍🏻 여행 계획</span>
+                    </a>
+                    <a class="cat-item" href="../html/diary.html">
+                        <span>🗂️ 여행 기록</span>
+                    </a>
+                </div>
+                <form class="search" action="#" method="get">
+                    <input type="search" name="all-search" placeholder="여행지, 명소, 숙소 등">
+                    <button type="submit">
+                        <img src="../res/icons/ic_search.svg" alt="검색 아이콘">
+                    </button>
+                </form>
+                <button type="button" class="logout">로그아웃</button>
+            </div>
+        </nav>
+    </header>
 
     <main>
 
@@ -27,37 +60,39 @@
 
 
 
-            <div class="theme-grid">
-                <div class="theme-box">
-                    <a href="#nature" class="theme-item nature-item">🌿</a>
-                    <p>자연</p>
-                </div>
+            <nav class="theme-grid" aria-label="여행 테마 바로가기">
+                <ul>
+                    <li class="theme-box">
+                        <a href="#nature" class="theme-item nature-item" aria-label="자연 테마">🌿</a>
+                        <p>자연</p>
+                    </li>
 
-                <div class="theme-box">
-                    <a href="#history" class="theme-item history-item">🏛️</a>
-                    <p>역사</p>
-                </div>
+                    <li class="theme-box">
+                        <a href="#history" class="theme-item history-item" aria-label="역사 테마">🏛️</a>
+                        <p>역사</p>
+                    </li>
 
-                <div class="theme-box">
-                    <a href="#food" class="theme-item food-item">🍜</a>
-                    <p>먹방</p>
-                </div>
+                    <li class="theme-box">
+                        <a href="#food" class="theme-item food-item" aria-label="먹방 테마">🍜</a>
+                        <p>먹방</p>
+                    </li>
 
-                <div class="theme-box">
-                    <a href="#activity" class="theme-item activity-item">🚴</a>
-                    <p>액티비티</p>
-                </div>
+                    <li class="theme-box">
+                        <a href="#activity" class="theme-item activity-item" aria-label="액티비티 테마">🚴</a>
+                        <p>액티비티</p>
+                    </li>
 
-                <div class="theme-box">
-                    <a href="#resort" class="theme-item resort-item">🌴</a>
-                    <p>휴양</p>
-                </div>
+                    <li class="theme-box">
+                        <a href="#resort" class="theme-item resort-item" aria-label="휴양 테마">🌴</a>
+                        <p>휴양</p>
+                    </li>
 
-                <div class="theme-box">
-                    <a href="#trendy" class="theme-item trendy-item">✨</a>
-                    <p>요즘</p>
-                </div>
-            </div>
+                    <li class="theme-box">
+                        <a href="#trendy" class="theme-item trendy-item" aria-label="요즘 테마">✨</a>
+                        <p>요즘</p>
+                    </li>
+                </ul>
+            </nav>
 
         </section>
 
@@ -88,10 +123,10 @@
             </p>
 
             <section class="category-section" id="nature">
-                <div class="category-title">
+                <header class="category-title">
                     <h3>🌿 자연</h3>
                     <p>아름다운 풍경 속에서 즐기는 여유로운 여행</p>
-                </div>
+                </header>
 
                 <div class="places-grid two-cards">
                     <article class="place-card">
@@ -117,10 +152,10 @@
             </section>
 
             <section class="category-section" id="history">
-                <div class="category-title">
+                <header class="category-title">
                     <h3>🏛️ 역사</h3>
                     <p>오래된 도시에서 발견하는 특별한 이야기</p>
-                </div>
+                </header>
 
                 <div class="places-grid">
                     <article class="place-card">
@@ -158,10 +193,10 @@
             </section>
 
             <section class="category-section" id="food">
-                <div class="category-title">
+                <header class="category-title">
                     <h3>🍜 먹방</h3>
                     <p>맛있는 음식으로 기억되는 특별한 여행</p>
-                </div>
+                </header>
 
                 <div class="places-grid">
                     <article class="place-card">
@@ -197,10 +232,10 @@
             </section>
 
             <section class="category-section" id="activity">
-                <div class="category-title">
+                <header class="category-title">
                     <h3>🚴 액티비티</h3>
                     <p>다양한 체험과 활동을 즐길 수 있는 여행</p>
-                </div>
+                </header>
 
                 <div class="places-grid two-cards">
                     <article class="place-card">
@@ -226,10 +261,10 @@
             </section>
 
             <section class="category-section" id="resort">
-                <div class="category-title">
+                <header class="category-title">
                     <h3>🌴 휴양</h3>
                     <p>아름다운 풍경 속에서 편안하게 쉬어가는 여행</p>
-                </div>
+                </header>
 
                 <div class="places-grid two-cards">
                     <article class="place-card">
@@ -255,10 +290,10 @@
             </section>
 
             <section class="category-section" id="trendy">
-                <div class="category-title">
+                <header class="category-title">
                     <h3>✨ 요즘</h3>
                     <p>새로운 감성과 트렌드를 발견하는 여행</p>
-                </div>
+                </header>
 
                 <div class="places-grid">
                     <article class="place-card">
@@ -296,7 +331,54 @@
 
     </main>
 
-    <!-- 공통 푸터 -->
+    <footer>
+        <div class="footer-up">
+            <div class="footer-support">
+                <h3>고객지원실 운영안내</h3>
+                <p>채팅상담 연중무휴 24시간</p>
+                <p>유선상담 연중무휴 09:00-18:00</p>
+                <p>유선상담 1670-8208</p>
+                <button>고객지원실</button>
+            </div>
+            <div class="footer-item">
+                <h4>소개</h4>
+                <ul class="footer-list">
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">채용</a></li>
+                    <li><a href="#">공고</a></li>
+                </ul>
+            </div>
+            <div class="footer-item">
+                <h4>파트너</h4>
+                <ul class="footer-list">
+                    <li><a href="#">파트너 홈</a></li>
+                    <li><a href="#">제휴 문의</a></li>
+                    <li><a href="#">광고 문의</a></li>
+                </ul>
+            </div>
+            <div class="footer-item">
+                <h4>지원</h4>
+                <ul class="footer-list">
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">문의내역</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-down">
+            <ul class="footer-legal">
+                <li><a href="#">이용 약관</a></li>
+                <li><a href="#">개인정보 처리방침</a></li>
+                <li><a href="#">취소 및 환불 정책</a></li>
+                <li><a href="#">개발자 센터</a></li>
+            </ul>
+            <form class="language" method="get" action="#">
+                <select name="language" id="language" size="1">
+                    <option value="korean">한국어</option>
+                    <option value="english">영어</option>
+                </select>
+            </form>
+        </div>
+    </footer>
 </body>
 
 </html>
