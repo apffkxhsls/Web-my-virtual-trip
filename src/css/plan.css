@@ -161,8 +161,6 @@ main {
     margin-bottom: 30px;
 }
 
-/* ===== 여행 계획 입력 폼 ===== */
-
 .plan-form {
     padding: 35px;
     background-color: white;
@@ -226,7 +224,7 @@ main {
 .theme-fieldset legend {
     font-size: 23px;
     font-weight: bold;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
 }
 
 .theme-options {
@@ -236,7 +234,7 @@ main {
 
 .theme-option {
     margin-right: 12px;
-    margin-bottom: 12px;
+    margin-bottom: 6px;
     padding: 13px 20px;
     background-color: white;
     border: 1px solid #EEEEEE;
@@ -252,7 +250,7 @@ main {
 }
 
 .schedule-section {
-    margin-top: 45px;
+    margin-top: 25px;
     padding-top: 35px;
     border-top: 1px solid #EEEEEE;
 }
@@ -370,7 +368,17 @@ main {
     font-size: 14px;
 }
 
-/* ===== 날짜 추가 버튼 ===== */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
 
 .add-day-button {
     display: flex;
@@ -403,16 +411,18 @@ main {
 }
 
 .expense-section {
-    margin-top: 45px;
+    margin-top: 25px;
     padding-top: 35px;
     border-top: 1px solid #EEEEEE;
 }
 
 .expense-list {
+    margin: 0;
     padding: 5px 20px;
     background-color: white;
     border: 1px solid #EEEEEE;
     border-radius: 10px;
+    list-style: none;
 }
 
 .expense-item {
@@ -496,6 +506,13 @@ main {
 .saved-list {
     display: flex;
     flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.saved-list li {
+    width: 100%;
 }
 
 .saved-card {
