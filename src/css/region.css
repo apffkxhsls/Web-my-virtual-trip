@@ -376,8 +376,11 @@ footer {
     flex-grow: 1;
     border: 1px solid #EEEEEE;
     border-radius: 12px;
-    text-decoration: none;
+}
+
+.city-card a{
     color: black;
+    text-decoration: none;
 }
 
 .city-card:hover {
