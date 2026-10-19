@@ -20,7 +20,6 @@ header {
     padding: 0 24px;
     height: 72px;
     gap: 24px;
-    /*아이템 사이의 간격 지정 */
 }
 
 #logo {
@@ -35,7 +34,6 @@ header {
     gap: 16px;
 }
 
-/* 카테고리 네비게이션 */
 .category-nav {
     display: flex;
     align-items: stretch;
@@ -55,7 +53,6 @@ header {
     text-decoration: none;
     color: black;
     border-bottom: 4px solid transparent;
-    /*transparent는 투명색*/
     margin-bottom: -1px;
 }
 
@@ -66,7 +63,6 @@ header {
 }
 
 
-/* 검색 아이콘 */
 .search {
     display: flex;
     align-items: center;
@@ -80,7 +76,6 @@ header {
 .search img {
     width: 15px;
     cursor: pointer
-        /* 이미지에 커서를 올렸을 때 손가락 모양으로 변경 */
 }
 
 .search input {
@@ -98,7 +93,6 @@ header {
     align-items: center;
 }
 
-/* 로그아웃 버튼 */
 .logout {
     background: #8DC5AC;
     color: black;
