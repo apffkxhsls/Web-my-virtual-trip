@@ -548,9 +548,9 @@ footer {
     text-decoration: underline;
 }
 
-.language {
+.language label {
+    margin-right: 5px;
     font-size: 13px;
-    color: gray;
 }
 
 .language select {

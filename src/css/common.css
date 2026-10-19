@@ -281,6 +281,11 @@ img {
     color: gray;
 }
 
+.language label {
+    margin-right: 5px;
+    font-size: 13px;
+}
+
 .language select {
     border: 1px solid #b1b3b4;
     border-radius: 6px;
