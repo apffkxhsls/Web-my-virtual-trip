@@ -5,7 +5,7 @@ body {
     font-family: "Asta Sans", sans-serif;
 }
 
-header {
+body>header {
     position: sticky;
     top: 0;
     z-index: 100;
@@ -405,7 +405,7 @@ footer {
 }
 
 .footer-support {
-    margin-right: 600px;
+    margin-right: auto;
 }
 
 .footer-support h3 {
