@@ -28,6 +28,10 @@ body>header {
     margin: auto 0;
 }
 
+.logo-link {
+    padding-top: 8px;
+}
+
 .nav-right {
     display: flex;
     align-items: stretch;
@@ -55,6 +59,11 @@ body>header {
     color: black;
     border-bottom: 4px solid transparent;
     margin-bottom: -1px;
+}
+
+.cat-item-active {
+    border-bottom: 4px solid #3377689b;
+    font-weight: 600;
 }
 
 .cat-item:hover,

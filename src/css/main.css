@@ -25,6 +25,10 @@ header {
     /*아이템 사이의 간격 지정 */
 }
 
+.logo-link {
+    padding-top: 8px;
+}
+
 #logo {
     height: 50px;
     width: auto;
