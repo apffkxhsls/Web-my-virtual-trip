@@ -5,6 +5,111 @@ body {
     font-family: "Asta Sans", sans-serif;
 }
 
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navigation {
+    justify-content: center;
+    background-color: white;
+    border-bottom: 1px solid #EEEEEF;
+    display: flex;
+    align-items: stretch;
+    padding: 0 24px;
+    height: 72px;
+    gap: 24px;
+}
+
+#logo {
+    height: 50px;
+    width: auto;
+    margin: auto 0;
+}
+
+.nav-right {
+    display: flex;
+    align-items: stretch;
+    gap: 16px;
+}
+
+
+.category-nav {
+    display: flex;
+    align-items: stretch;
+    gap: 16px;
+    padding: 0px 24px;
+}
+
+.cat-item {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 12px;
+    font-size: 17px;
+    font-weight: 500;
+    white-space: nowrap;
+    text-decoration: none;
+    color: black;
+    border-bottom: 4px solid transparent;
+    margin-bottom: -1px;
+}
+
+.cat-item:hover,
+.cat-item:active {
+    border-bottom: 4px solid #3377689b;
+    font-weight: 600;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    border: 1px solid #B1B3B4;
+    border-radius: 20px;
+    padding: 6px 14px;
+    margin: auto 0;
+    gap: 8px;
+}
+
+.search img {
+    width: 15px;
+    cursor: pointer;
+}
+
+.search input {
+    border: none;
+    outline: none;
+    font-size: 13px;
+    width: 180px;
+}
+
+.search button {
+    background: none;
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+
+.logout {
+    background: #8DC5AC;
+    color: black;
+    border-radius: 8px;
+    padding: 8px 16px;
+    margin: auto 0;
+    cursor: pointer;
+    font-size: 14px;
+    white-space: nowrap;
+    border: none;
+}
+
+.logout:hover {
+    background: #69A998;
+}
+
 main {
     max-width: 1200px;
     margin: 0 auto;
@@ -45,7 +150,7 @@ main h2 {
 .theme-grid {
     display: flex;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 40px;
 }
 
 .theme-grid ul {
@@ -58,7 +163,7 @@ main h2 {
 
 .theme-box {
     width: 16.66%;
-    margin-bottom: 35px;
+    margin-bottom: 20px;
     text-align: center;
 }
 
@@ -178,7 +283,8 @@ main h2 {
 }
 
 .category-section {
-    margin-top: 80px;
+    margin-top: 30px;
+    margin-bottom: 120px;
 }
 
 .category-title {
@@ -281,4 +387,115 @@ main h2 {
     font-size: 13px;
     line-height: 1.6;
     margin-bottom: 0;
+}
+
+footer {
+    color: gray;
+    border-top: 1px solid #EEEEEF;
+    padding: 40px 0 24px;
+}
+
+.footer-up {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 80px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #EEEEEF;
+}
+
+.footer-support {
+    margin-right: 600px;
+}
+
+.footer-support h3 {
+    font-size: 18px;
+    margin: 0 0 12px;
+    font-weight: 700;
+}
+
+.footer-support p {
+    font-size: 14px;
+    margin: 4px 0;
+}
+
+.footer-support button {
+    margin-top: 16px;
+    padding: 8px 20px;
+    border: 1px solid #B1B3B4;
+    border-radius: 4px;
+    background: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.footer-support button:hover {
+    background: #EEEEEF;
+}
+
+.footer-item h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 12px;
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-list a {
+    font-size: 14px;
+    text-decoration: none;
+    color: gray;
+}
+
+.footer-list a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.footer-down {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.footer-legal {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 24px;
+}
+
+.footer-legal a {
+    font-size: 14px;
+    color: gray;
+    text-decoration: none;
+}
+
+.footer-legal a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.language {
+    font-size: 13px;
+    color: gray;
+}
+
+.language select {
+    border: 1px solid #B1B3B4;
+    border-radius: 6px;
+    padding: 8px 14px;
+    font-size: 13px;
+    cursor: pointer;
 }
