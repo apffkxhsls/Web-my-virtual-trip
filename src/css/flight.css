@@ -147,6 +147,7 @@ main {
     align-items: center;
     min-width: 150px;
     margin-right: 20px;
+    margin-bottom: 16px;
     height: 42px;
 }
 
@@ -154,13 +155,16 @@ main {
 
 .search-fields {
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-end;
 }
 
 .search-field {
     flex-grow: 1;
-    width: 0;
+    width: 160px;
+    min-width: 160px;
     margin-right: 20px;
+    margin-bottom: 16px;
 }
 
 .search-field label {
@@ -186,6 +190,7 @@ main {
     padding: 0 28px;
     border: none;
     border-radius: 8px;
+    margin-bottom: 16px;
     background-color: #8DC5AC;
     color: black;
 }
@@ -196,6 +201,7 @@ main {
 
 .flight-layout {
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-start;
 }
 
@@ -207,6 +213,7 @@ main {
     border-radius: 12px;
     box-sizing: border-box;
     margin-right: 28px;
+    margin-bottom: 24px;
 }
 
 .flight-filter h2 {
@@ -238,6 +245,7 @@ main {
 .flight-recommendation {
     flex-grow: 1;
     min-width: 0;
+    width: 600px;
 }
 
 .recommendation-header {
@@ -278,6 +286,7 @@ main {
     border-radius: 16px;
     box-sizing: border-box;
     margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 
 .flight-card:last-child {
@@ -299,8 +308,9 @@ main {
 
 .flight-info {
     flex-grow: 1;
-    min-width: 0;
-    padding: 0 24px;
+    min-width: 200px;
+    padding: 0 12px;
+    box-sizing: border-box;
 }
 
 .flight-price {
@@ -396,10 +406,13 @@ main {
 
 .flight-notice {
     flex-grow: 1;
-    margin-right: 28px;
+    min-width: 280px;
+    margin-right: 0;
+    margin-bottom: 20px;
     padding: 24px;
     border: 1px solid #EEEEEF;
     border-radius: 12px;
+    box-sizing: border-box;
 }
 
 .flight-notice h2 {
@@ -421,10 +434,16 @@ main {
     display: flex;
     align-items: center;
     margin-top: 36px;
+    flex-wrap: wrap;
+}
+
+.flight-video {
+    max-width: 100%;
 }
 
 .flight-video iframe {
     display: block;
+    max-width: 100%;
     border: none;
 }
 
@@ -469,7 +488,7 @@ footer {
 }
 
 .footer-support button:hover {
-    background:  #EEEEEF;
+    background: #EEEEEF;
 }
 
 .footer-item h4 {
