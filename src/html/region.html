@@ -1,3 +1,5 @@
+<!-- 웹프 중간고사 지역별 여행지 탐색 페이지 / 2516078 심현희 -->
+
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -13,10 +15,12 @@
     <!-- 로고 및 네비게이션 바 -->
     <header>
         <nav class="navigation">
-            <img src="../res/images/logo.png" id="logo" alt="MyVirtualTrip 로고">
+            <a href="main.html" class="logo-link">
+                <img src="../res/images/logo.png" id="logo" alt="MyVirtualTrip 로고">
+            </a>
             <div class="nav-right">
                 <div class="category-nav">
-                    <a class="cat-item" href="../html/region.html">
+                    <a class="cat-item cat-item-active" href="../html/region.html">
                         <span>🗺️ 지역별</span>
                     </a>
                     <a class="cat-item" href="../html/theme.html">
@@ -46,6 +50,10 @@
         </nav>
     </header>
     <main>
+        <section class="region-heading">
+            <h1>여행 지역으로 찾아보기</h1>
+            <p class="section-description">원하는 지역을 선택해 여행지를 찾아보세요</p>
+        </section>
         <!-- 대륙별 지역 선택 -->
         <section class="continent-select">
             <div class="continent-list">
@@ -209,7 +217,7 @@
                                 <img class="favorite" src="../res/icons/ic_favorite.svg" alt="좋아요 아이콘">
                                 <img class="favorite-filled" src="../res/icons/ic_favorite_filled.svg" alt="좋아요 누른 아이콘">
                             </button>
-                            <a href="#">
+                            <a href="../html/detail.html">
                                 <img class="city-img" src="../res/images/theme-history.jpg" alt="일본 도시 사진">
                                 <div class="city-info">
                                     <p class="city-name">교토</p>
@@ -225,7 +233,6 @@
                 </div>
             </div>
         </section>
-
         <!-- 축제 및 행사 섹션 -->
         <section class="festival-section">
             <h3 class="festival-title">일본의 축제 및 행사</h3>
