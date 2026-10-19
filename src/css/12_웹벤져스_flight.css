@@ -555,6 +555,11 @@ footer {
     color: gray;
 }
 
+.language label {
+    margin-right: 5px;
+    font-size: 13px;
+}
+
 .language select {
     border: 1px solid #B1B3B4;
     border-radius: 6px;

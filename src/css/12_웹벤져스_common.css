@@ -71,7 +71,6 @@ img {
 
 .logo-link {
     display: flex;
-    align-items: center;
     margin-right: 48px;
     padding-top: 8px;
 }
@@ -279,6 +278,11 @@ img {
 .language {
     font-size: 13px;
     color: gray;
+}
+
+.language label {
+    margin-right: 5px;
+    font-size: 13px;
 }
 
 .language select {
