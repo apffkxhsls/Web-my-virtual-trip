@@ -69,10 +69,15 @@ img {
     border-bottom: 1px solid #eeeeef;
 }
 
+.logo-link {
+    display: flex;
+    align-items: center;
+    margin-right: 48px;
+}
+
 #logo {
     height: 50px;
     width: auto;
-    margin: auto 48px auto 0;
     background-color: transparent;
 }
 
