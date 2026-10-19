@@ -1,0 +1,558 @@
+/* 구글 폰트 Asta Sans import */
+@import url('https://fonts.googleapis.com/css2?family=Asta+Sans:wght@300..800&display=swap');
+
+body {
+    font-family: "Asta Sans", sans-serif;
+    margin: 0;
+}
+
+/* ==== 로고 및 네비게이션 바 ====  */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navigation {
+    justify-content: center;
+    background-color: white;
+    border-bottom: 1px solid #EEEEEF;
+    display: flex;
+    align-items: stretch;
+    padding: 0 24px;
+    height: 72px;
+    gap: 24px;
+    /*아이템 사이의 간격 지정 */
+}
+
+#logo {
+    height: 50px;
+    width: auto;
+    margin: auto 0;
+}
+
+.nav-right {
+    display: flex;
+    align-items: stretch;
+    gap: 16px;
+}
+
+/* 카테고리 네비게이션 */
+.category-nav {
+    display: flex;
+    align-items: stretch;
+    gap: 16px;
+    padding: 0px 24px;
+}
+
+.cat-item {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 12px;
+    font-size: 17px;
+    font-weight: 500;
+    white-space: nowrap;
+    text-decoration: none;
+    color: black;
+    border-bottom: 4px solid transparent;
+    /*transparent는 투명색*/
+    margin-bottom: -1px;
+}
+
+.cat-item:hover,
+.cat-item:active {
+    border-bottom: 4px solid #3377689b;
+    font-weight: 600;
+}
+
+
+/* 검색 아이콘 */
+.search {
+    display: flex;
+    align-items: center;
+    border: 1px solid #B1B3B4;
+    border-radius: 20px;
+    padding: 6px 14px;
+    margin: auto 0;
+    gap: 8px;
+}
+
+.search img {
+    width: 15px;
+    cursor: pointer
+        /* 이미지에 커서를 올렸을 때 손가락 모양으로 변경 */
+}
+
+.search input {
+    border: none;
+    outline: none;
+    font-size: 13px;
+    width: 180px;
+}
+
+.search button {
+    background: none;
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+/* 로그아웃 버튼 */
+.logout {
+    background: #8DC5AC;
+    color: black;
+    border-radius: 8px;
+    padding: 8px 16px;
+    margin: auto 0;
+    cursor: pointer;
+    font-size: 14px;
+    white-space: nowrap;
+    border: none;
+}
+
+.logout:hover {
+    background: #69A998;
+}
+
+/* ===== 히어로 섹션 ===== */
+.home-container {
+    max-width: 1200px;
+    margin: 32px auto;
+    position: relative;
+    background-image: url(../res/images/hero_background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    border-radius: 16px;
+}
+
+.home-container h1 {
+    color: white;
+    font-size: 36px;
+    z-index: 1;
+}
+
+.search-card {
+    width: 70%;
+    background: white;
+    border: 1px solid #B1B3B4;
+    border-radius: 16px;
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.explore {
+    display: flex;
+    align-items: center;
+}
+
+.explore-field {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 20px;
+}
+
+.explore-field:hover {
+    background: #f5f5f5;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.explore-field span {
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+.explore-field input {
+    width: 70%;
+    flex-grow: 1;
+    min-width: 0;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    font-family: "Asta Sans", sans-serif;
+    /*body 속성을 자동으로 상속받지 않으므로 지정 필요*/
+    background: transparent;
+}
+
+.explore-field input[type="number"] {
+    /*인원 숫자의 위치를 변경*/
+    text-align: right;
+}
+
+.explore-divider {
+    width: 1px;
+    height: 28px;
+    background: #EEEEEE;
+}
+
+.explore-btn {
+    background: #8DC5AC;
+    color: black;
+    border: none;
+    white-space: nowrap;
+    border-radius: 10px;
+    padding: 12px 24px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+.explore-btn:hover {
+    background: #69A998;
+}
+
+.section-title {
+    padding: 0px 7px;
+}
+
+/* ===== 지역별 여행지 탐색 섹션 ===== */
+
+.region-section {
+    max-width: 1200px;
+    margin: 60px auto;
+}
+
+.region-card-list {
+    display: flex;
+    gap: 16px;
+}
+
+.region-card {
+    width: 0;
+    flex-grow: 1;
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.region-img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+.region-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.35);
+    padding: 12px 14px;
+    color: white;
+}
+
+.region-meta {
+    margin: 10px auto;
+    padding: 2px 5px;
+    border-radius: 6px;
+    font-weight: 400;
+    font-size: 12px;
+    color: black;
+    background-color: #b1b3b4de;
+}
+
+.region-name {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 4px 0;
+}
+
+.region-rating {
+    font-size: 13px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* ===== 테마별 여행지 탐색 섹션 ===== */
+
+.theme-section {
+    max-width: 1200px;
+    margin: 60px auto;
+}
+
+.theme-card-list {
+    display: flex;
+    gap: 16px;
+}
+
+.theme-card {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #EEEEEF;
+    width: 0;
+    flex-grow: 1;
+    position: relative;
+}
+
+.card-img-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    background: rgba(128, 128, 128, 0.411);
+    border-radius: 20px;
+    padding: 1px 7px;
+    color: white;
+    font-size: 13px;
+}
+
+.card-badge {
+    margin: 0px;
+}
+
+.card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-title {
+    margin: 10px auto;
+    padding: 3px 7px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+/* 테마별로 다르게 배경색 지정 */
+#nature {
+    background-color: rgba(153, 205, 50, 0.178);
+}
+
+#history {
+    background-color: rgba(255, 140, 0, 0.147);
+}
+
+#food {
+    background-color: rgba(255, 0, 0, 0.089);
+}
+
+#activity {
+    background-color: rgba(30, 143, 255, 0.144)
+}
+
+#resort {
+    background-color: rgba(255, 166, 0, 0.188);
+}
+
+.card-info {
+    padding: 8px 12px;
+    margin: 8px auto;
+}
+
+.card-btn {
+    display: block;
+    border: 1.5px solid #EEEEEF;
+    text-align: center;
+    padding: 8px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: black;
+}
+
+.card-btn:hover {
+    background-color: #EEEEEF;
+}
+
+/* ===== 숙소 섹션 ===== */
+.stay-section {
+    max-width: 1200px;
+    margin: 60px auto;
+}
+
+.stay-card-list {
+    display: flex;
+    gap: 16px;
+}
+
+.stay-card {
+    width: 0;
+    flex-grow: 1;
+    position: relative;
+}
+
+.stay-card a {
+    color: black;
+    text-decoration: none;
+}
+
+.stay-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.heart-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.favorite {
+    width: 24px;
+}
+
+/* hover 또는 active되지 않았을 때는 보이지 않음 */
+.favorite-filled {
+    display: none;
+}
+
+
+.heart-btn:hover .favorite {
+    display: none;
+}
+
+.heart-btn:hover .favorite-filled,
+.heart-btn:active .favorite-filled {
+    display: block;
+}
+
+.stay-info {
+    padding: 4px 5px;
+}
+
+.stay-name {
+    font-weight: 600;
+    margin: 8px 0 4px;
+}
+
+.stay-price,
+.stay-rating {
+    color: gray;
+    margin: 2px 0;
+    display: inline;
+}
+
+.stay-price {
+    margin-right: 8px;
+}
+
+/* ===== 푸터 ===== */
+footer {
+    color: gray;
+    border-top: 1px solid #EEEEEF;
+    padding: 40px 0 24px;
+}
+
+.footer-up {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 80px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #EEEEEF;
+}
+
+.footer-support {
+    margin-right: auto;
+}
+
+.footer-support h3 {
+    font-size: 18px;
+    margin: 0 0 12px;
+    font-weight: 700;
+}
+
+.footer-support p {
+    font-size: 14px;
+    margin: 4px 0;
+}
+
+.footer-support button {
+    margin-top: 16px;
+    padding: 8px 20px;
+    border: 1px solid #B1B3B4;
+    border-radius: 4px;
+    background: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.footer-support button:hover {
+    background:  #EEEEEF;
+}
+
+.footer-item h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 12px;
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-list a {
+    font-size: 14px;
+    text-decoration: none;
+    color: gray;
+}
+
+.footer-list a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.footer-down {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.footer-legal {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 24px;
+}
+
+.footer-legal a {
+    font-size: 14px;
+    color: gray;
+    text-decoration: none;
+}
+
+.footer-legal a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.language {
+    font-size: 13px;
+    color: gray;
+}
+
+.language select {
+    border: 1px solid #B1B3B4;
+    border-radius: 6px;
+    padding: 8px 14px;
+    font-size: 13px;
+    cursor: pointer;
+}

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="김지호">
+    <meta name="description" content="My Virtual Trip 여행 계획 작성 페이지">
+    <title>여행 계획 | My Virtual Trip</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Asta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/plan.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navigation" aria-label="주요 메뉴">
+            <img src="../res/images/logo.png" id="logo" alt="MyVirtualTrip 로고">
+            <div class="nav-right">
+                <div class="category-nav">
+                    <a class="cat-item" href="../html/region.html">
+                        <span>🗺️ 지역별</span>
+                    </a>
+                    <a class="cat-item" href="../html/theme.html">
+                        <span>🎞️ 테마별</span>
+                    </a>
+                    <a class="cat-item" href="../html/stay.html">
+                        <span>🏩 숙박</span>
+                    </a>
+                    <a class="cat-item" href="../html/flight.html">
+                        <span>✈️ 항공</span>
+                    </a>
+                    <a class="cat-item" href="../html/plan.html">
+                        <span>✍🏻 여행 계획</span>
+                    </a>
+                    <a class="cat-item" href="../html/diary.html">
+                        <span>🗂️ 여행 기록</span>
+                    </a>
+                </div>
+                <form class="search" action="#" method="get">
+                    <input type="search" name="all-search" placeholder="여행지, 명소, 숙소 등" aria-label="여행지, 명소, 숙소 검색">
+                    <button type="submit">
+                        <img src="../res/icons/ic_search.svg" alt="검색 아이콘">
+                    </button>
+                </form>
+                <button type="button" class="logout">로그아웃</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="plan-layout">
+
+            <!-- 작성한 계획 목록 -->
+            <aside class="plan-sidebar">
+                <section class="saved-section">
+                    <h2>작성한 계획 목록 보기</h2>
+
+                    <ul class="saved-list">
+                        <li>
+                            <article class="saved-card">
+                                <img src="../res/images/theme-shanghai.jpg" alt="상하이의 야경">
+
+                                <div class="saved-info">
+                                    <h3>상하이 여행</h3>
+                                    <p>📅 2026.12.22 ~ 2026.12.25</p>
+                                    <p>📍 중국 상하이</p>
+                                </div>
+                            </article>
+                        </li>
+
+                        <li>
+                            <article class="saved-card">
+                                <img src="../res/images/theme-nature.jpg" alt="나이아가라의 폭포">
+
+                                <div class="saved-info">
+                                    <h3>나이아가라</h3>
+                                    <p>📅 2027.01.10 ~ 2027.01.13</p>
+                                    <p>📍 캐나다 나이아가라</p>
+                                </div>
+                            </article>
+                        </li>
+
+                        <li>
+                            <article class="saved-card">
+                                <img src="../res/images/theme-paris.jpg" alt="퀸스타운에서의 스카이다이빙">
+
+                                <div class="saved-info">
+                                    <h3>캐나다 스카이다이빙!!</h3>
+                                    <p>📅 2028.03.05 ~ 2028.03.09</p>
+                                    <p>📍 뉴질랜드 퀸스타운</p>
+                                </div>
+                            </article>
+                        </li>
+                    </ul>
+
+
+                </section>
+            </aside>
+
+            <div class="plan-content">
+                <section class="plan-section">
+                    <h1>여행 계획 작성하기</h1>
+                    <p class="section-description">
+                        나만의 여행을 계획해보세요
+                    </p>
+
+                    <form class="plan-form">
+                        <h2>기본 정보</h2>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="trip-title">여행 제목</label>
+                                <input type="text" id="trip-title" name="trip-title" placeholder="예: 인생 첫 혼자 여행">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="trip-region">여행 지역</label>
+                                <input type="text" id="trip-region" name="trip-region" placeholder="예: 일본 오사카">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="start-date">출발일</label>
+                                <input type="date" id="start-date" name="start-date">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="end-date">도착일</label>
+                                <input type="date" id="end-date" name="end-date">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="travelers">동행 인원</label>
+                                <input type="number" id="travelers" name="travelers" min="1" placeholder="1">
+                            </div>
+                        </div>
+
+                        <fieldset class="theme-fieldset">
+                            <legend>여행 테마 선택</legend>
+
+                            <div class="theme-options">
+                                <div class="theme-option">
+                                    <input type="checkbox" name="trip-theme" id="nature" value="nature">
+                                    <label for="nature">🌿 자연</label>
+                                </div>
+
+                                <div class="theme-option">
+                                    <input type="checkbox" name="trip-theme" id="history" value="history">
+                                    <label for="history">🏛️ 역사</label>
+                                </div>
+
+                                <div class="theme-option">
+                                    <input type="checkbox" name="trip-theme" id="food" value="food">
+                                    <label for="food">🍜 먹방</label>
+                                </div>
+
+                                <div class="theme-option">
+                                    <input type="checkbox" name="trip-theme" id="sea" value="sea">
+                                    <label for="sea">🏖️ 바다</label>
+                                </div>
+
+                                <div class="theme-option">
+                                    <input type="checkbox" name="trip-theme" id="activity" value="activity">
+                                    <label for="activity">🚴 액티비티</label>
+                                </div>
+
+                                <div class="theme-option">
+                                    <input type="checkbox" name="trip-theme" id="trendy" value="trendy">
+                                    <label for="trendy">✨ 요즘</label>
+                                </div>
+
+                                <div class="theme-option">
+                                    <input type="checkbox" name="trip-theme" id="friends" value="friends">
+                                    <label for="friends">👫 친구</label>
+                                </div>
+
+                                <div class="theme-option">
+                                    <input type="checkbox" name="trip-theme" id="solo" value="solo">
+                                    <label for="solo">🎒 혼여행</label>
+                                </div>
+                            </div>
+                        </fieldset>
+
+
+                        <section class="schedule-section">
+                            <h2>날짜별 여행 일정</h2>
+
+                            <section class="day-section" aria-labelledby="day1-heading">
+                                <header class="day-header">
+                                    <h3 id="day1-heading">DAY 1</h3>
+
+                                    <div class="day-date">
+                                        <label for="day1-date">여행 날짜</label>
+                                        <input type="date" id="day1-date" name="day1-date">
+                                    </div>
+                                </header>
+
+                                <table class="schedule-table">
+                                    <caption class="visually-hidden">DAY 1 여행 일정</caption>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">시간</th>
+                                            <th scope="col">방문 장소</th>
+                                            <th scope="col">일정 내용</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <input type="time" name="day1-time1" aria-label="DAY 1 일정 1 시간">
+                                            </td>
+                                            <td>
+                                                <input type="text" name="day1-place1" placeholder="방문 장소"
+                                                    aria-label="DAY 1 일정 1 방문 장소">
+                                            </td>
+                                            <td>
+                                                <input type="text" name="day1-memo1" placeholder="일정 내용"
+                                                    aria-label="DAY 1 일정 1 내용">
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <input type="time" name="day1-time2" aria-label="DAY 1 일정 2 시간">
+                                            </td>
+                                            <td>
+                                                <input type="text" name="day1-place2" placeholder="방문 장소"
+                                                    aria-label="DAY 1 일정 2 방문 장소">
+                                            </td>
+                                            <td>
+                                                <input type="text" name="day1-memo2" placeholder="일정 내용"
+                                                    aria-label="DAY 1 일정 2 내용">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <button type="button" class="add-schedule-button">
+                                    <img src="../res/icons/ic_add.svg" alt="">
+                                    일정 추가하기
+                                </button>
+                            </section>
+
+                            <button type="button" class="add-day-button">
+                                <img src="../res/icons/ic_add.svg" alt="">
+                                날짜 추가하기
+                            </button>
+                        </section>
+
+
+                        <section class="expense-section">
+                            <h2>예상 지출</h2>
+
+                            <ul class="expense-list">
+                                <li class="expense-item">
+                                    <label for="transport">🚆 교통비</label>
+                                    <div class="expense-input">
+                                        <input type="number" id="transport" min="0" step="1000" placeholder="0">
+                                        <span>원</span>
+                                    </div>
+                                </li>
+
+                                <li class="expense-item">
+                                    <label for="food-cost">🍽️ 식비</label>
+                                    <div class="expense-input">
+                                        <input type="number" id="food-cost" min="0" step="1000" placeholder="0">
+                                        <span>원</span>
+                                    </div>
+                                </li>
+
+                                <li class="expense-item">
+                                    <label for="stay-cost">🏨 숙박비</label>
+                                    <div class="expense-input">
+                                        <input type="number" id="stay-cost" min="0" step="1000" placeholder="0">
+                                        <span>원</span>
+                                    </div>
+                                </li>
+
+                                <li class="expense-item">
+                                    <label for="other-cost">🧳 기타</label>
+                                    <div class="expense-input">
+                                        <input type="number" id="other-cost" min="0" step="1000" placeholder="0">
+                                        <span>원</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </section>
+
+                        <div class="save-area">
+                            <button type="button" class="save-button">
+                                계획 저장
+                            </button>
+                        </div>
+
+                    </form>
+                </section>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-up">
+            <div class="footer-support">
+                <h3>고객지원실 운영안내</h3>
+                <p>채팅상담 연중무휴 24시간</p>
+                <p>유선상담 연중무휴 09:00-18:00</p>
+                <p>유선상담 1670-8208</p>
+                <button>고객지원실</button>
+            </div>
+            <div class="footer-item">
+                <h4>소개</h4>
+                <ul class="footer-list">
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">채용</a></li>
+                    <li><a href="#">공고</a></li>
+                </ul>
+            </div>
+            <div class="footer-item">
+                <h4>파트너</h4>
+                <ul class="footer-list">
+                    <li><a href="#">파트너 홈</a></li>
+                    <li><a href="#">제휴 문의</a></li>
+                    <li><a href="#">광고 문의</a></li>
+                </ul>
+            </div>
+            <div class="footer-item">
+                <h4>지원</h4>
+                <ul class="footer-list">
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">문의내역</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-down">
+            <ul class="footer-legal">
+                <li><a href="#">이용 약관</a></li>
+                <li><a href="#">개인정보 처리방침</a></li>
+                <li><a href="#">취소 및 환불 정책</a></li>
+                <li><a href="#">개발자 센터</a></li>
+            </ul>
+            <form class="language" method="get" action="#">
+                <select name="language" id="language" size="1">
+                    <option value="korean">한국어</option>
+                    <option value="english">영어</option>
+                </select>
+            </form>
+        </div>
+    </footer>
+</body>
+
+</html>
