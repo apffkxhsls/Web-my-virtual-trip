@@ -80,7 +80,6 @@ header {
 
 .search input {
     border: none;
-    outline: none;
     font-size: 13px;
     width: 180px;
 }
@@ -445,7 +444,7 @@ footer {
 }
 
 .footer-support {
-    margin-right: 600px;
+    margin-right: auto;
 }
 
 .footer-support h3 {
