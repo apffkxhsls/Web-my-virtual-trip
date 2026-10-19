@@ -61,6 +61,11 @@ body>header {
     margin-bottom: -1px;
 }
 
+.cat-item-active {
+    border-bottom: 4px solid #3377689b;
+    font-weight: 600;
+}
+
 .cat-item:hover,
 .cat-item:active {
     border-bottom: 4px solid #3377689b;
