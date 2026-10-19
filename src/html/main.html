@@ -1,0 +1,352 @@
+<!-- 웹프 중간고사 메인 페이지 / 2516078 심현희 -->
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyVirtualTrip</title>
+    <meta name="author" content="심현희">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+    <!-- 로고 및 네비게이션 바 -->
+    <header>
+        <nav class="navigation">
+            <img src="../res/images/logo.png" id="logo" alt="MyVirtualTrip 로고">
+            <div class="nav-right">
+                <div class="category-nav">
+                    <a class="cat-item" href="../html/region.html">
+                        <span>🗺️ 지역별</span>
+                    </a>
+                    <a class="cat-item" href="../html/theme.html">
+                        <span>🎞️ 테마별</span>
+                    </a>
+                    <a class="cat-item" href="../html/stay.html">
+                        <span>🏩 숙박</span>
+                    </a>
+                    <a class="cat-item" href="../html/flight.html">
+                        <span>✈️ 항공</span>
+                    </a>
+                    <a class="cat-item" href="../html/plan.html">
+                        <span>✍🏻 여행 계획</span>
+                    </a>
+                    <a class="cat-item" href="../html/diary.html">
+                        <span>🗂️ 여행 기록</span>
+                    </a>
+                </div>
+                <form class="search" action="#" method="get">
+                    <input type="search" name="all-search" placeholder="여행지, 명소, 숙소 등">
+                    <button type="submit">
+                        <img src="../res/icons/ic_search.svg" alt="검색 아이콘">
+                    </button>
+                </form>
+                <button type="button" class="logout">로그아웃</button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- 히어로 섹션 / 여행지 탐색 : 사용자에게 맞는 여행지 검색 컨테이너 -->
+        <section class="home-container">
+            <h1>지금, 나만의 여행지로 떠나보세요</h1>
+            <div class="search-card">
+                <form class="explore">
+                    <div class="explore-field">
+                        <img src="../res/icons/ic_location.svg" alt="장소 아이콘">
+                        <input type="text" list="explore-data" placeholder="장소" name="place">
+                        <datalist id="explore-data">
+                            <option value="국내"></option>
+                            <option value="아시아"></option>
+                            <option value="대양주"></option>
+                            <option value="유럽"></option>
+                            <option value="미주"></option>
+                            <option value="중동·아프리카"></option>
+                        </datalist>
+                    </div>
+                    <div class="explore-divider"></div>
+                    <div class="explore-field">
+                        <img src="../res/icons/ic_date.svg" alt="날짜 아이콘">
+                        <input type="date" name="date">
+                    </div>
+                    <div class="explore-divider"></div>
+                    <div class="explore-field">
+                        <img src="../res/icons/ic_personnel.svg" alt="인원 아이콘">
+                        <span>인원</span>
+                        <input type="number" name="people" placeholder="인원" min="1" value="1">
+                        <span>명</span>
+                    </div>
+                    <button type="submit" class="explore-btn">검색</button>
+                </form>
+            </div>
+        </section>
+        <!-- 지금 떠나기 좋은 여행지 -->
+        <section class="region-section">
+            <h2 class="section-title"> 지금 떠나기 좋은 여행지</h2>
+            <div class="region-card-list">
+                <article class="region-card">
+                    <button class="heart-btn">
+                        <img class="favorite" src="../res/icons/ic_favorite.svg" alt="좋아요 아이콘">
+                        <img class="favorite-filled" src="../res/icons/ic_favorite_filled.svg" alt="좋아요 누른 아이콘">
+                    </button>
+                    <a href="#">
+                        <img class="region-img" src="../res/images/theme-history.jpg" alt="지역별 사진">
+                        <div class="region-info">
+                            <span class="region-meta">국내</span>
+                            <p class="region-name">대전</p>
+                            <p class="region-rating">4.8/5 · 리뷰 157,136개</p>
+                        </div>
+                    </a>
+                </article>
+                <article class="region-card">
+                    <button class="heart-btn">
+                        <img class="favorite" src="../res/icons/ic_favorite.svg" alt="좋아요 아이콘">
+                        <img class="favorite-filled" src="../res/icons/ic_favorite_filled.svg" alt="좋아요 누른 아이콘">
+                    </button>
+                    <a href="#">
+                        <img class="region-img" src="../res/images/theme-history.jpg" alt="지역별 사진">
+                        <div class="region-info">
+                            <span class="region-meta">일본</span>
+                            <p class="region-name">교토</p>
+                            <p class="region-rating">4.6/5 · 리뷰 125,300개</p>
+                        </div>
+                    </a>
+                </article>
+                <article class="region-card">
+                    <button class="heart-btn">
+                        <img class="favorite" src="../res/icons/ic_favorite.svg" alt="좋아요 아이콘">
+                        <img class="favorite-filled" src="../res/icons/ic_favorite_filled.svg" alt="좋아요 누른 아이콘">
+                    </button>
+                    <a href="#">
+                        <img class="region-img" src="../res/images/theme-history.jpg" alt="지역별 사진">
+                        <div class="region-info">
+                            <span class="region-meta">중국</span>
+                            <p class="region-name">상하이</p>
+                            <p class="region-rating">3.4/5 · 리뷰 221,200개</p>
+                        </div>
+                    </a>
+                </article>
+                <article class="region-card">
+                    <button class="heart-btn">
+                        <img class="favorite" src="../res/icons/ic_favorite.svg" alt="좋아요 아이콘">
+                        <img class="favorite-filled" src="../res/icons/ic_favorite_filled.svg" alt="좋아요 누른 아이콘">
+                    </button>
+                    <a href="#">
+                        <img class="region-img" src="../res/images/theme-history.jpg" alt="지역별 사진">
+                        <div class="region-info">
+                            <span class="region-meta">유럽</span>
+                            <p class="region-name">스위스</p>
+                            <p class="region-rating">4.9/5 · 리뷰 92,104개</p>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </section>
+        <!-- 인기있는 여행 테마 TOP 5 -->
+        <section class="theme-section">
+            <h2 class="section-title">지금 인기있는 여행 테마 TOP 5</h2>
+            <div class="theme-card-list">
+                <article class="theme-card">
+                    <div class="card-img-wrapper">
+                        <img class="vis-icon" src="../res/icons/ic_visibility.svg" alt="조회 수 아이콘">
+                        <p class="card-badge">1.5K</p>
+                    </div>
+                    <img class="card-img" src="../res/images/theme-nature.jpg" alt="자연 테마 사진">
+                    <div class="card-info">
+                        <span class="card-title" id="nature">자연 여행</span>
+                        <p class="card-desc">아름다운 풍경 속에서 즐기는 여유로운 여행</p>
+                        <a href="../html/detail.html" class="card-btn">테마관 가기</a>
+                    </div>
+                </article>
+                <article class="theme-card">
+                    <div class="card-img-wrapper">
+                        <img class="vis-icon" src="../res/icons/ic_visibility.svg" alt="조회 수 아이콘">
+                        <p class="card-badge">1.2K</p>
+                    </div>
+                    <img class="card-img" src="../res/images/theme-history.jpg" alt="역사 테마 사진">
+                    <div class="card-info">
+                        <span class="card-title" id="history">역사 여행</span>
+                        <p class="card-desc">오래된 도시에서 발견하는 특별한 이야기</p>
+                        <a href="../html/detail.html" class="card-btn">테마관 가기</a>
+                    </div>
+                </article>
+                <article class="theme-card">
+                    <div class="card-img-wrapper">
+                        <img class="vis-icon" src="../res/icons/ic_visibility.svg" alt="조회 수 아이콘">
+                        <p class="card-badge">2.8K</p>
+                    </div>
+                    <img class="card-img" src="../res/images/theme-food.jpg" alt="먹방 테마 사진">
+                    <div class="card-info">
+                        <span class="card-title" id="food">먹방 여행</span>
+                        <p class="card-desc">맛있는 음식으로 기억되는 특별한 여행</p>
+                        <a href="../html/detail.html" class="card-btn">테마관 가기</a>
+                    </div>
+                </article>
+                <article class="theme-card">
+                    <div class="card-img-wrapper">
+                        <img class="vis-icon" src="../res/icons/ic_visibility.svg" alt="조회 수 아이콘">
+                        <p class="card-badge">2.4K</p>
+                    </div>
+                    <img class="card-img" src="../res/images/theme-activity.jpg" alt="액티비티 테마 사진">
+                    <div class="card-info">
+                        <span class="card-title" id="activity">액티비티 여행</span>
+                        <p class="card-desc">다양한 체험과 활동을 즐길 수 있는 여행</p>
+                        <a href="../html/detail.html" class="card-btn">테마관 가기</a>
+                    </div>
+                </article>
+                <article class="theme-card">
+                    <div class="card-img-wrapper">
+                        <img class="vis-icon" src="../res/icons/ic_visibility.svg" alt="조회 수 아이콘">
+                        <p class="card-badge">3.1K</p>
+                    </div>
+                    <img class="card-img" src="../res/images/theme-resort.jpg" alt="휴양 테마 사진">
+                    <div class="card-info">
+                        <span class="card-title" id="resort">휴양 여행</span>
+                        <p class="card-desc">아름다운 풍경 속에서 편안하게 쉬어가는 여행</p>
+                        <a href="../html/detail.html" class="card-btn">테마관 가기</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <!-- 인기있는 숙소 추천 -->
+        <section class="stay-section">
+            <h2 class="section-title">제주의 인기 숙소</h2>
+            <div class="stay-card-list">
+                <article class="stay-card">
+                    <button class="heart-btn">
+                        <img class="favorite" src="../res/icons/ic_favorite.svg" alt="좋아요 아이콘">
+                        <img class="favorite-filled" src="../res/icons/ic_favorite_filled.svg" alt="좋아요 누른 아이콘">
+                    </button>
+                    <a href="#">
+                        <img class="stay-img" src="../res/images/stay.jpg" alt="숙소 사진">
+                        <div class="stay-info">
+                            <p class="stay-name">제주의 펜션</p>
+                            <p class="stay-price">총액 ₩600,000</p>
+                            <p class="stay-rating">★ 4.5</p>
+                        </div>
+                    </a>
+                </article>
+                <article class="stay-card">
+                    <button class="heart-btn">
+                        <img class="favorite" src="../res/icons/ic_favorite.svg" alt="좋아요 아이콘">
+                        <img class="favorite-filled" src="../res/icons/ic_favorite_filled.svg" alt="좋아요 누른 아이콘">
+                    </button>
+                    <a href="#">
+                        <img class="stay-img" src="../res/images/stay.jpg" alt="숙소 사진">
+                        <div class="stay-info">
+                            <p class="stay-name">제주의 집</p>
+                            <p class="stay-price">총액 ₩575,000</p>
+                            <p class="stay-rating">★ 4.8</p>
+                        </div>
+                    </a>
+                </article>
+                <article class="stay-card">
+                    <button class="heart-btn">
+                        <img class="favorite" src="../res/icons/ic_favorite.svg" alt="좋아요 아이콘">
+                        <img class="favorite-filled" src="../res/icons/ic_favorite_filled.svg" alt="좋아요 누른 아이콘">
+                    </button>
+                    <a href="#">
+                        <img class="stay-img" src="../res/images/stay.jpg" alt="숙소 사진">
+                        <div class="stay-info">
+                            <p class="stay-name">서귀포시의 펜션</p>
+                            <p class="stay-price">총액 ₩480,000</p>
+                            <p class="stay-rating">★ 4.9</p>
+                        </div>
+                    </a>
+                </article>
+                <article class="stay-card">
+                    <button class="heart-btn">
+                        <img class="favorite" src="../res/icons/ic_favorite.svg" alt="좋아요 아이콘">
+                        <img class="favorite-filled" src="../res/icons/ic_favorite_filled.svg" alt="좋아요 누른 아이콘">
+                    </button>
+                    <a href="#">
+                        <img class="stay-img" src="../res/images/stay.jpg" alt="숙소 사진">
+                        <div class="stay-info">
+                            <p class="stay-name">제주의 집</p>
+                            <p class="stay-price">총액 ₩765,000</p>
+                            <p class="stay-rating">★ 5.0</p>
+                        </div>
+                    </a>
+                </article>
+                <article class="stay-card">
+                    <button class="heart-btn">
+                        <img class="favorite" src="../res/icons/ic_favorite.svg" alt="좋아요 아이콘">
+                        <img class="favorite-filled" src="../res/icons/ic_favorite_filled.svg" alt="좋아요 누른 아이콘">
+                    </button>
+                    <a href="#">
+                        <img class="stay-img" src="../res/images/stay.jpg" alt="숙소 사진">
+                        <div class="stay-info">
+                            <p class="stay-name">남원의 펜션</p>
+                            <p class="stay-price">총액 ₩427,500</p>
+                            <p class="stay-rating">★ 4.5</p>
+                        </div>
+                    </a>
+                </article>
+                <article class="stay-card">
+                    <button class="heart-btn">
+                        <img class="favorite" src="../res/icons/ic_favorite.svg" alt="좋아요 아이콘">
+                        <img class="favorite-filled" src="../res/icons/ic_favorite_filled.svg" alt="좋아요 누른 아이콘">
+                    </button>
+                    <a href="#">
+                        <img class="stay-img" src="../res/images/stay.jpg" alt="숙소 사진">
+                        <div class="stay-info">
+                            <p class="stay-name">제주의 방</p>
+                            <p class="stay-price">총액 ₩176,000</p>
+                            <p class="stay-rating">★ 4.2</p>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </section>
+    </main>
+    <!-- footer -->
+    <footer>
+        <div class="footer-up">
+            <div class="footer-support">
+                <h3>고객지원실 운영안내</h3>
+                <p>채팅상담 연중무휴 24시간</p>
+                <p>유선상담 연중무휴 09:00-18:00</p>
+                <p>유선상담 1670-8208</p>
+                <button>고객지원실</button>
+            </div>
+            <div class="footer-item">
+                <h4>소개</h4>
+                <ul class="footer-list">
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">채용</a></li>
+                    <li><a href="#">공고</a></li>
+                </ul>
+            </div>
+            <div class="footer-item">
+                <h4>파트너</h4>
+                <ul class="footer-list">
+                    <li><a href="#">파트너 홈</a></li>
+                    <li><a href="#">제휴 문의</a></li>
+                    <li><a href="#">광고 문의</a></li>
+                </ul>
+            </div>
+            <div class="footer-item">
+                <h4>지원</h4>
+                <ul class="footer-list">
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">문의내역</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-down">
+            <ul class="footer-legal">
+                <li><a href="#">이용 약관</a></li>
+                <li><a href="#">개인정보 처리방침</a></li>
+                <li><a href="#">취소 및 환불 정책</a></li>
+                <li><a href="#">개발자 센터</a></li>
+            </ul>
+            <form class="language" method="get" action="#">
+                <select name="language" id="language" size="1">
+                    <option value="korean">한국어</option>
+                    <option value="english">영어</option>
+                </select>
+            </form>
+        </div>
+    </footer>
+</body>
