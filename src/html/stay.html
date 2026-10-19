@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="김예지">
+    <meta name="description" content="My Virtual Trip 숙박 페이지">
+    <title>숙박 | My Virtual Trip</title>
+    <link href="https://fonts.googleapis.com/css2?family=Asta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/stay.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navigation">
+            <a href="main.html" class="logo-link">
+                <img src="../res/images/logo.png" id="logo" alt="MyVirtualTrip 로고">
+            </a>
+            <div class="nav-right">
+                <div class="category-nav">
+                    <a class="cat-item" href="../html/region.html">
+                        <span>🗺️ 지역별</span>
+                    </a>
+                    <a class="cat-item" href="../html/theme.html">
+                        <span>🎞️ 테마별</span>
+                    </a>
+                    <a class="cat-item cat-item-active" href="../html/stay.html">
+                        <span>🏩 숙박</span>
+                    </a>
+                    <a class="cat-item" href="../html/flight.html">
+                        <span>✈️ 항공</span>
+                    </a>
+                    <a class="cat-item" href="../html/plan.html">
+                        <span>✍🏻 여행 계획</span>
+                    </a>
+                    <a class="cat-item" href="../html/diary.html">
+                        <span>🗂️ 여행 기록</span>
+                    </a>
+                </div>
+                <form class="search" action="#" method="get">
+                    <input type="search" name="all-search" placeholder="여행지, 명소, 숙소 등">
+                    <button type="submit">
+                        <img src="../res/icons/ic_search.svg" alt="검색 아이콘">
+                    </button>
+                </form>
+                <button type="button" class="logout">로그아웃</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="stay-banner">
+            <img src="../res/images/stay-banner.jpg" alt="숲속 오두막 숙소">
+
+            <div class="banner-text">
+                <h1>여행의 하루를 완성할 숙소</h1>
+                <p>나에게 맞는 편안한 머무름을 찾아보세요.</p>
+            </div>
+        </section>
+
+        <form class="stay-search">
+            <div class="search-field">
+                <label for="region">지역</label>
+                <select id="region" name="region">
+                    <option value="">전체</option>
+                    <option value="seoul">대한민국</option>
+                    <option value="macau">마카오</option>
+                    <option value="france">프랑스</option>
+                </select>
+            </div>
+
+            <div class="search-field">
+                <label for="checkin">체크인</label>
+                <input type="date" id="checkin" name="checkin">
+            </div>
+
+            <div class="search-field">
+                <label for="checkout">체크아웃</label>
+                <input type="date" id="checkout" name="checkout">
+            </div>
+
+            <div class="search-field">
+                <label for="guests">인원</label>
+                <select id="guests" name="guests">
+                    <option value="1">1명</option>
+                    <option value="2">2명</option>
+                    <option value="3">3명</option>
+                    <option value="4">4명</option>
+                    <option value="5">5명 이상</option>
+                </select>
+            </div>
+
+            <button type="button" class="search-button">검색</button>
+        </form>
+
+        <div class="stay-layout">
+            <aside class="stay-filter">
+                <h2>필터</h2>
+
+                <fieldset>
+                    <legend>숙소 유형</legend>
+
+                    <label>
+                        <input type="checkbox" name="type" value="hotel">
+                        호텔
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="type" value="guesthouse">
+                        게스트하우스
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="type" value="resort">
+                        리조트
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="type" value="pension">
+                        펜션
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>가격 / 1박</legend>
+
+                    <label>
+                        <input type="checkbox" name="price" value="under-100000">
+                        10만원 미만
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="price" value="100000to200000">
+                        10만원 ~ 20만원
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="price" value="over200000">
+                        20만원 이상
+                    </label>
+                </fieldset>
+            </aside>
+
+            <section class="stay-recommendation">
+                <div class="recommendation-header">
+                    <h2>추천 숙소</h2>
+
+                    <div class="sort-box">
+                        <label for="sort">정렬</label>
+                        <select id="sort" name="sort">
+                            <option value="recommended">추천순</option>
+                            <option value="price-low">낮은 가격순</option>
+                            <option value="rating-high">높은 평점순</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="stay-list">
+                    <article class="stay-card">
+                        <div class="stay-image">
+                            <img class="stay" src="../res/images/stay.jpg" alt="숙소 객실">
+
+                            <button type="button" class="favorite-button">
+                                <img src="../res/icons/ic_favorite.svg" alt="제주 바람 스테이 찜하기">
+                            </button>
+                        </div>
+
+                        <div class="stay-info">
+                            <p class="stay-location">대한민국 - 제주</p>
+                            <h3>제주 바람 스테이</h3>
+
+                            <p class="stay-rating">
+                                <img src="../res/icons/ic_star.svg" alt="평점">
+                            </p>
+
+                            <p class="stay-features">오션뷰 - 무료 주차</p>
+                            <p class="stay-capacity">2인 기준 - 최대 4인</p>
+
+                            <p class="stay-price">
+                                <strong>85,000원</strong>
+                                <span>/ 1박</span>
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="stay-card">
+                        <div class="stay-image">
+                            <img class="stay" src="../res/images/stay.jpg" alt="숙소 객실">
+
+                            <button type="button" class="favorite-button">
+                                <img src="../res/icons/ic_favorite.svg" alt="그랜드 하얏트 찜하기">
+                            </button>
+                        </div>
+
+                        <div class="stay-info">
+                            <p class="stay-location">대한민국 - 서울</p>
+                            <h3>그랜드 하얏트</h3>
+
+                            <p class="stay-rating">
+                                <img src="../res/icons/ic_star.svg" alt="평점">
+                            </p>
+
+                            <p class="stay-features">시티뷰 - 무료 주차</p>
+                            <p class="stay-capacity">4인 기준 - 최대 8인</p>
+
+                            <p class="stay-price">
+                                <strong>440,000원</strong>
+                                <span>/ 1박</span>
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="stay-card">
+                        <div class="stay-image">
+                            <img class="stay" src="../res/images/stay.jpg" alt="숙소 객실">
+
+                            <button type="button" class="favorite-button">
+                                <img src="../res/icons/ic_favorite.svg" alt="신라 스테이 찜하기">
+                            </button>
+                        </div>
+
+                        <div class="stay-info">
+                            <p class="stay-location">대한민국 - 부산</p>
+                            <h3>신라 스테이</h3>
+
+                            <p class="stay-rating">
+                                <img src="../res/icons/ic_star.svg" alt="평점">
+                            </p>
+
+                            <p class="stay-features">오션뷰 - 무료 주차</p>
+                            <p class="stay-capacity">2인 기준 - 최대 4인</p>
+
+                            <p class="stay-price">
+                                <strong>200,000원</strong>
+                                <span>/ 1박</span>
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="stay-card">
+                        <div class="stay-image">
+                            <img class="stay" src="../res/images/stay.jpg" alt="숙소 객실">
+
+                            <button type="button" class="favorite-button">
+                                <img src="../res/icons/ic_favorite.svg" alt="웨스턴 조선 찜하기">
+                            </button>
+                        </div>
+
+                        <div class="stay-info">
+                            <p class="stay-location">대한민국 - 서울</p>
+                            <h3>웨스턴 조선</h3>
+
+                            <p class="stay-rating">
+                                <img src="../res/icons/ic_star.svg" alt="평점">
+                            </p>
+
+                            <p class="stay-features">시티뷰 - 무료 주차</p>
+                            <p class="stay-capacity">2인 기준 - 최대 4인</p>
+
+                            <p class="stay-price">
+                                <strong>500,000원</strong>
+                                <span>/ 1박</span>
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="stay-card">
+                        <div class="stay-image">
+                            <img class="stay" src="../res/images/stay.jpg" alt="숙소 객실">
+
+                            <button type="button" class="favorite-button">
+                                <img src="../res/icons/ic_favorite.svg" alt="그랜드 임페리얼 호텔 찜하기">
+                            </button>
+                        </div>
+
+                        <div class="stay-info">
+                            <p class="stay-location">마카오</p>
+                            <h3>그랜드 임페리얼 호텔</h3>
+
+                            <p class="stay-rating">
+                                <img src="../res/icons/ic_star.svg" alt="평점">
+                            </p>
+
+                            <p class="stay-features">바다 전망 - 무료 주차</p>
+                            <p class="stay-capacity">2인 기준 - 최대 4인</p>
+
+                            <p class="stay-price">
+                                <strong>150,000원</strong>
+                                <span>/ 1박</span>
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="stay-card">
+                        <div class="stay-image">
+                            <img class="stay" src="../res/images/stay.jpg" alt="숙소 객실">
+
+                            <button type="button" class="favorite-button">
+                                <img src="../res/icons/ic_favorite.svg" alt="호텔 리츠 파리 찜하기">
+                            </button>
+                        </div>
+
+                        <div class="stay-info">
+                            <p class="stay-location">프랑스 - 파리</p>
+                            <h3>호텔 리츠 파리</h3>
+
+                            <p class="stay-rating">
+                                <img src="../res/icons/ic_star.svg" alt="평점">
+                            </p>
+
+                            <p class="stay-features">바다 전망 - 무료 주차</p>
+                            <p class="stay-capacity">2인 기준 - 최대 4인</p>
+
+                            <p class="stay-price">
+                                <strong>4,000,000원</strong>
+                                <span>/ 1박</span>
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-up">
+            <div class="footer-support">
+                <h3>고객지원실 운영안내</h3>
+                <p>채팅상담 연중무휴 24시간</p>
+                <p>유선상담 연중무휴 09:00-18:00</p>
+                <p>유선상담 1670-8208</p>
+                <button>고객지원실</button>
+            </div>
+            <div class="footer-item">
+                <h4>소개</h4>
+                <ul class="footer-list">
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">채용</a></li>
+                    <li><a href="#">공고</a></li>
+                </ul>
+            </div>
+            <div class="footer-item">
+                <h4>파트너</h4>
+                <ul class="footer-list">
+                    <li><a href="#">파트너 홈</a></li>
+                    <li><a href="#">제휴 문의</a></li>
+                    <li><a href="#">광고 문의</a></li>
+                </ul>
+            </div>
+            <div class="footer-item">
+                <h4>지원</h4>
+                <ul class="footer-list">
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">문의내역</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-down">
+            <ul class="footer-legal">
+                <li><a href="#">이용 약관</a></li>
+                <li><a href="#">개인정보 처리방침</a></li>
+                <li><a href="#">취소 및 환불 정책</a></li>
+                <li><a href="#">개발자 센터</a></li>
+            </ul>
+            <form class="language" method="get" action="#">
+                <select name="language" id="language" size="1">
+                    <option value="korean">한국어</option>
+                    <option value="english">영어</option>
+                </select>
+            </form>
+        </div>
+    </footer>
+</body>
+
+</html>
