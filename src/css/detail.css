@@ -173,6 +173,10 @@
     margin-bottom: 0;
 }
 
+.restaurants .more-wrap {
+    margin-top: 35px;
+}
+
 .restaurant-item {
     display: flex;
     width: 46%;
