@@ -17,7 +17,7 @@ a {
 .memory-banner {
     position: relative;
     overflow: hidden;
-    padding: 54px 0 34px;
+    padding: 44px 0 28px;
     background-color: #d7dcd9;
     border-radius: 15px;
 }
@@ -55,7 +55,7 @@ a {
 .banner-side {
     position: relative;
     width: 31.5%;
-    height: 312px;
+    height: 280px;
     border-radius: 40px;
     overflow: hidden;
 }
@@ -75,7 +75,7 @@ a {
     display: flex;
     align-items: flex-end;
     width: 31.5%;
-    min-height: 390px;
+    min-height: 350px;
     border-radius: 40px;
     overflow: hidden;
     background-color: #b1bfb6;
