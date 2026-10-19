@@ -1,44 +1,10 @@
-/* 1~6주차 범위: HTML5, 박스 모델, 위치 지정, Flexbox */
-* {
-    box-sizing: border-box;
-}
-body {
-    margin: 0;
-    padding-top: 60px;
-    font-family: "Asta Sans", sans-serif;
-    color: #252525;
-    background-color: #ffffff;
-    word-break: keep-all;
-}
-h1, h2, h3, p {
-    margin: 0;
-}
-
-/* 모든 사진은 영역을 채우고, 로딩 실패 시 대체 설명을 표시합니다. */
-img {
-    display: block;
-    object-fit: cover;
-    background-color: #f0f0ee;
-    color: #777777;
-    font-size: 13px;
-}
-.ui-icon {
-    background-color: transparent;
-    object-fit: contain;
-}
-.page-width {
-    width: 88%;
-    max-width: 846px;
-    margin: 0 auto;
-}
-
-/* 상단 배너: 사진 위에 소개 문구 배치 */
 .hero {
     position: relative;
     min-height: 350px;
     display: flex;
     align-items: flex-end;
 }
+
 .hero-image {
     position: absolute;
     top: 0;
@@ -48,40 +14,45 @@ img {
     background-color: #687b75;
     color: #ffffff;
 }
+
 .hero-copy {
     position: relative;
     width: 90%;
     margin: 140px 5% 32px;
     color: #ffffff;
 }
+
 .country {
     display: flex;
     align-items: center;
     font-size: 20px;
     margin-bottom: 4px;
 }
+
 .country-pin {
     min-width: 18px;
     margin-right: 10px;
 }
+
 .hero-copy h1 {
     font-size: 80px;
     font-weight: normal;
     line-height: 1.1;
     margin-bottom: 12px;
 }
-.hero-copy > p:last-child {
+
+.hero-summary {
     font-size: 20px;
     line-height: 1.3;
 }
 
-/* About: 왼쪽 소개 및 작은 사진 2개, 오른쪽 큰 사진 */
 .about {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 135px;
 }
+
 .about-left {
     width: 50.5%;
     min-width: 240px;
@@ -89,42 +60,29 @@ img {
     display: flex;
     flex-direction: column;
 }
-.section-header {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 26px;
-}
-.section-header h2 {
-    margin-bottom: 4px;
-    font-size: 30px;
-    line-height: 1.3;
-    font-weight: normal;
-    color: #378476;
-}
-.section-header p {
-    color: #949494;
-    font-size: 16px;
-    line-height: 1.5;
-}
+
 .about .section-header {
     padding-top: 4px;
     margin-bottom: 22px;
 }
+
 .about-description {
     font-size: 18px;
     line-height: 1.3;
     margin-bottom: 40px;
 }
+
 .about-small-photos {
     display: flex;
     justify-content: space-between;
     margin-top: auto;
 }
+
 .about-small-photos img {
     width: 48%;
     height: 207px;
 }
-/* 오른쪽 사진 박스를 왼쪽 열 높이만큼 늘려 세 이미지의 하단을 맞춥니다. */
+
 .about-large-photo {
     position: relative;
     width: 47%;
@@ -133,6 +91,7 @@ img {
     flex-grow: 1;
     margin-left: 2.5%;
 }
+
 .about-large-photo img {
     position: absolute;
     top: 0;
@@ -141,16 +100,16 @@ img {
     height: 100%;
 }
 
-/* 명소 카드: Flexbox 줄 바꿈으로 4열 구성, 텍스트 높이는 자동 */
-/* 각 섹션의 끝에서 다음 섹션 제목까지 같은 간격을 둡니다. */
 .places, .restaurants {
     margin-top: 120px;
 }
-.places-list {
+
+.places-list, .restaurant-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
 .place-card {
     display: flex;
     flex-direction: column;
@@ -160,37 +119,43 @@ img {
     border: 1px solid #ededed;
     border-radius: 10px;
 }
+
 .place-card img {
     width: 100%;
     height: 176px;
     border-radius: 9px 9px 0 0;
 }
+
 .place-description {
     display: flex;
     flex-direction: column;
     padding: 16px 12px 12px;
 }
+
 .place-description h3 {
     font-size: 17px;
     line-height: 1.4;
     margin-bottom: 6px;
 }
+
 .place-description p {
     font-size: 13px;
     line-height: 1.35;
-    color: #949494;
+    color: #777777;
 }
+
 .more-wrap {
     display: flex;
     justify-content: center;
     margin-top: 3px;
 }
+
 .more-button {
     padding: 8px 12px;
     border: 1px solid #ededed;
     border-radius: 24px;
     background-color: #ffffff;
-    color: #454545;
+    color: #252525;
     font-size: 14px;
     line-height: 1.4;
     position: relative;
@@ -200,25 +165,21 @@ img {
     text-decoration: none;
 }
 
-/* 맛집 카드: 바깥쪽 2열, 카드 안쪽 텍스트와 사진도 Flexbox */
 .restaurants {
-    padding-bottom: 140px;
+    padding-bottom: 190px;
 }
+
 .restaurants .section-header {
-    margin-bottom: 40px;
+    margin-bottom: 0;
 }
-.restaurant-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-/* 두 카드의 너비는 동일하게, 남은 공간은 가운데 배치하여 바깥 끝선을 유지합니다. */
+
 .restaurant-item {
     display: flex;
     width: 46%;
     min-width: 240px;
-    margin-bottom: 50px;
+    margin-top: 50px;
 }
+
 .restaurant-text {
     display: flex;
     flex-direction: column;
@@ -227,16 +188,19 @@ img {
     width: 0;
     margin-right: 16px;
 }
+
 .restaurant-text h3 {
     font-size: 17px;
     line-height: 1.5;
 }
+
 .restaurant-text p {
-    color: #949494;
+    color: #777777;
     font-size: 13px;
     line-height: 1.5;
 }
-.restaurant-link > img {
+
+.restaurant-photo {
     width: 94px;
     min-width: 94px;
     height: 94px;
@@ -244,22 +208,21 @@ img {
     font-size: 10px;
 }
 
-/* 맛집 카드의 모든 텍스트만 한 줄 말줄임 처리 */
 .restaurant-text h3, .restaurant-text p {
-    width: 100%;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
 }
+
 .restaurant-text .rating {
     display: flex;
     align-items: center;
     margin-top: 12px;
     height: 16px;
-    font-size: 13px;
     line-height: 16px;
 }
-.rating > span:first-child {
+
+.rating-value {
     position: relative;
     top: 1px;
     display: flex;
@@ -267,7 +230,6 @@ img {
     height: 16px;
 }
 
-/* 회색 별 위에 노란 별을 겹치고 너비만큼 보여줍니다. */
 .stars {
     display: block;
     position: relative;
@@ -276,12 +238,14 @@ img {
     height: 14px;
     margin-left: 3px;
 }
+
 .star-row {
     display: flex;
     align-items: center;
     width: 70px;
     height: 14px;
 }
+
 .restaurant-text .rating-star {
     width: 14px;
     min-width: 14px;
@@ -289,6 +253,7 @@ img {
     background-color: transparent;
     object-fit: contain;
 }
+
 .star-filled {
     position: absolute;
     top: 0;
@@ -297,24 +262,26 @@ img {
     overflow: hidden;
 }
 
-/* 채움 비율 = 평점 / 5 × 100. 평점 변경 시 해당 클래스도 바꿉니다. */
 .fill-98 {
     width: 98%;
 }
+
 .fill-90 {
     width: 90%;
 }
+
 .fill-100 {
     width: 100%;
 }
+
 .fill-84 {
     width: 84%;
 }
+
 .fill-92 {
     width: 92%;
 }
 
-/* 카드 전체를 링크로 묶고 기존 Flexbox 배치를 유지합니다. */
 .card-link {
     position: relative;
     display: flex;
@@ -324,23 +291,26 @@ img {
     text-decoration: none;
     border-radius: 9px;
 }
+
 .place-link {
     flex-direction: column;
     flex-grow: 1;
 }
+
 .restaurant-link {
     align-items: center;
     justify-content: space-between;
 }
 
-/* hover: 텍스트 밑줄, focus: 키보드로 선택할 때도 같은 표시 */
-.card-link:hover h3, .card-link:hover p,
-.card-link:focus h3, .card-link:focus p,
-.more-button:hover .more-text, .more-button:focus .more-text {
+.card-link:hover h3,
+.card-link:hover p,
+.card-link:focus h3,
+.card-link:focus p,
+.more-button:hover .more-text,
+.more-button:focus .more-text {
     text-decoration: underline;
 }
 
-/* active: 누르는 동안 검은색 반투명 상자를 겹쳐 살짝 어둡게 표시 */
 .press-shade {
     display: none;
     position: absolute;
@@ -353,15 +323,16 @@ img {
     border-radius: 9px;
     z-index: 1;
 }
+
 .card-link:active .press-shade, .more-button:active .press-shade {
     display: block;
 }
 
-/* 더보기 글자와 아이콘을 세로 중앙에 맞춥니다. */
 .more-icon {
     min-width: 14px;
     margin-left: 6px;
 }
+
 .more-button .press-shade {
     border-radius: 24px;
 }
