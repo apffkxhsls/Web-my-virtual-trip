@@ -134,7 +134,7 @@ footer {
 }
 
 .footer-support {
-    margin-right: 600px;
+    margin-right: auto;
 }
 
 .footer-support h3 {
@@ -378,9 +378,10 @@ footer {
     border-radius: 12px;
 }
 
-.city-card a{
-    color: black;
+.city-card a {
+    display: block;
     text-decoration: none;
+    color: inherit;
 }
 
 .city-card:hover {
