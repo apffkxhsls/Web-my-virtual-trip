@@ -15,7 +15,7 @@
     <!-- 로고 및 네비게이션 바 -->
     <header>
         <nav class="navigation">
-            <a href="main.html">
+            <a href="main.html" class="logo-link">
                 <img src="../res/images/logo.png" id="logo" alt="MyVirtualTrip 로고">
             </a>
             <div class="nav-right">
@@ -39,6 +39,13 @@
                         <span>🗂️ 여행 기록</span>
                     </a>
                 </div>
+                <form class="search" action="#" method="get">
+                    <input type="search" name="all-search" placeholder="여행지, 명소, 숙소 등">
+                    <button type="submit">
+                        <img src="../res/icons/ic_search.svg" alt="검색 아이콘">
+                    </button>
+                </form>
+                <button type="button" class="logout">로그아웃</button>
             </div>
         </nav>
     </header>

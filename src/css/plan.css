@@ -35,6 +35,10 @@ header {
     margin: auto 0;
 }
 
+.logo-link {
+    padding-top: 8px;
+}
+
 .nav-right {
     display: flex;
     align-items: stretch;
