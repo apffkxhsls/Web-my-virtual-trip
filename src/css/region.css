@@ -81,8 +81,8 @@ header {
 
 .search img {
     width: 15px;
-    cursor: pointer
-        /* 이미지에 커서를 올렸을 때 손가락 모양으로 변경 */
+    cursor: pointer;
+    /* 이미지에 커서를 올렸을 때 손가락 모양으로 변경 */
 }
 
 .search input {
@@ -478,13 +478,13 @@ footer {
 #hotelcard {
     background-image: url(../res/images/stay.jpg);
     background-size: cover;
-    background-position: center 70%
+    background-position: center 70%;
 }
 
 #aircard {
     background-image: url(../res/images/flight.jpg);
     background-size: cover;
-    background-position: center 40%
+    background-position: center 40%;
 }
 
 .shortcut-desc,

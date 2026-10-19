@@ -382,8 +382,11 @@ header {
     width: 0;
     flex-grow: 1;
     position: relative;
-    text-decoration: none;
+}
+
+.stay-card a {
     color: black;
+    text-decoration: none;
 }
 
 .stay-img {
