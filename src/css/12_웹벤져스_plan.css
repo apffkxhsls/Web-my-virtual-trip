@@ -12,7 +12,7 @@ select {
     font-size: 16px;
 }
 
-body > header {
+body>header {
     position: sticky;
     top: 0;
     z-index: 100;
@@ -334,12 +334,6 @@ main {
     font-weight: bold;
 }
 
-.add-schedule-button img {
-    width: 18px;
-    height: 18px;
-    margin-right: 8px;
-}
-
 .add-schedule-button:hover {
     background-color: #9ACEB7;
     border: 1px dashed #69A998;
@@ -401,12 +395,6 @@ main {
     color: #337768;
     font-size: 14px;
     font-weight: bold;
-}
-
-.add-day-button img {
-    width: 18px;
-    height: 18px;
-    margin-right: 8px;
 }
 
 .add-day-button:hover {
