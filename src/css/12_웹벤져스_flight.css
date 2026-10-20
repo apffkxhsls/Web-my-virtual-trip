@@ -166,8 +166,8 @@ main {
 
 .search-field {
     flex-grow: 1;
-    width: 160px;
-    min-width: 160px;
+    width: 140px;
+    min-width: 140px;
     margin-right: 20px;
     margin-bottom: 16px;
 }
