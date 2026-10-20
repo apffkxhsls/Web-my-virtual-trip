@@ -322,13 +322,12 @@ main {
     top: 12px;
     right: 12px;
 
-    width: 36px;
-    height: 36px;
-    padding: 6px;
-    border: 1px solid #EEEEEF;
-    border-radius: 50%;
-    box-sizing: border-box;
-    background-color: white;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
 }
 
 .favorite-button img {
@@ -337,8 +336,16 @@ main {
     height: 100%;
 }
 
-.favorite-button:hover {
-    border-color: #e96c8b;
+.favorite-button .favorite-filled {
+    display: none;
+}
+
+.favorite-button:hover .favorite {
+    display: none;
+}
+
+.favorite-button:hover .favorite-filled {
+    display: block;
 }
 
 .stay-info {
