@@ -37,7 +37,14 @@ function displayStays(data) {
             '</div>' +
 
             '<div class="stay-info">' +
+            '<div class="stay-info-top">' +
             '<p class="stay-location">' + stay.location + '</p>' +
+            '<p class="stay-rating">' +
+            '<img src="../res/icons/12_ic_star.svg" alt="평점">' +
+            '<span>' + stay.rating + '</span>' +
+            '</p>' +
+            '</div>' +
+
             '<h3>' + stay.name + '</h3>' +
             '<p class="stay-features">' + stay.features + '</p>' +
             '<p class="stay-capacity">' +
