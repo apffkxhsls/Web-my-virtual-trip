@@ -311,6 +311,14 @@ main {
     box-sizing: border-box;
     margin-right: 1%;
     overflow: hidden;
+    position: relative;
+}
+
+.stay-detail-link {
+    display: block;
+    height: 100%;
+    color: black;
+    text-decoration: none;
 }
 
 .stay-image {
@@ -524,4 +532,9 @@ footer {
 
 .favorite-button.is-favorite .favorite-filled {
     display: block;
+}
+
+.stay-detail-link {
+    color: black;
+    text-decoration: none;
 }

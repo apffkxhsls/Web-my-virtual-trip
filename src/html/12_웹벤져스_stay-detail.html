@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="김예지">
+    <meta name="description" content="My Virtual Trip 숙소 상세 정보">
+    <title>숙소 상세 | My Virtual Trip</title>
+    <link href="https://fonts.googleapis.com/css2?family=Asta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/12_웹벤져스_stay-detail.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navigation">
+            <a href="12_웹벤져스_main.html" class="logo-link">
+                <img src="../res/images/12_logo.png" id="logo" alt="MyVirtualTrip 로고">
+            </a>
+            <div class="nav-right">
+                <div class="category-nav">
+                    <a class="cat-item" href="../html/12_웹벤져스_region.html">
+                        <span>🗺️ 지역별</span>
+                    </a>
+                    <a class="cat-item" href="../html/12_웹벤져스_theme.html">
+                        <span>🎞️ 테마별</span>
+                    </a>
+                    <a class="cat-item cat-item-active" href="../html/12_웹벤져스_stay.html">
+                        <span>🏩 숙박</span>
+                    </a>
+                    <a class="cat-item" href="../html/12_웹벤져스_flight.html">
+                        <span>✈️ 항공</span>
+                    </a>
+                    <a class="cat-item" href="../html/12_웹벤져스_plan.html">
+                        <span>✍🏻 여행 계획</span>
+                    </a>
+                    <a class="cat-item" href="../html/12_웹벤져스_diary.html">
+                        <span>🗂️ 여행 기록</span>
+                    </a>
+                </div>
+                <form class="search" action="#" method="get">
+                    <input type="search" name="all-search" placeholder="여행지, 명소, 숙소 등">
+                    <button type="submit">
+                        <img src="../res/icons/12_ic_search.svg" alt="검색 아이콘">
+                    </button>
+                </form>
+                <button type="button" class="logout">로그아웃</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <a href="12_웹벤져스_stay.html">숙소 목록으로 돌아가기</a>
+
+        <div class="stay-detail">
+        </div>
+
+        <article class="stay-card">
+            <a class="stay-detail-link" id="stay-1" href="12_웹벤져스_stay-detail.html">
+            </a>
+
+            <button type="button" class="favorite-button" value="1">
+                <!-- 하트 이미지 2개 -->
+            </button>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-up">
+            <div class="footer-support">
+                <h3>고객지원실 운영안내</h3>
+                <p>채팅상담 연중무휴 24시간</p>
+                <p>유선상담 연중무휴 09:00-18:00</p>
+                <p>유선상담 1670-8208</p>
+                <button>고객지원실</button>
+            </div>
+            <div class="footer-item">
+                <h4>소개</h4>
+                <ul class="footer-list">
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">채용</a></li>
+                    <li><a href="#">공고</a></li>
+                </ul>
+            </div>
+            <div class="footer-item">
+                <h4>파트너</h4>
+                <ul class="footer-list">
+                    <li><a href="#">파트너 홈</a></li>
+                    <li><a href="#">제휴 문의</a></li>
+                    <li><a href="#">광고 문의</a></li>
+                </ul>
+            </div>
+            <div class="footer-item">
+                <h4>지원</h4>
+                <ul class="footer-list">
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">문의내역</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-down">
+            <ul class="footer-legal">
+                <li><a href="#">이용 약관</a></li>
+                <li><a href="#">개인정보 처리방침</a></li>
+                <li><a href="#">취소 및 환불 정책</a></li>
+                <li><a href="#">개발자 센터</a></li>
+            </ul>
+            <form class="language" method="get" action="#">
+                <label for="language">언어</label>
+                <select name="language" id="language" size="1">
+                    <option value="korean">한국어</option>
+                    <option value="english">영어</option>
+                </select>
+            </form>
+        </div>
+    </footer>
+    <script src="../js/12_웹벤져스_stay-detail.js"></script>
+</body>
+
+</html>

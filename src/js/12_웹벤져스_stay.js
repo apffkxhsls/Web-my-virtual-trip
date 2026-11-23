@@ -45,18 +45,11 @@ function displayStays(data) {
 
         stayList.innerHTML +=
             '<article class="stay-card">' +
+            '<a class="stay-detail-link" id="stay-' + stay.id + '"' +
+            ' href="12_웹벤져스_stay-detail.html">' +
+
             '<div class="stay-image">' +
             '<img class="stay" src="' + stay.image + '" alt="숙소 객실">' +
-
-            '<button type="button" class="favorite-button' + favoriteClass +
-            '" value="' + stay.id + '">' +
-            '<img class="favorite"' +
-            ' src="../res/icons/12_ic_favorite.svg"' +
-            ' alt="' + stay.name + ' 찜하기">' +
-            '<img class="favorite-filled"' +
-            ' src="../res/icons/12_ic_favorite_filled.svg"' +
-            ' alt="' + stay.name + ' 찜하기">' +
-            '</button>' +
             '</div>' +
 
             '<div class="stay-info">' +
@@ -79,13 +72,30 @@ function displayStays(data) {
             '<span>/ 1박</span>' +
             '</p>' +
             '</div>' +
+            '</a>' +
+
+            '<button type="button" class="favorite-button' + favoriteClass +
+            '" value="' + stay.id + '">' +
+            '<img class="favorite"' +
+            ' src="../res/icons/12_ic_favorite.svg"' +
+            ' alt="' + stay.name + ' 찜하기">' +
+            '<img class="favorite-filled"' +
+            ' src="../res/icons/12_ic_favorite_filled.svg"' +
+            ' alt="' + stay.name + ' 찜하기">' +
+            '</button>' +
             '</article>';
     }
 
     const favoriteButtons = document.querySelectorAll(".favorite-button");
-
     for (let i = 0; i < favoriteButtons.length; i++) {
         favoriteButtons[i].addEventListener("click", toggleFavorite);
+    }
+
+    const detailLinks = document.querySelectorAll(".stay-detail-link");
+    for (let i = 0; i < detailLinks.length; i++) {
+        detailLinks[i].addEventListener("click", function () {
+            sessionStorage.setItem("selectedStayId", this.id);
+        });
     }
 }
 
