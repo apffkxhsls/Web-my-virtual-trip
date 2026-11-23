@@ -54,13 +54,19 @@ function displayStays(data) {
 }
 
 const typeCheckboxes = document.querySelectorAll('input[name="type"]');
+const priceCheckboxes = document.querySelectorAll('input[name="price"]');
 
 for (let i = 0; i < typeCheckboxes.length; i++) {
     typeCheckboxes[i].addEventListener("change", filterStays);
 }
 
+for (let i = 0; i < priceCheckboxes.length; i++) {
+    priceCheckboxes[i].addEventListener("change", filterStays);
+}
+
 function filterStays() {
     const selectedTypes = [];
+    const selectedPrices = [];
 
     for (let i = 0; i < typeCheckboxes.length; i++) {
         if (typeCheckboxes[i].checked) {
@@ -68,18 +74,43 @@ function filterStays() {
         }
     }
 
-    const filteredStays = stays.filter(function (stay) {
-        if (selectedTypes.length === 0) {
-            return true;
+    for (let i = 0; i < priceCheckboxes.length; i++) {
+        if (priceCheckboxes[i].checked) {
+            selectedPrices.push(priceCheckboxes[i].value);
         }
+    }
+
+    const filteredStays = stays.filter(function (stay) {
+        let typeMatch = selectedTypes.length === 0;
+        let priceMatch = selectedPrices.length === 0;
 
         for (let i = 0; i < selectedTypes.length; i++) {
             if (stay.type === selectedTypes[i]) {
-                return true;
+                typeMatch = true;
             }
         }
 
-        return false;
+        for (let i = 0; i < selectedPrices.length; i++) {
+            const price = selectedPrices[i];
+
+            if (price === "under-100000" && stay.price < 100000) {
+                priceMatch = true;
+            }
+
+            if (
+                price === "100000to200000" &&
+                stay.price >= 100000 &&
+                stay.price < 200000
+            ) {
+                priceMatch = true;
+            }
+
+            if (price === "over200000" && stay.price >= 200000) {
+                priceMatch = true;
+            }
+        }
+
+        return typeMatch && priceMatch;
     });
 
     displayStays(filteredStays);
