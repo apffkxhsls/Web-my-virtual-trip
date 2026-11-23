@@ -113,5 +113,11 @@ function filterStays() {
         return typeMatch && priceMatch;
     });
 
+    if (selectedPrices.length > 0) {
+    filteredStays.sort(function (a, b) {
+        return a.price - b.price;
+    });
+}
+
     displayStays(filteredStays);
 }
