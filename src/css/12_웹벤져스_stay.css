@@ -517,3 +517,11 @@ footer {
     font-size: 13px;
     cursor: pointer;
 }
+
+.favorite-button.is-favorite .favorite {
+    display: none;
+}
+
+.favorite-button.is-favorite .favorite-filled {
+    display: block;
+}

@@ -1,4 +1,11 @@
 let stays = [];
+let favoriteStays = [];
+
+const savedFavorites = localStorage.getItem("favoriteStays");
+
+if (savedFavorites !== null) {
+    favoriteStays = JSON.parse(savedFavorites);
+}
 
 fetch("../data/12_웹벤져스_stay.json")
     .then(function (response) {
@@ -21,12 +28,21 @@ function displayStays(data) {
     for (let i = 0; i < data.length; i++) {
         const stay = data[i];
 
+        let favoriteClass = "";
+
+        for (let j = 0; j < favoriteStays.length; j++) {
+            if (favoriteStays[j] === stay.id) {
+                favoriteClass = " is-favorite";
+            }
+        }
+
         stayList.innerHTML +=
             '<article class="stay-card">' +
             '<div class="stay-image">' +
             '<img class="stay" src="' + stay.image + '" alt="숙소 객실">' +
 
-            '<button type="button" class="favorite-button">' +
+            '<button type="button" class="favorite-button' + favoriteClass +
+            '" value="' + stay.id + '">' +
             '<img class="favorite"' +
             ' src="../res/icons/12_ic_favorite.svg"' +
             ' alt="' + stay.name + ' 찜하기">' +
@@ -57,6 +73,12 @@ function displayStays(data) {
             '</p>' +
             '</div>' +
             '</article>';
+    }
+
+    const favoriteButtons = document.querySelectorAll(".favorite-button");
+
+    for (let i = 0; i < favoriteButtons.length; i++) {
+        favoriteButtons[i].addEventListener("click", toggleFavorite);
     }
 }
 
@@ -137,4 +159,32 @@ function filterStays() {
     }
 
     displayStays(filteredStays);
+}
+
+function toggleFavorite() {
+    const stayId = parseInt(this.value);
+    let isFavorite = false;
+
+    for (let i = 0; i < favoriteStays.length; i++) {
+        if (favoriteStays[i] === stayId) {
+            isFavorite = true;
+        }
+    }
+
+    if (isFavorite) {
+        favoriteStays = favoriteStays.filter(function (id) {
+            return id !== stayId;
+        });
+    } else {
+        favoriteStays.push(stayId);
+    }
+
+    localStorage.setItem(
+        "favoriteStays",
+        JSON.stringify(favoriteStays)
+    );
+
+    console.log("찜한 숙소:", favoriteStays);
+
+    filterStays();
 }
