@@ -31,7 +31,7 @@ fetch("../data/12_웹벤져스_stay.json")
             '<section class="detail-info">' +
             '<p>' + selectedStay.location + '</p>' +
             '<h1>' + selectedStay.name + '</h1>' +
-            '<p>평점: ' + selectedStay.rating + '</p>' +
+            '<p>평점: ' + selectedStay.rating + ' / 5.0</p>' +
             '<p>' + selectedStay.features + '</p>' +
             '<p>' + selectedStay.baseGuests + '인 기준 - 최대 ' +
             selectedStay.maxGuests + '인</p>' +
