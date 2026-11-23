@@ -43,6 +43,9 @@ fetch("../data/12_웹벤져스_stay.json")
             selectedStay.price.toLocaleString("ko-KR") +
             '원</strong> / 1박</p>' +
             '<p>예약 사이트에서 날짜별 요금을 확인해주세요.</p>' +
+            '<a class="booking-link" href="' + selectedStay.bookingUrl + '">' +
+            '공식 사이트에서 예약하기' +
+            '</a>' +
             '</aside>' +
             '</div>';
     })

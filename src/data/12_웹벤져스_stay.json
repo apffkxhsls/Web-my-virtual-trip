@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "name": "제주 바람 스테이",
+        "name": "제주 바다풍경 펜션",
         "type": "pension",
         "location": "대한민국 - 제주",
         "region": "korea",
@@ -10,7 +10,8 @@
         "baseGuests": 2,
         "maxGuests": 4,
         "features": "오션뷰 - 무료 주차",
-        "image": "../res/images/12_stay.jpg"
+        "image": "../res/images/12_stay.jpg",
+        "bookingUrl": "https://jejuseaps.kr/index.html"
     },
     {
         "id": 2,
@@ -23,7 +24,8 @@
         "baseGuests": 4,
         "maxGuests": 8,
         "features": "시티뷰 - 무료 주차",
-        "image": "../res/images/12_stay.jpg"
+        "image": "../res/images/12_stay.jpg",
+        "bookingUrl": "https://www.hyatt.com/grand-hyatt/en-US/selrs-grand-hyatt-seoul"
     },
     {
         "id": 3,
@@ -36,7 +38,8 @@
         "baseGuests": 2,
         "maxGuests": 4,
         "features": "오션뷰 - 무료 주차",
-        "image": "../res/images/12_stay.jpg"
+        "image": "../res/images/12_stay.jpg",
+        "bookingUrl": "https://www.shillahotels.com/en/shillastay/haeundae/index.do"
     },
     {
         "id": 4,
@@ -49,11 +52,12 @@
         "baseGuests": 2,
         "maxGuests": 4,
         "features": "시티뷰 - 무료 주차",
-        "image": "../res/images/12_stay.jpg"
+        "image": "../res/images/12_stay.jpg",
+        "bookingUrl": "https://www.marriott.com/en-us/hotels/selwi-the-westin-josun-seoul/overview/"
     },
     {
         "id": 5,
-        "name": "그랜드 임페리얼 호텔",
+        "name": "그랜드 엠퍼러 호텔",
         "type": "hotel",
         "location": "마카오",
         "region": "macau",
@@ -62,7 +66,8 @@
         "baseGuests": 2,
         "maxGuests": 4,
         "features": "시티뷰 - 무료 주차",
-        "image": "../res/images/12_stay.jpg"
+        "image": "../res/images/12_stay.jpg",
+        "bookingUrl": "https://www.grandemperor.com/accommodation"
     },
     {
         "id": 6,
@@ -75,6 +80,7 @@
         "baseGuests": 2,
         "maxGuests": 4,
         "features": "시티뷰 - 무료 주차",
-        "image": "../res/images/12_stay.jpg"
+        "image": "../res/images/12_stay.jpg",
+        "bookingUrl": "https://www.ritzparis.com/fr"
     }
 ]
