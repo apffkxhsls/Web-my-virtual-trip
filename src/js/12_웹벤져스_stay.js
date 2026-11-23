@@ -20,7 +20,7 @@ function displayStays(data) {
 
     for (let i = 0; i < data.length; i++) {
         const stay = data[i];
-        
+
         stayList.innerHTML +=
             '<article class="stay-card">' +
             '<div class="stay-image">' +
@@ -51,4 +51,36 @@ function displayStays(data) {
             '</div>' +
             '</article>';
     }
+}
+
+const typeCheckboxes = document.querySelectorAll('input[name="type"]');
+
+for (let i = 0; i < typeCheckboxes.length; i++) {
+    typeCheckboxes[i].addEventListener("change", filterStays);
+}
+
+function filterStays() {
+    const selectedTypes = [];
+
+    for (let i = 0; i < typeCheckboxes.length; i++) {
+        if (typeCheckboxes[i].checked) {
+            selectedTypes.push(typeCheckboxes[i].value);
+        }
+    }
+
+    const filteredStays = stays.filter(function (stay) {
+        if (selectedTypes.length === 0) {
+            return true;
+        }
+
+        for (let i = 0; i < selectedTypes.length; i++) {
+            if (stay.type === selectedTypes[i]) {
+                return true;
+            }
+        }
+
+        return false;
+    });
+
+    displayStays(filteredStays);
 }
