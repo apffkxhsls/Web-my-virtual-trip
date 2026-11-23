@@ -1,5 +1,6 @@
 let stays = [];
 let selectedRegion = "";
+let selectedGuests = 1;
 let favoriteStays = [];
 
 const savedFavorites = localStorage.getItem("favoriteStays");
@@ -88,10 +89,12 @@ const priceCheckboxes = document.querySelectorAll('input[name="price"]');
 const sortSelect = document.querySelector("#sort");
 sortSelect.addEventListener("change", filterStays);
 const regionSelect = document.querySelector("#region");
+const guestsSelect = document.querySelector("#guests");
 const searchButton = document.querySelector(".stay-search .search-button");
 
 searchButton.addEventListener("click", function () {
     selectedRegion = regionSelect.value;
+    selectedGuests = parseInt(guestsSelect.value);
     filterStays();
 });
 
@@ -149,10 +152,10 @@ function filterStays() {
             }
         }
 
-        const regionMatch =
-            selectedRegion === "" || stay.region === selectedRegion;
+        const regionMatch = selectedRegion === "" || stay.region === selectedRegion;
+        const guestsMatch = stay.maxGuests >= selectedGuests;
 
-        return typeMatch && priceMatch && regionMatch;
+return typeMatch && priceMatch && regionMatch && guestsMatch;
     });
 
     if (sortSelect.value === "price-low") {
