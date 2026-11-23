@@ -55,6 +55,8 @@ function displayStays(data) {
 
 const typeCheckboxes = document.querySelectorAll('input[name="type"]');
 const priceCheckboxes = document.querySelectorAll('input[name="price"]');
+const sortSelect = document.querySelector("#sort");
+sortSelect.addEventListener("change", filterStays);
 
 for (let i = 0; i < typeCheckboxes.length; i++) {
     typeCheckboxes[i].addEventListener("change", filterStays);
@@ -113,11 +115,19 @@ function filterStays() {
         return typeMatch && priceMatch;
     });
 
-    if (selectedPrices.length > 0) {
-    filteredStays.sort(function (a, b) {
-        return a.price - b.price;
-    });
-}
+    if (sortSelect.value === "price-low") {
+        filteredStays.sort(function (a, b) {
+            return a.price - b.price;
+        });
+    } else if (sortSelect.value === "rating-high") {
+        filteredStays.sort(function (a, b) {
+            return b.rating - a.rating;
+        });
+    } else if (selectedPrices.length > 0) {
+        filteredStays.sort(function (a, b) {
+            return a.price - b.price;
+        });
+    }
 
     displayStays(filteredStays);
 }
