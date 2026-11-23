@@ -15,11 +15,13 @@ fetch("../data/12_웹벤져스_stay.json")
     })
     .then(function (data) {
         stays = data;
-        displayStays(stays);
-
+        filterStays();
     })
     .catch(function (error) {
         console.log("숙소 데이터를 불러오지 못했습니다.", error);
+
+        document.querySelector(".stay-list").innerHTML =
+            "<p>숙소 정보를 불러오지 못했습니다. 새로고침해주세요.</p>";
     });
 
 function displayStays(data) {
@@ -36,7 +38,7 @@ function displayStays(data) {
         const stay = data[i];
 
         let ratingText = stay.rating;
-        
+
         if (stay.rating % 1 === 0) {
             ratingText = stay.rating + ".0";
         }
