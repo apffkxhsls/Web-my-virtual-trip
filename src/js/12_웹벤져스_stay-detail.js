@@ -23,6 +23,12 @@ fetch("../data/12_웹벤져스_stay.json")
             return;
         }
 
+        let ratingText = selectedStay.rating;
+
+        if (selectedStay.rating % 1 === 0) {
+            ratingText = selectedStay.rating + ".0";
+        }
+
         detail.innerHTML =
             '<img class="detail-image" src="' + selectedStay.image +
             '" alt="' + selectedStay.name + ' 객실">' +
@@ -34,7 +40,7 @@ fetch("../data/12_웹벤져스_stay.json")
             '<h1>' + selectedStay.name + '</h1>' +
             '<button type="button" id="detail-favorite-button"></button>' +
             '</div>' +
-            '<p>평점: ' + selectedStay.rating + ' / 5.0</p>' +
+            '<p>평점: ' + ratingText + ' / 5.0</p>' +
             '<p>' + selectedStay.features + '</p>' +
             '<p>' + selectedStay.baseGuests + '인 기준 - 최대 ' +
             selectedStay.maxGuests + '인</p>' +

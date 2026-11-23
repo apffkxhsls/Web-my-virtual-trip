@@ -35,6 +35,12 @@ function displayStays(data) {
     for (let i = 0; i < data.length; i++) {
         const stay = data[i];
 
+        let ratingText = stay.rating;
+        
+        if (stay.rating % 1 === 0) {
+            ratingText = stay.rating + ".0";
+        }
+
         let favoriteClass = "";
 
         for (let j = 0; j < favoriteStays.length; j++) {
@@ -57,7 +63,7 @@ function displayStays(data) {
             '<p class="stay-location">' + stay.location + '</p>' +
             '<p class="stay-rating">' +
             '<img src="../res/icons/12_ic_star.svg" alt="평점">' +
-            '<span>' + stay.rating + '</span>' +
+            '<span>' + ratingText + '</span>' +
             '</p>' +
             '</div>' +
 
