@@ -67,7 +67,7 @@
         "maxGuests": 4,
         "features": "시티뷰 - 무료 주차",
         "image": "../res/images/12_stay.jpg",
-        "bookingUrl": "https://www.grandemperor.com/accommodation"
+        "bookingUrl": "https://www.grandemperor.com/"
     },
     {
         "id": 6,
