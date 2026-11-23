@@ -10,12 +10,13 @@
         "baseGuests": 2,
         "maxGuests": 4,
         "features": "오션뷰 - 무료 주차",
+        "description": "바다를 바라보며 여유로운 제주 여행을 계획해보세요. 주변 여행지를 둘러본 뒤 편안하게 쉬어갈 숙소를 찾는 분들을 위한 공간입니다.",
         "image": "../res/images/12_stay.jpg",
         "bookingUrl": "https://jejuseaps.kr/index.html"
     },
     {
         "id": 2,
-        "name": "그랜드 하얏트",
+        "name": "그랜드 하얏트 서울",
         "type": "hotel",
         "location": "대한민국 - 서울",
         "region": "korea",
@@ -24,12 +25,13 @@
         "baseGuests": 4,
         "maxGuests": 8,
         "features": "시티뷰 - 무료 주차",
+        "description": "서울의 다양한 명소를 둘러보는 도심 여행을 계획해보세요. 관광과 휴식을 함께 즐기고 싶은 여행자를 위한 숙소입니다.",
         "image": "../res/images/12_stay.jpg",
         "bookingUrl": "https://www.hyatt.com/grand-hyatt/en-US/selrs-grand-hyatt-seoul"
     },
     {
         "id": 3,
-        "name": "신라 스테이",
+        "name": "신라 스테이 해운대",
         "type": "hotel",
         "location": "대한민국 - 부산",
         "region": "korea",
@@ -38,12 +40,13 @@
         "baseGuests": 2,
         "maxGuests": 4,
         "features": "오션뷰 - 무료 주차",
+        "description": "부산의 바다와 함께하는 여행을 계획해보세요. 해변 산책과 주변 관광을 즐긴 뒤 쉬어갈 숙소를 찾는 분들에게 어울립니다.",
         "image": "../res/images/12_stay.jpg",
         "bookingUrl": "https://www.shillahotels.com/en/shillastay/haeundae/index.do"
     },
     {
         "id": 4,
-        "name": "웨스턴 조선",
+        "name": "웨스턴 조선 서울",
         "type": "hotel",
         "location": "대한민국 - 서울",
         "region": "korea",
@@ -52,6 +55,7 @@
         "baseGuests": 2,
         "maxGuests": 4,
         "features": "시티뷰 - 무료 주차",
+        "description": "서울 도심의 관광과 미식을 함께 즐기는 여행을 계획해보세요. 하루 일정을 마친 뒤 편안한 휴식을 이어갈 수 있는 숙소입니다.",
         "image": "../res/images/12_stay.jpg",
         "bookingUrl": "https://www.marriott.com/en-us/hotels/selwi-the-westin-josun-seoul/overview/"
     },
@@ -66,6 +70,7 @@
         "baseGuests": 2,
         "maxGuests": 4,
         "features": "시티뷰 - 무료 주차",
+        "description": "마카오의 거리와 다양한 명소를 탐방하는 여행을 계획해보세요. 도시를 둘러보는 일정과 휴식을 함께 구성하기 위한 숙소입니다.",
         "image": "../res/images/12_stay.jpg",
         "bookingUrl": "https://www.grandemperor.com/"
     },
@@ -80,6 +85,7 @@
         "baseGuests": 2,
         "maxGuests": 4,
         "features": "시티뷰 - 무료 주차",
+        "description": "파리의 문화와 풍경을 즐기는 여행을 계획해보세요. 미술관과 거리 산책 등 다양한 일정을 마친 뒤 머무를 숙소입니다.",
         "image": "../res/images/12_stay.jpg",
         "bookingUrl": "https://www.ritzparis.com/fr"
     }

@@ -217,6 +217,22 @@ main > a:hover {
     margin-right: 6px;
 }
 
+.detail-description {
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid #EEEEEF;
+}
+
+.detail-description h2 {
+    margin: 0 0 16px;
+    font-size: 20px;
+}
+
+.detail-description p {
+    max-width: 650px;
+    line-height: 1.8;
+}
+
 footer {
     color: gray;
     border-top: 1px solid #EEEEEF;
