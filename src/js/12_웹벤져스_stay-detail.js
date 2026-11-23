@@ -30,7 +30,10 @@ fetch("../data/12_웹벤져스_stay.json")
             '<div class="detail-layout">' +
             '<section class="detail-info">' +
             '<p>' + selectedStay.location + '</p>' +
+            '<div class="detail-title-row">' +
             '<h1>' + selectedStay.name + '</h1>' +
+            '<button type="button" id="detail-favorite-button"></button>' +
+            '</div>' +
             '<p>평점: ' + selectedStay.rating + ' / 5.0</p>' +
             '<p>' + selectedStay.features + '</p>' +
             '<p>' + selectedStay.baseGuests + '인 기준 - 최대 ' +
@@ -52,8 +55,61 @@ fetch("../data/12_웹벤져스_stay.json")
             '</a>' +
             '</aside>' +
             '</div>';
+        setupDetailFavorite(selectedStay.id);
     })
 
     .catch(function (error) {
         console.log("숙소 상세 정보를 불러오지 못했습니다.", error);
     });
+
+function setupDetailFavorite(stayId) {
+    const button = document.querySelector("#detail-favorite-button");
+    let favoriteStays = [];
+
+    const savedFavorites = localStorage.getItem("favoriteStays");
+
+    if (savedFavorites !== null) {
+        favoriteStays = JSON.parse(savedFavorites);
+    }
+
+    function isFavorite() {
+        for (let i = 0; i < favoriteStays.length; i++) {
+            if (favoriteStays[i] === stayId) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    function updateButton() {
+        if (isFavorite()) {
+            button.innerHTML =
+                '<img src="../res/icons/12_ic_favorite_filled.svg"' +
+                ' alt="숙소 찜 취소">';
+        } else {
+            button.innerHTML =
+                '<img src="../res/icons/12_ic_favorite.svg"' +
+                ' alt="숙소 찜하기">';
+        }
+    }
+
+    button.addEventListener("click", function () {
+        if (isFavorite()) {
+            favoriteStays = favoriteStays.filter(function (id) {
+                return id !== stayId;
+            });
+        } else {
+            favoriteStays.push(stayId);
+        }
+
+        localStorage.setItem(
+            "favoriteStays",
+            JSON.stringify(favoriteStays)
+        );
+
+        updateButton();
+    });
+
+    updateButton();
+}
