@@ -1,4 +1,5 @@
 let stays = [];
+let selectedRegion = "";
 let favoriteStays = [];
 
 const savedFavorites = localStorage.getItem("favoriteStays");
@@ -86,6 +87,13 @@ const typeCheckboxes = document.querySelectorAll('input[name="type"]');
 const priceCheckboxes = document.querySelectorAll('input[name="price"]');
 const sortSelect = document.querySelector("#sort");
 sortSelect.addEventListener("change", filterStays);
+const regionSelect = document.querySelector("#region");
+const searchButton = document.querySelector(".stay-search .search-button");
+
+searchButton.addEventListener("click", function () {
+    selectedRegion = regionSelect.value;
+    filterStays();
+});
 
 for (let i = 0; i < typeCheckboxes.length; i++) {
     typeCheckboxes[i].addEventListener("change", filterStays);
@@ -141,7 +149,10 @@ function filterStays() {
             }
         }
 
-        return typeMatch && priceMatch;
+        const regionMatch =
+            selectedRegion === "" || stay.region === selectedRegion;
+
+        return typeMatch && priceMatch && regionMatch;
     });
 
     if (sortSelect.value === "price-low") {
