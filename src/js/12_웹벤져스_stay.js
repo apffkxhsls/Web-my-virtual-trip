@@ -95,9 +95,26 @@ const sortSelect = document.querySelector("#sort");
 sortSelect.addEventListener("change", filterStays);
 const regionSelect = document.querySelector("#region");
 const guestsSelect = document.querySelector("#guests");
+const checkinInput = document.querySelector("#checkin");
+const checkoutInput = document.querySelector("#checkout");
 const searchButton = document.querySelector(".stay-search .search-button");
 
 searchButton.addEventListener("click", function () {
+    const checkin = checkinInput.value;
+    const checkout = checkoutInput.value;
+
+    if (checkin !== "" || checkout !== "") {
+        if (checkin === "" || checkout === "") {
+            alert("체크인과 체크아웃 날짜를 모두 선택해주세요.");
+            return;
+        }
+
+        if (checkout <= checkin) {
+            alert("체크아웃은 체크인보다 뒤의 날짜로 선택해주세요.");
+            return;
+        }
+    }
+
     selectedRegion = regionSelect.value;
     selectedGuests = parseInt(guestsSelect.value);
     filterStays();
