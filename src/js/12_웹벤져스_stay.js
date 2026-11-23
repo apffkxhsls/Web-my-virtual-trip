@@ -34,7 +34,7 @@ fetch("../data/12_웹벤져스_stay.json")
                             stay.maxGuests + '인' +
                         '</p>' +
                         '<p class="stay-price">' +
-                            '<strong>' + stay.price + '원</strong>' +
+                            '<strong>' + stay.price.toLocaleString("ko-KR") + '원</strong>' +
                             '<span>/ 1박</span>' +
                         '</p>' +
                     '</div>' +

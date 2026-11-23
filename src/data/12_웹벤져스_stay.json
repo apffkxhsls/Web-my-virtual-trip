@@ -8,5 +8,55 @@
         "maxGuests": 4,
         "features": "오션뷰 - 무료 주차",
         "image": "../res/images/12_stay.jpg"
+    },
+    {
+        "id": 2,
+        "name": "그랜드 하얏트",
+        "location": "대한민국 - 서울",
+        "price": 440000,
+        "baseGuests": 4,
+        "maxGuests": 8,
+        "features": "시티뷰 - 무료 주차",
+        "image": "../res/images/12_stay.jpg"
+    },
+    {
+        "id": 3,
+        "name": "신라 스테이",
+        "location": "대한민국 - 부산",
+        "price": 200000,
+        "baseGuests": 2,
+        "maxGuests": 4,
+        "features": "오션뷰 - 무료 주차",
+        "image": "../res/images/12_stay.jpg"
+    },
+    {
+        "id": 4,
+        "name": "웨스턴 조선",
+        "location": "대한민국 - 서울",
+        "price": 500000,
+        "baseGuests": 2,
+        "maxGuests": 4,
+        "features": "시티뷰 - 무료 주차",
+        "image": "../res/images/12_stay.jpg"
+    },
+    {
+        "id": 5,
+        "name": "그랜드 임페리얼 호텔",
+        "location": "마카오",
+        "price": 150000,
+        "baseGuests": 2,
+        "maxGuests": 4,
+        "features": "시티뷰 - 무료 주차",
+        "image": "../res/images/12_stay.jpg"
+    },
+    {
+        "id": 6,
+        "name": "호텔 리츠 파리",
+        "location": "프랑스 - 파리",
+        "price": 4000000,
+        "baseGuests": 2,
+        "maxGuests": 4,
+        "features": "시티뷰 - 무료 주차",
+        "image": "../res/images/12_stay.jpg"
     }
 ]
