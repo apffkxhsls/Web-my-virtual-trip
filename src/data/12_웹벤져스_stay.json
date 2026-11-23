@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "name": "제주 바람 스테이",
+        "location": "대한민국 - 제주",
+        "price": 85000,
+        "baseGuests": 2,
+        "maxGuests": 4,
+        "features": "오션뷰 - 무료 주차",
+        "image": "../res/images/12_stay.jpg"
+    }
+]
