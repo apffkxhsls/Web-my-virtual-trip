@@ -27,6 +27,11 @@ function displayStays(data) {
 
     stayList.innerHTML = "";
 
+    if (data.length === 0) {
+        stayList.innerHTML = "<p>조건에 맞는 숙소가 없습니다.</p>";
+        return;
+    }
+
     for (let i = 0; i < data.length; i++) {
         const stay = data[i];
 
@@ -155,7 +160,7 @@ function filterStays() {
         const regionMatch = selectedRegion === "" || stay.region === selectedRegion;
         const guestsMatch = stay.maxGuests >= selectedGuests;
 
-return typeMatch && priceMatch && regionMatch && guestsMatch;
+        return typeMatch && priceMatch && regionMatch && guestsMatch;
     });
 
     if (sortSelect.value === "price-low") {
