@@ -615,7 +615,6 @@ main {
 
 .checklist-done {
     color: gray;
-    text-decoration: line-through;
 }
 
 .checklist-add {
