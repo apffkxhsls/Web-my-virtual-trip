@@ -1,4 +1,6 @@
 let flights = [];
+let selectedDeparture = "";
+let selectedArrival = "";
 
 fetch("../data/12_웹벤져스_flight.json")
     .then(function (response) {
@@ -83,6 +85,58 @@ function displayFlights(data) {
 const stopsCheckboxes = document.querySelectorAll('input[name="stops"]');
 const airlineCheckboxes = document.querySelectorAll('input[name="airline"]');
 const sortSelect = document.querySelector("#sort");
+const departureInput = document.querySelector("#departure");
+const arrivalInput = document.querySelector("#arrival");
+const searchButton = document.querySelector(".flight-search .search-button");
+const tripTypeInputs = document.querySelectorAll('input[name="trip-type"]');
+const returnDateInput = document.querySelector("#return-date");
+const departureDateInput = document.querySelector("#departure-date");
+
+for (let i = 0; i < tripTypeInputs.length; i++) {
+    tripTypeInputs[i].addEventListener("change", updateTripType);
+}
+
+function updateTripType() {
+    for (let i = 0; i < tripTypeInputs.length; i++) {
+        if (tripTypeInputs[i].checked) {
+            if (tripTypeInputs[i].value === "one-way") {
+                returnDateInput.value = "";
+                returnDateInput.disabled = true;
+            } else {
+                returnDateInput.disabled = false;
+            }
+        }
+    }
+}
+
+updateTripType();
+
+searchButton.addEventListener("click", function () {
+    const departureDate = departureDateInput.value;
+    const returnDate = returnDateInput.value;
+
+    if (returnDateInput.disabled) {
+        if (departureDate === "") {
+            alert("출발일을 선택해주세요.");
+            return;
+        }
+    } else {
+        if (departureDate === "" || returnDate === "") {
+            alert("출발일과 귀국일을 모두 선택해주세요.");
+            return;
+        }
+
+        if (returnDate < departureDate) {
+            alert("귀국일은 출발일과 같거나 이후로 선택해주세요.");
+            return;
+        }
+    }
+
+    selectedDeparture = departureInput.value;
+    selectedArrival = arrivalInput.value;
+
+    filterFlights();
+});
 
 sortSelect.addEventListener("change", filterFlights);
 
@@ -130,7 +184,15 @@ function filterFlights() {
             }
         }
 
-        return stopsMatch && airlineMatch;
+        const departureMatch =
+            selectedDeparture === "" ||
+            flight.departure === selectedDeparture;
+
+        const arrivalMatch =
+            selectedArrival === "" ||
+            flight.arrival === selectedArrival;
+
+        return stopsMatch && airlineMatch && departureMatch && arrivalMatch;
     });
 
     if (sortSelect.value === "price-low") {
