@@ -201,6 +201,17 @@ main>a:hover {
     background-color: #69A998;
 }
 
+.back-link {
+    display: inline-flex;
+    align-items: center;
+}
+
+.back-link img {
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+}
+
 footer {
     color: gray;
     border-top: 1px solid #EEEEEF;

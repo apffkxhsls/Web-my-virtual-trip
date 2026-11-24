@@ -49,7 +49,6 @@ fetch("../data/12_웹벤져스_flight.json")
             selectedFlight.durationText + '</p>' +
             '<p>' + selectedFlight.baggage + '</p>' +
             '</section>' +
-
             '<aside class="flight-detail-price">' +
             '<h2>예상 총액</h2>' +
             '<p><strong>' + totalPrice.toLocaleString("ko-KR") +
