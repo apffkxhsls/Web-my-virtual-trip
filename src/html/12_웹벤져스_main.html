@@ -50,6 +50,7 @@
         </nav>
     </header>
     <main>
+        
         <!-- 히어로 섹션 / 여행지 탐색 : 사용자에게 맞는 여행지 검색 컨테이너 -->
         <section class="home-container">
             <h1>지금, 나만의 여행지로 떠나보세요</h1>
@@ -83,224 +84,25 @@
                 </form>
             </div>
         </section>
+
         <!-- 지금 떠나기 좋은 여행지 -->
         <section class="region-section">
             <h2 class="section-title"> 지금 떠나기 좋은 여행지</h2>
-            <div class="region-card-list">
-                <article class="region-card">
-                    <button class="heart-btn">
-                        <img class="favorite" src="../res/icons/12_ic_favorite.svg" alt="좋아요 아이콘">
-                        <img class="favorite-filled" src="../res/icons/12_ic_favorite_filled.svg" alt="좋아요 누른 아이콘">
-                    </button>
-                    <a href="#">
-                        <img class="region-img" src="../res/images/12_theme-history.jpg" alt="지역별 사진">
-                        <div class="region-info">
-                            <span class="region-meta">국내</span>
-                            <p class="region-name">대전</p>
-                            <p class="region-rating">4.8/5 · 리뷰 157,136개</p>
-                        </div>
-                    </a>
-                </article>
-                <article class="region-card">
-                    <button class="heart-btn">
-                        <img class="favorite" src="../res/icons/12_ic_favorite.svg" alt="좋아요 아이콘">
-                        <img class="favorite-filled" src="../res/icons/12_ic_favorite_filled.svg" alt="좋아요 누른 아이콘">
-                    </button>
-                    <a href="../html/12_웹벤져스_detail.html">
-                        <img class="region-img" src="../res/images/12_theme-history.jpg" alt="지역별 사진">
-                        <div class="region-info">
-                            <span class="region-meta">일본</span>
-                            <p class="region-name">교토</p>
-                            <p class="region-rating">4.6/5 · 리뷰 125,300개</p>
-                        </div>
-                    </a>
-                </article>
-                <article class="region-card">
-                    <button class="heart-btn">
-                        <img class="favorite" src="../res/icons/12_ic_favorite.svg" alt="좋아요 아이콘">
-                        <img class="favorite-filled" src="../res/icons/12_ic_favorite_filled.svg" alt="좋아요 누른 아이콘">
-                    </button>
-                    <a href="#">
-                        <img class="region-img" src="../res/images/12_theme-history.jpg" alt="지역별 사진">
-                        <div class="region-info">
-                            <span class="region-meta">중국</span>
-                            <p class="region-name">상하이</p>
-                            <p class="region-rating">3.4/5 · 리뷰 221,200개</p>
-                        </div>
-                    </a>
-                </article>
-                <article class="region-card">
-                    <button class="heart-btn">
-                        <img class="favorite" src="../res/icons/12_ic_favorite.svg" alt="좋아요 아이콘">
-                        <img class="favorite-filled" src="../res/icons/12_ic_favorite_filled.svg" alt="좋아요 누른 아이콘">
-                    </button>
-                    <a href="#">
-                        <img class="region-img" src="../res/images/12_theme-history.jpg" alt="지역별 사진">
-                        <div class="region-info">
-                            <span class="region-meta">유럽</span>
-                            <p class="region-name">스위스</p>
-                            <p class="region-rating">4.9/5 · 리뷰 92,104개</p>
-                        </div>
-                    </a>
-                </article>
-            </div>
+            <div class="region-card-list"></div>
         </section>
+
         <!-- 인기있는 여행 테마 TOP 5 -->
         <section class="theme-section">
             <h2 class="section-title">지금 인기있는 여행 테마 TOP 5</h2>
-            <div class="theme-card-list">
-                <article class="theme-card">
-                    <div class="card-img-wrapper">
-                        <img class="vis-icon" src="../res/icons/12_ic_visibility.svg" alt="조회 수 아이콘">
-                        <p class="card-badge">1.5K</p>
-                    </div>
-                    <img class="card-img" src="../res/images/12_theme-nature.jpg" alt="자연 테마 사진">
-                    <div class="card-info">
-                        <span class="card-title" id="nature">자연 여행</span>
-                        <p class="card-desc">아름다운 풍경 속에서 즐기는 여유로운 여행</p>
-                        <a href="12_웹벤져스_theme.html#nature" class="card-btn">테마관 가기</a>
-                    </div>
-                </article>
-                <article class="theme-card">
-                    <div class="card-img-wrapper">
-                        <img class="vis-icon" src="../res/icons/12_ic_visibility.svg" alt="조회 수 아이콘">
-                        <p class="card-badge">1.2K</p>
-                    </div>
-                    <img class="card-img" src="../res/images/12_theme-history.jpg" alt="역사 테마 사진">
-                    <div class="card-info">
-                        <span class="card-title" id="history">역사 여행</span>
-                        <p class="card-desc">오래된 도시에서 발견하는 특별한 이야기</p>
-                        <a href="12_웹벤져스_theme.html#history" class="card-btn">테마관 가기</a>
-                    </div>
-                </article>
-                <article class="theme-card">
-                    <div class="card-img-wrapper">
-                        <img class="vis-icon" src="../res/icons/12_ic_visibility.svg" alt="조회 수 아이콘">
-                        <p class="card-badge">2.8K</p>
-                    </div>
-                    <img class="card-img" src="../res/images/12_theme-food.jpg" alt="먹방 테마 사진">
-                    <div class="card-info">
-                        <span class="card-title" id="food">먹방 여행</span>
-                        <p class="card-desc">맛있는 음식으로 기억되는 특별한 여행</p>
-                        <a href="12_웹벤져스_theme.html#food" class="card-btn">테마관 가기</a>
-                    </div>
-                </article>
-                <article class="theme-card">
-                    <div class="card-img-wrapper">
-                        <img class="vis-icon" src="../res/icons/12_ic_visibility.svg" alt="조회 수 아이콘">
-                        <p class="card-badge">2.4K</p>
-                    </div>
-                    <img class="card-img" src="../res/images/12_theme-activity.jpg" alt="액티비티 테마 사진">
-                    <div class="card-info">
-                        <span class="card-title" id="activity">액티비티 여행</span>
-                        <p class="card-desc">다양한 체험과 활동을 즐길 수 있는 여행</p>
-                        <a href="12_웹벤져스_theme.html#activity" class="card-btn">테마관 가기</a>
-                    </div>
-                </article>
-                <article class="theme-card">
-                    <div class="card-img-wrapper">
-                        <img class="vis-icon" src="../res/icons/12_ic_visibility.svg" alt="조회 수 아이콘">
-                        <p class="card-badge">3.1K</p>
-                    </div>
-                    <img class="card-img" src="../res/images/12_theme-resort.jpg" alt="휴양 테마 사진">
-                    <div class="card-info">
-                        <span class="card-title" id="resort">휴양 여행</span>
-                        <p class="card-desc">아름다운 풍경 속에서 편안하게 쉬어가는 여행</p>
-                        <a href="12_웹벤져스_theme.html#resort" class="card-btn">테마관 가기</a>
-                    </div>
-                </article>
-            </div>
+            <div class="theme-card-list"></div>
         </section>
+
         <!-- 인기있는 숙소 추천 -->
         <section class="stay-section">
             <h2 class="section-title">제주의 인기 숙소</h2>
-            <div class="stay-card-list">
-                <article class="stay-card">
-                    <button class="heart-btn">
-                        <img class="favorite" src="../res/icons/12_ic_favorite.svg" alt="좋아요 아이콘">
-                        <img class="favorite-filled" src="../res/icons/12_ic_favorite_filled.svg" alt="좋아요 누른 아이콘">
-                    </button>
-                    <a href="#">
-                        <img class="stay-img" src="../res/images/12_stay.jpg" alt="숙소 사진">
-                        <div class="stay-info">
-                            <p class="stay-name">제주의 펜션</p>
-                            <p class="stay-price">총액 ₩600,000</p>
-                            <p class="stay-rating">★ 4.5</p>
-                        </div>
-                    </a>
-                </article>
-                <article class="stay-card">
-                    <button class="heart-btn">
-                        <img class="favorite" src="../res/icons/12_ic_favorite.svg" alt="좋아요 아이콘">
-                        <img class="favorite-filled" src="../res/icons/12_ic_favorite_filled.svg" alt="좋아요 누른 아이콘">
-                    </button>
-                    <a href="#">
-                        <img class="stay-img" src="../res/images/12_stay.jpg" alt="숙소 사진">
-                        <div class="stay-info">
-                            <p class="stay-name">제주의 집</p>
-                            <p class="stay-price">총액 ₩575,000</p>
-                            <p class="stay-rating">★ 4.8</p>
-                        </div>
-                    </a>
-                </article>
-                <article class="stay-card">
-                    <button class="heart-btn">
-                        <img class="favorite" src="../res/icons/12_ic_favorite.svg" alt="좋아요 아이콘">
-                        <img class="favorite-filled" src="../res/icons/12_ic_favorite_filled.svg" alt="좋아요 누른 아이콘">
-                    </button>
-                    <a href="#">
-                        <img class="stay-img" src="../res/images/12_stay.jpg" alt="숙소 사진">
-                        <div class="stay-info">
-                            <p class="stay-name">서귀포시의 펜션</p>
-                            <p class="stay-price">총액 ₩480,000</p>
-                            <p class="stay-rating">★ 4.9</p>
-                        </div>
-                    </a>
-                </article>
-                <article class="stay-card">
-                    <button class="heart-btn">
-                        <img class="favorite" src="../res/icons/12_ic_favorite.svg" alt="좋아요 아이콘">
-                        <img class="favorite-filled" src="../res/icons/12_ic_favorite_filled.svg" alt="좋아요 누른 아이콘">
-                    </button>
-                    <a href="#">
-                        <img class="stay-img" src="../res/images/12_stay.jpg" alt="숙소 사진">
-                        <div class="stay-info">
-                            <p class="stay-name">제주의 집</p>
-                            <p class="stay-price">총액 ₩765,000</p>
-                            <p class="stay-rating">★ 5.0</p>
-                        </div>
-                    </a>
-                </article>
-                <article class="stay-card">
-                    <button class="heart-btn">
-                        <img class="favorite" src="../res/icons/12_ic_favorite.svg" alt="좋아요 아이콘">
-                        <img class="favorite-filled" src="../res/icons/12_ic_favorite_filled.svg" alt="좋아요 누른 아이콘">
-                    </button>
-                    <a href="#">
-                        <img class="stay-img" src="../res/images/12_stay.jpg" alt="숙소 사진">
-                        <div class="stay-info">
-                            <p class="stay-name">남원의 펜션</p>
-                            <p class="stay-price">총액 ₩427,500</p>
-                            <p class="stay-rating">★ 4.5</p>
-                        </div>
-                    </a>
-                </article>
-                <article class="stay-card">
-                    <button class="heart-btn">
-                        <img class="favorite" src="../res/icons/12_ic_favorite.svg" alt="좋아요 아이콘">
-                        <img class="favorite-filled" src="../res/icons/12_ic_favorite_filled.svg" alt="좋아요 누른 아이콘">
-                    </button>
-                    <a href="#">
-                        <img class="stay-img" src="../res/images/12_stay.jpg" alt="숙소 사진">
-                        <div class="stay-info">
-                            <p class="stay-name">제주의 방</p>
-                            <p class="stay-price">총액 ₩176,000</p>
-                            <p class="stay-rating">★ 4.2</p>
-                        </div>
-                    </a>
-                </article>
-            </div>
+            <div class="stay-card-list"></div>
         </section>
+
     </main>
     <!-- footer -->
     <footer>
@@ -352,4 +154,7 @@
             </form>
         </div>
     </footer>
+
+    <script src="../js/12_웹벤져스_main.js"></script>
 </body>
+</html>
