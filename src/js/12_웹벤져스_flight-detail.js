@@ -1,8 +1,6 @@
 const selectedFlightId = sessionStorage.getItem("selectedFlightId");
 const selectedTripType = sessionStorage.getItem("selectedTripType");
 const selectedPassengers = sessionStorage.getItem("selectedPassengers");
-const selectedDepartureDate = sessionStorage.getItem("selectedDepartureDate");
-const selectedReturnDate = sessionStorage.getItem("selectedReturnDate");
 
 fetch("../data/12_웹벤져스_flight.json")
     .then(function (response) {
