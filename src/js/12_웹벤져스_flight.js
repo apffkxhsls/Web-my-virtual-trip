@@ -1,9 +1,12 @@
+let flights = [];
+
 fetch("../data/12_웹벤져스_flight.json")
     .then(function (response) {
         return response.json();
     })
     .then(function (data) {
-        displayFlights(data);
+        flights = data;
+        filterFlights();
     })
     .catch(function (error) {
         console.log("항공편 데이터를 불러오지 못했습니다.", error);
@@ -13,6 +16,11 @@ function displayFlights(data) {
     const flightList = document.querySelector(".flight-list");
 
     flightList.innerHTML = "";
+
+    if (data.length === 0) {
+        flightList.innerHTML = "<p>조건에 맞는 항공편이 없습니다.</p>";
+        return;
+    }
 
     for (let i = 0; i < data.length; i++) {
         const flight = data[i];
@@ -70,4 +78,57 @@ function displayFlights(data) {
             '</div>' +
             '</article>';
     }
+}
+
+const stopsCheckboxes = document.querySelectorAll('input[name="stops"]');
+const airlineCheckboxes = document.querySelectorAll('input[name="airline"]');
+
+for (let i = 0; i < stopsCheckboxes.length; i++) {
+    stopsCheckboxes[i].addEventListener("change", filterFlights);
+}
+
+for (let i = 0; i < airlineCheckboxes.length; i++) {
+    airlineCheckboxes[i].addEventListener("change", filterFlights);
+}
+
+function filterFlights() {
+    const selectedStops = [];
+    const selectedAirlines = [];
+
+    for (let i = 0; i < stopsCheckboxes.length; i++) {
+        if (stopsCheckboxes[i].checked) {
+            selectedStops.push(stopsCheckboxes[i].value);
+        }
+    }
+
+    for (let i = 0; i < airlineCheckboxes.length; i++) {
+        if (airlineCheckboxes[i].checked) {
+            selectedAirlines.push(airlineCheckboxes[i].value);
+        }
+    }
+
+    const filteredFlights = flights.filter(function (flight) {
+        let stopsMatch = selectedStops.length === 0;
+        let airlineMatch = selectedAirlines.length === 0;
+
+        for (let i = 0; i < selectedStops.length; i++) {
+            if (selectedStops[i] === "direct" && flight.stops === 0) {
+                stopsMatch = true;
+            }
+
+            if (selectedStops[i] === "connecting" && flight.stops > 0) {
+                stopsMatch = true;
+            }
+        }
+
+        for (let i = 0; i < selectedAirlines.length; i++) {
+            if (flight.airline === selectedAirlines[i]) {
+                airlineMatch = true;
+            }
+        }
+
+        return stopsMatch && airlineMatch;
+    });
+
+    displayFlights(filteredFlights);
 }

@@ -11,5 +11,31 @@
         "durationText": "14시간 05분",
         "price": 1308900,
         "baggage": "위탁 수하물 포함 여부 확인 필요"
+    },
+    {
+        "id": 2,
+        "airline": "아시아나항공",
+        "departure": "인천",
+        "arrival": "뉴욕",
+        "departureTime": "21:05",
+        "arrivalTime": "23:00",
+        "stops": 0,
+        "durationMinutes": 895,
+        "durationText": "14시간 55분",
+        "price": 1298200,
+        "baggage": "위탁 수하물 포함 여부 확인 필요"
+    },
+    {
+        "id": 3,
+        "airline": "아시아나항공",
+        "departure": "인천",
+        "arrival": "뉴욕",
+        "departureTime": "21:40",
+        "arrivalTime": "05:13",
+        "stops": 1,
+        "durationMinutes": 1233,
+        "durationText": "20시간 33분",
+        "price": 1787300,
+        "baggage": "위탁 수하물 포함 여부 확인 필요"
     }
 ]
