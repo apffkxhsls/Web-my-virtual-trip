@@ -25,6 +25,10 @@ header {
     /*아이템 사이의 간격 지정 */
 }
 
+.logo-link {
+    padding-top: 8px;
+}
+
 #logo {
     height: 50px;
     width: auto;
@@ -122,7 +126,7 @@ header {
     max-width: 1200px;
     margin: 32px auto;
     position: relative;
-    background-image: url(../res/images/hero_background.jpg);
+    background-image: url(../res/images/12_hero_background.jpg);
     background-repeat: no-repeat;
     background-position: center;
     min-height: 400px;
@@ -220,7 +224,7 @@ header {
 
 .region-section {
     max-width: 1200px;
-    margin: 35px auto;
+    margin: 60px auto;
 }
 
 .region-card-list {
@@ -279,7 +283,7 @@ header {
 
 .theme-section {
     max-width: 1200px;
-    margin: 35px auto;
+    margin: 60px auto;
 }
 
 .theme-card-list {
@@ -370,7 +374,7 @@ header {
 /* ===== 숙소 섹션 ===== */
 .stay-section {
     max-width: 1200px;
-    margin: 35px auto;
+    margin: 60px auto;
 }
 
 .stay-card-list {
@@ -382,8 +386,11 @@ header {
     width: 0;
     flex-grow: 1;
     position: relative;
-    text-decoration: none;
+}
+
+.stay-card a {
     color: black;
+    text-decoration: none;
 }
 
 .stay-img {
@@ -459,7 +466,7 @@ footer {
 }
 
 .footer-support {
-    margin-right: 600px;
+    margin-right: auto;
 }
 
 .footer-support h3 {
@@ -541,9 +548,9 @@ footer {
     text-decoration: underline;
 }
 
-.language {
+.language label {
+    margin-right: 5px;
     font-size: 13px;
-    color: gray;
 }
 
 .language select {
