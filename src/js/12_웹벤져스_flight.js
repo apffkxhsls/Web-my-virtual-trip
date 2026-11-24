@@ -16,6 +16,9 @@ fetch("../data/12_웹벤져스_flight.json")
     })
     .catch(function (error) {
         console.log("항공편 데이터를 불러오지 못했습니다.", error);
+
+        document.querySelector(".flight-list").innerHTML =
+            "<p>항공편 정보를 불러오지 못했습니다. 새로고침해주세요.</p>";
     });
 
 function displayFlights(data) {
