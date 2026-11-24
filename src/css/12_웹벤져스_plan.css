@@ -570,9 +570,84 @@ main {
     box-sizing: border-box;
 }
 
+.plan-view {
+    display: none;
+}
+
+.view-box {
+    padding: 35px;
+    background-color: white;
+    border: 1px solid #EEEEEE;
+    border-radius: 14px;
+    box-sizing: border-box;
+}
+
+.view-section {
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.view-section h2 {
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+.view-section p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.view-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.view-actions button {
+    padding: 13px 35px;
+    border: 1px solid #B1B3B4;
+    border-radius: 7px;
+    background-color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#edit-plan-button {
+    background-color: #8DC5AC;
+    border-color: #8DC5AC;
+}
+
+#edit-plan-button:hover {
+    background-color: #69A998;
+}
+
+#delete-plan-button:hover {
+    background-color: #FDECEC;
+    border-color: #D98C8C;
+}
+
 .saved-section h2 {
     font-size: 20px;
     margin: 0 0 22px;
+}
+
+.new-plan-button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 22px;
+    background-color: #8DC5AC;
+    border: none;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.new-plan-button:hover {
+    background-color: #69A998;
 }
 
 .saved-list {
@@ -597,6 +672,7 @@ main {
     box-sizing: border-box;
     background-color: white;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .saved-card:hover {

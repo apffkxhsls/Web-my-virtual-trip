@@ -56,6 +56,9 @@
             <aside class="plan-sidebar">
                 <section class="saved-section">
                     <h2>작성한 계획 목록 보기</h2>
+                    <button type="button" id="new-plan-button" class="new-plan-button">
+                        + 새 계획 작성
+                    </button>
 
                     <ul class="saved-list">
                         <li>
@@ -100,7 +103,7 @@
             </aside>
 
             <div class="plan-content">
-                <section class="plan-section">
+                <section class="plan-section" id="plan-write">
                     <h1>여행 계획 작성하기</h1>
                     <p class="section-description">
                         나만의 여행을 계획해보세요
@@ -356,6 +359,55 @@
                         </div>
 
                     </form>
+                </section>
+
+                <section class="plan-view" id="plan-view">
+                    <h1 id="view-title">여행 계획</h1>
+                    <p class="section-description">
+                        나의 여행 계획을 한눈에 확인해보세요
+                    </p>
+
+                    <div class="view-box">
+                        <section class="view-section">
+                            <h2>기본 정보</h2>
+
+                            <p id="view-region"></p>
+                            <p id="view-date"></p>
+                            <p id="view-travelers">동행 인원: 미입력</p>
+                            <p id="view-theme">여행 테마: 미입력</p>
+                        </section>
+
+                        <section class="view-section">
+                            <h2>날짜별 여행 일정</h2>
+                            <div id="view-schedule">
+                                <p>등록된 일정이 없습니다.</p>
+                            </div>
+                        </section>
+
+                        <section class="view-section">
+                            <h2>예상 지출</h2>
+                            <div id="view-expense">
+                                <p>등록된 예상 지출이 없습니다.</p>
+                            </div>
+                        </section>
+
+                        <section class="view-section">
+                            <h2>여행 체크리스트</h2>
+                            <div id="view-checklist">
+                                <p>등록된 체크리스트가 없습니다.</p>
+                            </div>
+                        </section>
+
+                        <div class="view-actions">
+                            <button type="button" id="edit-plan-button">
+                                계획 수정
+                            </button>
+
+                            <button type="button" id="delete-plan-button">
+                                계획 삭제
+                            </button>
+                        </div>
+                    </div>
                 </section>
             </div>
 
