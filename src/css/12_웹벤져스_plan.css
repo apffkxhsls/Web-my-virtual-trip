@@ -344,15 +344,24 @@ main {
 }
 
 .schedule-table th:first-child {
-    width: 22%;
+    width: 20%;
 }
 
 .schedule-table th:nth-child(2) {
-    width: 30%;
+    width: 27%;
 }
 
 .schedule-table th:nth-child(3) {
-    width: 48%;
+    width: 43%;
+}
+
+.schedule-table th:nth-child(4) {
+    width: 10%;
+    text-align: center;
+}
+
+.schedule-table td:nth-child(4) {
+    text-align: center;
 }
 
 .schedule-table input {
@@ -363,6 +372,22 @@ main {
     border-radius: 6px;
     box-sizing: border-box;
     font-size: 14px;
+}
+
+.delete-schedule-button {
+    padding: 8px 12px;
+    background-color: white;
+    border: 1px solid #B1B3B4;
+    border-radius: 6px;
+    color: gray;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.delete-schedule-button:hover {
+    background-color: #FDECEC;
+    border-color: #D98C8C;
+    color: #C05050;
 }
 
 .add-schedule-button {
@@ -378,6 +403,7 @@ main {
     color: #337768;
     font-size: 14px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .add-schedule-button:hover {

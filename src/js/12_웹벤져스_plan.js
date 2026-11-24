@@ -119,16 +119,10 @@ function createDays() {
             '<th>시간</th>' +
             '<th>방문 장소</th>' +
             '<th>일정 내용</th>' +
+            '<th>삭제</th>' +
             '</tr>' +
             '</thead>' +
-
-            '<tbody>' +
-            '<tr>' +
-            '<td><input type="time"></td>' +
-            '<td><input type="text" placeholder="방문 장소"></td>' +
-            '<td><input type="text" placeholder="일정 내용"></td>' +
-            '</tr>' +
-            '</tbody>' +
+            '<tbody></tbody>' +
             '</table>' +
 
             '<button type="button" class="add-schedule-button">' +
@@ -136,5 +130,36 @@ function createDays() {
             '</button>';
 
         scheduleDays.appendChild(daySection);
+
+        let tbody = daySection.querySelector("tbody");
+        let addButton = daySection.querySelector(".add-schedule-button");
+
+        addSchedule(tbody);
+
+        addButton.addEventListener("click", function () {
+            addSchedule(tbody);
+        });
     }
+}
+
+function addSchedule(tbody) {
+    let row = document.createElement("tr");
+
+    row.innerHTML =
+        '<td><input type="time"></td>' +
+        '<td><input type="text" placeholder="방문 장소"></td>' +
+        '<td><input type="text" placeholder="일정 내용"></td>' +
+        '<td>' +
+        '<button type="button" class="delete-schedule-button">' +
+        '삭제' +
+        '</button>' +
+        '</td>';
+
+    tbody.appendChild(row);
+
+    let deleteButton = row.querySelector(".delete-schedule-button");
+
+    deleteButton.addEventListener("click", function () {
+        row.remove();
+    });
 }
