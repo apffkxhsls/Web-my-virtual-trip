@@ -94,6 +94,14 @@ for (let i = 0; i < bannerButtons.length; i++) {
     });
 }
 
+let favoritePlaces = [];
+
+const savedFavorites = localStorage.getItem("favoritePlaces");
+
+if (savedFavorites !== null) {
+    favoritePlaces = JSON.parse(savedFavorites);
+}
+
 fetch("../data/12_웹벤져스_theme.json")
     .then(response => {
         return response.json();
@@ -117,6 +125,14 @@ function showPlaces(places) {
 
         card.setAttribute("class", "place-card hover-card");
 
+        let favoriteClass = "";
+
+        for (let j = 0; j < favoritePlaces.length; j++) {
+            if (favoritePlaces[j] === place.id) {
+                favoriteClass = " is-favorite";
+            }
+        }
+
         let content =
             '<img src="' + place.image + '" alt="' + place.alt + '">' +
             '<div class="place-info">' +
@@ -137,6 +153,53 @@ function showPlaces(places) {
                 '</div>';
         }
 
+        card.innerHTML +=
+            '<button type="button" class="favorite-button' + favoriteClass +
+            '" value="' + place.id + '">' +
+            '<img class="favorite"' +
+            ' src="../res/icons/12_ic_favorite.svg"' +
+            ' alt="' + place.name + ' 찜하기">' +
+            '<img class="favorite-filled"' +
+            ' src="../res/icons/12_ic_favorite_filled.svg"' +
+            ' alt="' + place.name + ' 찜하기">' +
+            '</button>';
+
         grid.appendChild(card);
     }
+
+    const favoriteButtons = document.querySelectorAll(".favorite-button");
+
+    for (let i = 0; i < favoriteButtons.length; i++) {
+        favoriteButtons[i].addEventListener("click", toggleFavorite);
+    }
+}
+
+function toggleFavorite() {
+    const placeId = this.value;
+    let isFavorite = false;
+
+    for (let i = 0; i < favoritePlaces.length; i++) {
+        if (favoritePlaces[i] === placeId) {
+            isFavorite = true;
+        }
+    }
+
+    if (isFavorite) {
+        favoritePlaces = favoritePlaces.filter(function (id) {
+            return id !== placeId;
+        });
+
+        this.setAttribute("class", "favorite-button");
+    } else {
+        favoritePlaces.push(placeId);
+
+        this.setAttribute("class", "favorite-button is-favorite");
+    }
+
+    localStorage.setItem(
+        "favoritePlaces",
+        JSON.stringify(favoritePlaces)
+    );
+
+    console.log("찜한 여행지:", favoritePlaces);
 }
