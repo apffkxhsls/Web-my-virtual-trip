@@ -39,42 +39,42 @@ fetch("../data/12_웹벤져스_flight.json")
         const passengers = parseInt(selectedPassengers);
         const totalPrice = unitPrice * passengers;
 
-        let dateHtml = "";
+        let returnFlightHtml = "";
 
-        if (selectedDepartureDate !== null && selectedDepartureDate !== "") {
-            dateHtml += '<p>출발일: ' + selectedDepartureDate + '</p>';
-        }
+        if (selectedTripType === "round-trip") {
+            let returnStopsText = "직항";
 
-        if (
-            selectedTripType === "round-trip" &&
-            selectedReturnDate !== null &&
-            selectedReturnDate !== ""
-        ) {
-            dateHtml += '<p>귀국일: ' + selectedReturnDate + '</p>';
+            if (selectedFlight.returnStops > 0) {
+                returnStopsText = selectedFlight.returnStops + "회 경유";
+            }
+
+            returnFlightHtml =
+                '<section class="flight-leg">' +
+                '<h2>오는 편</h2>' +
+                '<p>' + selectedFlight.arrival + ' → ' +
+                selectedFlight.departure + '</p>' +
+                '<p>출발: ' + selectedFlight.returnDate +
+                ' ' + selectedFlight.returnDepartureTime + '</p>' +
+                '<p>도착: ' + selectedFlight.returnArrivalDate +
+                ' ' + selectedFlight.returnArrivalTime + '</p>' +
+                '<p>' + returnStopsText + ' | ' +
+                selectedFlight.returnDurationText + '</p>' +
+                '</section>';
         }
 
         document.querySelector(".flight-detail").innerHTML =
             '<div class="flight-detail-layout">' +
             '<section class="flight-detail-info">' +
             '<h1>' + selectedFlight.airline + '</h1>' +
-            '<h2>' + selectedFlight.departure + ' → ' +
-            selectedFlight.arrival + '</h2>' +
-            dateHtml +
-            '<div class="detail-route">' +
-            '<div>' +
-            '<strong>' + selectedFlight.departureTime + '</strong>' +
-            '<p>' + selectedFlight.departure + '</p>' +
-            '</div>' +
-            '<div class="detail-duration">' +
-            '<p>' + stopsText + '</p>' +
-            '<p>' + selectedFlight.durationText + '</p>' +
-            '</div>' +
-            '<div>' +
-            '<strong>' + selectedFlight.arrivalTime + '</strong>' +
-            '<p>' + selectedFlight.arrival + '</p>' +
-            '</div>' +
-            '</div>' +
+            '<p>시간은 각 공항의 현지 시각 기준입니다.</p>' +
+            '<section class="flight-leg">' +
+            '<h2>가는 편</h2>' +
+            '<p>' + selectedFlight.departure + ' → ' + selectedFlight.arrival + '</p>' +
+            '<p>출발: ' + selectedFlight.departureDate + ' ' + selectedFlight.departureTime + '</p>' +
+            '<p>도착: ' + selectedFlight.arrivalDate + ' ' + selectedFlight.arrivalTime + '</p>' +
             '<p>' + stopsText + ' | ' + selectedFlight.durationText + '</p>' +
+            '</section>' +
+            returnFlightHtml +
             '<p>' + selectedFlight.baggage + '</p>' +
             '</section>' +
             '<aside class="flight-detail-price">' +
