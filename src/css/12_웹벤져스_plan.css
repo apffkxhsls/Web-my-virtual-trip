@@ -142,7 +142,13 @@ main {
 .form-group input,
 .day-date input,
 .expense-input input,
-.checklist-add input {
+.checklist-add input,
+.add-schedule-button,
+.add-day-button,
+.new-plan-button,
+.save-button,
+.view-actions button,
+.checklist-add button {
     border-radius: 7px;
 }
 
@@ -153,21 +159,13 @@ main {
     box-sizing: border-box;
 }
 
-.add-schedule-button,
-.add-day-button,
-.new-plan-button,
-.save-button,
-.view-actions button,
-.checklist-add button {
-    border-radius: 7px;
-}
-
 .plan-tab,
 .add-schedule-button,
 .add-day-button,
 .new-plan-button,
 .view-actions button,
-.checklist-add button {
+.checklist-add button,
+.checklist-list input {
     cursor: pointer;
 }
 
@@ -575,7 +573,9 @@ main {
     font-weight: bold;
 }
 
-.expense-input {
+.expense-input,
+.saved-empty,
+#view-schedule .day-header {
     font-size: 14px;
 }
 
@@ -613,10 +613,6 @@ main {
     cursor: pointer;
 }
 
-.checklist-list input {
-    cursor: pointer;
-}
-
 .checklist-done {
     color: gray;
     text-decoration: line-through;
@@ -647,10 +643,6 @@ main {
 .save-notice {
     font-size: 13px;
     margin-bottom: 15px;
-}
-
-.saved-empty {
-    font-size: 14px;
 }
 
 .save-area {
@@ -783,6 +775,26 @@ main {
     transform: scale(1.06);
 }
 
+#view-schedule .schedule-table td {
+    font-size: 14px;
+    overflow-wrap: break-word;
+}
+
+#view-schedule .schedule-table {
+    table-layout: fixed;
+}
+
+.view-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.view-info img {
+    width: 18px;
+    height: 18px;
+}
+
 footer {
     color: gray;
     border-top: 1px solid #EEEEEF;
@@ -897,28 +909,4 @@ footer {
     padding: 8px 14px;
     font-size: 13px;
     cursor: pointer;
-}
-
-#view-schedule .schedule-table td {
-    font-size: 14px;
-    overflow-wrap: break-word;
-}
-
-#view-schedule .schedule-table {
-    table-layout: fixed;
-}
-
-#view-schedule .day-header {
-    font-size: 14px;
-}
-
-.view-info {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.view-info img {
-    width: 18px;
-    height: 18px;
 }
