@@ -247,7 +247,22 @@ function filterFlights() {
             selectedArrival === "" ||
             flight.arrival === selectedArrival;
 
-        return stopsMatch && airlineMatch && departureMatch && arrivalMatch;
+        const departureDateMatch =
+            selectedDepartureDate === "" ||
+            flight.departureDate === selectedDepartureDate;
+
+        let returnDateMatch = true;
+
+        if (selectedTripType === "round-trip" && selectedReturnDate !== "") {
+            returnDateMatch = flight.returnDate === selectedReturnDate;
+        }
+
+        return stopsMatch &&
+            airlineMatch &&
+            departureMatch &&
+            arrivalMatch &&
+            departureDateMatch &&
+            returnDateMatch;
     });
 
     if (sortSelect.value === "price-low") {
