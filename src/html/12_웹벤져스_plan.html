@@ -68,7 +68,7 @@
 
             <div class="plan-content">
                 <section class="plan-section" id="plan-write">
-                    <h1>여행 계획 작성하기</h1>
+                    <h1 id="write-title">여행 계획 작성하기</h1>
                     <p class="section-description">
                         나만의 여행을 계획해보세요
                     </p>
@@ -209,7 +209,7 @@
                         </section>
 
                         <div class="save-area">
-                            <p class="save-notice">계획을 저장하지 않고 다른 페이지로 이동하거나 새 계획을 작성하면 입력한 내용이 사라질 수 있습니다.</p>
+                            <p class="save-notice">계획을 저장하지 않고 다른 페이지로 이동하거나 다른 계획을 선택하면 입력한 내용이 사라질 수 있습니다.</p>
                             <button type="button" class="save-button" id="save-plan-button">
                                 계획 저장
                             </button>
@@ -235,31 +235,54 @@
 
                         <section class="view-section">
                             <h2>날짜별 여행 일정</h2>
-                            <div id="view-schedule">
-                                <p>상세 일정 조회 기능은 다음 단계에서 연결됩니다.</p>
-                            </div>
+                            <div id="view-schedule"></div>
                         </section>
 
                         <section class="view-section">
                             <h2>예상 지출</h2>
                             <div id="view-expense">
-                                <p>상세 지출 조회 기능은 다음 단계에서 연결됩니다.</p>
+                                <div class="budget-summary">
+                                    <div class="budget-row">
+                                        <h3>최종 예상 지출</h3>
+                                        <strong id="view-total-cost">0원</strong>
+                                    </div>
+                                    <div class="budget-row">
+                                        <span>목표 예산 대비</span>
+                                        <span id="view-budget-percent">0%</span>
+                                    </div>
+                                    <div class="budget-bar">
+                                        <div id="view-budget-fill"></div>
+                                    </div>
+                                    <div class="budget-row budget-range">
+                                        <span>0원</span><span id="view-budget-limit">0원</span>
+                                    </div>
+                                    <div class="budget-row">
+                                        <span id="view-budget-status">남은 예산</span>
+                                        <strong id="view-remaining-budget">0원</strong>
+                                    </div>
+                                </div>
+                                <h3 class="expense-title">세부 예상 지출</h3>
+                                <ul class="expense-list">
+                                    <li class="expense-item"><span>교통비</span><strong id="view-transport"></strong></li>
+                                    <li class="expense-item"><span>식비</span><strong id="view-food"></strong></li>
+                                    <li class="expense-item"><span>숙박비</span><strong id="view-stay"></strong></li>
+                                    <li class="expense-item"><span>기타</span><strong id="view-other"></strong></li>
+                                </ul>
                             </div>
                         </section>
 
                         <section class="view-section">
                             <h2>여행 체크리스트</h2>
-                            <div id="view-checklist">
-                                <p>상세 체크리스트 조회 기능은 다음 단계에서 연결됩니다.</p>
-                            </div>
+                            <p id="view-checklist-count"></p>
+                            <ul class="checklist-list" id="view-checklist"></ul>
                         </section>
 
                         <div class="view-actions">
-                            <button type="button" id="edit-plan-button" disabled>
+                            <button type="button" id="edit-plan-button">
                                 계획 수정
                             </button>
 
-                            <button type="button" id="delete-plan-button" disabled>
+                            <button type="button" id="delete-plan-button">
                                 계획 삭제
                             </button>
                         </div>

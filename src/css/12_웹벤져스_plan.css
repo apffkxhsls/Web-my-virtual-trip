@@ -227,7 +227,8 @@ main {
 }
 
 .budget-bar,
-#budget-fill {
+#budget-fill,
+#view-budget-fill {
     border-radius: 10px;
 }
 
@@ -510,13 +511,17 @@ main {
     font-size: 18px;
 }
 
-#total-cost {
+#total-cost,
+#view-total-cost {
     font-size: 26px;
 }
 
 #total-cost,
 #budget-percent,
-#remaining-budget {
+#remaining-budget,
+#view-total-cost,
+#view-budget-percent,
+#view-remaining-budget {
     color: #337768;
     font-weight: bold;
 }
@@ -528,7 +533,8 @@ main {
     overflow: hidden;
 }
 
-#budget-fill {
+#budget-fill,
+#view-budget-fill {
     width: 0%;
     height: 100%;
     background-color: #69A998;
@@ -588,7 +594,8 @@ main {
     margin: 0;
 }
 
-#checklist-count {
+#checklist-count,
+#view-checklist-count {
     color: #337768;
     font-size: 14px;
     font-weight: bold;
@@ -644,11 +651,6 @@ main {
 
 .saved-empty {
     font-size: 14px;
-}
-
-.view-actions button:disabled {
-    cursor: default;
-    opacity: 0.5;
 }
 
 .save-area {
@@ -895,4 +897,17 @@ footer {
     padding: 8px 14px;
     font-size: 13px;
     cursor: pointer;
+}
+
+#view-schedule .schedule-table td {
+    font-size: 14px;
+    overflow-wrap: break-word;
+}
+
+#view-schedule .schedule-table {
+    table-layout: fixed;
+}
+
+#view-schedule .day-header {
+    font-size: 14px;
 }
