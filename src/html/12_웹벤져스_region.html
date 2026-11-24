@@ -1,3 +1,5 @@
+<!-- 웹프 중간고사 지역별 여행지 탐색 페이지 / 2516078 심현희 -->
+
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -6,16 +8,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>지역별 탐색 | MyVirtualTrip</title>
     <meta name="author" content="심현희">
-    <link rel="stylesheet" href="../css/region.css">
+    <link rel="stylesheet" href="../css/12_웹벤져스_region.css">
 </head>
 
 <body>
     <!-- 로고 및 네비게이션 바 -->
     <header>
         <nav class="navigation">
-            <img src="../res/images/logo(1).png" id="logo" alt="MyVirtualTrip 로고">
+            <a href="12_웹벤져스_main.html" class="logo-link">
+                <img src="../res/images/12_logo.png" id="logo" alt="MyVirtualTrip 로고">
+            </a>
             <div class="nav-right">
                 <div class="category-nav">
+<<<<<<< HEAD:src/html/region.html
                     <a class="cat-item" href="../html/region.html">
                         <span>지역별</span>
                     </a>
@@ -33,12 +38,31 @@
                     </a>
                     <a class="cat-item" href="../html/diary.html">
                         <span>여행 기록</span>
+=======
+                    <a class="cat-item cat-item-active" href="../html/12_웹벤져스_region.html">
+                        <span>🗺️ 지역별</span>
+                    </a>
+                    <a class="cat-item" href="../html/12_웹벤져스_theme.html">
+                        <span>🎞️ 테마별</span>
+                    </a>
+                    <a class="cat-item" href="../html/12_웹벤져스_stay.html">
+                        <span>🏩 숙박</span>
+                    </a>
+                    <a class="cat-item" href="../html/12_웹벤져스_flight.html">
+                        <span>✈️ 항공</span>
+                    </a>
+                    <a class="cat-item" href="../html/12_웹벤져스_plan.html">
+                        <span>✍🏻 여행 계획</span>
+                    </a>
+                    <a class="cat-item" href="../html/12_웹벤져스_diary.html">
+                        <span>🗂️ 여행 기록</span>
+>>>>>>> 05b78594736b04c7cd3e5e07117fd0d2788db255:src/html/12_웹벤져스_region.html
                     </a>
                 </div>
                 <form class="search" action="#" method="get">
                     <input type="search" name="all-search" placeholder="여행지, 명소, 숙소 등">
                     <button type="submit">
-                        <img src="../res/icons/ic_search.svg" alt="검색 아이콘">
+                        <img src="../res/icons/12_ic_search.svg" alt="검색 아이콘">
                     </button>
                 </form>
                 <button type="button" class="logout">로그아웃</button>
@@ -46,6 +70,10 @@
         </nav>
     </header>
     <main>
+        <section class="region-heading">
+            <h1>여행 지역으로 찾아보기</h1>
+            <p class="section-description">원하는 지역을 선택해 여행지를 찾아보세요</p>
+        </section>
         <!-- 대륙별 지역 선택 -->
         <section class="continent-select">
             <div class="continent-list">
@@ -90,7 +118,7 @@
 
         <!-- 나라 선택 후 인기 및 추천 도시 섹션 -->
         <section class="country-select">
-            <h3 class="country-desc">아시아의 인기 도시를 알려드릴게요!</h3>
+            <h2 class="country-desc">아시아의 인기 도시를 알려드릴게요!</h2>
             <div class="country-layout">
                 <!-- 왼쪽: 나라 선택 패널 -->
                 <aside class="country-panel">
@@ -118,11 +146,11 @@
                     <div class="city-card-list">
                         <article class="city-card">
                             <button class="heart-btn">
-                                <img class="favorite" src="../res/icons/ic_favorite.svg" alt="좋아요 아이콘">
-                                <img class="favorite-filled" src="../res/icons/ic_favorite_filled.svg" alt="좋아요 누른 아이콘">
+                                <img class="favorite" src="../res/icons/12_ic_favorite.svg" alt="좋아요 아이콘">
+                                <img class="favorite-filled" src="../res/icons/12_ic_favorite_filled.svg" alt="좋아요 누른 아이콘">
                             </button>
                             <a href="#">
-                                <img class="city-img" src="../res/images/theme-history.jpg" alt="일본 도시 사진">
+                                <img class="city-img" src="../res/images/12_theme-history.jpg" alt="일본 도시 사진">
                                 <div class="city-info">
                                     <p class="city-name">오사카</p>
                                     <p class="city-location">일본</p>
@@ -135,11 +163,11 @@
                         </article>
                         <article class="city-card">
                             <button class="heart-btn">
-                                <img class="favorite" src="../res/icons/ic_favorite.svg" alt="좋아요 아이콘">
-                                <img class="favorite-filled" src="../res/icons/ic_favorite_filled.svg" alt="좋아요 누른 아이콘">
+                                <img class="favorite" src="../res/icons/12_ic_favorite.svg" alt="좋아요 아이콘">
+                                <img class="favorite-filled" src="../res/icons/12_ic_favorite_filled.svg" alt="좋아요 누른 아이콘">
                             </button>
                             <a href="#">
-                                <img class="city-img" src="../res/images/theme-history.jpg" alt="일본 도시 사진">
+                                <img class="city-img" src="../res/images/12_theme-history.jpg" alt="일본 도시 사진">
                                 <div class="city-info">
                                     <p class="city-name">도쿄</p>
                                     <p class="city-location">일본</p>
@@ -152,11 +180,11 @@
                         </article>
                         <article class="city-card">
                             <button class="heart-btn">
-                                <img class="favorite" src="../res/icons/ic_favorite.svg" alt="좋아요 아이콘">
-                                <img class="favorite-filled" src="../res/icons/ic_favorite_filled.svg" alt="좋아요 누른 아이콘">
+                                <img class="favorite" src="../res/icons/12_ic_favorite.svg" alt="좋아요 아이콘">
+                                <img class="favorite-filled" src="../res/icons/12_ic_favorite_filled.svg" alt="좋아요 누른 아이콘">
                             </button>
                             <a href="#">
-                                <img class="city-img" src="../res/images/theme-history.jpg" alt="일본 도시 사진">
+                                <img class="city-img" src="../res/images/12_theme-history.jpg" alt="일본 도시 사진">
                                 <div class="city-info">
                                     <p class="city-name">후쿠오카</p>
                                     <p class="city-location">일본</p>
@@ -172,11 +200,11 @@
                     <div class="city-card-list">
                         <article class="city-card">
                             <button class="heart-btn">
-                                <img class="favorite" src="../res/icons/ic_favorite.svg" alt="좋아요 아이콘">
-                                <img class="favorite-filled" src="../res/icons/ic_favorite_filled.svg" alt="좋아요 누른 아이콘">
+                                <img class="favorite" src="../res/icons/12_ic_favorite.svg" alt="좋아요 아이콘">
+                                <img class="favorite-filled" src="../res/icons/12_ic_favorite_filled.svg" alt="좋아요 누른 아이콘">
                             </button>
                             <a href="#">
-                                <img class="city-img" src="../res/images/theme-history.jpg" alt="일본 도시 사진">
+                                <img class="city-img" src="../res/images/12_theme-history.jpg" alt="일본 도시 사진">
                                 <div class="city-info">
                                     <p class="city-name">삿포로</p>
                                     <p class="city-location">일본</p>
@@ -189,11 +217,11 @@
                         </article>
                         <article class="city-card">
                             <button class="heart-btn">
-                                <img class="favorite" src="../res/icons/ic_favorite.svg" alt="좋아요 아이콘">
-                                <img class="favorite-filled" src="../res/icons/ic_favorite_filled.svg" alt="좋아요 누른 아이콘">
+                                <img class="favorite" src="../res/icons/12_ic_favorite.svg" alt="좋아요 아이콘">
+                                <img class="favorite-filled" src="../res/icons/12_ic_favorite_filled.svg" alt="좋아요 누른 아이콘">
                             </button>
                             <a href="#">
-                                <img class="city-img" src="../res/images/theme-history.jpg" alt="일본 도시 사진">
+                                <img class="city-img" src="../res/images/12_theme-history.jpg" alt="일본 도시 사진">
                                 <div class="city-info">
                                     <p class="city-name">오키나와</p>
                                     <p class="city-location">일본</p>
@@ -206,11 +234,11 @@
                         </article>
                         <article class="city-card">
                             <button class="heart-btn">
-                                <img class="favorite" src="../res/icons/ic_favorite.svg" alt="좋아요 아이콘">
-                                <img class="favorite-filled" src="../res/icons/ic_favorite_filled.svg" alt="좋아요 누른 아이콘">
+                                <img class="favorite" src="../res/icons/12_ic_favorite.svg" alt="좋아요 아이콘">
+                                <img class="favorite-filled" src="../res/icons/12_ic_favorite_filled.svg" alt="좋아요 누른 아이콘">
                             </button>
-                            <a href="#">
-                                <img class="city-img" src="../res/images/theme-history.jpg" alt="일본 도시 사진">
+                            <a href="../html/12_웹벤져스_detail.html">
+                                <img class="city-img" src="../res/images/12_theme-history.jpg" alt="일본 도시 사진">
                                 <div class="city-info">
                                     <p class="city-name">교토</p>
                                     <p class="city-location">일본</p>
@@ -225,14 +253,13 @@
                 </div>
             </div>
         </section>
-
         <!-- 축제 및 행사 섹션 -->
         <section class="festival-section">
             <h3 class="festival-title">일본의 축제 및 행사</h3>
             <div class="festival-list">
                 <article class="festival-card">
                     <div class="festival-poster">
-                        <img src="../res/images/festival.jpg" alt="축제 포스터">
+                        <img src="../res/images/12_festival.jpg" alt="축제 포스터">
                     </div>
                     <div class="ticket-divider"></div>
                     <div class="festival-info">
@@ -254,7 +281,7 @@
                 </article>
                 <article class="festival-card">
                     <div class="festival-poster">
-                        <img src="../res/images/festival.jpg" alt="축제 포스터">
+                        <img src="../res/images/12_festival.jpg" alt="축제 포스터">
                     </div>
                     <div class="ticket-divider"></div>
                     <div class="festival-info">
@@ -280,20 +307,20 @@
         <!-- 숙소 및 항공권 바로가기 배너 -->
         <section class="hotel-air">
             <div class="hotel-air-banner">
-                <a href="../html/stay.html" class="shortcut-card" id="hotelcard">
+                <a href="../html/12_웹벤져스_stay.html" class="shortcut-card" id="hotelcard">
                     <p class="shortcut-desc">일본의 인기있는 숙소를 만나보세요!</p>
                     <span class="shortcut-text">숙소 바로가기 ▶</span>
                 </a>
-                <a href="../html/flight.html" class="shortcut-card" id="aircard">
+                <a href="../html/12_웹벤져스_flight.html" class="shortcut-card" id="aircard">
                     <p class="shortcut-desc">일본으로 가는 가장 저렴한 항공권을 찾아보세요!</p>
-                    <span class="shortcut-text">비행기 바로가기 ▶</span>
+                    <span class="shortcut-text">항공 바로가기 ▶</span>
                 </a>
             </div>
         </section>
         <!-- 여행 계획 바로가기 배너 -->
         <section class="plan">
             <div class="plan-banner">
-                <a href="../html/plan.html" class="plan-card">
+                <a href="../html/12_웹벤져스_plan.html" class="plan-card">
                     <p class="plan-desc">찾아본 장소들 지금 저장해보세요!</p>
                     <span class="plan-text">여행 계획 바로가기 ▶</span>
                 </a>
@@ -342,6 +369,7 @@
                 <li><a href="#">개발자 센터</a></li>
             </ul>
             <form class="language" method="get" action="#">
+                <label for="language">언어</label>
                 <select name="language" id="language" size="1">
                     <option value="korean">한국어</option>
                     <option value="english">영어</option>
