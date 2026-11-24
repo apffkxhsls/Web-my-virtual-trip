@@ -245,37 +245,33 @@ function calculateExpense() {
 
 function showBudget(prefix, budget, total) {
     let percent = 0;
+
     if (budget > 0) {
         percent = total / budget * 100;
     }
 
     let budgetFill = document.getElementById(prefix + "budget-fill");
-    let budgetPercent = document.getElementById(prefix + "budget-percent");
     let budgetStatus = document.getElementById(prefix + "budget-status");
     let remainingBudget = document.getElementById(prefix + "remaining-budget");
 
     document.getElementById(prefix + "total-cost").innerText = total + "원";
     document.getElementById(prefix + "budget-limit").innerText = budget + "원";
-    budgetPercent.innerText = Math.round(percent) + "%";
+
     budgetFill.style.width = Math.min(percent, 100) + "%";
 
     if (budget === 0) {
-        budgetPercent.innerText = "-";
         budgetFill.style.width = "0%";
         budgetFill.style.backgroundColor = "#69A998";
-        budgetPercent.style.color = "#337768";
         budgetStatus.innerText = "목표 예산 미설정";
         remainingBudget.innerText = "-";
         remainingBudget.style.color = "#337768";
     } else if (total > budget) {
         budgetFill.style.backgroundColor = "#D98C8C";
-        budgetPercent.style.color = "#C05050";
         budgetStatus.innerText = "초과 예산";
         remainingBudget.innerText = (total - budget) + "원";
         remainingBudget.style.color = "#C05050";
     } else {
         budgetFill.style.backgroundColor = "#69A998";
-        budgetPercent.style.color = "#337768";
         budgetStatus.innerText = "남은 예산";
         remainingBudget.innerText = (budget - total) + "원";
         remainingBudget.style.color = "#337768";
@@ -298,12 +294,14 @@ addChecklistButton.addEventListener("click", function () {
 
 function addChecklist(item) {
     let li = document.createElement("li");
+
     li.innerHTML = '<label><input type="checkbox"><span></span></label>' +
         '<button type="button" class="delete-checklist-button">삭제</button>';
 
     let checkbox = li.querySelector("input");
     let text = li.querySelector("span");
     let deleteButton = li.querySelector("button");
+
     text.innerText = item;
     checklistList.appendChild(li);
 
@@ -313,26 +311,13 @@ function addChecklist(item) {
         } else {
             text.setAttribute("class", "");
         }
-        updateChecklistCount();
     });
 
     deleteButton.addEventListener("click", function () {
         li.remove();
-        updateChecklistCount();
     });
-    updateChecklistCount();
-    return li;
-}
 
-function updateChecklistCount() {
-    let items = checklistList.querySelectorAll("input");
-    let completed = 0;
-    for (let i = 0; i < items.length; i++) {
-        if (items[i].checked) {
-            completed++;
-        }
-    }
-    document.getElementById("checklist-count").innerText = completed + " / " + items.length + " 완료";
+    return li;
 }
 
 function getPlanData() {
@@ -422,7 +407,6 @@ function resetPlan() {
         addChecklist(defaultChecklist[i]);
     }
     calculateExpense();
-    updateChecklistCount();
 }
 
 savePlanButton.addEventListener("click", function () {
@@ -499,23 +483,26 @@ function displayExpense(plan) {
 function displayChecklist(plan) {
     let list = document.getElementById("view-checklist");
     list.innerHTML = "";
-    let completed = 0;
+
     for (let i = 0; i < plan.checklist.length; i++) {
         let item = plan.checklist[i];
         let li = document.createElement("li");
+
         li.innerHTML = '<span></span><span></span>';
+
         let spans = li.querySelectorAll("span");
         spans[0].innerText = item.text;
+
         if (item.checked) {
             spans[0].setAttribute("class", "checklist-done");
             spans[1].innerText = "완료";
-            completed++;
         } else {
             spans[1].innerText = "미완료";
         }
+
         list.appendChild(li);
     }
-    document.getElementById("view-checklist-count").innerText = completed + " / " + plan.checklist.length + " 완료";
+
     if (plan.checklist.length === 0) {
         list.innerHTML = "<li>등록된 체크리스트가 없습니다.</li>";
     }
@@ -563,7 +550,6 @@ function loadPlan(plan) {
             li.querySelector("span").setAttribute("class", "checklist-done");
         }
     }
-    updateChecklistCount();
 }
 
 const editPlanButton = document.getElementById("edit-plan-button");

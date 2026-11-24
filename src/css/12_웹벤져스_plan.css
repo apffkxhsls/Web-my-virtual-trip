@@ -515,13 +515,16 @@ main {
 }
 
 #total-cost,
-#budget-percent,
 #remaining-budget,
 #view-total-cost,
-#view-budget-percent,
 #view-remaining-budget {
     color: #337768;
     font-weight: bold;
+}
+
+#budget-percent,
+#view-budget-percent {
+    display: none;
 }
 
 .budget-bar {
@@ -592,13 +595,6 @@ main {
 
 .plan-form .checklist-header h2 {
     margin: 0;
-}
-
-#checklist-count,
-#view-checklist-count {
-    color: #337768;
-    font-size: 14px;
-    font-weight: bold;
 }
 
 .checklist-list li {
