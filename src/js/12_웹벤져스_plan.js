@@ -28,17 +28,16 @@ showTab(0);
 const writeSection = document.getElementById("plan-write");
 const viewSection = document.getElementById("plan-view");
 const newPlanButton = document.getElementById("new-plan-button");
-const savedCards = document.querySelectorAll(".saved-card");
+const savedList = document.getElementById("saved-list");
+const savePlanButton = document.getElementById("save-plan-button");
+const planForm = document.querySelector(".plan-form");
+
+let savedPlans = JSON.parse(localStorage.getItem("savedPlans")) || [];
 
 newPlanButton.addEventListener("click", function () {
+    resetPlan();
     showWrite();
 });
-
-for (let i = 0; i < savedCards.length; i++) {
-    savedCards[i].addEventListener("click", function () {
-        showView(i);
-    });
-}
 
 function showWrite() {
     writeSection.style.display = "block";
@@ -47,13 +46,12 @@ function showWrite() {
 }
 
 function showView(index) {
-    let info = savedCards[index].querySelector(".saved-info");
-    let title = info.querySelector("h3");
-    let details = info.querySelectorAll("p");
+    let plan = savedPlans[index];
 
-    document.getElementById("view-title").innerText = title.innerText;
-    document.getElementById("view-date").innerText = details[0].innerText;
-    document.getElementById("view-region").innerText = details[1].innerText;
+    document.getElementById("view-title").innerText = plan.title;
+    document.getElementById("view-date").innerText = plan.startDate + " ~ " + plan.endDate;
+    document.getElementById("view-region").innerText = plan.region;
+    document.getElementById("view-travelers").innerText = "동행 인원: " + (plan.travelers || "미입력");
 
     writeSection.style.display = "none";
     viewSection.style.display = "block";
@@ -144,8 +142,6 @@ function addSchedule(tbody) {
     });
 }
 
-addDay();
-
 const budgetInput = document.getElementById("budget");
 const expenseInputs = document.querySelectorAll(".expense-input input");
 
@@ -156,14 +152,11 @@ for (let i = 0; i < expenseInputs.length; i++) {
 }
 
 function calculateExpense() {
-    let budget = parseFloat(budgetInput.value) || 0;
+    let budget = Math.max(0, parseFloat(budgetInput.value) || 0);
     let total = 0;
-
-    budget = Math.max(0, budget);
 
     for (let i = 0; i < expenseInputs.length; i++) {
         let cost = parseFloat(expenseInputs[i].value) || 0;
-
         total += Math.max(0, cost);
     }
 
@@ -207,8 +200,6 @@ function calculateExpense() {
     }
 }
 
-calculateExpense();
-
 const checklistList = document.getElementById("checklist-list");
 const checklistInput = document.getElementById("checklist-input");
 const addChecklistButton = document.getElementById("add-checklist-button");
@@ -236,10 +227,7 @@ function addChecklist(item) {
     let li = document.createElement("li");
 
     li.innerHTML =
-        '<label>' +
-        '<input type="checkbox">' +
-        '<span></span>' +
-        '</label>' +
+        '<label><input type="checkbox"><span></span></label>' +
         '<button type="button" class="delete-checklist-button">삭제</button>';
 
     let checkbox = li.querySelector("input");
@@ -247,7 +235,6 @@ function addChecklist(item) {
     let deleteButton = li.querySelector("button");
 
     text.innerText = item;
-
     checklistList.appendChild(li);
 
     checkbox.addEventListener("change", function () {
@@ -282,6 +269,138 @@ function updateChecklistCount() {
         completed + " / " + items.length + " 완료";
 }
 
-for (let i = 0; i < defaultChecklist.length; i++) {
-    addChecklist(defaultChecklist[i]);
+function getPlanData() {
+    let plan = {
+        title: document.getElementById("trip-title").value,
+        region: document.getElementById("trip-region").value,
+        startDate: document.getElementById("start-date").value,
+        endDate: document.getElementById("end-date").value,
+        travelers: document.getElementById("travelers").value,
+        days: [],
+        expense: {
+            budget: budgetInput.value,
+            transport: document.getElementById("transport").value,
+            food: document.getElementById("food-cost").value,
+            stay: document.getElementById("stay-cost").value,
+            other: document.getElementById("other-cost").value
+        },
+        checklist: []
+    };
+
+    let daySections = scheduleDays.querySelectorAll(".day-section");
+
+    for (let i = 0; i < daySections.length; i++) {
+        let day = {
+            date: daySections[i].querySelector(".day-date input").value,
+            schedules: []
+        };
+
+        let rows = daySections[i].querySelectorAll("tbody tr");
+
+        for (let j = 0; j < rows.length; j++) {
+            let inputs = rows[j].querySelectorAll("input");
+
+            day.schedules.push({
+                time: inputs[0].value,
+                place: inputs[1].value,
+                memo: inputs[2].value
+            });
+        }
+
+        plan.days.push(day);
+    }
+
+    let items = checklistList.querySelectorAll("li");
+
+    for (let i = 0; i < items.length; i++) {
+        plan.checklist.push({
+            text: items[i].querySelector("span").innerText,
+            checked: items[i].querySelector("input").checked
+        });
+    }
+
+    return plan;
 }
+
+function displayPlans() {
+    savedList.innerHTML = "";
+
+    if (savedPlans.length === 0) {
+        savedList.innerHTML =
+            '<li class="saved-empty">저장된 여행 계획이 없습니다.</li>';
+        return;
+    }
+
+    for (let i = 0; i < savedPlans.length; i++) {
+        let plan = savedPlans[i];
+        let li = document.createElement("li");
+
+        li.innerHTML =
+            '<article class="saved-card hover-card">' +
+            '<div class="card-content saved-info">' +
+            '<h3></h3>' +
+            '<p><img src="../res/icons/12_ic_calendar.svg" alt="날짜"><span></span></p>' +
+            '<p><img src="../res/icons/12_ic_location_filled.svg" alt="장소"><span></span></p>' +
+            '</div>' +
+            '</article>';
+
+        li.querySelector("h3").innerText = plan.title;
+
+        let details = li.querySelectorAll("span");
+
+        details[0].innerText = plan.startDate + " ~ " + plan.endDate;
+        details[1].innerText = plan.region;
+
+        li.querySelector("article").addEventListener("click", function () {
+            showView(i);
+        });
+
+        savedList.appendChild(li);
+    }
+}
+
+function resetPlan() {
+    planForm.reset();
+    scheduleDays.innerHTML = "";
+    checklistList.innerHTML = "";
+
+    addDay();
+
+    for (let i = 0; i < defaultChecklist.length; i++) {
+        addChecklist(defaultChecklist[i]);
+    }
+
+    calculateExpense();
+    updateChecklistCount();
+}
+
+savePlanButton.addEventListener("click", function () {
+    let plan = getPlanData();
+
+    if (plan.title === "" || plan.region === "" || plan.startDate === "" || plan.endDate === "") {
+        alert("여행 제목, 지역, 출발일, 도착일을 입력해주세요.");
+        showTab(0);
+        return;
+    }
+
+    if (plan.endDate < plan.startDate) {
+        alert("도착일은 출발일보다 빠를 수 없습니다.");
+        showTab(0);
+        return;
+    }
+
+    savedPlans.push(plan);
+
+    localStorage.setItem("savedPlans", JSON.stringify(savedPlans));
+
+    displayPlans();
+    resetPlan();
+    showView(savedPlans.length - 1);
+});
+
+planForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+});
+
+resetPlan();
+displayPlans();

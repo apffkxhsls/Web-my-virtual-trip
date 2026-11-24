@@ -130,9 +130,119 @@ main {
     padding: 32px 0 50px;
 }
 
+.form-group input,
+.schedule-table input,
+.day-date input,
+.expense-input input,
+.checklist-add input {
+    border: 1px solid #B1B3B4;
+    font-size: 14px;
+}
+
+.form-group input,
+.day-date input,
+.expense-input input,
+.checklist-add input {
+    border-radius: 7px;
+}
+
+.form-group input,
+.schedule-table input,
+.day-date input,
+.expense-input input {
+    box-sizing: border-box;
+}
+
+.add-schedule-button,
+.add-day-button,
+.new-plan-button,
+.save-button,
+.view-actions button,
+.checklist-add button {
+    border-radius: 7px;
+}
+
+.plan-tab,
+.add-schedule-button,
+.add-day-button,
+.new-plan-button,
+.view-actions button,
+.checklist-add button {
+    cursor: pointer;
+}
+
+.add-schedule-button,
+.add-day-button,
+.new-plan-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.plan-tab,
+.save-button,
+.view-actions button {
+    font-weight: bold;
+}
+
+.new-plan-button,
+.save-button,
+.checklist-add button,
+#edit-plan-button {
+    background-color: #8DC5AC;
+}
+
+.budget-row,
+.expense-item,
+.checklist-header,
+.checklist-list li,
+.day-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.day-date,
+.expense-input {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.saved-list,
+.checklist-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.plan-form,
+.view-box,
+.saved-section,
+.saved-card {
+    background-color: white;
+    border: 1px solid #EEEEEE;
+    box-sizing: border-box;
+}
+
+.budget-bar,
+#budget-fill {
+    border-radius: 10px;
+}
+
+.checklist-list li,
+.view-section {
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.save-notice,
+.saved-empty {
+    color: gray;
+}
+
 .plan-layout {
     display: flex;
-    align-items: stretch;
 }
 
 .plan-sidebar {
@@ -159,14 +269,8 @@ main {
     margin-bottom: 12px;
 }
 
-.plan-content h2 {
-    font-size: 25px;
-    margin-bottom: 12px;
-}
-
 .section-description {
     font-size: 15px;
-    color: black;
     margin-bottom: 30px;
 }
 
@@ -184,8 +288,6 @@ main {
     border-radius: 8px;
     color: black;
     font-size: 15px;
-    font-weight: bold;
-    cursor: pointer;
     transition: background-color 0.2s;
 }
 
@@ -211,10 +313,7 @@ main {
 .plan-form,
 .view-box {
     padding: 35px;
-    background-color: white;
-    border: 1px solid #EEEEEE;
     border-radius: 14px;
-    box-sizing: border-box;
 }
 
 .plan-form h2 {
@@ -249,10 +348,6 @@ main {
     height: 45px;
     padding: 12px;
     background-color: white;
-    border: 1px solid #B1B3B4;
-    border-radius: 7px;
-    box-sizing: border-box;
-    font-size: 14px;
 }
 
 .plan-content input:active {
@@ -274,13 +369,13 @@ main {
 }
 
 .day-section h3 {
-    display: inline-block;
     padding: 9px 17px;
     margin-bottom: 0;
     background-color: #337768;
     border-radius: 6px;
     color: white;
     font-size: 16px;
+    display: inline-block;
 }
 
 .schedule-table {
@@ -327,10 +422,7 @@ main {
     width: 100%;
     min-width: 0;
     padding: 11px;
-    border: 1px solid #B1B3B4;
     border-radius: 6px;
-    box-sizing: border-box;
-    font-size: 14px;
 }
 
 .delete-schedule-button,
@@ -357,16 +449,10 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
     margin-top: 12px;
-    padding: 12px;
     background-color: white;
     border: 1px dashed #69A998;
-    border-radius: 7px;
     color: #337768;
-    font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
 }
 
 .add-schedule-button:hover {
@@ -379,38 +465,19 @@ main {
 }
 
 .day-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     margin-bottom: 15px;
-}
-
-.day-date {
-    display: flex;
-    align-items: center;
-    gap: 12px;
 }
 
 .day-date input {
     height: 40px;
     padding: 8px 12px;
-    border: 1px solid #B1B3B4;
-    border-radius: 7px;
-    box-sizing: border-box;
-    font-size: 14px;
 }
 
 .add-day-button {
-    display: block;
-    width: 100%;
-    padding: 12px;
     background-color: #C3E4D9;
     border: 1px solid #8DC5AC;
-    border-radius: 7px;
     color: #337768;
-    font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
+    display: block;
 }
 
 .add-day-button:hover {
@@ -430,9 +497,6 @@ main {
 }
 
 .budget-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     margin-bottom: 12px;
     font-size: 14px;
 }
@@ -461,7 +525,6 @@ main {
     width: 100%;
     height: 15px;
     background-color: #DEE5E1;
-    border-radius: 10px;
     overflow: hidden;
 }
 
@@ -469,7 +532,6 @@ main {
     width: 0%;
     height: 100%;
     background-color: #69A998;
-    border-radius: 10px;
     transition: width 0.3s ease;
 }
 
@@ -494,9 +556,6 @@ main {
 }
 
 .expense-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     padding: 8px 0;
     border-top: 1px solid #EEEEEE;
 }
@@ -511,9 +570,6 @@ main {
 }
 
 .expense-input {
-    display: flex;
-    align-items: center;
-    gap: 12px;
     font-size: 14px;
 }
 
@@ -521,17 +577,10 @@ main {
     width: 150px;
     height: 35px;
     padding: 8px;
-    border: 1px solid #B1B3B4;
-    border-radius: 7px;
-    box-sizing: border-box;
-    font-size: 14px;
     text-align: right;
 }
 
 .checklist-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     margin-bottom: 25px;
 }
 
@@ -545,18 +594,8 @@ main {
     font-weight: bold;
 }
 
-.checklist-list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
 .checklist-list li {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     padding: 15px 0;
-    border-bottom: 1px solid #EEEEEE;
     font-size: 15px;
 }
 
@@ -585,23 +624,31 @@ main {
 .checklist-add input {
     flex-grow: 1;
     padding: 12px;
-    border: 1px solid #B1B3B4;
-    border-radius: 7px;
-    font-size: 14px;
 }
 
 .checklist-add button {
     padding: 12px 24px;
-    background-color: #8DC5AC;
     border: none;
-    border-radius: 7px;
-    cursor: pointer;
 }
 
 .checklist-add button:hover,
 .new-plan-button:hover,
 #edit-plan-button:hover {
     background-color: #69A998;
+}
+
+.save-notice {
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.saved-empty {
+    font-size: 14px;
+}
+
+.view-actions button:disabled {
+    cursor: default;
+    opacity: 0.5;
 }
 
 .save-area {
@@ -611,12 +658,9 @@ main {
 
 .save-button {
     padding: 15px 65px;
-    background-color: #8DC5AC;
     border: 1px solid #8DC5AC;
-    border-radius: 7px;
     color: black;
     font-size: 16px;
-    font-weight: bold;
 }
 
 .save-button:hover {
@@ -633,16 +677,12 @@ main {
     flex-grow: 1;
     width: 100%;
     padding: 22px 16px;
-    background-color: white;
-    border: 1px solid #EEEEEE;
     border-radius: 12px;
-    box-sizing: border-box;
 }
 
 .view-section {
     padding-bottom: 30px;
     margin-bottom: 30px;
-    border-bottom: 1px solid #EEEEEE;
 }
 
 .view-section h2 {
@@ -665,15 +705,11 @@ main {
 .view-actions button {
     padding: 13px 35px;
     border: 1px solid #B1B3B4;
-    border-radius: 7px;
     background-color: white;
     font-size: 15px;
-    font-weight: bold;
-    cursor: pointer;
 }
 
 #edit-plan-button {
-    background-color: #8DC5AC;
     border-color: #8DC5AC;
 }
 
@@ -688,52 +724,28 @@ main {
 }
 
 .new-plan-button {
-    width: 100%;
-    padding: 12px;
     margin-bottom: 22px;
-    background-color: #8DC5AC;
     border: none;
-    border-radius: 7px;
-    font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
 }
 
 .saved-list {
     display: flex;
     flex-direction: column;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.saved-list li {
-    width: 100%;
 }
 
 .saved-card {
-    display: flex;
-    flex-direction: column;
     width: 100%;
     margin-bottom: 16px;
-    border: 1px solid #EEEEEE;
     border-radius: 12px;
-    box-sizing: border-box;
-    background-color: white;
     overflow: hidden;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
 }
 
 .saved-card:active {
     border-color: #337768;
     background-color: #C3E4D9;
-}
-
-.saved-image {
-    display: block;
-    width: 100%;
-    height: 115px;
-    object-fit: cover;
 }
 
 .saved-info {
@@ -750,7 +762,6 @@ main {
     align-items: center;
     gap: 5px;
     font-size: 12px;
-    color: black;
     line-height: 1.6;
     margin: 0 0 7px;
 }
