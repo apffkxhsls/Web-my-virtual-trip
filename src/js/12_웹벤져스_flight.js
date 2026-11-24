@@ -92,6 +92,16 @@ function displayFlights(data) {
             '</div>' +
             '</article>';
     }
+
+    const selectLinks = document.querySelectorAll(".flight-list .select-button");
+
+    for (let i = 0; i < selectLinks.length; i++) {
+        selectLinks[i].addEventListener("click", function () {
+            sessionStorage.setItem("selectedFlightId", this.id);
+            sessionStorage.setItem("selectedTripType", selectedTripType);
+            sessionStorage.setItem("selectedPassengers", selectedPassengers);
+        });
+    }
 }
 
 const stopsCheckboxes = document.querySelectorAll('input[name="stops"]');
