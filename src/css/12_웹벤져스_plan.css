@@ -199,22 +199,12 @@ main {
     color: #337768;
 }
 
-.plan-panel {
-    display: none;
-}
-
-#basic {
+.plan-panel,
+#schedule {
     display: block;
 }
 
-.plan-form {
-    padding: 35px;
-    background-color: white;
-    border: 1px solid #EEEEEE;
-    border-radius: 14px;
-    box-sizing: border-box;
-}
-
+.plan-form,
 .plan-form h2 {
     font-size: 23px;
     margin-bottom: 25px;
@@ -261,53 +251,10 @@ main {
     border-color: #69A998;
 }
 
-.theme-fieldset {
-    margin: 35px 0 0;
-    padding: 0;
-    border: none;
-}
-
-.theme-fieldset legend {
-    font-size: 23px;
-    font-weight: bold;
-    margin-bottom: 8px;
-}
-
-.theme-options {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.theme-option {
-    margin-right: 12px;
-    margin-bottom: 6px;
-    padding: 13px 20px;
-    background-color: white;
-    border: 1px solid #EEEEEE;
-    border-radius: 25px;
-}
-
-.theme-option input {
-    margin-right: 7px;
-}
-
-.theme-option:hover {
-    border-color: #69A998;
-}
-
-.schedule-section {
-    margin-top: 0;
-}
-
-#schedule-message {
-    font-size: 14px;
-    color: gray;
-    margin-bottom: 24px;
-}
-
-.day-date {
-    font-size: 14px;
-    color: black;
+.schedule-detail {
+    margin-top: 35px;
+    padding-top: 35px;
+    border-top: 1px solid #EEEEEE;
 }
 
 .day-section {
@@ -357,9 +304,9 @@ main {
 
 .schedule-table th:nth-child(4) {
     width: 10%;
-    text-align: center;
 }
 
+.schedule-table th:nth-child(4),
 .schedule-table td:nth-child(4) {
     text-align: center;
 }
@@ -374,22 +321,12 @@ main {
     font-size: 14px;
 }
 
-.delete-schedule-button {
-    padding: 8px 12px;
-    background-color: white;
-    border: 1px solid #B1B3B4;
-    border-radius: 6px;
-    color: gray;
-    font-size: 13px;
-    cursor: pointer;
+.delete-schedule-button,
+.delete-day-button {
+    padding: 9px 12px;
 }
 
-.delete-schedule-button:hover {
-    background-color: #FDECEC;
-    border-color: #D98C8C;
-    color: #C05050;
-}
-
+.delete-schedule-button:hover,
 .add-schedule-button {
     display: flex;
     align-items: center;
@@ -408,7 +345,6 @@ main {
 
 .add-schedule-button:hover {
     background-color: #9ACEB7;
-    border: 1px dashed #69A998;
 }
 
 .add-schedule-button:active {
@@ -426,22 +362,38 @@ main {
 .day-date {
     display: flex;
     align-items: center;
+    gap: 12px;
 }
 
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
+.day-date input {
+    height: 40px;
+    padding: 8px 12px;
+    border: 1px solid #B1B3B4;
+    border-radius: 7px;
+    box-sizing: border-box;
+    font-size: 14px;
 }
 
-.expense-section {
-    margin-top: 0;
+.add-day-button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #C3E4D9;
+    border: 1px solid #8DC5AC;
+    border-radius: 7px;
+    color: #337768;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.add-day-button:hover {
+    background-color: #9ACEB7;
+    border-color: #69A998;
+}
+
+.delete-day-button {
+    padding: 9px 12px;
 }
 
 .expense-list {
@@ -529,7 +481,9 @@ main {
     cursor: pointer;
 }
 
-.checklist-add button:hover {
+.checklist-add button:hover,
+.new-plan-button:hover,
+#edit-plan-button:hover {
     background-color: #69A998;
 }
 
@@ -565,18 +519,6 @@ main {
     background-color: white;
     border: 1px solid #EEEEEE;
     border-radius: 12px;
-    box-sizing: border-box;
-}
-
-.plan-view {
-    display: none;
-}
-
-.view-box {
-    padding: 35px;
-    background-color: white;
-    border: 1px solid #EEEEEE;
-    border-radius: 14px;
     box-sizing: border-box;
 }
 
@@ -618,10 +560,6 @@ main {
     border-color: #8DC5AC;
 }
 
-#edit-plan-button:hover {
-    background-color: #69A998;
-}
-
 #delete-plan-button:hover {
     background-color: #FDECEC;
     border-color: #D98C8C;
@@ -642,10 +580,6 @@ main {
     font-size: 14px;
     font-weight: bold;
     cursor: pointer;
-}
-
-.new-plan-button:hover {
-    background-color: #69A998;
 }
 
 .saved-list {
@@ -709,10 +643,6 @@ main {
     width: 15px;
     height: 15px;
     object-fit: contain;
-}
-
-.hover-card {
-    overflow: hidden;
 }
 
 .card-content {

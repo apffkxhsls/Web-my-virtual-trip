@@ -141,12 +141,8 @@
                     </p>
 
                     <div class="plan-tabs">
-                        <button type="button" id="tab-basic" class="plan-tab active">
-                            기본 정보
-                        </button>
-
-                        <button type="button" id="tab-schedule" class="plan-tab">
-                            일정
+                        <button type="button" id="tab-schedule" class="plan-tab active">
+                            여행 일정
                         </button>
 
                         <button type="button" id="tab-expense" class="plan-tab">
@@ -159,7 +155,7 @@
                     </div>
 
                     <form class="plan-form">
-                        <section class="basic-section plan-panel" id="basic">
+                        <section class="schedule-section plan-panel" id="schedule">
                             <h2>기본 정보</h2>
 
                             <div class="form-row">
@@ -191,71 +187,23 @@
                                 </div>
                             </div>
 
-                            <fieldset class="theme-fieldset">
-                                <legend>여행 테마 선택</legend>
+                            <div class="schedule-detail">
+                                <h2>날짜별 여행 일정</h2>
 
-                                <div class="theme-options">
-                                    <div class="theme-option">
-                                        <input type="checkbox" name="trip-theme" id="nature" value="nature">
-                                        <label for="nature">🌿 자연</label>
-                                    </div>
+                                <div id="schedule-days"></div>
 
-                                    <div class="theme-option">
-                                        <input type="checkbox" name="trip-theme" id="history" value="history">
-                                        <label for="history">🏛️ 역사</label>
-                                    </div>
-
-                                    <div class="theme-option">
-                                        <input type="checkbox" name="trip-theme" id="food" value="food">
-                                        <label for="food">🍜 먹방</label>
-                                    </div>
-
-                                    <div class="theme-option">
-                                        <input type="checkbox" name="trip-theme" id="sea" value="sea">
-                                        <label for="sea">🏖️ 바다</label>
-                                    </div>
-
-                                    <div class="theme-option">
-                                        <input type="checkbox" name="trip-theme" id="activity" value="activity">
-                                        <label for="activity">🚴 액티비티</label>
-                                    </div>
-
-                                    <div class="theme-option">
-                                        <input type="checkbox" name="trip-theme" id="trendy" value="trendy">
-                                        <label for="trendy">✨ 요즘</label>
-                                    </div>
-
-                                    <div class="theme-option">
-                                        <input type="checkbox" name="trip-theme" id="friends" value="friends">
-                                        <label for="friends">👫 친구</label>
-                                    </div>
-
-                                    <div class="theme-option">
-                                        <input type="checkbox" name="trip-theme" id="solo" value="solo">
-                                        <label for="solo">🎒 혼여행</label>
-                                    </div>
-                                </div>
-                            </fieldset>
+                                <button type="button" class="add-day-button" id="add-day-button">
+                                    + 날짜 추가하기
+                                </button>
+                            </div>
                         </section>
-
-
-                        <section class="schedule-section plan-panel" id="schedule">
-                            <h2>날짜별 여행 일정</h2>
-
-                            <p id="schedule-message">
-                                기본 정보에서 여행 기간을 먼저 선택해주세요.
-                            </p>
-
-                            <div id="schedule-days"></div>
-                        </section>
-
 
                         <section class="expense-section plan-panel" id="expense">
                             <h2>예상 지출</h2>
 
                             <ul class="expense-list">
                                 <li class="expense-item">
-                                    <label for="transport">🚆 교통비</label>
+                                    <label for="transport">교통비</label>
                                     <div class="expense-input">
                                         <input type="number" id="transport" min="0" step="1000" placeholder="0">
                                         <span>원</span>
@@ -263,7 +211,7 @@
                                 </li>
 
                                 <li class="expense-item">
-                                    <label for="food-cost">🍽️ 식비</label>
+                                    <label for="food-cost">식비</label>
                                     <div class="expense-input">
                                         <input type="number" id="food-cost" min="0" step="1000" placeholder="0">
                                         <span>원</span>
@@ -271,7 +219,7 @@
                                 </li>
 
                                 <li class="expense-item">
-                                    <label for="stay-cost">🏨 숙박비</label>
+                                    <label for="stay-cost">숙박비</label>
                                     <div class="expense-input">
                                         <input type="number" id="stay-cost" min="0" step="1000" placeholder="0">
                                         <span>원</span>
@@ -279,7 +227,7 @@
                                 </li>
 
                                 <li class="expense-item">
-                                    <label for="other-cost">🧳 기타</label>
+                                    <label for="other-cost">기타</label>
                                     <div class="expense-input">
                                         <input type="number" id="other-cost" min="0" step="1000" placeholder="0">
                                         <span>원</span>
@@ -351,7 +299,6 @@
                             <p id="view-region"></p>
                             <p id="view-date"></p>
                             <p id="view-travelers">동행 인원: 미입력</p>
-                            <p id="view-theme">여행 테마: 미입력</p>
                         </section>
 
                         <section class="view-section">
