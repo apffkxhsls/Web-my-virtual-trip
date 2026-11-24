@@ -82,6 +82,9 @@ function displayFlights(data) {
 
 const stopsCheckboxes = document.querySelectorAll('input[name="stops"]');
 const airlineCheckboxes = document.querySelectorAll('input[name="airline"]');
+const sortSelect = document.querySelector("#sort");
+
+sortSelect.addEventListener("change", filterFlights);
 
 for (let i = 0; i < stopsCheckboxes.length; i++) {
     stopsCheckboxes[i].addEventListener("change", filterFlights);
@@ -129,6 +132,16 @@ function filterFlights() {
 
         return stopsMatch && airlineMatch;
     });
+
+    if (sortSelect.value === "price-low") {
+        filteredFlights.sort(function (a, b) {
+            return a.price - b.price;
+        });
+    } else if (sortSelect.value === "duration-short") {
+        filteredFlights.sort(function (a, b) {
+            return a.durationMinutes - b.durationMinutes;
+        });
+    }
 
     displayFlights(filteredFlights);
 }
