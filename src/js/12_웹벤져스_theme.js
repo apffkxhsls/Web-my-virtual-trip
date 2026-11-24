@@ -26,9 +26,9 @@ function showThemes() {
         let section = document.getElementById(themes[i]);
 
         if (selected[i]) {
-            button.classList.add("selected");
+            button.setAttribute("class", "theme-item selected");
         } else {
-            button.classList.remove("selected");
+            button.setAttribute("class", "theme-item");
         }
 
         if (count == 0 || selected[i]) {
@@ -39,13 +39,13 @@ function showThemes() {
     }
 }
 
+
 const bannerContainer = document.querySelector(".banner-container");
 const banners = document.querySelectorAll(".theme-banner");
 const prevButton = document.getElementById("banner-prev");
 const nextButton = document.getElementById("banner-next");
 
 let currentIndex = 0;
-let bannerTimer;
 
 function showBanner() {
     bannerContainer.style.transform =
@@ -73,25 +73,14 @@ function prevBanner() {
 }
 
 function autoBanner() {
-    bannerTimer = setTimeout(function () {
-        nextBanner();
-        autoBanner();
-    }, 5000);
+    nextBanner();
+    setTimeout(autoBanner, 5000);
 }
 
-prevButton.addEventListener("click", function () {
-    clearTimeout(bannerTimer);
-    prevBanner();
-    autoBanner();
-});
+prevButton.addEventListener("click", prevBanner);
+nextButton.addEventListener("click", nextBanner);
 
-nextButton.addEventListener("click", function () {
-    clearTimeout(bannerTimer);
-    nextBanner();
-    autoBanner();
-});
-
-autoBanner();
+setTimeout(autoBanner, 5000);
 
 const bannerButtons = document.querySelectorAll(".banner-button");
 
