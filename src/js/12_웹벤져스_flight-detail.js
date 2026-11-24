@@ -38,20 +38,24 @@ fetch("../data/12_웹벤져스_flight.json")
         const totalPrice = unitPrice * passengers;
 
         document.querySelector(".flight-detail").innerHTML =
+            '<div class="flight-detail-layout">' +
+            '<section class="flight-detail-info">' +
             '<h1>' + selectedFlight.airline + '</h1>' +
             '<h2>' + selectedFlight.departure + ' → ' +
             selectedFlight.arrival + '</h2>' +
-
             '<p>출발 시간: ' + selectedFlight.departureTime + '</p>' +
             '<p>도착 시간: ' + selectedFlight.arrivalTime + '</p>' +
-            '<p>' + stopsText + ' · ' + selectedFlight.durationText + '</p>' +
+            '<p>' + stopsText + ' · ' +
+            selectedFlight.durationText + '</p>' +
             '<p>' + selectedFlight.baggage + '</p>' +
+            '</section>' +
 
-            '<div class="flight-detail-price">' +
+            '<aside class="flight-detail-price">' +
             '<h2>예상 총액</h2>' +
             '<p><strong>' + totalPrice.toLocaleString("ko-KR") +
             '원</strong></p>' +
             '<p>' + passengers + '인 ' + tripText + ' 기준</p>' +
+            '</aside>' +
             '</div>';
     })
     .catch(function (error) {
