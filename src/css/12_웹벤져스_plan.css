@@ -147,7 +147,6 @@ main {
 .add-day-button,
 .new-plan-button,
 .save-button,
-.view-actions button,
 .checklist-add button {
     border-radius: 7px;
 }
@@ -163,7 +162,6 @@ main {
 .add-schedule-button,
 .add-day-button,
 .new-plan-button,
-.view-actions button,
 .checklist-add button,
 .checklist-list input {
     cursor: pointer;
@@ -179,15 +177,13 @@ main {
 }
 
 .plan-tab,
-.save-button,
-.view-actions button {
+.save-button {
     font-weight: bold;
 }
 
 .new-plan-button,
 .save-button,
-.checklist-add button,
-#edit-plan-button {
+.checklist-add button {
     background-color: #8DC5AC;
 }
 
@@ -216,7 +212,6 @@ main {
 }
 
 .plan-form,
-.view-box,
 .saved-section,
 .saved-card {
     background-color: white;
@@ -225,13 +220,11 @@ main {
 }
 
 .budget-bar,
-#budget-fill,
-#view-budget-fill {
+#budget-fill {
     border-radius: 10px;
 }
 
-.checklist-list li,
-.view-section {
+.checklist-list li {
     border-bottom: 1px solid #EEEEEE;
 }
 
@@ -300,8 +293,7 @@ main {
     color: #337768;
 }
 
-.plan-panel,
-.plan-view {
+.plan-panel {
     display: none;
 }
 
@@ -309,8 +301,7 @@ main {
     display: block;
 }
 
-.plan-form,
-.view-box {
+.plan-form {
     padding: 35px;
     border-radius: 14px;
 }
@@ -509,22 +500,14 @@ main {
     font-size: 18px;
 }
 
-#total-cost,
-#view-total-cost {
+#total-cost {
     font-size: 26px;
 }
 
 #total-cost,
-#remaining-budget,
-#view-total-cost,
-#view-remaining-budget {
+#remaining-budget {
     color: #337768;
     font-weight: bold;
-}
-
-#budget-percent,
-#view-budget-percent {
-    display: none;
 }
 
 .budget-bar {
@@ -534,8 +517,7 @@ main {
     overflow: hidden;
 }
 
-#budget-fill,
-#view-budget-fill {
+#budget-fill {
     width: 0%;
     height: 100%;
     background-color: #69A998;
@@ -577,8 +559,7 @@ main {
 }
 
 .expense-input,
-.saved-empty,
-#view-schedule .day-header {
+.saved-empty {
     font-size: 14px;
 }
 
@@ -630,8 +611,7 @@ main {
 }
 
 .checklist-add button:hover,
-.new-plan-button:hover,
-#edit-plan-button:hover {
+.new-plan-button:hover {
     background-color: #69A998;
 }
 
@@ -662,49 +642,31 @@ main {
     border: 1px solid #337768;
 }
 
+.delete-plan-button {
+    padding: 15px 35px;
+    margin-left: 10px;
+    border: 1px solid #B1B3B4;
+    border-radius: 7px;
+    background-color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.delete-plan-button:hover {
+    background-color: #FDECEC;
+}
+
+.delete-plan-button:disabled {
+    color: gray;
+    cursor: default;
+    background-color: white;
+}
+
 .saved-section {
     flex-grow: 1;
     width: 100%;
     padding: 22px 16px;
     border-radius: 12px;
-}
-
-.view-section {
-    padding-bottom: 30px;
-    margin-bottom: 30px;
-}
-
-.view-section h2 {
-    font-size: 23px;
-    margin-bottom: 20px;
-}
-
-.view-section p {
-    font-size: 15px;
-    line-height: 1.6;
-    margin-bottom: 10px;
-}
-
-.view-actions {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-}
-
-.view-actions button {
-    padding: 13px 35px;
-    border: 1px solid #B1B3B4;
-    background-color: white;
-    font-size: 15px;
-}
-
-#edit-plan-button {
-    border-color: #8DC5AC;
-}
-
-#delete-plan-button:hover {
-    background-color: #FDECEC;
-    border-color: #D98C8C;
 }
 
 .saved-section h2 {
@@ -768,26 +730,6 @@ main {
 
 .hover-card:hover .card-content {
     transform: scale(1.06);
-}
-
-#view-schedule .schedule-table td {
-    font-size: 14px;
-    overflow-wrap: break-word;
-}
-
-#view-schedule .schedule-table {
-    table-layout: fixed;
-}
-
-.view-info {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.view-info img {
-    width: 18px;
-    height: 18px;
 }
 
 footer {

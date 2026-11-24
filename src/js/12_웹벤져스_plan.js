@@ -25,115 +25,138 @@ function showTab(index) {
 
 showTab(0);
 
-const writeSection = document.getElementById("plan-write");
-const viewSection = document.getElementById("plan-view");
 const newPlanButton = document.getElementById("new-plan-button");
 const savedList = document.getElementById("saved-list");
 const savePlanButton = document.getElementById("save-plan-button");
 const planForm = document.querySelector(".plan-form");
 let selectedIndex = -1;
-let editingIndex = -1;
+const deletePlanButton = document.getElementById("delete-plan-button");
+let savedPlans = JSON.parse(localStorage.getItem("savedPlans")) || [];
 
-const defaultPlan = {
-    title: "크리스마스 상하이 여행",
-    region: "중국 상하이",
-    startDate: "2026-12-25",
-    endDate: "2026-12-29",
-    travelers: "2",
-    days: [
-        {
-            date: "2026-12-25",
-            schedules: [
-                { time: "10:00", place: "인천국제공항", memo: "상하이 출국" },
-                { time: "14:00", place: "호텔", memo: "체크인 및 휴식" },
-                { time: "18:00", place: "와이탄", memo: "크리스마스 야경 감상" }
-            ]
+if (localStorage.getItem("savedPlans") === null) {
+    savedPlans.push({
+        "title": "크리스마스 상하이 여행",
+        "region": "중국 상하이",
+        "startDate": "2026-12-25",
+        "endDate": "2026-12-29",
+        "travelers": "2",
+        "days": [
+            {
+                "date": "2026-12-25",
+                "schedules": [
+                    {
+                        "time": "12:00",
+                        "place": "푸동 공항",
+                        "memo": "상하이 도착"
+                    },
+                    {
+                        "time": "18:00",
+                        "place": "와이탄",
+                        "memo": "야경 감상"
+                    }
+                ]
+            },
+            {
+                "date": "2026-12-26",
+                "schedules": [
+                    {
+                        "time": "10:00",
+                        "place": "예원",
+                        "memo": "정원 관람"
+                    },
+                    {
+                        "time": "15:00",
+                        "place": "난징동루",
+                        "memo": "거리 구경"
+                    }
+                ]
+            },
+            {
+                "date": "2026-12-27",
+                "schedules": [
+                    {
+                        "time": "09:00",
+                        "place": "상하이 디즈니랜드",
+                        "memo": "놀이공원 방문"
+                    }
+                ]
+            },
+            {
+                "date": "2026-12-28",
+                "schedules": [
+                    {
+                        "time": "10:00",
+                        "place": "우캉루",
+                        "memo": "산책"
+                    },
+                    {
+                        "time": "14:00",
+                        "place": "신톈디",
+                        "memo": "거리 구경"
+                    },
+                    {
+                        "time": "19:00",
+                        "place": "동방명주",
+                        "memo": "야경 감상"
+                    }
+                ]
+            },
+            {
+                "date": "2026-12-29",
+                "schedules": [
+                    {
+                        "time": "10:00",
+                        "place": "푸동 공항",
+                        "memo": "출국"
+                    }
+                ]
+            }
+        ],
+        "expense": {
+            "budget": "2000000",
+            "transport": "700000",
+            "food": "300000",
+            "stay": "480000",
+            "other": "320000"
         },
-        {
-            date: "2026-12-26",
-            schedules: [
-                { time: "10:00", place: "예원", memo: "정원 관람" },
-                { time: "13:00", place: "예원상성", memo: "점심 식사 및 기념품 쇼핑" },
-                { time: "17:00", place: "난징동루", memo: "거리 구경 및 쇼핑" }
-            ]
-        },
-        {
-            date: "2026-12-27",
-            schedules: [
-                { time: "09:00", place: "상하이 디즈니랜드", memo: "놀이기구 및 테마파크 관람" },
-                { time: "19:00", place: "상하이 디즈니랜드", memo: "야간 공연 관람" }
-            ]
-        },
-        {
-            date: "2026-12-28",
-            schedules: [
-                { time: "10:00", place: "우캉루", memo: "거리 산책 및 사진 촬영" },
-                { time: "13:00", place: "신천지", memo: "점심 식사 및 카페 방문" },
-                { time: "18:00", place: "동방명주", memo: "상하이 야경 감상" }
-            ]
-        },
-        {
-            date: "2026-12-29",
-            schedules: [
-                { time: "10:00", place: "호텔", memo: "체크아웃" },
-                { time: "12:00", place: "푸동국제공항", memo: "귀국 준비" },
-                { time: "17:00", place: "인천국제공항", memo: "한국 도착 예정" }
-            ]
-        }
-    ],
-    expense: {
-        budget: "2000000",
-        transport: "700000",
-        food: "300000",
-        stay: "480000",
-        other: "320000"
-    },
-    checklist: [
-        { text: "여권 준비", checked: true },
-        { text: "항공권 예약", checked: true },
-        { text: "숙소 예약", checked: true },
-        { text: "여행자 보험 가입", checked: false },
-        { text: "환전", checked: false },
-        { text: "디즈니랜드 입장권 예약", checked: false },
-        { text: "해외 결제 수단 준비", checked: true }
-    ]
-};
-
-let savedPlans = JSON.parse(localStorage.getItem("savedPlans"));
-
-if (savedPlans === null) {
-    savedPlans = [defaultPlan];
+        "checklist": [
+            {
+                "text": "여권 준비",
+                "checked": true
+            },
+            {
+                "text": "항공권 예약",
+                "checked": true
+            },
+            {
+                "text": "숙소 예약",
+                "checked": true
+            },
+            {
+                "text": "여행자 보험 가입",
+                "checked": true
+            },
+            {
+                "text": "환전",
+                "checked": false
+            },
+            {
+                "text": "유심 준비",
+                "checked": false
+            },
+            {
+                "text": "짐 챙기기",
+                "checked": false
+            }
+        ]
+    });
     localStorage.setItem("savedPlans", JSON.stringify(savedPlans));
 }
 
+
 newPlanButton.addEventListener("click", function () {
     resetPlan();
-    showWrite();
 });
-
-function showWrite() {
-    writeSection.style.display = "block";
-    viewSection.style.display = "none";
-    showTab(0);
-}
-
-function showView(index) {
-    selectedIndex = index;
-    editingIndex = -1;
-    let plan = savedPlans[index];
-
-    document.getElementById("view-title").innerText = plan.title;
-    document.getElementById("view-date").innerText = plan.startDate + " ~ " + plan.endDate;
-    document.getElementById("view-region").innerText = plan.region;
-    document.getElementById("view-travelers").innerText = "동행 인원: " + (plan.travelers || "미입력");
-
-    displaySchedule(plan);
-    displayExpense(plan);
-    displayChecklist(plan);
-
-    writeSection.style.display = "none";
-    viewSection.style.display = "block";
-}
 
 const scheduleDays = document.getElementById("schedule-days");
 const addDayButton = document.getElementById("add-day-button");
@@ -240,23 +263,21 @@ function calculateExpense() {
         total += Math.max(0, cost);
     }
 
-    showBudget("", budget, total);
+    showBudget(budget, total);
 }
 
-function showBudget(prefix, budget, total) {
+function showBudget(budget, total) {
     let percent = 0;
-
     if (budget > 0) {
         percent = total / budget * 100;
     }
 
-    let budgetFill = document.getElementById(prefix + "budget-fill");
-    let budgetStatus = document.getElementById(prefix + "budget-status");
-    let remainingBudget = document.getElementById(prefix + "remaining-budget");
+    let budgetFill = document.getElementById("budget-fill");
+    let budgetStatus = document.getElementById("budget-status");
+    let remainingBudget = document.getElementById("remaining-budget");
 
-    document.getElementById(prefix + "total-cost").innerText = total + "원";
-    document.getElementById(prefix + "budget-limit").innerText = budget + "원";
-
+    document.getElementById("total-cost").innerText = total + "원";
+    document.getElementById("budget-limit").innerText = budget + "원";
     budgetFill.style.width = Math.min(percent, 100) + "%";
 
     if (budget === 0) {
@@ -294,14 +315,12 @@ addChecklistButton.addEventListener("click", function () {
 
 function addChecklist(item) {
     let li = document.createElement("li");
-
     li.innerHTML = '<label><input type="checkbox"><span></span></label>' +
         '<button type="button" class="delete-checklist-button">삭제</button>';
 
     let checkbox = li.querySelector("input");
     let text = li.querySelector("span");
     let deleteButton = li.querySelector("button");
-
     text.innerText = item;
     checklistList.appendChild(li);
 
@@ -316,7 +335,6 @@ function addChecklist(item) {
     deleteButton.addEventListener("click", function () {
         li.remove();
     });
-
     return li;
 }
 
@@ -389,16 +407,17 @@ function displayPlans() {
         details[0].innerText = plan.startDate + " ~ " + plan.endDate;
         details[1].innerText = plan.region;
         li.querySelector("article").addEventListener("click", function () {
-            showView(i);
+            selectedIndex = i;
+            loadPlan(savedPlans[i]);
         });
         savedList.appendChild(li);
     }
 }
 
 function resetPlan() {
-    editingIndex = -1;
-    document.getElementById("write-title").innerText = "여행 계획 작성하기";
-    savePlanButton.innerText = "계획 저장";
+    selectedIndex = -1;
+    deletePlanButton.disabled = true;
+    showTab(0);
     planForm.reset();
     scheduleDays.innerHTML = "";
     checklistList.innerHTML = "";
@@ -421,94 +440,21 @@ savePlanButton.addEventListener("click", function () {
         showTab(0);
         return;
     }
-    let index;
-    if (editingIndex === -1) {
+    if (selectedIndex === -1) {
         savedPlans.push(plan);
-        index = savedPlans.length - 1;
+        selectedIndex = savedPlans.length - 1;
     } else {
-        savedPlans[editingIndex] = plan;
-        index = editingIndex;
+        savedPlans[selectedIndex] = plan;
     }
     localStorage.setItem("savedPlans", JSON.stringify(savedPlans));
     displayPlans();
-    resetPlan();
-    showView(index);
+    deletePlanButton.disabled = false;
+    alert("여행 계획을 저장했습니다.");
 });
 
-function displaySchedule(plan) {
-    let container = document.getElementById("view-schedule");
-    container.innerHTML = "";
-    for (let i = 0; i < plan.days.length; i++) {
-        let day = plan.days[i];
-        let section = document.createElement("section");
-        section.setAttribute("class", "day-section");
-        section.innerHTML = '<header class="day-header"><h3></h3><span></span></header>' +
-            '<table class="schedule-table"><thead><tr><th>시간</th><th>방문 장소</th><th>일정 내용</th></tr></thead><tbody></tbody></table>';
-        section.querySelector("h3").innerText = "DAY " + (i + 1);
-        section.querySelector("span").innerText = day.date || "날짜 미입력";
-        let tbody = section.querySelector("tbody");
-        for (let j = 0; j < day.schedules.length; j++) {
-            let schedule = day.schedules[j];
-            if (schedule.time === "" && schedule.place === "" && schedule.memo === "") {
-                continue;
-            }
-            let row = document.createElement("tr");
-            row.innerHTML = "<td></td><td></td><td></td>";
-            let cells = row.querySelectorAll("td");
-            cells[0].innerText = schedule.time || "-";
-            cells[1].innerText = schedule.place || "-";
-            cells[2].innerText = schedule.memo || "-";
-            tbody.appendChild(row);
-        }
-        if (tbody.querySelectorAll("tr").length === 0) {
-            tbody.innerHTML = '<tr><td colspan="3">등록된 일정이 없습니다.</td></tr>';
-        }
-        container.appendChild(section);
-    }
-}
-
-function displayExpense(plan) {
-    let expense = plan.expense;
-    let budget = Math.max(0, parseFloat(expense.budget) || 0);
-    let keys = ["transport", "food", "stay", "other"];
-    let total = 0;
-    for (let i = 0; i < keys.length; i++) {
-        let cost = Math.max(0, parseFloat(expense[keys[i]]) || 0);
-        document.getElementById("view-" + keys[i]).innerText = cost + "원";
-        total += cost;
-    }
-    showBudget("view-", budget, total);
-}
-
-function displayChecklist(plan) {
-    let list = document.getElementById("view-checklist");
-    list.innerHTML = "";
-
-    for (let i = 0; i < plan.checklist.length; i++) {
-        let item = plan.checklist[i];
-        let li = document.createElement("li");
-
-        li.innerHTML = '<span></span><span></span>';
-
-        let spans = li.querySelectorAll("span");
-        spans[0].innerText = item.text;
-
-        if (item.checked) {
-            spans[0].setAttribute("class", "checklist-done");
-            spans[1].innerText = "완료";
-        } else {
-            spans[1].innerText = "미완료";
-        }
-
-        list.appendChild(li);
-    }
-
-    if (plan.checklist.length === 0) {
-        list.innerHTML = "<li>등록된 체크리스트가 없습니다.</li>";
-    }
-}
-
 function loadPlan(plan) {
+    deletePlanButton.disabled = false;
+    showTab(0);
     planForm.reset();
     document.getElementById("trip-title").value = plan.title;
     document.getElementById("trip-region").value = plan.region;
@@ -552,18 +498,10 @@ function loadPlan(plan) {
     }
 }
 
-const editPlanButton = document.getElementById("edit-plan-button");
-const deletePlanButton = document.getElementById("delete-plan-button");
-
-editPlanButton.addEventListener("click", function () {
-    editingIndex = selectedIndex;
-    loadPlan(savedPlans[editingIndex]);
-    document.getElementById("write-title").innerText = "여행 계획 수정하기";
-    savePlanButton.innerText = "수정 저장";
-    showWrite();
-});
-
 deletePlanButton.addEventListener("click", function () {
+    if (selectedIndex === -1) {
+        return;
+    }
     if (confirm("이 여행 계획을 삭제하시겠습니까?")) {
         let remainingPlans = [];
         for (let i = 0; i < savedPlans.length; i++) {
@@ -576,7 +514,6 @@ deletePlanButton.addEventListener("click", function () {
         selectedIndex = -1;
         displayPlans();
         resetPlan();
-        showWrite();
     }
 });
 

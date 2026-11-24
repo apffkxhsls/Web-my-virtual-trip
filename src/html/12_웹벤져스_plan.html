@@ -67,8 +67,8 @@
             </aside>
 
             <div class="plan-content">
-                <section class="plan-section" id="plan-write">
-                    <h1 id="write-title">여행 계획 작성하기</h1>
+                <section class="plan-section">
+                    <h1>여행 계획 작성하기</h1>
                     <p class="section-description">
                         나만의 여행을 계획해보세요
                     </p>
@@ -211,87 +211,15 @@
                             <button type="button" class="save-button" id="save-plan-button">
                                 계획 저장
                             </button>
+                            <button type="button" class="delete-plan-button" id="delete-plan-button" disabled>
+                                계획 삭제
+                            </button>
                         </div>
 
                     </form>
                 </section>
 
-                <section class="plan-view" id="plan-view">
-                    <h1 id="view-title">여행 계획</h1>
-                    <p class="section-description">
-                        나의 여행 계획을 한눈에 확인해보세요
-                    </p>
 
-                    <div class="view-box">
-                        <section class="view-section">
-                            <h2>기본 정보</h2>
-
-                            <p class="view-info">
-                                <img src="../res/icons/12_ic_location_filled.svg" alt="장소">
-                                <span id="view-region"></span>
-                            </p>
-
-                            <p class="view-info">
-                                <img src="../res/icons/12_ic_calendar.svg" alt="날짜">
-                                <span id="view-date"></span>
-                            </p>
-
-                            <p id="view-travelers">동행 인원: 미입력</p>
-                        </section>
-
-                        <section class="view-section">
-                            <h2>날짜별 여행 일정</h2>
-                            <div id="view-schedule"></div>
-                        </section>
-
-                        <section class="view-section">
-                            <h2>예상 지출</h2>
-                            <div id="view-expense">
-                                <div class="budget-summary">
-                                    <div class="budget-row">
-                                        <h3>최종 예상 지출</h3>
-                                        <strong id="view-total-cost">0원</strong>
-                                    </div>
-                                    <div class="budget-row">
-                                        <span>목표 예산 대비</span>
-                                    </div>
-                                    <div class="budget-bar">
-                                        <div id="view-budget-fill"></div>
-                                    </div>
-                                    <div class="budget-row budget-range">
-                                        <span>0원</span><span id="view-budget-limit">0원</span>
-                                    </div>
-                                    <div class="budget-row">
-                                        <span id="view-budget-status">남은 예산</span>
-                                        <strong id="view-remaining-budget">0원</strong>
-                                    </div>
-                                </div>
-                                <h3 class="expense-title">세부 예상 지출</h3>
-                                <ul class="expense-list">
-                                    <li class="expense-item"><span>교통비</span><strong id="view-transport"></strong></li>
-                                    <li class="expense-item"><span>식비</span><strong id="view-food"></strong></li>
-                                    <li class="expense-item"><span>숙박비</span><strong id="view-stay"></strong></li>
-                                    <li class="expense-item"><span>기타</span><strong id="view-other"></strong></li>
-                                </ul>
-                            </div>
-                        </section>
-
-                        <section class="view-section">
-                            <h2>여행 체크리스트</h2>
-                            <ul class="checklist-list" id="view-checklist"></ul>
-                        </section>
-
-                        <div class="view-actions">
-                            <button type="button" id="edit-plan-button">
-                                계획 수정
-                            </button>
-
-                            <button type="button" id="delete-plan-button">
-                                계획 삭제
-                            </button>
-                        </div>
-                    </div>
-                </section>
             </div>
 
         </div>
