@@ -85,9 +85,10 @@ function displayFlights(data) {
             '<strong>' + totalPrice.toLocaleString("ko-KR") + '원</strong>' +
             '<span>/ ' + selectedPassengers + '인 ' + tripText + '</span>' +
             '</p>' +
-            '<button type="button" class="select-button">' +
+            '<a class="select-button" id="flight-' + flight.id + '"' +
+            ' href="12_웹벤져스_flight-detail.html">' +
             '선택' +
-            '</button>' +
+            '</a>' +
             '</div>' +
             '</article>';
     }

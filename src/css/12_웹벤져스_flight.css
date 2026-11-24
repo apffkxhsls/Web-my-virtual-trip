@@ -403,6 +403,10 @@ main {
     border-radius: 8px;
     background-color: #8DC5AC;
     color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
 }
 
 .select-button:hover {
