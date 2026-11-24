@@ -1,0 +1,15 @@
+[
+    {
+        "id": 1,
+        "airline": "에어프레미아",
+        "departure": "인천",
+        "arrival": "뉴욕",
+        "departureTime": "21:25",
+        "arrivalTime": "22:30",
+        "stops": 0,
+        "durationMinutes": 845,
+        "durationText": "14시간 05분",
+        "price": 1308900,
+        "baggage": "위탁 수하물 포함 여부 확인 필요"
+    }
+]
