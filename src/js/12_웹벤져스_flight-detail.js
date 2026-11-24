@@ -1,6 +1,8 @@
 const selectedFlightId = sessionStorage.getItem("selectedFlightId");
 const selectedTripType = sessionStorage.getItem("selectedTripType");
 const selectedPassengers = sessionStorage.getItem("selectedPassengers");
+const selectedDepartureDate = sessionStorage.getItem("selectedDepartureDate");
+const selectedReturnDate = sessionStorage.getItem("selectedReturnDate");
 
 fetch("../data/12_웹벤져스_flight.json")
     .then(function (response) {
@@ -37,20 +39,49 @@ fetch("../data/12_웹벤져스_flight.json")
         const passengers = parseInt(selectedPassengers);
         const totalPrice = unitPrice * passengers;
 
+        let dateHtml = "";
+
+        if (selectedDepartureDate !== null && selectedDepartureDate !== "") {
+            dateHtml += '<p>출발일: ' + selectedDepartureDate + '</p>';
+        }
+
+        if (
+            selectedTripType === "round-trip" &&
+            selectedReturnDate !== null &&
+            selectedReturnDate !== ""
+        ) {
+            dateHtml += '<p>귀국일: ' + selectedReturnDate + '</p>';
+        }
+
         document.querySelector(".flight-detail").innerHTML =
             '<div class="flight-detail-layout">' +
             '<section class="flight-detail-info">' +
             '<h1>' + selectedFlight.airline + '</h1>' +
             '<h2>' + selectedFlight.departure + ' → ' +
             selectedFlight.arrival + '</h2>' +
-            '<p>출발 시간: ' + selectedFlight.departureTime + '</p>' +
-            '<p>도착 시간: ' + selectedFlight.arrivalTime + '</p>' +
-            '<p>' + stopsText + ' · ' +
-            selectedFlight.durationText + '</p>' +
+            dateHtml +
+            '<div class="detail-route">' +
+            '<div>' +
+            '<strong>' + selectedFlight.departureTime + '</strong>' +
+            '<p>' + selectedFlight.departure + '</p>' +
+            '</div>' +
+            '<div class="detail-duration">' +
+            '<p>' + stopsText + '</p>' +
+            '<p>' + selectedFlight.durationText + '</p>' +
+            '</div>' +
+            '<div>' +
+            '<strong>' + selectedFlight.arrivalTime + '</strong>' +
+            '<p>' + selectedFlight.arrival + '</p>' +
+            '</div>' +
+            '</div>' +
+            '<p>' + stopsText + ' | ' + selectedFlight.durationText + '</p>' +
             '<p>' + selectedFlight.baggage + '</p>' +
             '</section>' +
             '<aside class="flight-detail-price">' +
             '<h2>예상 총액</h2>' +
+            '<p>1인 ' + tripText + ' ' +
+            unitPrice.toLocaleString("ko-KR") + '원 × ' +
+            passengers + '명</p>' +
             '<p><strong>' + totalPrice.toLocaleString("ko-KR") +
             '원</strong></p>' +
             '<p>' + passengers + '인 ' + tripText + ' 기준</p>' +

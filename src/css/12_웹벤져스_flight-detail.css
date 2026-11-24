@@ -212,6 +212,41 @@ main>a:hover {
     margin-right: 6px;
 }
 
+.detail-route {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 24px 0;
+    padding: 24px 16px;
+    border: 1px solid #EEEEEF;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+.detail-route>div {
+    text-align: center;
+}
+
+.detail-route strong {
+    font-size: 26px;
+}
+
+.detail-route p {
+    margin: 8px 0 0;
+}
+
+.detail-duration {
+    flex-grow: 1;
+    margin: 0 20px;
+}
+
+.detail-duration p:first-child {
+    margin-top: 0;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #B1B3B4;
+}
+
 footer {
     color: gray;
     border-top: 1px solid #EEEEEF;

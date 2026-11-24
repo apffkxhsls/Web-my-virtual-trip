@@ -3,6 +3,8 @@ let selectedDeparture = "";
 let selectedArrival = "";
 let selectedTripType = "round-trip";
 let selectedPassengers = 1;
+let selectedDepartureDate = "";
+let selectedReturnDate = "";
 
 fetch("../data/12_웹벤져스_flight.json")
     .then(function (response) {
@@ -100,6 +102,8 @@ function displayFlights(data) {
             sessionStorage.setItem("selectedFlightId", this.id);
             sessionStorage.setItem("selectedTripType", selectedTripType);
             sessionStorage.setItem("selectedPassengers", selectedPassengers);
+            sessionStorage.setItem("selectedDepartureDate", selectedDepartureDate);
+            sessionStorage.setItem("selectedReturnDate", selectedReturnDate);
         });
     }
 }
@@ -165,6 +169,8 @@ searchButton.addEventListener("click", function () {
     }
 
     selectedPassengers = parseInt(passengersSelect.value);
+    selectedDepartureDate = departureDate;
+    selectedReturnDate = returnDate;
 
     filterFlights();
 });
