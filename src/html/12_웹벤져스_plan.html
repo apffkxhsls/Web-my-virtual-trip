@@ -242,65 +242,11 @@
                         <section class="schedule-section plan-panel" id="schedule">
                             <h2>날짜별 여행 일정</h2>
 
-                            <section class="day-section" aria-labelledby="day1-heading">
-                                <header class="day-header">
-                                    <h3 id="day1-heading">DAY 1</h3>
+                            <p id="schedule-message">
+                                기본 정보에서 여행 기간을 먼저 선택해주세요.
+                            </p>
 
-                                    <div class="day-date">
-                                        <label for="day1-date">여행 날짜</label>
-                                        <input type="date" id="day1-date" name="day1-date">
-                                    </div>
-                                </header>
-
-                                <table class="schedule-table">
-                                    <caption class="visually-hidden">DAY 1 여행 일정</caption>
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">시간</th>
-                                            <th scope="col">방문 장소</th>
-                                            <th scope="col">일정 내용</th>
-                                        </tr>
-                                    </thead>
-
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <input type="time" name="day1-time1" aria-label="DAY 1 일정 1 시간">
-                                            </td>
-                                            <td>
-                                                <input type="text" name="day1-place1" placeholder="방문 장소"
-                                                    aria-label="DAY 1 일정 1 방문 장소">
-                                            </td>
-                                            <td>
-                                                <input type="text" name="day1-memo1" placeholder="일정 내용"
-                                                    aria-label="DAY 1 일정 1 내용">
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>
-                                                <input type="time" name="day1-time2" aria-label="DAY 1 일정 2 시간">
-                                            </td>
-                                            <td>
-                                                <input type="text" name="day1-place2" placeholder="방문 장소"
-                                                    aria-label="DAY 1 일정 2 방문 장소">
-                                            </td>
-                                            <td>
-                                                <input type="text" name="day1-memo2" placeholder="일정 내용"
-                                                    aria-label="DAY 1 일정 2 내용">
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-
-                                <button type="button" class="add-schedule-button">
-                                    + 일정 추가하기
-                                </button>
-                            </section>
-
-                            <button type="button" class="add-day-button">
-                                + 날짜 추가하기
-                            </button>
+                            <div id="schedule-days"></div>
                         </section>
 
 
