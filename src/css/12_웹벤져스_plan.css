@@ -911,3 +911,14 @@ footer {
 #view-schedule .day-header {
     font-size: 14px;
 }
+
+.view-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.view-info img {
+    width: 18px;
+    height: 18px;
+}
