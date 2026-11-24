@@ -39,7 +39,6 @@ function showThemes() {
     }
 }
 
-
 const bannerContainer = document.querySelector(".banner-container");
 const banners = document.querySelectorAll(".theme-banner");
 const prevButton = document.getElementById("banner-prev");
@@ -93,4 +92,51 @@ for (let i = 0; i < bannerButtons.length; i++) {
         selected[i] = true;
         showThemes();
     });
+}
+
+fetch("../data/12_웹벤져스_theme.json")
+    .then(response => {
+        return response.json();
+    })
+    .then(result => {
+        showPlaces(result);
+    })
+    .catch(error => {
+        console.error("실패", error);
+    });
+
+function showPlaces(places) {
+    for (let i = 0; i < places.length; i++) {
+        let place = places[i];
+
+        let grid = document.querySelector(
+            "#" + place.theme + " .places-grid"
+        );
+
+        let card = document.createElement("article");
+
+        card.setAttribute("class", "place-card hover-card");
+
+        let content =
+            '<img src="' + place.image + '" alt="' + place.alt + '">' +
+            '<div class="place-info">' +
+            '<h3>' + place.name + '</h3>' +
+            '<span class="country">' + place.country + '</span>' +
+            '<p>' + place.description + '</p>' +
+            '</div>';
+
+        if (place.link != "") {
+            card.innerHTML =
+                '<a href="' + place.link + '" class="place-link card-content">' +
+                content +
+                '</a>';
+        } else {
+            card.innerHTML =
+                '<div class="card-content">' +
+                content +
+                '</div>';
+        }
+
+        grid.appendChild(card);
+    }
 }
