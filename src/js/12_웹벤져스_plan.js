@@ -33,7 +33,78 @@ const savePlanButton = document.getElementById("save-plan-button");
 const planForm = document.querySelector(".plan-form");
 let selectedIndex = -1;
 let editingIndex = -1;
-let savedPlans = JSON.parse(localStorage.getItem("savedPlans")) || [];
+
+const defaultPlan = {
+    title: "크리스마스 상하이 여행",
+    region: "중국 상하이",
+    startDate: "2026-12-25",
+    endDate: "2026-12-29",
+    travelers: "2",
+    days: [
+        {
+            date: "2026-12-25",
+            schedules: [
+                { time: "10:00", place: "인천국제공항", memo: "상하이 출국" },
+                { time: "14:00", place: "호텔", memo: "체크인 및 휴식" },
+                { time: "18:00", place: "와이탄", memo: "크리스마스 야경 감상" }
+            ]
+        },
+        {
+            date: "2026-12-26",
+            schedules: [
+                { time: "10:00", place: "예원", memo: "정원 관람" },
+                { time: "13:00", place: "예원상성", memo: "점심 식사 및 기념품 쇼핑" },
+                { time: "17:00", place: "난징동루", memo: "거리 구경 및 쇼핑" }
+            ]
+        },
+        {
+            date: "2026-12-27",
+            schedules: [
+                { time: "09:00", place: "상하이 디즈니랜드", memo: "놀이기구 및 테마파크 관람" },
+                { time: "19:00", place: "상하이 디즈니랜드", memo: "야간 공연 관람" }
+            ]
+        },
+        {
+            date: "2026-12-28",
+            schedules: [
+                { time: "10:00", place: "우캉루", memo: "거리 산책 및 사진 촬영" },
+                { time: "13:00", place: "신천지", memo: "점심 식사 및 카페 방문" },
+                { time: "18:00", place: "동방명주", memo: "상하이 야경 감상" }
+            ]
+        },
+        {
+            date: "2026-12-29",
+            schedules: [
+                { time: "10:00", place: "호텔", memo: "체크아웃" },
+                { time: "12:00", place: "푸동국제공항", memo: "귀국 준비" },
+                { time: "17:00", place: "인천국제공항", memo: "한국 도착 예정" }
+            ]
+        }
+    ],
+    expense: {
+        budget: "2000000",
+        transport: "700000",
+        food: "300000",
+        stay: "480000",
+        other: "320000"
+    },
+    checklist: [
+        { text: "여권 준비", checked: true },
+        { text: "항공권 예약", checked: true },
+        { text: "숙소 예약", checked: true },
+        { text: "여행자 보험 가입", checked: false },
+        { text: "환전", checked: false },
+        { text: "디즈니랜드 입장권 예약", checked: false },
+        { text: "해외 결제 수단 준비", checked: true }
+    ]
+};
+
+let savedPlans = JSON.parse(localStorage.getItem("savedPlans"));
+
+if (savedPlans === null) {
+    savedPlans = [defaultPlan];
+    localStorage.setItem("savedPlans", JSON.stringify(savedPlans));
+}
 
 newPlanButton.addEventListener("click", function () {
     resetPlan();
