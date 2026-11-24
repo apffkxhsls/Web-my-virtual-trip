@@ -156,7 +156,19 @@ main {
     height: 42px;
 }
 
+.trip-type label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
 
+.trip-type label:first-child {
+    margin-right: 16px;
+}
+
+.trip-type input {
+    margin: 0 6px 0 0;
+}
 
 .search-fields {
     display: flex;
