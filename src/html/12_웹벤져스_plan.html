@@ -201,11 +201,44 @@
                         <section class="expense-section plan-panel" id="expense">
                             <h2>예상 지출</h2>
 
+                            <div class="form-group budget-group">
+                                <label for="budget">목표 예산</label>
+                                <input type="number" id="budget" min="0" placeholder="목표 예산을 입력하세요 (원)">
+                            </div>
+
+                            <div class="budget-summary">
+                                <div class="budget-row">
+                                    <h3>최종 예상 지출</h3>
+                                    <strong id="total-cost">0원</strong>
+                                </div>
+
+                                <div class="budget-row">
+                                    <span>목표 예산 대비</span>
+                                    <span id="budget-percent">0%</span>
+                                </div>
+
+                                <div class="budget-bar">
+                                    <div id="budget-fill"></div>
+                                </div>
+
+                                <div class="budget-row budget-range">
+                                    <span>0원</span>
+                                    <span id="budget-limit">0원</span>
+                                </div>
+
+                                <div class="budget-row">
+                                    <span id="budget-status">남은 예산</span>
+                                    <strong id="remaining-budget">0원</strong>
+                                </div>
+                            </div>
+
+                            <h3 class="expense-title">세부 예상 지출</h3>
+
                             <ul class="expense-list">
                                 <li class="expense-item">
                                     <label for="transport">교통비</label>
                                     <div class="expense-input">
-                                        <input type="number" id="transport" min="0" step="1000" placeholder="0">
+                                        <input type="number" id="transport" min="0" placeholder="0">
                                         <span>원</span>
                                     </div>
                                 </li>
@@ -213,7 +246,7 @@
                                 <li class="expense-item">
                                     <label for="food-cost">식비</label>
                                     <div class="expense-input">
-                                        <input type="number" id="food-cost" min="0" step="1000" placeholder="0">
+                                        <input type="number" id="food-cost" min="0" placeholder="0">
                                         <span>원</span>
                                     </div>
                                 </li>
@@ -221,7 +254,7 @@
                                 <li class="expense-item">
                                     <label for="stay-cost">숙박비</label>
                                     <div class="expense-input">
-                                        <input type="number" id="stay-cost" min="0" step="1000" placeholder="0">
+                                        <input type="number" id="stay-cost" min="0" placeholder="0">
                                         <span>원</span>
                                     </div>
                                 </li>
@@ -229,7 +262,7 @@
                                 <li class="expense-item">
                                     <label for="other-cost">기타</label>
                                     <div class="expense-input">
-                                        <input type="number" id="other-cost" min="0" step="1000" placeholder="0">
+                                        <input type="number" id="other-cost" min="0" placeholder="0">
                                         <span>원</span>
                                     </div>
                                 </li>

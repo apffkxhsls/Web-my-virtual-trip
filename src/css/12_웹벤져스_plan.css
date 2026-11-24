@@ -396,10 +396,76 @@ main {
     padding: 9px 12px;
 }
 
+.budget-group {
+    margin: 0 0 25px;
+}
+
+.budget-summary {
+    padding: 25px;
+    margin-bottom: 30px;
+    background-color: #F4F8F6;
+    border-radius: 10px;
+}
+
+.budget-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.budget-row:last-child {
+    margin-bottom: 0;
+}
+
+.budget-row h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+#total-cost {
+    font-size: 26px;
+}
+
+#total-cost,
+#budget-percent,
+#remaining-budget {
+    color: #337768;
+    font-weight: bold;
+}
+
+.budget-bar {
+    width: 100%;
+    height: 15px;
+    background-color: #DEE5E1;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#budget-fill {
+    width: 0%;
+    height: 100%;
+    background-color: #69A998;
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+.budget-range {
+    margin-top: 8px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    color: gray;
+}
+
+.expense-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
 .expense-list {
     margin: 0;
     padding: 5px 20px;
-    background-color: white;
     border: 1px solid #EEEEEE;
     border-radius: 10px;
     list-style: none;
@@ -425,22 +491,19 @@ main {
 .expense-input {
     display: flex;
     align-items: center;
+    gap: 12px;
+    font-size: 14px;
 }
 
 .expense-input input {
     width: 150px;
     height: 35px;
-    margin-right: 12px;
     padding: 8px;
     border: 1px solid #B1B3B4;
     border-radius: 7px;
     box-sizing: border-box;
     font-size: 14px;
     text-align: right;
-}
-
-.expense-input span {
-    font-size: 14px;
 }
 
 .checklist-list {

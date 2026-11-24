@@ -145,3 +145,66 @@ function addSchedule(tbody) {
 }
 
 addDay();
+
+const budgetInput = document.getElementById("budget");
+const expenseInputs = document.querySelectorAll(".expense-input input");
+
+budgetInput.addEventListener("change", calculateExpense);
+
+for (let i = 0; i < expenseInputs.length; i++) {
+    expenseInputs[i].addEventListener("change", calculateExpense);
+}
+
+function calculateExpense() {
+    let budget = parseFloat(budgetInput.value) || 0;
+    let total = 0;
+
+    budget = Math.max(0, budget);
+
+    for (let i = 0; i < expenseInputs.length; i++) {
+        let cost = parseFloat(expenseInputs[i].value) || 0;
+
+        total += Math.max(0, cost);
+    }
+
+    let percent = 0;
+
+    if (budget > 0) {
+        percent = total / budget * 100;
+    }
+
+    let budgetFill = document.getElementById("budget-fill");
+    let budgetPercent = document.getElementById("budget-percent");
+    let budgetStatus = document.getElementById("budget-status");
+    let remainingBudget = document.getElementById("remaining-budget");
+
+    document.getElementById("total-cost").innerText = total + "원";
+    document.getElementById("budget-limit").innerText = budget + "원";
+
+    budgetPercent.innerText = Math.round(percent) + "%";
+    budgetFill.style.width = Math.min(percent, 100) + "%";
+
+    if (budget === 0) {
+        budgetPercent.innerText = "-";
+        budgetFill.style.width = "0%";
+        budgetFill.style.backgroundColor = "#69A998";
+        budgetPercent.style.color = "#337768";
+        budgetStatus.innerText = "목표 예산 미설정";
+        remainingBudget.innerText = "-";
+        remainingBudget.style.color = "#337768";
+    } else if (total > budget) {
+        budgetFill.style.backgroundColor = "#D98C8C";
+        budgetPercent.style.color = "#C05050";
+        budgetStatus.innerText = "초과 예산";
+        remainingBudget.innerText = (total - budget) + "원";
+        remainingBudget.style.color = "#C05050";
+    } else {
+        budgetFill.style.backgroundColor = "#69A998";
+        budgetPercent.style.color = "#337768";
+        budgetStatus.innerText = "남은 예산";
+        remainingBudget.innerText = (budget - total) + "원";
+        remainingBudget.style.color = "#337768";
+    }
+}
+
+calculateExpense();
