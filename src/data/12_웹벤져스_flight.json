@@ -43,5 +43,50 @@
         "oneWayPrice": 950000,
         "baggage": "위탁 수하물 포함 여부 확인 필요",
         "bookingUrl": "https://flyasiana.com/C/KR/KO/contents/book-online?tabId=booking"
+    },
+    {
+        "id": 4,
+        "airline": "대한항공",
+        "departure": "김포",
+        "arrival": "제주",
+        "departureTime": "09:00",
+        "arrivalTime": "10:10",
+        "stops": 0,
+        "durationMinutes": 70,
+        "durationText": "1시간 10분",
+        "price": 180000,
+        "oneWayPrice": 95000,
+        "baggage": "위탁 수하물 포함 여부 확인 필요",
+        "bookingUrl": "https://www.koreanair.com/"
+    },
+    {
+        "id": 5,
+        "airline": "아시아나항공",
+        "departure": "인천",
+        "arrival": "도쿄",
+        "departureTime": "10:00",
+        "arrivalTime": "12:30",
+        "stops": 0,
+        "durationMinutes": 150,
+        "durationText": "2시간 30분",
+        "price": 420000,
+        "oneWayPrice": 230000,
+        "baggage": "위탁 수하물 포함 여부 확인 필요",
+        "bookingUrl": "https://flyasiana.com/C/KR/KO/contents/book-online?tabId=booking"
+    },
+    {
+        "id": 6,
+        "airline": "대한항공",
+        "departure": "부산",
+        "arrival": "오사카",
+        "departureTime": "13:00",
+        "arrivalTime": "14:30",
+        "stops": 0,
+        "durationMinutes": 90,
+        "durationText": "1시간 30분",
+        "price": 320000,
+        "oneWayPrice": 175000,
+        "baggage": "위탁 수하물 포함 여부 확인 필요",
+        "bookingUrl": "https://www.koreanair.com/"
     }
 ]

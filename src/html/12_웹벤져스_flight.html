@@ -73,12 +73,25 @@
 
                 <div class="search-field">
                     <label for="departure">출발지</label>
-                    <input type="text" id="departure" name="departure" placeholder="도시 또는 공항">
+                    <input type="text" id="departure" name="departure" list="departure-list" placeholder="도시 또는 공항">
+
+                    <datalist id="departure-list">
+                        <option value="인천">
+                        <option value="김포">
+                        <option value="부산">
+                    </datalist>
                 </div>
 
                 <div class="search-field">
                     <label for="arrival">도착지</label>
-                    <input type="text" id="arrival" name="arrival" placeholder="도시 또는 공항">
+                    <input type="text" id="arrival" name="arrival" list="arrival-list" placeholder="도시 또는 공항">
+
+                    <datalist id="arrival-list">
+                        <option value="뉴욕">
+                        <option value="제주">
+                        <option value="도쿄">
+                        <option value="오사카">
+                    </datalist>
                 </div>
 
                 <div class="search-field">
@@ -146,7 +159,7 @@
 
             <section class="flight-recommendation">
                 <div class="recommendation-header">
-                    <h2>인천 → 뉴욕</h2>
+                    <h2 id="flight-results-title">전체 항공편</h2>
 
                     <div class="sort-box">
                         <label for="sort">정렬</label>

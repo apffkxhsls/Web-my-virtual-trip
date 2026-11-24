@@ -182,6 +182,24 @@ for (let i = 0; i < airlineCheckboxes.length; i++) {
 function filterFlights() {
     const selectedStops = [];
     const selectedAirlines = [];
+    const resultsTitle = document.querySelector("#flight-results-title");
+
+    if (selectedDeparture === "" && selectedArrival === "") {
+        resultsTitle.innerText = "전체 항공편";
+    } else {
+        let departureText = "전체 출발지";
+        let arrivalText = "전체 도착지";
+
+        if (selectedDeparture !== "") {
+            departureText = selectedDeparture;
+        }
+
+        if (selectedArrival !== "") {
+            arrivalText = selectedArrival;
+        }
+
+        resultsTitle.innerText = departureText + " → " + arrivalText;
+    }
 
     for (let i = 0; i < stopsCheckboxes.length; i++) {
         if (stopsCheckboxes[i].checked) {
