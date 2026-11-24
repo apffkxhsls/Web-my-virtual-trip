@@ -49,14 +49,22 @@ fetch("../data/12_웹벤져스_flight.json")
             returnFlightHtml =
                 '<section class="flight-leg">' +
                 '<h2>오는 편</h2>' +
-                '<p>' + selectedFlight.arrival + ' → ' +
-                selectedFlight.departure + '</p>' +
-                '<p>출발: ' + selectedFlight.returnDate +
-                ' ' + selectedFlight.returnDepartureTime + '</p>' +
-                '<p>도착: ' + selectedFlight.returnArrivalDate +
-                ' ' + selectedFlight.returnArrivalTime + '</p>' +
-                '<p>' + returnStopsText + ' | ' +
-                selectedFlight.returnDurationText + '</p>' +
+                '<div class="leg-route">' +
+                '<div class="leg-airport">' +
+                '<p>' + selectedFlight.arrival + '</p>' +
+                '<strong>' + selectedFlight.returnDepartureTime + '</strong>' +
+                '<p>' + selectedFlight.returnDate + '</p>' +
+                '</div>' +
+                '<div class="leg-duration">' +
+                '<p>' + returnStopsText + '</p>' +
+                '<p>' + selectedFlight.returnDurationText + '</p>' +
+                '</div>' +
+                '<div class="leg-airport">' +
+                '<p>' + selectedFlight.departure + '</p>' +
+                '<strong>' + selectedFlight.returnArrivalTime + '</strong>' +
+                '<p>' + selectedFlight.returnArrivalDate + '</p>' +
+                '</div>' +
+                '</div>' +
                 '</section>';
         }
 
@@ -67,10 +75,22 @@ fetch("../data/12_웹벤져스_flight.json")
             '<p>시간은 각 공항의 현지 시각 기준입니다.</p>' +
             '<section class="flight-leg">' +
             '<h2>가는 편</h2>' +
-            '<p>' + selectedFlight.departure + ' → ' + selectedFlight.arrival + '</p>' +
-            '<p>출발: ' + selectedFlight.departureDate + ' ' + selectedFlight.departureTime + '</p>' +
-            '<p>도착: ' + selectedFlight.arrivalDate + ' ' + selectedFlight.arrivalTime + '</p>' +
-            '<p>' + stopsText + ' | ' + selectedFlight.durationText + '</p>' +
+            '<div class="leg-route">' +
+            '<div class="leg-airport">' +
+            '<p>' + selectedFlight.departure + '</p>' +
+            '<strong>' + selectedFlight.departureTime + '</strong>' +
+            '<p>' + selectedFlight.departureDate + '</p>' +
+            '</div>' +
+            '<div class="leg-duration">' +
+            '<p>' + stopsText + '</p>' +
+            '<p>' + selectedFlight.durationText + '</p>' +
+            '</div>' +
+            '<div class="leg-airport">' +
+            '<p>' + selectedFlight.arrival + '</p>' +
+            '<strong>' + selectedFlight.arrivalTime + '</strong>' +
+            '<p>' + selectedFlight.arrivalDate + '</p>' +
+            '</div>' +
+            '</div>' +
             '</section>' +
             returnFlightHtml +
             '<p>' + selectedFlight.baggage + '</p>' +

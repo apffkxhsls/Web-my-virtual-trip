@@ -264,6 +264,39 @@ main>a:hover {
     margin-bottom: 0;
 }
 
+.leg-route {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.leg-airport {
+    min-width: 120px;
+    text-align: center;
+    margin: 12px 0;
+}
+
+.leg-airport strong {
+    font-size: 28px;
+}
+
+.leg-route p {
+    margin: 8px 0;
+}
+
+.leg-duration {
+    flex-grow: 1;
+    min-width: 100px;
+    margin: 12px 20px;
+    text-align: center;
+}
+
+.leg-duration p:first-child {
+    padding-bottom: 12px;
+    border-bottom: 1px solid #B1B3B4;
+}
+
 footer {
     color: gray;
     border-top: 1px solid #EEEEEF;
