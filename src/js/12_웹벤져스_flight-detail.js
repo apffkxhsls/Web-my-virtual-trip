@@ -55,6 +55,9 @@ fetch("../data/12_웹벤져스_flight.json")
             '<p><strong>' + totalPrice.toLocaleString("ko-KR") +
             '원</strong></p>' +
             '<p>' + passengers + '인 ' + tripText + ' 기준</p>' +
+            '<a class="flight-booking-link" href="' + selectedFlight.bookingUrl + '">' +
+            '항공사 공식 사이트에서 예약하기' +
+            '</a>' +
             '</aside>' +
             '</div>';
     })

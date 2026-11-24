@@ -186,6 +186,21 @@ main>a:hover {
     font-size: 28px;
 }
 
+.flight-booking-link {
+    display: block;
+    margin-top: 20px;
+    padding: 14px 20px;
+    border-radius: 8px;
+    background-color: #8DC5AC;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+}
+
+.flight-booking-link:hover {
+    background-color: #69A998;
+}
+
 footer {
     color: gray;
     border-top: 1px solid #EEEEEF;

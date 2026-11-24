@@ -11,7 +11,8 @@
         "durationText": "14시간 05분",
         "price": 1308900,
         "oneWayPrice": 750000,
-        "baggage": "위탁 수하물 포함 여부 확인 필요"
+        "baggage": "위탁 수하물 포함 여부 확인 필요",
+        "bookingUrl": "https://www.airpremia.com/?locale=ko"
     },
     {
         "id": 2,
@@ -25,7 +26,8 @@
         "durationText": "14시간 55분",
         "price": 1298200,
         "oneWayPrice": 720000,
-        "baggage": "위탁 수하물 포함 여부 확인 필요"
+        "baggage": "위탁 수하물 포함 여부 확인 필요",
+        "bookingUrl": "https://flyasiana.com/C/KR/KO/contents/book-online?tabId=booking"
     },
     {
         "id": 3,
@@ -39,6 +41,7 @@
         "durationText": "20시간 33분",
         "price": 1787300,
         "oneWayPrice": 950000,
-        "baggage": "위탁 수하물 포함 여부 확인 필요"
+        "baggage": "위탁 수하물 포함 여부 확인 필요",
+        "bookingUrl": "https://flyasiana.com/C/KR/KO/contents/book-online?tabId=booking"
     }
 ]
