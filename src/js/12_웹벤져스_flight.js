@@ -69,7 +69,7 @@ function displayFlights(data) {
 
             '<div class="flight-price">' +
             '<p>' +
-            '<strong>' + flight.price + '원</strong>' +
+            '<strong>' + flight.price.toLocaleString("ko-KR") + '원</strong>' +
             '<span>/ 1인 왕복</span>' +
             '</p>' +
             '<button type="button" class="select-button">' +
