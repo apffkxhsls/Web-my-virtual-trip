@@ -1,11 +1,11 @@
-{  "regionList": [
-    { "meta": "국내", "name": "대전", "rating": "4.8/5 · 리뷰 157,136개", "image": "../res/images/12_theme-history.jpg", "alt": "지역별 사진", "link": "#" },
-    { "meta": "일본", "name": "교토", "rating": "4.6/5 · 리뷰 125,300개", "image": "../res/images/12_theme-history.jpg", "alt": "지역별 사진", "link": "../html/12_웹벤져스_detail.html" },
-    { "meta": "중국", "name": "상하이", "rating": "3.4/5 · 리뷰 221,200개", "image": "../res/images/12_theme-history.jpg", "alt": "지역별 사진", "link": "#" },
-    { "meta": "유럽", "name": "스위스", "rating": "4.9/5 · 리뷰 92,104개", "image": "../res/images/12_theme-history.jpg", "alt": "지역별 사진", "link": "#" },
-    { "meta": "아시아", "name": "다낭", "rating": "4.7/5 · 리뷰 138,420개", "image": "../res/images/12_theme-history.jpg", "alt": "지역별 사진", "link": "#" },
-    { "meta": "대양주", "name": "시드니", "rating": "4.6/5 · 리뷰 98,750개", "image": "../res/images/12_theme-history.jpg", "alt": "지역별 사진", "link": "#" },
-    { "meta": "미주", "name": "뉴욕", "rating": "4.5/5 · 리뷰 203,610개", "image": "../res/images/12_theme-history.jpg", "alt": "지역별 사진", "link": "#" }
+{   "regionList": [
+    { "id": "daejeon", "meta": "국내", "name": "대전", "rating": "4.8/5 · 리뷰 157,136개", "image": "../res/images/12_theme-history.jpg", "alt": "지역별 사진", "link": "#" },
+    { "id": "kyoto", "meta": "일본", "name": "교토", "rating": "4.6/5 · 리뷰 125,300개", "image": "../res/images/12_theme-history.jpg", "alt": "지역별 사진", "link": "../html/12_웹벤져스_detail.html" },
+    { "id": "shanghai", "meta": "중국", "name": "상하이", "rating": "3.4/5 · 리뷰 221,200개", "image": "../res/images/12_theme-history.jpg", "alt": "지역별 사진", "link": "#" },
+    { "id": "switzerland", "meta": "유럽", "name": "스위스", "rating": "4.9/5 · 리뷰 92,104개", "image": "../res/images/12_theme-history.jpg", "alt": "지역별 사진", "link": "#" },
+    { "id": "danang", "meta": "아시아", "name": "다낭", "rating": "4.7/5 · 리뷰 138,420개", "image": "../res/images/12_theme-history.jpg", "alt": "지역별 사진", "link": "#" },
+    { "id": "sydney", "meta": "대양주", "name": "시드니", "rating": "4.6/5 · 리뷰 98,750개", "image": "../res/images/12_theme-history.jpg", "alt": "지역별 사진", "link": "#" },
+    { "id": "new-york", "meta": "미주", "name": "뉴욕", "rating": "4.5/5 · 리뷰 203,610개", "image": "../res/images/12_theme-history.jpg", "alt": "지역별 사진", "link": "#" }
   ],
   "themeList": [
     { "id": "nature", "title": "자연 여행", "desc": "아름다운 풍경 속에서 즐기는 여유로운 여행", "views": "1.5K", "image": "../res/images/12_theme-nature.jpg", "alt": "자연 테마 사진" },
@@ -14,12 +14,12 @@
     { "id": "activity", "title": "액티비티 여행", "desc": "다양한 체험과 활동을 즐길 수 있는 여행", "views": "2.4K", "image": "../res/images/12_theme-activity.jpg", "alt": "액티비티 테마 사진" },
     { "id": "resort", "title": "휴양 여행", "desc": "아름다운 풍경 속에서 편안하게 쉬어가는 여행", "views": "3.1K", "image": "../res/images/12_theme-resort.jpg", "alt": "휴양 테마 사진" }
   ],
-  "stayList": [
-    { "name": "제주의 펜션", "price": "총액 ₩600,000", "rating": "★ 4.5", "image": "../res/images/12_stay.jpg", "alt": "숙소 사진", "link": "#" },
-    { "name": "제주의 집", "price": "총액 ₩575,000", "rating": "★ 4.8", "image": "../res/images/12_stay.jpg", "alt": "숙소 사진", "link": "#" },
-    { "name": "서귀포시의 펜션", "price": "총액 ₩480,000", "rating": "★ 4.9", "image": "../res/images/12_stay.jpg", "alt": "숙소 사진", "link": "#" },
-    { "name": "제주의 집", "price": "총액 ₩765,000", "rating": "★ 5.0", "image": "../res/images/12_stay.jpg", "alt": "숙소 사진", "link": "#" },
-    { "name": "남원의 펜션", "price": "총액 ₩427,500", "rating": "★ 4.5", "image": "../res/images/12_stay.jpg", "alt": "숙소 사진", "link": "#" },
-    { "name": "제주의 방", "price": "총액 ₩176,000", "rating": "★ 4.2", "image": "../res/images/12_stay.jpg", "alt": "숙소 사진", "link": "#" }
+    "stayList": [
+    { "id": "stay-jeju-pension", "name": "제주의 펜션", "price": "총액 ₩600,000", "rating": "★ 4.5", "image": "../res/images/12_stay.jpg", "alt": "숙소 사진", "link": "#" },
+    { "id": "stay-sokcho-house", "name": "속초의 집", "price": "총액 ₩575,000", "rating": "★ 4.8", "image": "../res/images/12_stay.jpg", "alt": "숙소 사진", "link": "#" },
+    { "id": "stay-seogwipo-pension", "name": "서귀포시의 펜션", "price": "총액 ₩480,000", "rating": "★ 4.9", "image": "../res/images/12_stay.jpg", "alt": "숙소 사진", "link": "#" },
+    { "id": "stay-jeju-house", "name": "제주의 집", "price": "총액 ₩765,000", "rating": "★ 5.0", "image": "../res/images/12_stay.jpg", "alt": "숙소 사진", "link": "#" },
+    { "id": "stay-namwon-pension", "name": "남원의 펜션", "price": "총액 ₩427,500", "rating": "★ 4.5", "image": "../res/images/12_stay.jpg", "alt": "숙소 사진", "link": "#" },
+    { "id": "stay-busan-room", "name": "부산의 방", "price": "총액 ₩176,000", "rating": "★ 4.2", "image": "../res/images/12_stay.jpg", "alt": "숙소 사진", "link": "#" }
   ]
 }

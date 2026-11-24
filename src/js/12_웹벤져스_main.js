@@ -8,13 +8,19 @@ const regionNext = document.querySelector('.region-next');
 
 let currentRegion = 3;
 
+let favoritePlaces = [];
+const savedFavorites = localStorage.getItem("favoritePlaces");
+if (savedFavorites !== null) {
+    favoritePlaces = JSON.parse(savedFavorites);
+}
+
 fetch('../data/12_웹벤져스_main.json')
     .then(response => response.json())
     .then(data => {
         // 지금 떠나기 좋은 여행지
         regionList.innerHTML = data.regionList.map(item => `
             <article class="region-card">
-                <button class="heart-btn">
+                <button type="button" class="${getHeartClass(item.id)}" value="${item.id}">
                     <img class="favorite" src="../res/icons/12_ic_favorite.svg" alt="좋아요 아이콘">
                     <img class="favorite-filled" src="../res/icons/12_ic_favorite_filled.svg" alt="좋아요 누른 아이콘">
                 </button>
@@ -49,7 +55,7 @@ fetch('../data/12_웹벤져스_main.json')
         // 추후 숙소 상세 페이지와 정보 연결 필요 
         stayList.innerHTML = data.stayList.map(item => `
             <article class="stay-card">
-                <button class="heart-btn">
+                <button type="button" class="${getHeartClass(item.id)}" value="${item.id}">
                     <img class="favorite" src="../res/icons/12_ic_favorite.svg" alt="좋아요 아이콘">
                     <img class="favorite-filled" src="../res/icons/12_ic_favorite_filled.svg" alt="좋아요 누른 아이콘">
                 </button>
@@ -62,12 +68,15 @@ fetch('../data/12_웹벤져스_main.json')
                     </div>
                 </a>
             </article>`).join('');
+
+        setHeartButtons();
     })
     .catch(error => {
         console.error('에러 발생:', error.message);
     });
 
 // 지금 떠나기 좋은 여행지 섹션 캐러셀
+
 function setRegionSlider() {
     const cards = document.querySelectorAll('.region-card');
     const dots = document.querySelectorAll('.region-dot');
@@ -138,4 +147,63 @@ function setRegionSlider() {
     }
 
     showRegion();
+}
+
+// 하트 이모지 버튼 찜 기능
+
+function getHeartClass(id) {
+    for (let i = 0; i < favoritePlaces.length; i++) {
+        if (favoritePlaces[i] === id) {
+            return "heart-btn is-favorite";
+        }
+    }
+    return "heart-btn";
+}
+
+function toggleFavorite() {
+    const placeId = this.value;
+    const saved = localStorage.getItem("favoritePlaces");
+    favoritePlaces = [];
+    if (saved !== null) {
+        favoritePlaces = JSON.parse(saved);
+    }
+
+    let isFavorite = false;
+    for (let i = 0; i < favoritePlaces.length; i++) {
+        if (favoritePlaces[i] === placeId) {
+            isFavorite = true;
+        }
+    }
+
+    if (isFavorite) {
+        const newList = [];
+        for (let i = 0; i < favoritePlaces.length; i++) {
+            if (favoritePlaces[i] !== placeId) {
+                newList.push(favoritePlaces[i]);
+            }
+        }
+        favoritePlaces = newList;
+    } else {
+        favoritePlaces.push(placeId);
+    }
+
+    localStorage.setItem("favoritePlaces", JSON.stringify(favoritePlaces));
+
+    const hearts = document.querySelectorAll(".heart-btn");
+    for (let i = 0; i < hearts.length; i++) {
+        if (hearts[i].value === placeId) {
+            if (isFavorite) {
+                hearts[i].setAttribute("class", "heart-btn");
+            } else {
+                hearts[i].setAttribute("class", "heart-btn is-favorite");
+            }
+        }
+    }
+}
+
+function setHeartButtons() {
+    const hearts = document.querySelectorAll(".heart-btn");
+    for (let i = 0; i < hearts.length; i++) {
+        hearts[i].addEventListener("click", toggleFavorite);
+    }
 }
