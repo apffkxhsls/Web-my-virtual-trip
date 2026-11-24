@@ -147,6 +147,14 @@ searchButton.addEventListener("click", function () {
     selectedDeparture = departureInput.value;
     selectedArrival = arrivalInput.value;
 
+    for (let i = 0; i < tripTypeInputs.length; i++) {
+        if (tripTypeInputs[i].checked) {
+            selectedTripType = tripTypeInputs[i].value;
+        }
+    }
+
+    selectedPassengers = parseInt(passengersSelect.value);
+
     filterFlights();
 });
 
@@ -159,14 +167,6 @@ for (let i = 0; i < stopsCheckboxes.length; i++) {
 for (let i = 0; i < airlineCheckboxes.length; i++) {
     airlineCheckboxes[i].addEventListener("change", filterFlights);
 }
-
-for (let i = 0; i < tripTypeInputs.length; i++) {
-    if (tripTypeInputs[i].checked) {
-        selectedTripType = tripTypeInputs[i].value;
-    }
-}
-
-selectedPassengers = parseInt(passengersSelect.value);
 
 function filterFlights() {
     const selectedStops = [];
