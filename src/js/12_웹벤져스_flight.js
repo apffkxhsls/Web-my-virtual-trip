@@ -1,6 +1,8 @@
 let flights = [];
 let selectedDeparture = "";
 let selectedArrival = "";
+let selectedTripType = "round-trip";
+let selectedPassengers = 1;
 
 fetch("../data/12_웹벤져스_flight.json")
     .then(function (response) {
@@ -27,6 +29,15 @@ function displayFlights(data) {
     for (let i = 0; i < data.length; i++) {
         const flight = data[i];
         let stopsText = "직항";
+        let unitPrice = flight.price;
+        let tripText = "왕복";
+
+        if (selectedTripType === "one-way") {
+            unitPrice = flight.oneWayPrice;
+            tripText = "편도";
+        }
+
+        const totalPrice = unitPrice * selectedPassengers;
 
         if (flight.stops > 0) {
             stopsText = flight.stops + "회 경유";
@@ -71,8 +82,8 @@ function displayFlights(data) {
 
             '<div class="flight-price">' +
             '<p>' +
-            '<strong>' + flight.price.toLocaleString("ko-KR") + '원</strong>' +
-            '<span>/ 1인 왕복</span>' +
+            '<strong>' + totalPrice.toLocaleString("ko-KR") + '원</strong>' +
+            '<span>/ ' + selectedPassengers + '인 ' + tripText + '</span>' +
             '</p>' +
             '<button type="button" class="select-button">' +
             '선택' +
@@ -91,6 +102,7 @@ const searchButton = document.querySelector(".flight-search .search-button");
 const tripTypeInputs = document.querySelectorAll('input[name="trip-type"]');
 const returnDateInput = document.querySelector("#return-date");
 const departureDateInput = document.querySelector("#departure-date");
+const passengersSelect = document.querySelector("#passengers");
 
 for (let i = 0; i < tripTypeInputs.length; i++) {
     tripTypeInputs[i].addEventListener("change", updateTripType);
@@ -148,6 +160,14 @@ for (let i = 0; i < airlineCheckboxes.length; i++) {
     airlineCheckboxes[i].addEventListener("change", filterFlights);
 }
 
+for (let i = 0; i < tripTypeInputs.length; i++) {
+    if (tripTypeInputs[i].checked) {
+        selectedTripType = tripTypeInputs[i].value;
+    }
+}
+
+selectedPassengers = parseInt(passengersSelect.value);
+
 function filterFlights() {
     const selectedStops = [];
     const selectedAirlines = [];
@@ -197,6 +217,10 @@ function filterFlights() {
 
     if (sortSelect.value === "price-low") {
         filteredFlights.sort(function (a, b) {
+            if (selectedTripType === "one-way") {
+                return a.oneWayPrice - b.oneWayPrice;
+            }
+
             return a.price - b.price;
         });
     } else if (sortSelect.value === "duration-short") {
