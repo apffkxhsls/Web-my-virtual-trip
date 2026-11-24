@@ -200,11 +200,23 @@ main {
 }
 
 .plan-panel,
+.plan-view {
+    display: none;
+}
+
 #schedule {
     display: block;
 }
 
 .plan-form,
+.view-box {
+    padding: 35px;
+    background-color: white;
+    border: 1px solid #EEEEEE;
+    border-radius: 14px;
+    box-sizing: border-box;
+}
+
 .plan-form h2 {
     font-size: 23px;
     margin-bottom: 25px;
@@ -322,11 +334,25 @@ main {
 }
 
 .delete-schedule-button,
-.delete-day-button {
-    padding: 9px 12px;
+.delete-day-button,
+.delete-checklist-button {
+    padding: 8px 12px;
+    background-color: white;
+    border: 1px solid #B1B3B4;
+    border-radius: 6px;
+    color: gray;
+    font-size: 13px;
+    cursor: pointer;
 }
 
 .delete-schedule-button:hover,
+.delete-day-button:hover,
+.delete-checklist-button:hover {
+    background-color: #FDECEC;
+    border-color: #D98C8C;
+    color: #C05050;
+}
+
 .add-schedule-button {
     display: flex;
     align-items: center;
@@ -390,10 +416,6 @@ main {
 .add-day-button:hover {
     background-color: #9ACEB7;
     border-color: #69A998;
-}
-
-.delete-day-button {
-    padding: 9px 12px;
 }
 
 .budget-group {
@@ -506,6 +528,23 @@ main {
     text-align: right;
 }
 
+.checklist-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.plan-form .checklist-header h2 {
+    margin: 0;
+}
+
+#checklist-count {
+    color: #337768;
+    font-size: 14px;
+    font-weight: bold;
+}
+
 .checklist-list {
     margin: 0;
     padding: 0;
@@ -513,13 +552,28 @@ main {
 }
 
 .checklist-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 15px 0;
     border-bottom: 1px solid #EEEEEE;
     font-size: 15px;
 }
 
+.checklist-list label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
 .checklist-list input {
-    margin-right: 10px;
+    cursor: pointer;
+}
+
+.checklist-done {
+    color: gray;
+    text-decoration: line-through;
 }
 
 .checklist-add {

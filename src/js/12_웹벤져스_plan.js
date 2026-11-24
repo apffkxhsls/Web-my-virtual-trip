@@ -208,3 +208,80 @@ function calculateExpense() {
 }
 
 calculateExpense();
+
+const checklistList = document.getElementById("checklist-list");
+const checklistInput = document.getElementById("checklist-input");
+const addChecklistButton = document.getElementById("add-checklist-button");
+
+const defaultChecklist = [
+    "여권 준비",
+    "항공권 예약",
+    "숙소 예약",
+    "여행자 보험 가입",
+    "환전"
+];
+
+addChecklistButton.addEventListener("click", function () {
+    let item = checklistInput.value;
+
+    if (item === "") {
+        return;
+    }
+
+    addChecklist(item);
+    checklistInput.value = "";
+});
+
+function addChecklist(item) {
+    let li = document.createElement("li");
+
+    li.innerHTML =
+        '<label>' +
+        '<input type="checkbox">' +
+        '<span></span>' +
+        '</label>' +
+        '<button type="button" class="delete-checklist-button">삭제</button>';
+
+    let checkbox = li.querySelector("input");
+    let text = li.querySelector("span");
+    let deleteButton = li.querySelector("button");
+
+    text.innerText = item;
+
+    checklistList.appendChild(li);
+
+    checkbox.addEventListener("change", function () {
+        if (checkbox.checked) {
+            text.setAttribute("class", "checklist-done");
+        } else {
+            text.setAttribute("class", "");
+        }
+
+        updateChecklistCount();
+    });
+
+    deleteButton.addEventListener("click", function () {
+        li.remove();
+        updateChecklistCount();
+    });
+
+    updateChecklistCount();
+}
+
+function updateChecklistCount() {
+    let items = checklistList.querySelectorAll("input");
+    let completed = 0;
+
+    for (let i = 0; i < items.length; i++) {
+        if (items[i].checked) {
+            completed++;
+        }
+    }
+
+    document.getElementById("checklist-count").innerText =
+        completed + " / " + items.length + " 완료";
+}
+
+for (let i = 0; i < defaultChecklist.length; i++) {
+    addChecklist(defaultChecklist[i]);
+}
