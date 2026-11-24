@@ -170,6 +170,43 @@ main {
     margin-bottom: 30px;
 }
 
+.plan-tabs {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.plan-tab {
+    flex-grow: 1;
+    padding: 14px 20px;
+    background-color: white;
+    border: 1px solid #EEEEEE;
+    border-radius: 8px;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.plan-tab:hover {
+    background-color: #F0F7F4;
+}
+
+.plan-tab.active {
+    background-color: #C3E4D9;
+    border-color: #337768;
+    color: #337768;
+}
+
+.plan-panel {
+    display: none;
+}
+
+#basic {
+    display: block;
+}
+
 .plan-form {
     padding: 35px;
     background-color: white;
@@ -259,9 +296,7 @@ main {
 }
 
 .schedule-section {
-    margin-top: 25px;
-    padding-top: 35px;
-    border-top: 1px solid #EEEEEE;
+    margin-top: 0;
 }
 
 .day-section {
@@ -408,9 +443,7 @@ main {
 }
 
 .expense-section {
-    margin-top: 25px;
-    padding-top: 35px;
-    border-top: 1px solid #EEEEEE;
+    margin-top: 0;
 }
 
 .expense-list {
@@ -458,6 +491,48 @@ main {
 
 .expense-input span {
     font-size: 14px;
+}
+
+.checklist-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.checklist-list li {
+    padding: 15px 0;
+    border-bottom: 1px solid #EEEEEE;
+    font-size: 15px;
+}
+
+.checklist-list input {
+    margin-right: 10px;
+}
+
+.checklist-add {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.checklist-add input {
+    flex-grow: 1;
+    padding: 12px;
+    border: 1px solid #B1B3B4;
+    border-radius: 7px;
+    font-size: 14px;
+}
+
+.checklist-add button {
+    padding: 12px 24px;
+    background-color: #8DC5AC;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.checklist-add button:hover {
+    background-color: #69A998;
 }
 
 .save-area {

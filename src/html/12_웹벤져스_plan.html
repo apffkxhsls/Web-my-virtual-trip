@@ -53,7 +53,6 @@
     <main>
         <div class="plan-layout">
 
-            <!-- 작성한 계획 목록 -->
             <aside class="plan-sidebar">
                 <section class="saved-section">
                     <h2>작성한 계획 목록 보기</h2>
@@ -107,86 +106,106 @@
                         나만의 여행을 계획해보세요
                     </p>
 
+                    <div class="plan-tabs">
+                        <button type="button" id="tab-basic" class="plan-tab active">
+                            기본 정보
+                        </button>
+
+                        <button type="button" id="tab-schedule" class="plan-tab">
+                            일정
+                        </button>
+
+                        <button type="button" id="tab-expense" class="plan-tab">
+                            예상 지출
+                        </button>
+
+                        <button type="button" id="tab-checklist" class="plan-tab">
+                            체크리스트
+                        </button>
+                    </div>
+
                     <form class="plan-form">
-                        <h2>기본 정보</h2>
+                        <section class="basic-section plan-panel" id="basic">
+                            <h2>기본 정보</h2>
 
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="trip-title">여행 제목</label>
-                                <input type="text" id="trip-title" name="trip-title" placeholder="예: 인생 첫 혼자 여행">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="trip-region">여행 지역</label>
-                                <input type="text" id="trip-region" name="trip-region" placeholder="예: 일본 오사카">
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="start-date">출발일</label>
-                                <input type="date" id="start-date" name="start-date">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="end-date">도착일</label>
-                                <input type="date" id="end-date" name="end-date">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="travelers">동행 인원</label>
-                                <input type="number" id="travelers" name="travelers" min="1" placeholder="1">
-                            </div>
-                        </div>
-
-                        <fieldset class="theme-fieldset">
-                            <legend>여행 테마 선택</legend>
-
-                            <div class="theme-options">
-                                <div class="theme-option">
-                                    <input type="checkbox" name="trip-theme" id="nature" value="nature">
-                                    <label for="nature">🌿 자연</label>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="trip-title">여행 제목</label>
+                                    <input type="text" id="trip-title" name="trip-title" placeholder="예: 인생 첫 혼자 여행">
                                 </div>
 
-                                <div class="theme-option">
-                                    <input type="checkbox" name="trip-theme" id="history" value="history">
-                                    <label for="history">🏛️ 역사</label>
-                                </div>
-
-                                <div class="theme-option">
-                                    <input type="checkbox" name="trip-theme" id="food" value="food">
-                                    <label for="food">🍜 먹방</label>
-                                </div>
-
-                                <div class="theme-option">
-                                    <input type="checkbox" name="trip-theme" id="sea" value="sea">
-                                    <label for="sea">🏖️ 바다</label>
-                                </div>
-
-                                <div class="theme-option">
-                                    <input type="checkbox" name="trip-theme" id="activity" value="activity">
-                                    <label for="activity">🚴 액티비티</label>
-                                </div>
-
-                                <div class="theme-option">
-                                    <input type="checkbox" name="trip-theme" id="trendy" value="trendy">
-                                    <label for="trendy">✨ 요즘</label>
-                                </div>
-
-                                <div class="theme-option">
-                                    <input type="checkbox" name="trip-theme" id="friends" value="friends">
-                                    <label for="friends">👫 친구</label>
-                                </div>
-
-                                <div class="theme-option">
-                                    <input type="checkbox" name="trip-theme" id="solo" value="solo">
-                                    <label for="solo">🎒 혼여행</label>
+                                <div class="form-group">
+                                    <label for="trip-region">여행 지역</label>
+                                    <input type="text" id="trip-region" name="trip-region" placeholder="예: 일본 오사카">
                                 </div>
                             </div>
-                        </fieldset>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="start-date">출발일</label>
+                                    <input type="date" id="start-date" name="start-date">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="end-date">도착일</label>
+                                    <input type="date" id="end-date" name="end-date">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="travelers">동행 인원</label>
+                                    <input type="number" id="travelers" name="travelers" min="1" placeholder="1">
+                                </div>
+                            </div>
+
+                            <fieldset class="theme-fieldset">
+                                <legend>여행 테마 선택</legend>
+
+                                <div class="theme-options">
+                                    <div class="theme-option">
+                                        <input type="checkbox" name="trip-theme" id="nature" value="nature">
+                                        <label for="nature">🌿 자연</label>
+                                    </div>
+
+                                    <div class="theme-option">
+                                        <input type="checkbox" name="trip-theme" id="history" value="history">
+                                        <label for="history">🏛️ 역사</label>
+                                    </div>
+
+                                    <div class="theme-option">
+                                        <input type="checkbox" name="trip-theme" id="food" value="food">
+                                        <label for="food">🍜 먹방</label>
+                                    </div>
+
+                                    <div class="theme-option">
+                                        <input type="checkbox" name="trip-theme" id="sea" value="sea">
+                                        <label for="sea">🏖️ 바다</label>
+                                    </div>
+
+                                    <div class="theme-option">
+                                        <input type="checkbox" name="trip-theme" id="activity" value="activity">
+                                        <label for="activity">🚴 액티비티</label>
+                                    </div>
+
+                                    <div class="theme-option">
+                                        <input type="checkbox" name="trip-theme" id="trendy" value="trendy">
+                                        <label for="trendy">✨ 요즘</label>
+                                    </div>
+
+                                    <div class="theme-option">
+                                        <input type="checkbox" name="trip-theme" id="friends" value="friends">
+                                        <label for="friends">👫 친구</label>
+                                    </div>
+
+                                    <div class="theme-option">
+                                        <input type="checkbox" name="trip-theme" id="solo" value="solo">
+                                        <label for="solo">🎒 혼여행</label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </section>
 
 
-                        <section class="schedule-section">
+                        <section class="schedule-section plan-panel" id="schedule">
                             <h2>날짜별 여행 일정</h2>
 
                             <section class="day-section" aria-labelledby="day1-heading">
@@ -251,7 +270,7 @@
                         </section>
 
 
-                        <section class="expense-section">
+                        <section class="expense-section plan-panel" id="expense">
                             <h2>예상 지출</h2>
 
                             <ul class="expense-list">
@@ -287,6 +306,47 @@
                                     </div>
                                 </li>
                             </ul>
+                        </section>
+
+                        <section class="checklist-section plan-panel" id="checklist">
+                            <h2>여행 체크리스트</h2>
+
+                            <ul class="checklist-list">
+                                <li>
+                                    <label>
+                                        <input type="checkbox"> 여권 준비
+                                    </label>
+                                </li>
+
+                                <li>
+                                    <label>
+                                        <input type="checkbox"> 항공권 예약
+                                    </label>
+                                </li>
+
+                                <li>
+                                    <label>
+                                        <input type="checkbox"> 숙소 예약
+                                    </label>
+                                </li>
+
+                                <li>
+                                    <label>
+                                        <input type="checkbox"> 여행자 보험 가입
+                                    </label>
+                                </li>
+
+                                <li>
+                                    <label>
+                                        <input type="checkbox"> 환전
+                                    </label>
+                                </li>
+                            </ul>
+
+                            <div class="checklist-add">
+                                <input type="text" id="checklist-input" placeholder="준비할 항목을 입력하세요">
+                                <button type="button" id="add-checklist-button">추가</button>
+                            </div>
                         </section>
 
                         <div class="save-area">
@@ -351,6 +411,8 @@
             </form>
         </div>
     </footer>
+
+    <script src="../js/12_웹벤져스_plan.js"></script>
 </body>
 
 </html>
