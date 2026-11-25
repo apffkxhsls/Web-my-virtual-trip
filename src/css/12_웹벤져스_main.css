@@ -292,41 +292,35 @@ header {
     white-space: nowrap;
 }
 
-.region-control {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 24px;
-    margin-top: 24px;
+.region-slider {
+    position: relative;
 }
 
 .region-prev,
 .region-next {
-    width: 30px;
-    height: 30px;
+    position: absolute;
+    top: 234px;
+    width: 32px;
+    height: 32px;
     border: 1px solid #B1B3B4;
     border-radius: 50%;
     background: white;
+    font-size: 12px;
     cursor: pointer;
+    z-index: 20;
+}
+
+.region-prev {
+    left: 0;
+}
+
+.region-next {
+    right: 0;
 }
 
 .region-prev:hover,
 .region-next:hover {
     background: #EEEEEF;
-}
-
-.region-dots {
-    display: flex;
-    gap: 6px;
-}
-
-.region-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 4px;
-    background-color: #B1B3B4;
-    cursor: pointer;
-    transition: width 0.3s ease-in-out;
 }
 
 /* ===== 테마별 여행지 탐색 섹션 ===== */
