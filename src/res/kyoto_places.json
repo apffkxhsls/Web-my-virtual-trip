@@ -1,0 +1,147 @@
+{
+    "places": [
+        {
+            "id": "fushimi-inari",
+            "nameKo": "후시미 이나리 신사",
+            "nameEn": "Fushimi Inari Taisha",
+            "description": "황금빛 일본 전역 약 3만여 개 이나리 신사의 총본산으로, 사업 번창과 풍요를 기원하는 교토의 대표 신사입니다. 이나리산 기슭을 따라 수많은 붉은 도리이가 터널처럼 이어진 '센본 도리이'와 신의 사자로 여겨지는 여우 석상이 주요 볼거리입니다.",
+            "location": "교토시 후시미구",
+            "duration": "약 1~3시간",
+            "hours": "24시간",
+            "admission": "무료",
+            "tip": "이른 아침에 방문하고 산길을 걸을 때는 편한 신발을 준비하세요.",
+            "mapUrl": "https://www.google.co.kr/maps/place/%ED%9B%84%EC%8B%9C%EB%AF%B8+%EC%9D%B4%EB%82%98%EB%A6%AC+%EC%8B%A0%EC%82%AC/@34.9676968,135.7791845,17z/data=!4m6!3m5!1s0x60010f153d2e6d21:0x7b1aca1c753ae2e9!8m2!3d34.9676945!4d135.7791876!16zL20vMDVsZHJt?hl=ko&entry=ttu&g_ep=EgoyMDI2MTEyMi4wIKXMDSoASAFQAw%3D%3D",
+            "images": [
+                {
+                    "src": "../res/images/fushimi-inari.jpg",
+                    "alt": "후시미 이나리 신사의 붉은 도리이"
+                },
+                {
+                    "src": "../res/images/fushimi-inari-fox.png",
+                    "alt": "후시미 이나리 신사의 여우 석상"
+                },
+                {
+                    "src": "../res/images/fushimi-inari-water.jpeg",
+                    "alt": "후시미 이나리 신사의 물 정화대"
+                }
+            ]
+        },
+        {
+            "id": "kiyomizudera",
+            "nameKo": "기요미즈데라",
+            "nameEn": "Kiyomizu-dera",
+            "description": "산비탈에 자리한 사찰로, 본당의 나무 무대에서 교토 시내와 주변 산을 내려다볼 수 있습니다.",
+            "location": "교토시 히가시야마구",
+            "duration": "약 1~2시간",
+            "admission": "유료",
+            "tip": "언덕길을 오르는 시간을 고려하고, 인근 니넨자카·산넨자카를 함께 둘러보세요.",
+            "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E6%B8%85%E6%B0%B4%E5%AF%BA%20%E4%BA%AC%E9%83%BD",
+            "images": [
+                {
+                    "src": "../res/images/detail_image.jpg",
+                    "alt": "교토를 소개하는 공용 사진"
+                }
+            ]
+        },
+        {
+            "id": "kinkakuji",
+            "nameKo": "금각사",
+            "nameEn": "Kinkaku-ji",
+            "description": "금빛 누각이 연못에 비치는 풍경으로 알려진 사찰입니다. 정원 산책로를 따라 누각을 여러 각도에서 볼 수 있습니다.",
+            "location": "교토시 기타구",
+            "duration": "약 45분~1시간",
+            "admission": "유료",
+            "tip": "연못 앞 전망 지점에서 누각과 물에 비친 모습을 함께 감상해 보세요.",
+            "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E9%87%91%E9%96%A3%E5%AF%BA%20%E4%BA%AC%E9%83%BD",
+            "images": [
+                {
+                    "src": "../res/images/detail_image.jpg",
+                    "alt": "교토를 소개하는 공용 사진"
+                }
+            ]
+        },
+        {
+            "id": "ninenzaka-sannenzaka",
+            "nameKo": "니넨자카·산넨자카",
+            "nameEn": "Ninenzaka and Sannenzaka",
+            "description": "기요미즈데라 인근에 전통 가옥과 상점이 이어지는 돌길입니다.",
+            "location": "교토시 히가시야마구",
+            "duration": "약 30분~1시간",
+            "tip": "계단과 경사로가 있으니 걷기 편한 신발을 준비하세요.",
+            "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E4%BA%8C%E5%AF%A7%E5%9D%82%20%E7%94%A3%E5%AF%A7%E5%9D%82%20%E4%BA%AC%E9%83%BD",
+            "images": [
+                {
+                    "src": "../res/images/detail_image.jpg",
+                    "alt": "교토를 소개하는 공용 사진"
+                }
+            ]
+        },
+        {
+            "id": "gion",
+            "nameKo": "기온 거리",
+            "nameEn": "Gion",
+            "description": "전통 목조 건물과 찻집이 모여 있는 교토의 옛 거리입니다.",
+            "location": "교토시 히가시야마구",
+            "duration": "약 1~2시간",
+            "tip": "사유지 출입과 사진 촬영에 관한 현장 안내를 확인하세요.",
+            "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E7%A5%87%E5%9C%92%20%E8%8A%B1%E8%A6%8B%E5%B0%8F%E8%B7%AF%20%E4%BA%AC%E9%83%BD",
+            "images": [
+                {
+                    "src": "../res/images/detail_image.jpg",
+                    "alt": "교토를 소개하는 공용 사진"
+                }
+            ]
+        },
+        {
+            "id": "ginkakuji",
+            "nameKo": "은각사",
+            "nameEn": "Ginkaku-ji",
+            "description": "누각과 모래 정원, 이끼 정원이 어우러진 사찰입니다. 산책로를 따라 올라가면 경내를 내려다볼 수 있습니다.",
+            "location": "교토시 사쿄구",
+            "duration": "약 45분~1시간",
+            "admission": "유료",
+            "tip": "가까운 철학의 길을 같은 일정에 넣어 걸어 보세요.",
+            "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E9%8A%80%E9%96%A3%E5%AF%BA%20%E4%BA%AC%E9%83%BD",
+            "images": [
+                {
+                    "src": "../res/images/detail_image.jpg",
+                    "alt": "교토를 소개하는 공용 사진"
+                }
+            ]
+        },
+        {
+            "id": "nijo-castle",
+            "nameKo": "니조성",
+            "nameEn": "Nijō Castle",
+            "description": "도쿠가와 시대의 궁전과 정원을 둘러볼 수 있는 성입니다.",
+            "location": "교토시 나카교구",
+            "duration": "약 1~2시간",
+            "hours": "08:45~17:00 (입장 16:00까지)",
+            "admission": "유료",
+            "tip": "궁전마다 관람 조건과 접수 시간이 다르므로 방문 전에 확인하세요.",
+            "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E4%BA%8C%E6%9D%A1%E5%9F%8E%20%E4%BA%AC%E9%83%BD",
+            "images": [
+                {
+                    "src": "../res/images/detail_image.jpg",
+                    "alt": "교토를 소개하는 공용 사진"
+                }
+            ]
+        },
+        {
+            "id": "philosophers-path",
+            "nameKo": "철학의 길",
+            "nameEn": "Philosopher’s Path",
+            "description": "수로와 나란히 이어지는 산책로로, 봄에는 물길을 따라 벚꽃을 볼 수 있습니다.",
+            "location": "교토시 사쿄구",
+            "duration": "약 30분~1시간",
+            "tip": "산책로를 따라 걷고 주변 사찰이나 카페를 함께 둘러보세요.",
+            "mapUrl": "https://www.google.com/maps/search/?api=1&query=%E5%93%B2%E5%AD%A6%E3%81%AE%E9%81%93%20%E4%BA%AC%E9%83%BD",
+            "images": [
+                {
+                    "src": "../res/images/detail_image.jpg",
+                    "alt": "교토를 소개하는 공용 사진"
+                }
+            ]
+        }
+    ]
+}

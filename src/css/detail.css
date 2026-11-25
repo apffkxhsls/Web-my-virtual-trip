@@ -100,6 +100,68 @@
     height: 100%;
 }
 
+.about-lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 110;
+    align-items: center;
+    justify-content: center;
+    padding: 56px 24px 24px;
+}
+
+.lightbox-shade, .place-modal-shade {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+}
+
+.lightbox-shade {
+    opacity: 0.8;
+}
+
+.place-modal-shade {
+    opacity: 0.66;
+}
+
+.about-lightbox-photo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 94%;
+    height: 92%;
+    max-width: 920px;
+}
+
+.about-lightbox-photo img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.about-lightbox-close {
+    position: absolute;
+    z-index: 1;
+    top: 24px;
+    right: 64px;
+    width: 48px;
+    height: 48px;
+    border: 0;
+    background-color: transparent;
+    color: #ffffff;
+}
+
+.about-lightbox-close img {
+    width: 36px;
+    height: 36px;
+}
+
 .places, .restaurants {
     margin-top: 120px;
 }
@@ -111,6 +173,7 @@
 }
 
 .place-card {
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 23.2%;
@@ -120,10 +183,38 @@
     border-radius: 10px;
 }
 
-.place-card img {
+.place-card .place-link img {
     width: 100%;
     height: 176px;
     border-radius: 9px 9px 0 0;
+}
+
+.places-list .place-card:nth-child(n + 5),
+.restaurant-list .restaurant-item:nth-child(n + 5) {
+    display: none;
+}
+
+.place-favorite {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 2;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background-color: #b9c1c9;
+}
+
+.place-favorite img {
+    width: 22px;
+    height: 22px;
+    margin: 2px 0 0 1px;
+    border-radius: 0;
 }
 
 .place-description {
@@ -142,6 +233,224 @@
     font-size: 13px;
     line-height: 1.35;
     color: #777777;
+}
+
+.place-status {
+    display: none;
+    margin-bottom: 16px;
+    color: #252525;
+}
+
+.place-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 105;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.place-modal-panel {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 850px;
+    max-height: 100%;
+    overflow: auto;
+    padding: 40px 4% 24px;
+    border-radius: 12px;
+    background-color: #ffffff;
+}
+
+.place-modal-close {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    width: 32px;
+    height: 32px;
+    border: 0;
+    background-color: transparent;
+    color: #252525;
+    font-size: 26px;
+}
+
+.place-modal-gallery, .place-modal-details {
+    width: 47%;
+    min-width: 240px;
+    flex-grow: 1;
+    margin: 0 1.5% 16px;
+}
+
+.place-modal-photo {
+    position: relative;
+}
+
+#place-modal-image {
+    display: block;
+    width: 100%;
+    height: 340px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.place-modal-photo button {
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background-color: #ffffff;
+    opacity: 0.85;
+}
+
+#place-modal-prev { left: 12px; }
+#place-modal-next { right: 12px; }
+
+.place-modal-photo button .ui-icon {
+    width: 10px;
+    height: 16px;
+    opacity: 0.7;
+}
+
+.place-modal-photo button:active .ui-icon {
+    opacity: 1;
+}
+
+.place-modal-thumbnails {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 14px;
+}
+
+.place-modal-thumbnails button {
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    width: 32%;
+    border: 3px solid transparent;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.place-modal-thumbnails .selected-photo {
+    border: 3px solid #378476;
+}
+
+.place-modal-thumbnails img {
+    display: block;
+    width: 100%;
+    height: 104px;
+    object-fit: cover;
+}
+
+.place-modal-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.place-modal-heading {
+    position: relative;
+    padding: 0 42px 14px 0;
+    border-bottom: 1px solid #252525;
+}
+
+.place-modal-heading h2 {
+    font-size: 30px;
+    line-height: 1.2;
+    margin-bottom: 7px;
+}
+
+.place-modal-heading p {
+    color: #777777;
+    font-size: 17px;
+}
+
+.place-modal-favorite {
+    top: auto;
+    right: 0;
+    bottom: 10px;
+    background-color: transparent;
+}
+
+#place-modal-description {
+    margin: 22px 0 16px;
+    line-height: 1.35;
+}
+
+.place-modal-info {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 14px 16px;
+    border-radius: 10px;
+    background-color: #eeefed;
+    font-size: 14px;
+}
+
+.place-modal-info dt {
+    display: flex;
+    align-items: center;
+    width: 44%;
+    padding: 4px 4px 4px 0;
+}
+
+.place-modal-info dd {
+    width: 56%;
+    margin: 0;
+    padding: 4px 0 4px 14px;
+    border-left: 1px solid #777777;
+}
+
+.place-modal-info img,
+.place-modal-actions img {
+    width: 16px;
+    height: 16px;
+}
+
+.place-modal-info dt, .place-modal-info dd {
+    box-sizing: border-box;
+}
+
+.place-modal-info img, .place-modal-actions img {
+    margin-right: 6px;
+}
+
+.place-modal-external {
+    margin-left: 6px;
+}
+
+.place-modal-actions a {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    border: 1px solid #24594f;
+    min-height: 40px;
+    border-radius: 10px;
+    background-color: #24594f;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.place-modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: auto;
+    padding-top: 20px;
+    padding-bottom: 2px;
 }
 
 .more-wrap {
@@ -163,6 +472,7 @@
     align-items: center;
     justify-content: center;
     text-decoration: none;
+    font-family: inherit;
 }
 
 .restaurants {
@@ -270,6 +580,10 @@
     width: 98%;
 }
 
+.fill-96 {
+    width: 96%;
+}
+
 .fill-90 {
     width: 90%;
 }
@@ -304,14 +618,14 @@
 .restaurant-link {
     align-items: center;
     justify-content: space-between;
+    border-radius: 10px;
 }
 
 .card-link:hover h3,
 .card-link:hover p,
 .card-link:focus h3,
 .card-link:focus p,
-.more-button:hover .more-text,
-.more-button:focus .more-text {
+.more-button:hover .more-text {
     text-decoration: underline;
 }
 
