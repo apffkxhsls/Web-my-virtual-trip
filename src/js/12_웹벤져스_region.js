@@ -11,8 +11,8 @@ const festivalBox = document.querySelector('.festival-list');
 
 let countryList = [];
 let cityList = [];
-let selectedContinent = '아시아';
-let selectedCountry = '일본';
+let selectedContinent = '국내';
+let selectedCountry = '수도권';
 let popularCount = 3;
 let recommendCount = 3;
 let festivalList = [];
