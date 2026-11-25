@@ -57,42 +57,42 @@
         <!-- 대륙별 지역 선택 -->
         <section class="continent-select">
             <div class="continent-list">
-                <a href="#" class="continent-card">
+                <button type="button" class="continent-card" value="국내">
                     <div class="continent-circle">
                         <img class="continent-icon" src="../res/icons/12_ic_korea.svg" alt="국내 아이콘">
                     </div>
                     <span class="continent-label">국내</span>
-                </a>
-                <a href="#" class="continent-card">
+                </button>
+                <button type="button" class="continent-card" value="아시아">
                     <div class="continent-circle" id="asiacard">
                         <img class="continent-icon" src="../res/icons/12_ic_asia.svg" alt="아시아 아이콘">
                     </div>
                     <span class="continent-label">아시아</span>
-                </a>
-                <a href="#" class="continent-card">
+                </button>
+                <button type="button" class="continent-card" value="대양주">
                     <div class="continent-circle">
                         <img class="continent-icon" src="../res/icons/12_ic_oceania.svg" alt="대양주 아이콘">
                     </div>
                     <span class="continent-label">대양주</span>
-                </a>
-                <a href="#" class="continent-card">
+                </button>
+                <button type="button" class="continent-card" value="유럽">
                     <div class="continent-circle">
                         <img class="continent-icon" src="../res/icons/12_ic_europe.svg" alt="유럽 아이콘">
                     </div>
                     <span class="continent-label">유럽</span>
-                </a>
-                <a href="#" class="continent-card">
+                </button>
+                <button type="button" class="continent-card" value="미주">
                     <div class="continent-circle">
                         <img class="continent-icon" src="../res/icons/12_ic_america.svg" alt="미주 아이콘">
                     </div>
                     <span class="continent-label">미주</span>
-                </a>
-                <a href="#" class="continent-card">
+                </button>
+                <button type="button" class="continent-card" value="중동·아프리카">
                     <div class="continent-circle">
                         <img class="continent-icon" src="../res/icons/12_ic_mideast.svg" alt="중동·아프리카 아이콘">
                     </div>
                     <span class="continent-label">중동·아프리카</span>
-                </a>
+                </button>
             </div>
         </section>
 
@@ -104,20 +104,7 @@
                 <aside class="country-panel">
                     <p class="panel-desc">나라를 선택하면 해당 나라의 인기/추천 도시를 알려드려요.</p>
                     <div class="region-group">
-                        <div class="chip-list">
-                            <a class="chip" id="japanchip" href="#">일본</a>
-                            <a class="chip" href="#">중국</a>
-                            <a class="chip" href="#">홍콩</a>
-                            <a class="chip" href="#">대만</a>
-                            <a class="chip" href="#">마카오</a>
-                            <a class="chip" href="#">베트남</a>
-                            <a class="chip" href="#">태국</a>
-                            <a class="chip" href="#">필리핀</a>
-                            <a class="chip" href="#">인도네시아</a>
-                            <a class="chip" href="#">싱가포르</a>
-                            <a class="chip" href="#">말레이시아</a>
-                            <a class="chip" href="#">몽골</a>
-                        </div>
+                        <div class="chip-list"></div>
                     </div>
                 </aside>
                 <!-- 오른쪽: 도시 카드 -->
@@ -357,4 +344,5 @@
             </form>
         </div>
     </footer>
+    <script src="../js/12_웹벤져스_region.js"></script>
 </body>

@@ -297,7 +297,9 @@ footer {
     flex-grow: 1;
     flex-direction: column;
     align-items: center;
-    text-decoration: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
 
 }
 
@@ -306,7 +308,6 @@ footer {
     width: 96px;
     height: 96px;
     border-radius: 20px;
-    padding: 8px;
     border: 2px solid transparent;
     background-color: white;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -314,6 +315,16 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.continent-card:hover .continent-circle {
+    background-color: #EAF5F0;
+    border-color: #8DC5AC;
+}
+
+.continent-card.is-selected .continent-circle {
+    background-color: #C3E4D9;
+    border-color: #337768;
 }
 
 .continent-label {
@@ -335,6 +346,19 @@ footer {
     font-weight: 700;
     margin: 0 0 30px;
     line-height: 1.4;
+}
+
+.continent-card {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-family: "Asta Sans", sans-serif;
+}
+
+.continent-card.is-selected .continent-circle {
+    background-color: #C3E4D9;
+    border-color: #337768;
 }
 
 /* 좌우 2단 레이아웃 */
@@ -367,9 +391,10 @@ footer {
     border: 1px solid #B1B3B4;
     border-radius: 15px;
     font-size: 17px;
-    text-decoration: none;
     color: black;
     white-space: nowrap;
+    background-color: white;
+    cursor: pointer;
 }
 
 .chip:hover {
@@ -377,8 +402,7 @@ footer {
     color: #337768;
 }
 
-/* 선택된 칩 (active 상태에 class="chip active" 추가 시) */
-#japanchip {
+.chip.is-selected {
     background-color: #8DC5AC;
     border-color: #337768;
 }
