@@ -5,6 +5,7 @@ body {
     font-family: "Asta Sans", sans-serif;
 }
 
+/* ==== 로고 및 네비게이션 바 ====  */
 .site-header {
     position: sticky;
     top: 0;
@@ -12,13 +13,19 @@ body {
 }
 
 .navigation {
-    justify-content: center;
+    justify-content: space-between;
     background-color: white;
     border-bottom: 1px solid #EEEEEF;
     display: flex;
     align-items: stretch;
-    padding: 0 24px;
+    padding: 0 40px;
     height: 72px;
+    gap: 24px;
+    /*아이템 사이의 간격 지정 */
+}
+
+.logo-link {
+    padding-top: 8px;
 }
 
 #logo {
@@ -27,40 +34,37 @@ body {
     margin: auto 0;
 }
 
-.logo-link {
-    padding-top: 8px;
-    margin-right: 24px;
-}
-
 .nav-right {
     display: flex;
     align-items: stretch;
+    gap: 16px;
+    flex-grow: 1;
 }
 
-
+/* 카테고리 네비게이션 */
 .category-nav {
     display: flex;
     align-items: stretch;
+    justify-content: center;
+    flex-grow: 1;
+    gap: 40px;
     padding: 0px 24px;
-    margin-right: 16px;
 }
 
 .cat-item {
     flex-direction: row;
     display: flex;
     align-items: center;
-    margin-right: 16px;
+    gap: 4px;
     padding: 8px 12px;
-    font-size: 17px;
+    font-size: 20px;
     font-weight: 500;
     white-space: nowrap;
     text-decoration: none;
     color: black;
     border-bottom: 4px solid transparent;
-}
-
-.cat-item:last-child {
-    margin-right: 0;
+    /*transparent는 투명색*/
+    margin-bottom: -1px;
 }
 
 .cat-item-active {
@@ -74,54 +78,56 @@ body {
     font-weight: 600;
 }
 
+
+/* 검색 아이콘 */
 .search {
     display: flex;
     align-items: center;
+    width: 260px;
+    height: 27px;
     border: 1px solid #B1B3B4;
     border-radius: 20px;
     padding: 6px 14px;
-    margin: auto 16px auto 0;
+    margin: auto 0;
+    gap: 8px;
 }
 
 .search img {
-    width: 15px;
+    width: 23px;
+    cursor: pointer
 }
 
 .search input {
+    flex-grow: 1;
     border: none;
     outline: none;
-    font-size: 13px;
+    font-size: 15px;
     width: 180px;
-    margin-right: 8px;
 }
 
 .search button {
     background: none;
     border: none;
-    border-radius: 50%;
-    padding: 4px;
+    padding: 0;
     display: flex;
     align-items: center;
 }
 
-.search button:hover {
-    background-color: #EEEEEF;
-}
-
-
+/* 로그아웃 버튼 */
 .logout {
-    background: #8DC5AC;
+    background: #C3E4D9;
     color: black;
     border-radius: 8px;
     padding: 8px 16px;
     margin: auto 0;
+    cursor: pointer;
     font-size: 14px;
     white-space: nowrap;
     border: none;
 }
 
 .logout:hover {
-    background: #69A998;
+    background: #9ACEB7;
 }
 
 main {
