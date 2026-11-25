@@ -110,7 +110,14 @@ fetch("../data/12_웹벤져스_theme.json")
         showPlaces(result);
     })
     .catch(error => {
-        console.error("실패", error);
+        console.log("여행지 데이터를 불러오지 못했습니다.", error);
+
+        const grids = document.querySelectorAll(".places-grid");
+
+        for (let i = 0; i < grids.length; i++) {
+            grids[i].innerHTML =
+                "<p>여행지 정보를 불러오지 못했습니다. 새로고침해주세요.</p>";
+        }
     });
 
 function showPlaces(places) {
