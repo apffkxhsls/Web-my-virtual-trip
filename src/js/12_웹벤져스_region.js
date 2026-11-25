@@ -14,6 +14,12 @@ let selectedCountry = '일본';
 let popularCount = 3;
 let recommendCount = 3;
 
+let favoritePlaces = [];
+const savedFavorites = localStorage.getItem("favoritePlaces");
+if (savedFavorites !== null) {
+    favoritePlaces = JSON.parse(savedFavorites);
+}
+
 fetch('../data/12_웹벤져스_region.json')
     .then(response => response.json())
     .then(data => {
@@ -109,6 +115,7 @@ function showCountry() {
 function showCities() {
     showCityList(cityLists[0], moreButtons[0], getCities('popular'), popularCount);
     showCityList(cityLists[1], moreButtons[1], getCities('recommend'), recommendCount);
+    setHeartButtons();
 }
 
 function showCityList(listBox, moreButton, cities, count) {
@@ -125,12 +132,12 @@ function showCityList(listBox, moreButton, cities, count) {
 
     listBox.innerHTML = showList.map(city => `
         <article class="city-card">
-            <button type="button" class="heart-btn" value="${city.id}">
+            <button type="button" class="${getHeartClass(city.id)}" value="${city.id}">
                 <img class="favorite" src="../res/icons/12_ic_favorite.svg" alt="좋아요 아이콘">
                 <img class="favorite-filled" src="../res/icons/12_ic_favorite_filled.svg" alt="좋아요 누른 아이콘">
             </button>
             <a href="${city.link || '#'}">
-                <img class="city-img" src="../res/images/12_theme-history.jpg" alt="${city.alt} 사진">
+                <img class="city-img" src="../res/images/12_theme-history.jpg" alt="${city.name} 사진">
                 <div class="city-info">
                     <p class="city-name">${city.name}</p>
                     <p class="city-location">${city.country}</p>
@@ -154,4 +161,61 @@ function showCityList(listBox, moreButton, cities, count) {
 
 function getCities(type) {
     return cityList.filter(city => city.country === selectedCountry && city.type === type);
+}
+
+function getHeartClass(id) {
+    for (let i = 0; i < favoritePlaces.length; i++) {
+        if (favoritePlaces[i] === id) {
+            return "heart-btn is-favorite";
+        }
+    }
+    return "heart-btn";
+}
+
+function toggleFavorite() {
+    const placeId = this.value;
+    const saved = localStorage.getItem("favoritePlaces");
+    favoritePlaces = [];
+    if (saved !== null) {
+        favoritePlaces = JSON.parse(saved);
+    }
+
+    let isFavorite = false;
+    for (let i = 0; i < favoritePlaces.length; i++) {
+        if (favoritePlaces[i] === placeId) {
+            isFavorite = true;
+        }
+    }
+
+    if (isFavorite) {
+        const newList = [];
+        for (let i = 0; i < favoritePlaces.length; i++) {
+            if (favoritePlaces[i] !== placeId) {
+                newList.push(favoritePlaces[i]);
+            }
+        }
+        favoritePlaces = newList;
+    } else {
+        favoritePlaces.push(placeId);
+    }
+
+    localStorage.setItem("favoritePlaces", JSON.stringify(favoritePlaces));
+
+    const hearts = document.querySelectorAll(".heart-btn");
+    for (let i = 0; i < hearts.length; i++) {
+        if (hearts[i].value === placeId) {
+            if (isFavorite) {
+                hearts[i].setAttribute("class", "heart-btn");
+            } else {
+                hearts[i].setAttribute("class", "heart-btn is-favorite");
+            }
+        }
+    }
+}
+
+function setHeartButtons() {
+    const hearts = document.querySelectorAll(".heart-btn");
+    for (let i = 0; i < hearts.length; i++) {
+        hearts[i].addEventListener("click", toggleFavorite);
+    }
 }

@@ -502,26 +502,24 @@ footer {
     padding: 0;
 }
 
-.favorite {
+.favorite,
+.favorite-filled {
     width: 24px;
 }
 
-/* hover 또는 active되지 않았을 때는 보이지 않음 */
 .favorite-filled {
     display: none;
 }
 
-
-.heart-btn:hover .favorite {
+.heart-btn:hover .favorite,
+.heart-btn.is-favorite .favorite {
     display: none;
 }
 
 .heart-btn:hover .favorite-filled,
-.heart-btn:active .favorite-filled {
+.heart-btn.is-favorite .favorite-filled {
     display: block;
 }
-
-
 /* ===== 숙소 및 항공권 바로가기 섹션 ===== */
 .hotel-air {
     max-width: 1200px;
