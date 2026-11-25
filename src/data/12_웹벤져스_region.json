@@ -240,7 +240,7 @@
     { "id": "terkhiin-tsagaan", "name": "테르힝차강호", "country": "몽골", "continent": "아시아", "type": "recommend", "tags": ["자연", "휴양"] },
     { "id": "dalanzadgad", "name": "달란자드가드", "country": "몽골", "continent": "아시아", "type": "recommend", "tags": ["자연", "도시"] },
     { "id": "erdene-zuu", "name": "에르덴조", "country": "몽골", "continent": "아시아", "type": "recommend", "tags": ["역사", "문화"] },
-        { "id": "sydney", "name": "시드니", "country": "호주", "continent": "대양주", "type": "popular", "tags": ["도시", "바다"] },
+    { "id": "sydney", "name": "시드니", "country": "호주", "continent": "대양주", "type": "popular", "tags": ["도시", "바다"] },
     { "id": "melbourne", "name": "멜버른", "country": "호주", "continent": "대양주", "type": "popular", "tags": ["예술", "먹방"] },
     { "id": "gold-coast", "name": "골드코스트", "country": "호주", "continent": "대양주", "type": "popular", "tags": ["바다", "액티비티"] },
     { "id": "brisbane", "name": "브리즈번", "country": "호주", "continent": "대양주", "type": "popular", "tags": ["도시", "휴양"] },
@@ -315,5 +315,51 @@
     { "id": "jebel-jais", "name": "제벨자이스", "country": "아랍에미리트", "continent": "중동·아프리카", "type": "recommend", "tags": ["자연", "액티비티"] },
     { "id": "ajman", "name": "아지만", "country": "아랍에미리트", "continent": "중동·아프리카", "type": "recommend", "tags": ["바다", "휴양"] },
     { "id": "umm-al-quwain", "name": "움알쿠와인", "country": "아랍에미리트", "continent": "중동·아프리카", "type": "recommend", "tags": ["바다", "자연"] }
+  ],
+      "festivalList": [
+    { "name": "서울세계불꽃축제", "country": "수도권", "city": "서울 여의도", "date": "10월", "place": "여의도 한강공원" },
+    { "name": "수원화성문화제", "country": "수도권", "city": "수원", "date": "10월", "place": "수원화성 일대" },
+
+    { "name": "강릉단오제", "country": "강원도", "city": "강릉", "date": "6월", "place": "남대천 단오장" },
+    { "name": "화천산천어축제", "country": "강원도", "city": "화천", "date": "1월", "place": "화천천 일대" },
+
+    { "name": "보령머드축제", "country": "충청도", "city": "보령", "date": "7월", "place": "대천해수욕장" },
+    { "name": "백제문화제", "country": "충청도", "city": "공주·부여", "date": "9~10월", "place": "금강 일대" },
+
+    { "name": "전주국제영화제", "country": "전라도", "city": "전주", "date": "5월", "place": "전주 영화의거리" },
+    { "name": "진도신비의바닷길축제", "country": "전라도", "city": "진도", "date": "3~4월", "place": "회동리 일대" },
+
+    { "name": "부산국제영화제", "country": "경상도", "city": "부산", "date": "10월", "place": "영화의전당" },
+    { "name": "진해군항제", "country": "경상도", "city": "창원 진해", "date": "3~4월", "place": "여좌천·경화역 일대" },
+
+    { "name": "제주들불축제", "country": "제주도", "city": "제주시", "date": "3월", "place": "새별오름" },
+    { "name": "탐라문화제", "country": "제주도", "city": "제주시", "date": "10월", "place": "탑동광장 일대" },
+
+    { "name": "삿포로 눈 축제", "country": "일본", "city": "홋카이도 삿포로", "date": "2월 초", "place": "오도리 공원" },
+    { "name": "기온 마쓰리", "country": "일본", "city": "교토", "date": "7월", "place": "야사카 신사 일대" },
+
+    { "name": "하얼빈 빙설제", "country": "중국", "city": "하얼빈", "date": "1~2월", "place": "빙설대세계" },
+    { "name": "춘절 묘회", "country": "중국", "city": "베이징", "date": "1~2월", "place": "디탄공원" },
+
+    { "name": "홍콩 와인 앤 다인 페스티벌", "country": "홍콩/대만", "city": "홍콩", "date": "10월", "place": "센트럴 하버프론트" },
+    { "name": "핑시 천등축제", "country": "홍콩/대만", "city": "신베이 핑시", "date": "2월 (정월대보름)", "place": "스펀 일대" },
+
+    { "name": "칭게이 퍼레이드", "country": "싱가포르", "city": "싱가포르", "date": "2월", "place": "F1 피트 빌딩 일대" },
+    { "name": "싱가포르 나이트 페스티벌", "country": "싱가포르", "city": "싱가포르", "date": "8월", "place": "브라스 바사 일대" },
+
+    { "name": "나담 축제", "country": "몽골", "city": "울란바토르", "date": "7월", "place": "국립 경기장" },
+    { "name": "홉스골 얼음 축제", "country": "몽골", "city": "홉스골", "date": "3월", "place": "홉스골 호수" },
+
+    { "name": "비비드 시드니", "country": "호주", "city": "시드니", "date": "5~6월", "place": "서큘러 키 일대" },
+    { "name": "멜버른 국제 코미디 페스티벌", "country": "호주", "city": "멜버른", "date": "3~4월", "place": "멜버른 타운홀" },
+
+    { "name": "니스 카니발", "country": "프랑스", "city": "니스", "date": "2월", "place": "마세나 광장" },
+    { "name": "아비뇽 페스티벌", "country": "프랑스", "city": "아비뇽", "date": "7월", "place": "교황청 일대" },
+
+    { "name": "새해 카운트다운", "country": "미국", "city": "뉴욕", "date": "12월 31일", "place": "타임스스퀘어" },
+    { "name": "마디그라", "country": "미국", "city": "뉴올리언스", "date": "2~3월", "place": "프렌치 쿼터" },
+
+    { "name": "두바이 쇼핑 페스티벌", "country": "아랍에미리트", "city": "두바이", "date": "12~1월", "place": "두바이 전역" },
+    { "name": "알 다프라 페스티벌", "country": "아랍에미리트", "city": "아부다비", "date": "12월", "place": "마디낫 자예드" }
   ]
 }

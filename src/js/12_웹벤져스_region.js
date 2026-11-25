@@ -6,6 +6,8 @@ const cityLists = document.querySelectorAll('.city-card-list');
 const moreButtons = document.querySelectorAll('.more-btn');
 const festivalTitle = document.querySelector('.festival-title');
 const shortcutDescs = document.querySelectorAll('.shortcut-desc');
+const festivalSection = document.querySelector('.festival-section');
+const festivalBox = document.querySelector('.festival-list');
 
 let countryList = [];
 let cityList = [];
@@ -13,6 +15,7 @@ let selectedContinent = '아시아';
 let selectedCountry = '일본';
 let popularCount = 3;
 let recommendCount = 3;
+let festivalList = [];
 
 let favoritePlaces = [];
 const savedFavorites = localStorage.getItem("favoritePlaces");
@@ -25,6 +28,7 @@ fetch('../data/12_웹벤져스_region.json')
     .then(data => {
         countryList = data.countryList;
         cityList = data.cityList;
+        festivalList = data.festivalList;
 
         for (let i = 0; i < continentCards.length; i++) {
             continentCards[i].addEventListener('click', selectContinent);
@@ -110,6 +114,7 @@ function showCountry() {
     popularCount = 3;
     recommendCount = 3;
     showCities();
+    showFestivals();
 }
 
 function showCities() {
@@ -218,4 +223,38 @@ function setHeartButtons() {
     for (let i = 0; i < hearts.length; i++) {
         hearts[i].addEventListener("click", toggleFavorite);
     }
+}
+
+function showFestivals() {
+    const festivals = festivalList.filter(festival => festival.country === selectedCountry);
+
+    if (festivals.length === 0) {
+        festivalSection.style.display = 'none';
+        return;
+    }
+
+    festivalSection.style.display = 'block';
+    festivalBox.innerHTML = festivals.map(festival => `
+        <article class="festival-card">
+            <div class="festival-poster">
+                <img src="${festival.image || '../res/images/12_festival.jpg'}" alt="${festival.name} 포스터">
+            </div>
+            <div class="ticket-divider"></div>
+            <div class="festival-info">
+                <div class="festival-top">
+                    <p class="festival-name">${festival.name}</p>
+                    <p class="festival-city">${festival.city}</p>
+                </div>
+                <div class="festival-detail">
+                    <div class="detail-item">
+                        <span class="detail-label">날짜</span>
+                        <span class="detail-value">${festival.date}</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">장소</span>
+                        <span class="detail-value">${festival.place}</span>
+                    </div>
+                </div>
+            </div>
+        </article>`).join('');
 }
