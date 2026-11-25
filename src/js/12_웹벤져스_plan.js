@@ -328,6 +328,38 @@ savePlanButton.addEventListener("click", function () {
         showTab(0);
         return;
     }
+
+    let travelers = parseFloat(plan.travelers);
+    if (plan.travelers === "" || travelers < 1 || travelers % 1 !== 0) {
+        alert("동행 인원은 1명 이상의 정수로 입력해주세요.");
+        showTab(0);
+        return;
+    }
+
+    for (let i = 0; i < plan.days.length; i++) {
+        let date = plan.days[i].date;
+        if (date !== "" && (date < plan.startDate || date > plan.endDate)) {
+            alert("DAY " + (i + 1) + "의 날짜는 여행 기간 안으로 입력해주세요.");
+            showTab(0);
+            return;
+        }
+    }
+
+    let costs = [
+        plan.expense.budget,
+        plan.expense.transport,
+        plan.expense.food,
+        plan.expense.stay,
+        plan.expense.other
+    ];
+    for (let i = 0; i < costs.length; i++) {
+        if (parseFloat(costs[i]) < 0) {
+            alert("목표 예산과 지출은 0원 이상으로 입력해주세요.");
+            showTab(1);
+            return;
+        }
+    }
+
     if (selectedIndex === -1) {
         savedPlans.push(plan);
         selectedIndex = savedPlans.length - 1;
