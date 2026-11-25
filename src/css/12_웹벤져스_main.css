@@ -293,12 +293,17 @@ header {
 
 .region-prev,
 .region-next {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border: 1px solid #B1B3B4;
     border-radius: 50%;
     background: white;
     cursor: pointer;
+}
+
+.region-prev:hover,
+.region-next:hover {
+    background: #EEEEEF;
 }
 
 .region-dots {
