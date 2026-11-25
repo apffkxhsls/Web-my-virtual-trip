@@ -1,0 +1,204 @@
+{
+    "places": [
+        {
+            "id": "fushimi-inari",
+            "nameKo": "후시미 이나리 신사",
+            "nameEn": "Fushimi Inari Taisha",
+            "description": "황금빛 일본 전역 약 3만여 개 이나리 신사의 총본산으로, 사업 번창과 풍요를 기원하는 교토의 대표 신사입니다. 이나리산 기슭을 따라 수많은 붉은 도리이가 터널처럼 이어진 '센본 도리이'와 신의 사자로 여겨지는 여우 석상이 주요 볼거리입니다.",
+            "location": "교토시 후시미구",
+            "duration": "약 1~3시간",
+            "hours": "24시간",
+            "admission": "무료",
+            "mapUrl": "https://www.google.co.kr/maps/place/%ED%9B%84%EC%8B%9C%EB%AF%B8+%EC%9D%B4%EB%82%98%EB%A6%AC+%EC%8B%A0%EC%82%AC/@34.9676968,135.7791845,17z/data=!4m6!3m5!1s0x60010f153d2e6d21:0x7b1aca1c753ae2e9!8m2!3d34.9676945!4d135.7791876!16zL20vMDVsZHJt?hl=ko&entry=ttu&g_ep=EgoyMDI2MTEyMi4wIKXMDSoASAFQAw%3D%3D",
+            "images": [
+                {
+                    "src": "../res/images/12_fushimi-inari.jpg",
+                    "alt": "후시미 이나리 신사의 붉은 도리이"
+                },
+                {
+                    "src": "../res/images/12_fushimi-inari-fox.png",
+                    "alt": "후시미 이나리 신사의 여우 석상"
+                },
+                {
+                    "src": "../res/images/12_fushimi-inari-torii.jpg",
+                    "alt": "후시미 이나리 신사의 현판이 걸린 붉은 도리이와 숲길"
+                }
+            ]
+        },
+        {
+            "id": "kiyomizudera",
+            "nameKo": "기요미즈데라",
+            "nameEn": "Kiyomizu-dera",
+            "description": "교토 히가시야마의 오토와산 기슭에 자리한 사찰입니다. 본당 앞에 돌출된 목조 무대에서는 교토 시내와 주변 산을 한눈에 내려다볼 수 있습니다. 경내의 오토와 폭포와 붉은 삼층탑도 대표 볼거리이며, 봄에는 벚꽃이, 가을에는 단풍이 경내를 물들입니다.",
+            "location": "교토시 히가시야마구",
+            "duration": "약 1~2시간",
+            "hours": "06:00~18:00 (계절·행사에 따라 변동)",
+            "admission": "성인 500엔",
+            "mapUrl": "https://www.google.co.kr/maps/place/%EA%B8%B0%EC%9A%94%EB%AF%B8%EC%A6%88%EB%8D%B0%EB%9D%BC/@34.9946662,135.7824723,17z/data=!4m10!1m2!2m1!1z6riw7JqU66-47KaI642w6528!3m6!1s0x600108d385dcfb07:0x62af658650c434ba!8m2!3d34.9946662!4d135.784661!15sChLquLDsmpTrr7jspojrjbDrnbxaFiIU6riw7JqUIOuvuOymiCDrjbDrnbySAQ9idWRkaGlzdF90ZW1wbGWaASRDaGREU1VoTk1HOW5TMFZKUTBGblNVUTFPRXhQTldoblJSQULgAQD6AQQIABAR!16zL20vMDJ5bjNn?hl=ko&entry=ttu&g_ep=EgoyMDI2MTEyMi4wIKXMDSoASAFQAw%3D%3D",
+            "images": [
+                {
+                    "src": "../res/images/12_fushimi-inari.jpg",
+                    "alt": "후시미 이나리 신사의 붉은 도리이"
+                },
+                {
+                    "src": "../res/images/12_fushimi-inari-fox.png",
+                    "alt": "후시미 이나리 신사의 여우 석상"
+                },
+                {
+                    "src": "../res/images/12_fushimi-inari-torii.jpg",
+                    "alt": "후시미 이나리 신사의 현판이 걸린 붉은 도리이와 숲길"
+                }
+            ]
+        },
+        {
+            "id": "kinkakuji",
+            "nameKo": "금각사",
+            "nameEn": "Kinkaku-ji",
+            "description": "연못가에 세워진 금빛 누각이 교토를 대표하는 풍경을 이룹니다. 누각의 위쪽 두 층은 금박으로 덮여 있으며, 바람이 잔잔할 때는 맞은편 연못에 건물과 주변 나무가 비칩니다. 정원 산책로를 따라 걸으면 누각을 여러 각도에서 볼 수 있습니다.",
+            "location": "교토시 기타구",
+            "duration": "약 45분~1시간",
+            "hours": "09:00~17:00",
+            "admission": "성인 500엔",
+            "mapUrl": "https://www.google.co.kr/maps/place/%EA%B8%88%EA%B0%81%EC%82%AC/@35.03937,135.7292431,17z/data=!3m1!4b1!4m6!3m5!1s0x6001a820c0eb46bd:0xee4272b1c22645f!8m2!3d35.03937!4d135.7292431!16zL20vMDFrbjR3?hl=ko&entry=ttu&g_ep=EgoyMDI2MTEyMi4wIKXMDSoASAFQAw%3D%3D",
+            "images": [
+                {
+                    "src": "../res/images/12_fushimi-inari.jpg",
+                    "alt": "후시미 이나리 신사의 붉은 도리이"
+                },
+                {
+                    "src": "../res/images/12_fushimi-inari-fox.png",
+                    "alt": "후시미 이나리 신사의 여우 석상"
+                },
+                {
+                    "src": "../res/images/12_fushimi-inari-torii.jpg",
+                    "alt": "후시미 이나리 신사의 붉은 도리이와 숲길"
+                }
+            ]
+        },
+        {
+            "id": "ninenzaka-sannenzaka",
+            "nameKo": "니넨자카·산넨자카",
+            "nameEn": "Ninenzaka and Sannenzaka",
+            "description": "기요미즈데라로 이어지는 옛길로, 돌계단과 경사진 골목을 따라 전통 목조 가옥이 늘어서 있습니다. 골목에는 찻집과 공예품 가게가 들어서 있으며, 골목 곳곳에서 야사카의 탑을 바라볼 수 있습니다. 전통 가옥과 상점가를 함께 둘러볼 수 있는 곳입니다.",
+            "location": "교토시 히가시야마구",
+            "duration": "약 30분~1시간",
+            "hours": "상시 통행 (상점별 영업 시간 상이)",
+            "admission": "무료",
+            "mapUrl": "https://www.google.co.kr/maps/place/%EB%8B%88%EB%84%A8%EC%9E%90%EC%B9%B4/@34.9983989,135.7808431,17z/data=!3m1!4b1!4m6!3m5!1s0x600108d018ab0c97:0xe6ae59775061be35!8m2!3d34.9983989!4d135.7808431!16s%2Fg%2F11bw3d1ng5?hl=ko&entry=ttu&g_ep=EgoyMDI2MTEyMi4wIKXMDSoASAFQAw%3D%3D",
+            "images": [
+                {
+                    "src": "../res/images/12_fushimi-inari.jpg",
+                    "alt": "후시미 이나리 신사의 붉은 도리이"
+                },
+                {
+                    "src": "../res/images/12_fushimi-inari-fox.png",
+                    "alt": "후시미 이나리 신사의 여우 석상"
+                },
+                {
+                    "src": "../res/images/12_fushimi-inari-torii.jpg",
+                    "alt": "후시미 이나리 신사의 현판이 걸린 붉은 도리이와 숲길"
+                }
+            ]
+        },
+        {
+            "id": "gion",
+            "nameKo": "기온 거리",
+            "nameEn": "Gion",
+            "description": "기온은 전통 목조 가옥과 찻집이 남아 있는 교토의 옛 유흥 지구입니다. 하나미코지에는 격자문이 이어지고, 시라카와 주변에서는 수로와 버드나무가 어우러진 풍경을 볼 수 있습니다. 해 질 무렵 등불이 켜지면 낮과는 다른 분위기를 느낄 수 있습니다.",
+            "location": "교토시 히가시야마구",
+            "duration": "약 1~2시간",
+            "hours": "상시 통행 (공개 도로 기준)",
+            "admission": "무료",
+            "mapUrl": "https://www.google.co.kr/maps/place/%EA%B8%B0%EC%98%A8%EC%8B%9C%EC%A1%B0/@35.0033014,135.7678017,16z/data=!4m10!1m2!2m1!1z6riw7Jio!3m6!1s0x600108c01e8534ab:0x76d91f07d0ec9816!8m2!3d35.0033014!4d135.7719122!15sCgbquLDsmKhaCCIG6riw7JiokgENdHJhaW5fc3RhdGlvbuABAA!16s%2Fg%2F11bc6lk__j?hl=ko&entry=ttu&g_ep=EgoyMDI2MTEyMi4wIKXMDSoASAFQAw%3D%3D",
+            "images": [
+                {
+                    "src": "../res/images/12_fushimi-inari.jpg",
+                    "alt": "후시미 이나리 신사의 붉은 도리이"
+                },
+                {
+                    "src": "../res/images/12_fushimi-inari-fox.png",
+                    "alt": "후시미 이나리 신사의 여우 석상"
+                },
+                {
+                    "src": "../res/images/12_fushimi-inari-torii.jpg",
+                    "alt": "후시미 이나리 신사의 현판이 걸린 붉은 도리이와 숲길"
+                }
+            ]
+        },
+        {
+            "id": "ginkakuji",
+            "nameKo": "은각사",
+            "nameEn": "Ginkaku-ji",
+            "description": "은각사는 아시카가 요시마사의 별장에서 시작된 사찰입니다. 연못 옆의 관음전과 모래를 정갈하게 다듬은 정원, 이끼 정원이 주요 볼거리입니다. 경내 산책로를 따라 언덕에 오르면 누각과 정원 너머로 교토 시내를 볼 수 있습니다.",
+            "location": "교토시 사쿄구",
+            "duration": "약 45분~1시간",
+            "hours": "3~11월 08:30~17:00 / 12~2월 09:00~16:30",
+            "admission": "성인 1,000엔",
+            "mapUrl": "https://www.google.co.kr/maps/place/%EC%A7%80%EC%87%BC%EC%A7%80/@35.0270923,135.7973148,17z/data=!4m10!1m2!2m1!1z7J2A6rCB7IKs!3m6!1s0x600109050b426fe1:0x258aca1ce888abc9!8m2!3d35.0270213!4d135.7982058!15sCgnsnYDqsIHsgqxaCyIJ7J2A6rCB7IKskgEPYnVkZGhpc3RfdGVtcGxlmgEjQ2haRFNVaE5NRzluUzBWSlEwRm5TVVJ5ZEZCWVFVcEJFQUXgAQD6AQQIABAb!16zL20vMDJ5NG05?hl=ko&entry=ttu&g_ep=EgoyMDI2MTEyMi4wIKXMDSoASAFQAw%3D%3D",
+            "images": [
+                {
+                    "src": "../res/images/12_fushimi-inari.jpg",
+                    "alt": "후시미 이나리 신사의 붉은 도리이"
+                },
+                {
+                    "src": "../res/images/12_fushimi-inari-fox.png",
+                    "alt": "후시미 이나리 신사의 여우 석상"
+                },
+                {
+                    "src": "../res/images/12_fushimi-inari-torii.jpg",
+                    "alt": "후시미 이나리 신사의 현판이 걸린 붉은 도리이와 숲길"
+                }
+            ]
+        },
+        {
+            "id": "nijo-castle",
+            "nameKo": "니조성",
+            "nameEn": "Nijō Castle",
+            "description": "도쿠가와 이에야스가 세운 성으로, 해자와 성벽 안에 궁전과 정원이 자리합니다. 니노마루 어전에서는 장벽화와 걸을 때 소리가 나는 복도를 볼 수 있습니다. 밖에는 연못과 정원이 이어져 에도 시대의 궁전 건축과 조경을 함께 살펴볼 수 있습니다.",
+            "location": "교토시 나카교구",
+            "duration": "약 1~2시간",
+            "hours": "08:45~17:00 (입장 16:00까지)",
+            "admission": "성인 800엔",
+            "mapUrl": "https://www.google.co.kr/maps/place/%EB%8B%88%EC%A1%B0+%EC%84%B1/@35.0140379,135.7484258,17z/data=!3m1!4b1!4m6!3m5!1s0x600107d40a2b9b0b:0x106b8759906a2f2f!8m2!3d35.0140379!4d135.7484258!16zL20vMDJubmh4?hl=ko&entry=ttu&g_ep=EgoyMDI2MTEyMi4wIKXMDSoASAFQAw%3D%3D",
+            "images": [
+                {
+                    "src": "../res/images/12_fushimi-inari.jpg",
+                    "alt": "후시미 이나리 신사의 붉은 도리이"
+                },
+                {
+                    "src": "../res/images/12_fushimi-inari-fox.png",
+                    "alt": "후시미 이나리 신사의 여우 석상"
+                },
+                {
+                    "src": "../res/images/12_fushimi-inari-torii.jpg",
+                    "alt": "후시미 이나리 신사의 현판이 걸린 붉은 도리이와 숲길"
+                }
+            ]
+        },
+        {
+            "id": "philosophers-path",
+            "nameKo": "철학의 길",
+            "nameEn": "Philosopher’s Path",
+            "description": "은각사 인근에서 난젠지 방면으로 이어지는 수로 옆 산책길입니다. 철학자 니시다 기타로가 이 길을 걸으며 사색했다고 알려져 이름이 붙었습니다. 봄에는 물길을 따라 벚꽃이 피고, 다른 계절에는 나무 그늘과 조용한 골목이 어우러져 교토의 일상 풍경을 볼 수 있습니다.",
+            "location": "교토시 사쿄구",
+            "duration": "약 30분~1시간",
+            "hours": "상시 통행",
+            "admission": "무료",
+            "mapUrl": "https://www.google.co.kr/maps/place/%EC%B2%A0%ED%95%99%EC%9D%98+%EA%B8%B8/@35.0266194,135.795457,17z/data=!3m1!4b1!4m6!3m5!1s0x60010908ae94f057:0x917af331a75280f4!8m2!3d35.0266194!4d135.795457!16s%2Fg%2F11n065ssgc?hl=ko&entry=ttu&g_ep=EgoyMDI2MTEyMi4wIKXMDSoASAFQAw%3D%3D",
+            "images": [
+                {
+                    "src": "../res/images/12_fushimi-inari.jpg",
+                    "alt": "후시미 이나리 신사의 붉은 도리이"
+                },
+                {
+                    "src": "../res/images/12_fushimi-inari-fox.png",
+                    "alt": "후시미 이나리 신사의 여우 석상"
+                },
+                {
+                    "src": "../res/images/12_fushimi-inari-torii.jpg",
+                    "alt": "후시미 이나리 신사의 현판이 걸린 붉은 도리이와 숲길"
+                }
+            ]
+        }
+    ]
+}
