@@ -143,12 +143,12 @@ function showPlaces(places) {
 
         if (place.link != "") {
             card.innerHTML =
-                '<a href="' + place.link + '" class="place-link card-content">' +
+                '<a href="' + place.link + '" class="place-link">' +
                 content +
                 '</a>';
         } else {
             card.innerHTML =
-                '<div class="card-content">' +
+                '<div>' +
                 content +
                 '</div>';
         }
@@ -200,6 +200,4 @@ function toggleFavorite() {
         "favoritePlaces",
         JSON.stringify(favoritePlaces)
     );
-
-    console.log("찜한 여행지:", favoritePlaces);
 }

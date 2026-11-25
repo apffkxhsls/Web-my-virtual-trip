@@ -15,7 +15,7 @@
         "name": "제주도",
         "country": "대한민국",
         "image": "../res/images/12_theme-nature.jpg",
-        "alt": "대한민국 제주도의 한라산",
+        "alt": "캐나다 나이아가라의 폭포",
         "description": "한라산부터 성산일출봉까지 아름다운 자연을 만나는 섬",
         "link": ""
     },
@@ -35,7 +35,7 @@
         "name": "보스턴",
         "country": "미국",
         "image": "../res/images/12_theme-history.jpg",
-        "alt": "미국 보스턴의 대학교",
+        "alt": "일본 교토의 사찰",
         "description": "미국 독립혁명의 발자취를 따라 역사적 명소를 탐방하는 도시",
         "link": ""
     },
@@ -45,7 +45,7 @@
         "name": "이스탄불",
         "country": "튀르키예",
         "image": "../res/images/12_theme-history.jpg",
-        "alt": "튀르키예 이스탄불의 건축물",
+        "alt": "일본 교토의 사찰",
         "description": "동서양의 역사와 문화가 공존하는 도시",
         "link": ""
     },
@@ -55,7 +55,7 @@
         "name": "오사카",
         "country": "일본",
         "image": "../res/images/12_theme-food.jpg",
-        "alt": "일본 오사카의 타코야끼",
+        "alt": "일본 오사카의 라멘",
         "description": "타코야키부터 오코노미야키까지 일본의 대표 음식을 맛보는 미식 여행",
         "link": ""
     },
@@ -65,7 +65,7 @@
         "name": "타이베이",
         "country": "대만",
         "image": "../res/images/12_theme-food.jpg",
-        "alt": "대만 타이베이의 야시장",
+        "alt": "일본 오사카의 라멘",
         "description": "활기찬 야시장에서 맛보는 다양한 길거리 음식",
         "link": ""
     },
@@ -75,7 +75,7 @@
         "name": "홍콩",
         "country": "홍콩",
         "image": "../res/images/12_theme-food.jpg",
-        "alt": "홍콩의 거리",
+        "alt": "일본 오사카의 라멘",
         "description": "딤섬부터 에그타르트까지 즐기는 미식 탐방",
         "link": ""
     },
@@ -85,7 +85,7 @@
         "name": "세부",
         "country": "필리핀",
         "image": "../res/images/12_theme-activity.jpg",
-        "alt": "필리핀 세부의 해변",
+        "alt": "뉴질랜드 퀸스타운의 스카이다이빙 체험",
         "description": "에메랄드빛 바다에서 즐기는 해양스포츠",
         "link": ""
     },
@@ -105,7 +105,7 @@
         "name": "푸켓",
         "country": "태국",
         "image": "../res/images/12_theme-resort.jpg",
-        "alt": "태국 푸켓의 열대 해변",
+        "alt": "인도네시아 발리의 리조트",
         "description": "따뜻한 햇살 아래 여유롭게 쉬어가는 휴양지",
         "link": ""
     },
@@ -135,7 +135,7 @@
         "name": "미야코지마",
         "country": "일본",
         "image": "../res/images/12_theme-shanghai.jpg",
-        "alt": "일본 미야코지마의 바다",
+        "alt": "중국 상하이의 야경",
         "description": "에메랄드빛 바다와 아름다운 풍경으로 주목받는 여행지",
         "link": ""
     },
@@ -145,7 +145,7 @@
         "name": "뉴욕",
         "country": "미국",
         "image": "../res/images/12_theme-shanghai.jpg",
-        "alt": "미국 뉴욕의 거리",
+        "alt": "중국 상하이의 야경",
         "description": "맨해튼의 거리에서 느끼는 뉴욕 감성 여행",
         "link": ""
     }

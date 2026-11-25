@@ -251,8 +251,6 @@ main h2 {
     max-width: 560px;
     margin-left: 55px;
     padding: 25px;
-    border-radius: 12px;
-    box-sizing: border-box;
     color: white;
 }
 
@@ -307,8 +305,8 @@ main h2 {
 }
 
 .category-section {
-    margin-top: 30px;
-    margin-bottom: 120px;
+    padding-top: 96px;
+    margin-bottom: 24px;
 }
 
 .category-title {
@@ -369,7 +367,6 @@ main h2 {
 }
 
 .two-cards .place-card {
-    position: relative;
     width: 49%;
 }
 
