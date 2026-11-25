@@ -260,23 +260,6 @@ footer {
     margin: 0;
 }
 
-/* ==== 지역 페이지 제목 ==== */
-.region-heading {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 32px 48px 0;
-}
-
-.region-heading h1 {
-    font-size: 30px;
-    margin: 0 0 12px;
-}
-
-.region-heading .section-description {
-    font-size: 15px;
-    margin: 0;
-}
-
 /* ==== 대륙별 탐색 섹션 ==== */
 .continent-select {
     max-width: 1200px;
@@ -423,14 +406,14 @@ footer {
 
 .city-card-list {
     display: flex;
+    flex-wrap: wrap;
     gap: 32px;
     margin-bottom: 32px;
 }
 
 .city-card {
     position: relative;
-    width: 0;
-    flex-grow: 1;
+    width: 30%;
     border: 1px solid #EEEEEE;
     border-radius: 12px;
 }
@@ -477,6 +460,35 @@ footer {
     color: rgb(62, 61, 61);
     padding: 2px 8px;
     margin-right: 6px;
+}
+
+/* 도시 더보기 버튼 */
+.more-btn {
+    display: block;
+    margin: 0 auto 48px;
+    padding: 8px 15px;
+    border: 1px solid #B1B3B4;
+    border-radius: 20px;
+    background-color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.more-btn:hover {
+    border-color: #337768;
+    color: #337768;
+}
+
+.empty-msg {
+    color: gray;
+    margin: 0 0 32px;
+}
+
+.more-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 4x;
+    vertical-align: middle;
 }
 
 /* 하트 버튼  */

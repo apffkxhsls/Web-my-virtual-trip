@@ -2,21 +2,45 @@ const continentCards = document.querySelectorAll('.continent-card');
 const chipList = document.querySelector('.chip-list');
 const countryDesc = document.querySelector('.country-desc');
 const cityTitles = document.querySelectorAll('.city-panel-title');
+const cityLists = document.querySelectorAll('.city-card-list');
+const moreButtons = document.querySelectorAll('.more-btn');
 const festivalTitle = document.querySelector('.festival-title');
 const shortcutDescs = document.querySelectorAll('.shortcut-desc');
 
 let countryList = [];
+let cityList = [];
 let selectedContinent = '아시아';
 let selectedCountry = '일본';
+let popularCount = 3;
+let recommendCount = 3;
 
 fetch('../data/12_웹벤져스_region.json')
     .then(response => response.json())
     .then(data => {
         countryList = data.countryList;
+        cityList = data.cityList;
 
         for (let i = 0; i < continentCards.length; i++) {
             continentCards[i].addEventListener('click', selectContinent);
         }
+
+        moreButtons[0].addEventListener('click', () => {
+            if (popularCount >= getCities('popular').length) {
+                popularCount = 3;
+            } else {
+                popularCount = popularCount + 3;
+            }
+            showCities();
+        });
+
+        moreButtons[1].addEventListener('click', () => {
+            if (recommendCount >= getCities('recommend').length) {
+                recommendCount = 3;
+            } else {
+                recommendCount = recommendCount + 3;
+            }
+            showCities();
+        });
 
         showContinent();
     })
@@ -76,4 +100,58 @@ function showCountry() {
     festivalTitle.innerText = `${selectedCountry}의 축제 및 행사`;
     shortcutDescs[0].innerText = `${selectedCountry}의 인기있는 숙소를 만나보세요!`;
     shortcutDescs[1].innerText = `${selectedCountry} 여행을 위한 가장 저렴한 항공권을 찾아보세요!`;
+
+    popularCount = 3;
+    recommendCount = 3;
+    showCities();
+}
+
+function showCities() {
+    showCityList(cityLists[0], moreButtons[0], getCities('popular'), popularCount);
+    showCityList(cityLists[1], moreButtons[1], getCities('recommend'), recommendCount);
+}
+
+function showCityList(listBox, moreButton, cities, count) {
+    if (cities.length === 0) {
+        listBox.innerHTML = '<p class="empty-msg">아직 준비 중인 지역이에요.</p>';
+        moreButton.style.display = 'none';
+        return;
+    }
+
+    const showList = [];
+    for (let i = 0; i < count && i < cities.length; i++) {
+        showList.push(cities[i]);
+    }
+
+    listBox.innerHTML = showList.map(city => `
+        <article class="city-card">
+            <button type="button" class="heart-btn" value="${city.id}">
+                <img class="favorite" src="../res/icons/12_ic_favorite.svg" alt="좋아요 아이콘">
+                <img class="favorite-filled" src="../res/icons/12_ic_favorite_filled.svg" alt="좋아요 누른 아이콘">
+            </button>
+            <a href="${city.link || '#'}">
+                <img class="city-img" src="../res/images/12_theme-history.jpg" alt="${city.alt} 사진">
+                <div class="city-info">
+                    <p class="city-name">${city.name}</p>
+                    <p class="city-location">${city.country}</p>
+                    <div>
+                        ${city.tags.map(tag => `<span class="city-tags">#${tag}</span>`).join('')}
+                    </div>
+                </div>
+            </a>
+        </article>`).join('');
+
+    if (cities.length <= 3) {
+        moreButton.style.display = 'none';
+    } else if (count >= cities.length) {
+        moreButton.style.display = 'block';
+        moreButton.innerHTML = `접기 <img class="more-icon" src="../res/icons/12_ic_chevron_up.svg">`;
+    } else {
+        moreButton.style.display = 'block';
+        moreButton.innerHTML = `더보기 <img class="more-icon" src="../res/icons/12_ic_chevron_down.svg">`;
+    }
+}
+
+function getCities(type) {
+    return cityList.filter(city => city.country === selectedCountry && city.type === type);
 }
