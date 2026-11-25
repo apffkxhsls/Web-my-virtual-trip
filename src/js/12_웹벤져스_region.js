@@ -229,7 +229,7 @@ function showFestivals() {
     const festivals = festivalList.filter(festival => festival.country === selectedCountry);
 
     if (festivals.length === 0) {
-        festivalSection.style.display = 'none';
+        festivalBox.innerHTML = '<p class="empty-msg">아직 준비 중인 지역이에요.</p>';
         return;
     }
 
