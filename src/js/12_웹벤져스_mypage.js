@@ -42,19 +42,18 @@ fetch("../data/12_웹벤져스_theme.json")
         showFavorites();
     })
     .catch(error => {
-        favoriteMessage.innerText = "여행지 정보를 불러오지 못했습니다.";
-        console.error("실패", error);
+        console.log("여행지 데이터를 불러오지 못했습니다.", error);
+
+        favoriteMessage.innerText = "여행지 정보를 불러오지 못했습니다. 새로고침해주세요.";
     });
 
 function showFavorites() {
     favoriteList.innerHTML = "";
     let count = 0;
-    let shownIds = [];
 
     for (let i = 0; i < places.length; i++) {
         let place = places[i];
         let isFavorite = false;
-        let alreadyShown = false;
 
         for (let j = 0; j < favoritePlaces.length; j++) {
             if (favoritePlaces[j] === place.id) {
@@ -62,13 +61,7 @@ function showFavorites() {
             }
         }
 
-        for (let j = 0; j < shownIds.length; j++) {
-            if (shownIds[j] === place.id) {
-                alreadyShown = true;
-            }
-        }
-
-        if (isFavorite && !alreadyShown) {
+        if (isFavorite) {
             let card = document.createElement("article");
             card.setAttribute("class", "place-card hover-card");
 
@@ -76,7 +69,7 @@ function showFavorites() {
                 '<img src="' + place.image + '" alt="' + place.alt + '">' +
                 '<div class="place-info"><h3></h3><span class="country"></span><p></p></div>';
 
-            if (place.link) {
+            if (place.link != "") {
                 card.innerHTML =
                     '<a class="card-content" href="' + place.link + '">' +
                     content + '</a>';
@@ -86,7 +79,7 @@ function showFavorites() {
             }
 
             card.innerHTML +=
-                '<button type="button" class="favorite-button" aria-label="찜 취소">' +
+                '<button type="button" class="favorite-button">' +
                 '<img src="../res/icons/12_ic_favorite_filled.svg" alt="찜 취소"></button>';
 
             card.querySelector("h3").innerText = place.name;
@@ -98,7 +91,6 @@ function showFavorites() {
             button.addEventListener("click", removeFavorite);
 
             favoriteList.appendChild(card);
-            shownIds.push(place.id);
             count++;
         }
     }

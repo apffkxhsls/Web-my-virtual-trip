@@ -176,7 +176,6 @@ main h1 {
 .profile {
     display: flex;
     align-items: center;
-    gap: 20px;
     padding: 28px;
     margin: 28px 0;
     background-color: #E5F2ED;
@@ -189,6 +188,7 @@ main h1 {
     justify-content: center;
     width: 64px;
     height: 64px;
+    margin-right: 20px;
     border-radius: 50%;
     background-color: white;
 }
@@ -216,17 +216,16 @@ main h1 {
 }
 
 .mypage-tab {
-    flex: 1;
+    flex-grow: 1;
     padding: 16px 10px;
     font-size: 16px;
     background: white;
     color: gray;
     border: none;
     border-bottom: 3px solid transparent;
-    cursor: pointer;
 }
 
-.mypage-tab.active,
+.mypage-tabs .active,
 .mypage-tab:hover {
     border-bottom-color: #337768;
     color: #337768;
@@ -255,19 +254,24 @@ main h1 {
 }
 
 .panel-heading a {
-    font-size: 14px;
+    font-size: 16px;
+}
+
+.panel-heading a:hover {
+    color: #24594f;
 }
 
 .places-grid,
 .plan-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 18px;
 }
 
 .place-card,
 .plan-card {
     width: 32%;
+    margin-right: 18px;
+    margin-bottom: 18px;
     position: relative;
     border: 1px solid #EEEEEE;
     border-radius: 12px;
@@ -276,14 +280,18 @@ main h1 {
     background-color: white;
 }
 
+.place-card:nth-child(3n),
+.plan-card:nth-child(3n) {
+    margin-right: 0;
+}
+
+.hover-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
 .card-content {
     display: block;
     color: black;
-    transition: transform 0.3s ease;
-}
-
-.hover-card:hover .card-content {
-    transform: scale(1.06);
 }
 
 .place-card .card-content img {
@@ -326,18 +334,17 @@ main h1 {
     top: 12px;
     right: 12px;
     z-index: 1;
-    width: 36px;
-    height: 36px;
-    padding: 8px;
+    width: 24px;
+    height: 24px;
+    padding: 0;
     border: none;
     background: transparent;
-    cursor: pointer;
 }
 
 .favorite-button img {
     display: block;
-    width: 20px;
-    height: 20px;
+    width: 100%;
+    height: 100%;
 }
 
 .plan-info p img {
@@ -366,7 +373,6 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    gap: 80px;
     padding-bottom: 32px;
     border-bottom: 1px solid #EEEEEF;
 }
@@ -392,12 +398,15 @@ footer {
     border: 1px solid #B1B3B4;
     border-radius: 4px;
     background: white;
-    cursor: pointer;
     font-size: 14px;
 }
 
 .footer-support button:hover {
     background: #EEEEEF;
+}
+
+.footer-item {
+    margin-left: 80px;
 }
 
 .footer-item h4 {
@@ -412,7 +421,14 @@ footer {
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+}
+
+.footer-list li {
+    margin-bottom: 10px;
+}
+
+.footer-list li:last-child {
+    margin-bottom: 0;
 }
 
 .footer-list a {
@@ -440,7 +456,14 @@ footer {
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 24px;
+}
+
+.footer-legal li {
+    margin-right: 24px;
+}
+
+.footer-legal li:last-child {
+    margin-right: 0;
 }
 
 .footer-legal a {
@@ -469,5 +492,4 @@ footer {
     border-radius: 6px;
     padding: 8px 14px;
     font-size: 13px;
-    cursor: pointer;
 }
