@@ -5,7 +5,7 @@ body {
     font-family: "Asta Sans", sans-serif;
 }
 
-body>header {
+.site-header {
     position: sticky;
     top: 0;
     z-index: 100;
@@ -19,7 +19,6 @@ body>header {
     align-items: stretch;
     padding: 0 24px;
     height: 72px;
-    gap: 24px;
 }
 
 #logo {
@@ -30,27 +29,27 @@ body>header {
 
 .logo-link {
     padding-top: 8px;
+    margin-right: 24px;
 }
 
 .nav-right {
     display: flex;
     align-items: stretch;
-    gap: 16px;
 }
 
 
 .category-nav {
     display: flex;
     align-items: stretch;
-    gap: 16px;
     padding: 0px 24px;
+    margin-right: 16px;
 }
 
 .cat-item {
     flex-direction: row;
     display: flex;
     align-items: center;
-    gap: 4px;
+    margin-right: 16px;
     padding: 8px 12px;
     font-size: 17px;
     font-weight: 500;
@@ -58,7 +57,10 @@ body>header {
     text-decoration: none;
     color: black;
     border-bottom: 4px solid transparent;
-    margin-bottom: -1px;
+}
+
+.cat-item:last-child {
+    margin-right: 0;
 }
 
 .cat-item-active {
@@ -78,13 +80,11 @@ body>header {
     border: 1px solid #B1B3B4;
     border-radius: 20px;
     padding: 6px 14px;
-    margin: auto 0;
-    gap: 8px;
+    margin: auto 16px auto 0;
 }
 
 .search img {
     width: 15px;
-    cursor: pointer;
 }
 
 .search input {
@@ -92,14 +92,20 @@ body>header {
     outline: none;
     font-size: 13px;
     width: 180px;
+    margin-right: 8px;
 }
 
 .search button {
     background: none;
     border: none;
-    padding: 0;
+    border-radius: 50%;
+    padding: 4px;
     display: flex;
     align-items: center;
+}
+
+.search button:hover {
+    background-color: #EEEEEF;
 }
 
 
@@ -109,7 +115,6 @@ body>header {
     border-radius: 8px;
     padding: 8px 16px;
     margin: auto 0;
-    cursor: pointer;
     font-size: 14px;
     white-space: nowrap;
     border: none;
@@ -188,7 +193,6 @@ main h2 {
     border-radius: 18px;
     box-sizing: border-box;
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.10);
-    cursor: pointer;
 }
 
 .theme-box p {
@@ -203,10 +207,7 @@ main h2 {
 }
 
 .theme-item:hover,
-.theme-item.active,
-.theme-item.selected,
-.theme-item-active,
-.theme-item-selected {
+.selected {
     border-color: #337768;
     background-color: #C3E4D9;
 }
@@ -265,15 +266,14 @@ main h2 {
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.85);
     color: #337768;
-    cursor: pointer;
     font-size: 20px;
 }
 
-.banner-arrow.prev {
+#banner-prev {
     left: 14px;
 }
 
-.banner-arrow.next {
+#banner-next {
     right: 14px;
 }
 
@@ -403,23 +403,29 @@ main h2 {
     padding: 8px;
     border: none;
     background-color: transparent;
-    cursor: pointer;
     box-sizing: border-box;
 }
 
 .place-card .favorite-button img {
-    display: block;
     width: 20px;
     height: 20px;
     object-fit: contain;
 }
 
-.place-card .favorite-button .favorite-filled,
-.place-card .favorite-button.is-favorite .favorite {
+.favorite-button .favorite-filled,
+.is-favorite .favorite {
     display: none;
 }
 
-.place-card .favorite-button.is-favorite .favorite-filled {
+.is-favorite .favorite-filled {
+    display: block;
+}
+
+.favorite-button:hover .favorite {
+    display: none;
+}
+
+.favorite-button:hover .favorite-filled {
     display: block;
 }
 
@@ -459,7 +465,6 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    gap: 80px;
     padding-bottom: 32px;
     border-bottom: 1px solid #EEEEEF;
 }
@@ -485,12 +490,15 @@ footer {
     border: 1px solid #B1B3B4;
     border-radius: 4px;
     background: white;
-    cursor: pointer;
     font-size: 14px;
 }
 
 .footer-support button:hover {
     background: #EEEEEF;
+}
+
+.footer-item {
+    margin-left: 80px;
 }
 
 .footer-item h4 {
@@ -505,7 +513,14 @@ footer {
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+}
+
+.footer-list li {
+    margin-bottom: 10px;
+}
+
+.footer-list li:last-child {
+    margin-bottom: 0;
 }
 
 .footer-list a {
@@ -533,7 +548,14 @@ footer {
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 24px;
+}
+
+.footer-legal li {
+    margin-right: 24px;
+}
+
+.footer-legal li:last-child {
+    margin-right: 0;
 }
 
 .footer-legal a {
@@ -562,5 +584,4 @@ footer {
     border-radius: 6px;
     padding: 8px 14px;
     font-size: 13px;
-    cursor: pointer;
 }
