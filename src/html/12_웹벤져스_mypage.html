@@ -13,39 +13,40 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navigation" aria-label="주요 메뉴">
+    <!-- 로고 및 네비게이션 바 -->
+    <header class="site-header">
+        <nav class="navigation">
             <a href="12_웹벤져스_main.html" class="logo-link">
                 <img src="../res/images/12_logo.png" id="logo" alt="MyVirtualTrip 로고">
             </a>
             <div class="nav-right">
                 <div class="category-nav">
                     <a class="cat-item" href="../html/12_웹벤져스_region.html">
-                        <span>🗺️ 지역별</span>
+                        <span>지역별</span>
                     </a>
                     <a class="cat-item" href="../html/12_웹벤져스_theme.html">
-                        <span>🎞️ 테마별</span>
+                        <span>테마별</span>
                     </a>
                     <a class="cat-item" href="../html/12_웹벤져스_stay.html">
-                        <span>🏩 숙박</span>
+                        <span>숙박</span>
                     </a>
                     <a class="cat-item" href="../html/12_웹벤져스_flight.html">
-                        <span>✈️ 항공</span>
+                        <span>항공</span>
                     </a>
                     <a class="cat-item" href="../html/12_웹벤져스_plan.html">
-                        <span>✍🏻 여행 계획</span>
+                        <span>여행 계획</span>
                     </a>
                     <a class="cat-item" href="../html/12_웹벤져스_diary.html">
-                        <span>🗂️ 여행 기록</span>
+                        <span>여행 기록</span>
                     </a>
                 </div>
                 <form class="search" action="#" method="get">
-                    <input type="search" name="all-search" placeholder="여행지, 명소, 숙소 등" aria-label="여행지, 명소, 숙소 검색">
+                    <input type="search" name="all-search" placeholder="여행지, 명소, 숙소 등">
                     <button type="submit">
                         <img src="../res/icons/12_ic_search.svg" alt="검색 아이콘">
                     </button>
                 </form>
-                <a class="mypage-user" href="12_웹벤져스_mypage.html" aria-label="마이페이지"><img src="../res/icons/12_ic_user.svg" alt="마이페이지"></a>
+                <button type="button" class="logout">로그아웃</button>
             </div>
         </nav>
     </header>
@@ -54,7 +55,7 @@
         <h1>마이페이지</h1>
         <p class="section-description">나의 여행을 한곳에서 관리해보세요.</p>
         <section class="profile">
-            <div class="profile-icon"><img src="../res/icons/12_ic_user.svg" alt="사용자"></div>
+            <div class="profile-icon"><img src="../res/icons/12_ic_personnel.svg" alt="사용자"></div>
             <div><h2>여행자님, 안녕하세요!</h2><p>오늘도 새로운 여행을 꿈꿔보세요.</p></div>
         </section>
         <div class="mypage-tabs">
