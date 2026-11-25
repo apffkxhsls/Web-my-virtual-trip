@@ -12,6 +12,7 @@
 </head>
 
 <body>
+    <!-- 로고 및 네비게이션 바 -->
     <header>
         <nav class="navigation">
             <a href="12_웹벤져스_main.html" class="logo-link">
@@ -20,26 +21,26 @@
             <div class="nav-right">
                 <div class="category-nav">
                     <a class="cat-item" href="../html/12_웹벤져스_region.html">
-                        <span>🗺️ 지역별</span>
+                        <span>지역별</span>
                     </a>
                     <a class="cat-item" href="../html/12_웹벤져스_theme.html">
-                        <span>🎞️ 테마별</span>
+                        <span>테마별</span>
                     </a>
                     <a class="cat-item" href="../html/12_웹벤져스_stay.html">
-                        <span>🏩 숙박</span>
+                        <span>숙박</span>
                     </a>
-                    <a class="cat-item cat-item-active" href="../html/12_웹벤져스_flight.html">
-                        <span>✈️ 항공</span>
+                    <a class="cat-item" href="../html/12_웹벤져스_flight.html">
+                        <span>항공</span>
                     </a>
                     <a class="cat-item" href="../html/12_웹벤져스_plan.html">
-                        <span>✍🏻 여행 계획</span>
+                        <span>여행 계획</span>
                     </a>
                     <a class="cat-item" href="../html/12_웹벤져스_diary.html">
-                        <span>🗂️ 여행 기록</span>
+                        <span>여행 기록</span>
                     </a>
                 </div>
                 <form class="search" action="#" method="get">
-                    <input type="search" placeholder="여행지, 명소, 숙소 등">
+                    <input type="search" name="all-search" placeholder="여행지, 명소, 숙소 등">
                     <button type="submit">
                         <img src="../res/icons/12_ic_search.svg" alt="검색 아이콘">
                     </button>
@@ -73,12 +74,25 @@
 
                 <div class="search-field">
                     <label for="departure">출발지</label>
-                    <input type="text" id="departure" name="departure" placeholder="도시 또는 공항">
+                    <input type="text" id="departure" name="departure" list="departure-list" placeholder="도시 또는 공항">
+
+                    <datalist id="departure-list">
+                        <option value="인천">
+                        <option value="김포">
+                        <option value="부산">
+                    </datalist>
                 </div>
 
                 <div class="search-field">
                     <label for="arrival">도착지</label>
-                    <input type="text" id="arrival" name="arrival" placeholder="도시 또는 공항">
+                    <input type="text" id="arrival" name="arrival" list="arrival-list" placeholder="도시 또는 공항">
+
+                    <datalist id="arrival-list">
+                        <option value="뉴욕">
+                        <option value="제주">
+                        <option value="도쿄">
+                        <option value="오사카">
+                    </datalist>
                 </div>
 
                 <div class="search-field">
@@ -98,7 +112,7 @@
                         <option value="2">2명</option>
                         <option value="3">3명</option>
                         <option value="4">4명</option>
-                        <option value="5">5명 이상</option>
+                        <option value="5">5명</option>
                     </select>
                 </div>
 
@@ -128,17 +142,17 @@
                     <legend>항공사</legend>
 
                     <label>
-                        <input type="checkbox" name="airline" value="korean-air">
+                        <input type="checkbox" name="airline" value="대한항공">
                         대한항공
                     </label>
 
                     <label>
-                        <input type="checkbox" name="airline" value="asiana-air">
+                        <input type="checkbox" name="airline" value="아시아나항공">
                         아시아나항공
                     </label>
 
                     <label>
-                        <input type="checkbox" name="airline" value="emirates">
+                        <input type="checkbox" name="airline" value="에어프레미아">
                         에어프레미아
                     </label>
                 </fieldset>
@@ -146,7 +160,7 @@
 
             <section class="flight-recommendation">
                 <div class="recommendation-header">
-                    <h2>인천 → 뉴욕</h2>
+                    <h2 id="flight-results-title">전체 항공편</h2>
 
                     <div class="sort-box">
                         <label for="sort">정렬</label>
@@ -159,111 +173,6 @@
                 </div>
 
                 <div class="flight-list">
-                    <article class="flight-card">
-                        <div class="flight-airline">
-                            <h3>에어프레미아</h3>
-                        </div>
-
-                        <div class="flight-info">
-                            <div class="flight-route">
-                                <div class="departure-info">
-                                    <p class="flight-time">21:25</p>
-                                    <p class="flight-airport">인천</p>
-                                </div>
-
-                                <div class="flight-duration">
-                                    <p>직항</p>
-                                    <p>14시간 05분</p>
-                                </div>
-
-                                <div class="arrival-info">
-                                    <p class="flight-time">22:30</p>
-                                    <p class="flight-airport">뉴욕</p>
-                                </div>
-                            </div>
-
-                            <p class="flight-baggage">위탁 수하물 포함 여부 확인 필요</p>
-                        </div>
-
-                        <div class="flight-price">
-                            <p>
-                                <strong>2,617,800원</strong>
-                                <span>/ 2인 왕복</span>
-                            </p>
-                            <button type="button" class="select-button">선택</button>
-                        </div>
-                    </article>
-
-                    <article class="flight-card">
-                        <div class="flight-airline">
-                            <h3>아시아나항공</h3>
-                        </div>
-
-                        <div class="flight-info">
-                            <div class="flight-route">
-                                <div class="departure-info">
-                                    <p class="flight-time">21:05</p>
-                                    <p class="flight-airport">인천</p>
-                                </div>
-
-                                <div class="flight-duration">
-                                    <p>직항</p>
-                                    <p>14시간 55분</p>
-                                </div>
-
-                                <div class="arrival-info">
-                                    <p class="flight-time">23:00</p>
-                                    <p class="flight-airport">뉴욕</p>
-                                </div>
-                            </div>
-
-                            <p class="flight-baggage">위탁 수하물 포함 여부 확인 필요</p>
-                        </div>
-
-                        <div class="flight-price">
-                            <p>
-                                <strong>1,298,200원</strong>
-                                <span>/ 1인 왕복</span>
-                            </p>
-                            <button type="button" class="select-button">선택</button>
-                        </div>
-                    </article>
-
-                    <article class="flight-card">
-                        <div class="flight-airline">
-                            <h3>아시아나항공</h3>
-                        </div>
-
-                        <div class="flight-info">
-                            <div class="flight-route">
-                                <div class="departure-info">
-                                    <p class="flight-time">21:40</p>
-                                    <p class="flight-airport">인천</p>
-                                </div>
-
-                                <div class="flight-duration">
-                                    <p>1회 경유</p>
-                                    <p>20시간 33분</p>
-                                </div>
-
-                                <div class="arrival-info">
-                                    <p class="flight-time">05:13</p>
-                                    <p class="flight-airport">뉴욕</p>
-                                </div>
-                            </div>
-
-                            <p class="flight-baggage">위탁 수하물 포함 여부 확인 필요</p>
-                        </div>
-
-                        <div class="flight-price">
-                            <p>
-                                <strong>3,574,600원</strong>
-                                <span>/ 2인 왕복</span>
-                            </p>
-                            <button type="button" class="select-button">선택</button>
-                        </div>
-                    </article>
-
                 </div>
             </section>
         </div>
@@ -336,7 +245,7 @@
             </form>
         </div>
     </footer>
-
+    <script src="../js/12_웹벤져스_flight.js"></script>
 </body>
 
 </html>

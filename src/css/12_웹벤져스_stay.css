@@ -12,14 +12,18 @@ header {
 }
 
 .navigation {
-    justify-content: center;
+    justify-content: space-between;
     background-color: white;
     border-bottom: 1px solid #EEEEEF;
     display: flex;
     align-items: stretch;
-    padding: 0 24px;
+    padding: 0 40px;
     height: 72px;
     gap: 24px;
+}
+
+.logo-link {
+    padding-top: 8px;
 }
 
 #logo {
@@ -28,20 +32,19 @@ header {
     margin: auto 0;
 }
 
-.logo-link {
-    padding-top: 8px;
-}
-
 .nav-right {
     display: flex;
     align-items: stretch;
     gap: 16px;
+    flex-grow: 1;
 }
 
 .category-nav {
     display: flex;
     align-items: stretch;
-    gap: 16px;
+    justify-content: center;
+    flex-grow: 1;
+    gap: 40px;
     padding: 0px 24px;
 }
 
@@ -51,7 +54,7 @@ header {
     align-items: center;
     gap: 4px;
     padding: 8px 12px;
-    font-size: 17px;
+    font-size: 20px;
     font-weight: 500;
     white-space: nowrap;
     text-decoration: none;
@@ -60,7 +63,6 @@ header {
     margin-bottom: -1px;
 }
 
-.cat-item-active,
 .cat-item:hover,
 .cat-item:active {
     border-bottom: 4px solid #3377689b;
@@ -71,6 +73,8 @@ header {
 .search {
     display: flex;
     align-items: center;
+    width: 260px;
+    height: 27px;
     border: 1px solid #B1B3B4;
     border-radius: 20px;
     padding: 6px 14px;
@@ -79,14 +83,15 @@ header {
 }
 
 .search img {
-    width: 15px;
+    width: 23px;
     cursor: pointer
 }
 
 .search input {
+    flex-grow: 1;
     border: none;
     outline: none;
-    font-size: 13px;
+    font-size: 15px;
     width: 180px;
 }
 
@@ -99,7 +104,7 @@ header {
 }
 
 .logout {
-    background: #8DC5AC;
+    background: #C3E4D9;
     color: black;
     border-radius: 8px;
     padding: 8px 16px;
@@ -111,7 +116,7 @@ header {
 }
 
 .logout:hover {
-    background: #69A998;
+    background: #9ACEB7;
 }
 
 button,
@@ -291,7 +296,7 @@ main {
 .stay-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .stay {
@@ -309,7 +314,16 @@ main {
     border: 1px solid #EEEEEF;
     border-radius: 12px;
     box-sizing: border-box;
+    margin-right: 1%;
     overflow: hidden;
+    position: relative;
+}
+
+.stay-detail-link {
+    display: block;
+    height: 100%;
+    color: black;
+    text-decoration: none;
 }
 
 .stay-image {
@@ -385,6 +399,12 @@ main {
 
 .stay-info .stay-price {
     margin: 16px 0 0;
+}
+
+.stay-info-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .stay-price strong {
@@ -509,4 +529,17 @@ footer {
     padding: 8px 14px;
     font-size: 13px;
     cursor: pointer;
+}
+
+.favorite-button.is-favorite .favorite {
+    display: none;
+}
+
+.favorite-button.is-favorite .favorite-filled {
+    display: block;
+}
+
+.stay-detail-link {
+    color: black;
+    text-decoration: none;
 }
