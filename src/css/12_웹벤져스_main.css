@@ -264,30 +264,32 @@ header {
     left: 0;
     right: 0;
     background: rgba(0, 0, 0, 0.35);
-    padding: 12px 14px;
+    padding: 20px 22px;
     color: white;
 }
 
 .region-meta {
     margin: 10px auto;
-    padding: 2px 5px;
+    padding: 3px 8px;
     border-radius: 6px;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 14px;
     color: black;
     background-color: #b1b3b4de;
 }
 
 .region-name {
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 600;
-    margin: 4px 0;
+    margin: 6px 0;
+    white-space: nowrap;
 }
 
 .region-rating {
-    font-size: 13px;
+    font-size: 15px;
     margin: 0;
     color: rgba(255, 255, 255, 0.8);
+    white-space: nowrap;
 }
 
 .region-control {
