@@ -12,21 +12,27 @@ select {
     font-size: 16px;
 }
 
-body>header {
+/* ==== 로고 및 네비게이션 바 ====  */
+.site-header {
     position: sticky;
     top: 0;
     z-index: 100;
 }
 
 .navigation {
-    justify-content: center;
+    justify-content: space-between;
     background-color: white;
     border-bottom: 1px solid #EEEEEF;
     display: flex;
     align-items: stretch;
-    padding: 0 24px;
+    padding: 0 40px;
     height: 72px;
     gap: 24px;
+    /*아이템 사이의 간격 지정 */
+}
+
+.logo-link {
+    padding-top: 8px;
 }
 
 #logo {
@@ -35,20 +41,20 @@ body>header {
     margin: auto 0;
 }
 
-.logo-link {
-    padding-top: 8px;
-}
-
 .nav-right {
     display: flex;
     align-items: stretch;
     gap: 16px;
+    flex-grow: 1;
 }
 
+/* 카테고리 네비게이션 */
 .category-nav {
     display: flex;
     align-items: stretch;
-    gap: 16px;
+    justify-content: center;
+    flex-grow: 1;
+    gap: 40px;
     padding: 0px 24px;
 }
 
@@ -58,18 +64,14 @@ body>header {
     align-items: center;
     gap: 4px;
     padding: 8px 12px;
-    font-size: 17px;
+    font-size: 20px;
     font-weight: 500;
     white-space: nowrap;
     text-decoration: none;
     color: black;
     border-bottom: 4px solid transparent;
+    /*transparent는 투명색*/
     margin-bottom: -1px;
-}
-
-.cat-item-active {
-    border-bottom: 4px solid #3377689b;
-    font-weight: 600;
 }
 
 .cat-item:hover,
@@ -78,9 +80,13 @@ body>header {
     font-weight: 600;
 }
 
+
+/* 검색 아이콘 */
 .search {
     display: flex;
     align-items: center;
+    width: 260px;
+    height: 27px;
     border: 1px solid #B1B3B4;
     border-radius: 20px;
     padding: 6px 14px;
@@ -89,14 +95,15 @@ body>header {
 }
 
 .search img {
-    width: 15px;
-    cursor: pointer;
+    width: 23px;
+    cursor: pointer
 }
 
 .search input {
+    flex-grow: 1;
     border: none;
     outline: none;
-    font-size: 13px;
+    font-size: 15px;
     width: 180px;
 }
 
@@ -108,8 +115,9 @@ body>header {
     align-items: center;
 }
 
+/* 로그아웃 버튼 */
 .logout {
-    background: #8DC5AC;
+    background: #C3E4D9;
     color: black;
     border-radius: 8px;
     padding: 8px 16px;
@@ -121,7 +129,7 @@ body>header {
 }
 
 .logout:hover {
-    background: #69A998;
+    background: #9ACEB7;
 }
 
 main {
@@ -158,15 +166,6 @@ main {
     box-sizing: border-box;
 }
 
-.plan-tab,
-.add-schedule-button,
-.add-day-button,
-.new-plan-button,
-.checklist-add button,
-.checklist-list input {
-    cursor: pointer;
-}
-
 .add-schedule-button,
 .add-day-button,
 .new-plan-button {
@@ -201,7 +200,11 @@ main {
 .expense-input {
     display: flex;
     align-items: center;
-    gap: 12px;
+}
+
+.delete-day-button,
+.expense-input span {
+    margin-left: 12px;
 }
 
 .saved-list,
@@ -268,12 +271,12 @@ main {
 
 .plan-tabs {
     display: flex;
-    gap: 12px;
     margin-bottom: 20px;
 }
 
 .plan-tab {
     flex-grow: 1;
+    margin-right: 12px;
     padding: 14px 20px;
     background-color: white;
     border: 1px solid #EEEEEE;
@@ -283,11 +286,15 @@ main {
     transition: background-color 0.2s;
 }
 
+.plan-tab:last-child {
+    margin-right: 0;
+}
+
 .plan-tab:hover {
     background-color: #F0F7F4;
 }
 
-.plan-tab.active {
+.plan-tabs .active {
     background-color: #C3E4D9;
     border-color: #337768;
     color: #337768;
@@ -424,7 +431,6 @@ main {
     border-radius: 6px;
     color: gray;
     font-size: 13px;
-    cursor: pointer;
 }
 
 .delete-schedule-button:hover,
@@ -586,8 +592,10 @@ main {
 .checklist-list label {
     display: flex;
     align-items: center;
-    gap: 10px;
-    cursor: pointer;
+}
+
+.checklist-list label span {
+    margin-left: 10px;
 }
 
 .checklist-done {
@@ -596,7 +604,6 @@ main {
 
 .checklist-add {
     display: flex;
-    gap: 12px;
     margin-top: 24px;
 }
 
@@ -606,6 +613,7 @@ main {
 }
 
 .checklist-add button {
+    margin-left: 12px;
     padding: 12px 24px;
     border: none;
 }
@@ -649,7 +657,6 @@ main {
     border-radius: 7px;
     background-color: white;
     font-weight: bold;
-    cursor: pointer;
 }
 
 .delete-plan-button:hover {
@@ -658,7 +665,6 @@ main {
 
 .delete-plan-button:disabled {
     color: gray;
-    cursor: default;
     background-color: white;
 }
 
@@ -689,7 +695,6 @@ main {
     margin-bottom: 16px;
     border-radius: 12px;
     overflow: hidden;
-    cursor: pointer;
     display: flex;
     flex-direction: column;
 }
@@ -711,7 +716,6 @@ main {
 .saved-info p {
     display: flex;
     align-items: center;
-    gap: 5px;
     font-size: 12px;
     line-height: 1.6;
     margin: 0 0 7px;
@@ -719,17 +723,14 @@ main {
 
 .saved-info img {
     display: block;
+    margin-right: 5px;
     width: 15px;
     height: 15px;
     object-fit: contain;
 }
 
-.card-content {
-    transition: transform 0.3s ease;
-}
-
-.hover-card:hover .card-content {
-    transform: scale(1.06);
+.hover-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 footer {
@@ -742,7 +743,6 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    gap: 80px;
     padding-bottom: 32px;
     border-bottom: 1px solid #EEEEEF;
 }
@@ -768,12 +768,15 @@ footer {
     border: 1px solid #B1B3B4;
     border-radius: 4px;
     background: white;
-    cursor: pointer;
     font-size: 14px;
 }
 
 .footer-support button:hover {
     background: #EEEEEF;
+}
+
+.footer-item {
+    margin-left: 80px;
 }
 
 .footer-item h4 {
@@ -788,7 +791,14 @@ footer {
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+}
+
+.footer-list li {
+    margin-bottom: 10px;
+}
+
+.footer-list li:last-child {
+    margin-bottom: 0;
 }
 
 .footer-list a {
@@ -816,7 +826,14 @@ footer {
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 24px;
+}
+
+.footer-legal li {
+    margin-right: 24px;
+}
+
+.footer-legal li:last-child {
+    margin-right: 0;
 }
 
 .footer-legal a {
@@ -845,5 +862,4 @@ footer {
     border-radius: 6px;
     padding: 8px 14px;
     font-size: 13px;
-    cursor: pointer;
 }

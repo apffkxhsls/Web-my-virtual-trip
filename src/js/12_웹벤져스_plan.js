@@ -33,126 +33,6 @@ let selectedIndex = -1;
 const deletePlanButton = document.getElementById("delete-plan-button");
 let savedPlans = JSON.parse(localStorage.getItem("savedPlans")) || [];
 
-if (localStorage.getItem("savedPlans") === null) {
-    savedPlans.push({
-        "title": "크리스마스 상하이 여행",
-        "region": "중국 상하이",
-        "startDate": "2026-12-25",
-        "endDate": "2026-12-29",
-        "travelers": "2",
-        "days": [
-            {
-                "date": "2026-12-25",
-                "schedules": [
-                    {
-                        "time": "12:00",
-                        "place": "푸동 공항",
-                        "memo": "상하이 도착"
-                    },
-                    {
-                        "time": "18:00",
-                        "place": "와이탄",
-                        "memo": "야경 감상"
-                    }
-                ]
-            },
-            {
-                "date": "2026-12-26",
-                "schedules": [
-                    {
-                        "time": "10:00",
-                        "place": "예원",
-                        "memo": "정원 관람"
-                    },
-                    {
-                        "time": "15:00",
-                        "place": "난징동루",
-                        "memo": "거리 구경"
-                    }
-                ]
-            },
-            {
-                "date": "2026-12-27",
-                "schedules": [
-                    {
-                        "time": "09:00",
-                        "place": "상하이 디즈니랜드",
-                        "memo": "놀이공원 방문"
-                    }
-                ]
-            },
-            {
-                "date": "2026-12-28",
-                "schedules": [
-                    {
-                        "time": "10:00",
-                        "place": "우캉루",
-                        "memo": "산책"
-                    },
-                    {
-                        "time": "14:00",
-                        "place": "신톈디",
-                        "memo": "거리 구경"
-                    },
-                    {
-                        "time": "19:00",
-                        "place": "동방명주",
-                        "memo": "야경 감상"
-                    }
-                ]
-            },
-            {
-                "date": "2026-12-29",
-                "schedules": [
-                    {
-                        "time": "10:00",
-                        "place": "푸동 공항",
-                        "memo": "출국"
-                    }
-                ]
-            }
-        ],
-        "expense": {
-            "budget": "2000000",
-            "transport": "700000",
-            "food": "300000",
-            "stay": "480000",
-            "other": "320000"
-        },
-        "checklist": [
-            {
-                "text": "여권 준비",
-                "checked": true
-            },
-            {
-                "text": "항공권 예약",
-                "checked": true
-            },
-            {
-                "text": "숙소 예약",
-                "checked": true
-            },
-            {
-                "text": "여행자 보험 가입",
-                "checked": true
-            },
-            {
-                "text": "환전",
-                "checked": false
-            },
-            {
-                "text": "유심 준비",
-                "checked": false
-            },
-            {
-                "text": "짐 챙기기",
-                "checked": false
-            }
-        ]
-    });
-    localStorage.setItem("savedPlans", JSON.stringify(savedPlans));
-}
-
 
 newPlanButton.addEventListener("click", function () {
     resetPlan();
@@ -302,7 +182,7 @@ function showBudget(budget, total) {
 const checklistList = document.getElementById("checklist-list");
 const checklistInput = document.getElementById("checklist-input");
 const addChecklistButton = document.getElementById("add-checklist-button");
-const defaultChecklist = ["여권 준비", "항공권 예약", "숙소 예약", "여행자 보험 가입", "환전"];
+let defaultChecklist = [];
 
 addChecklistButton.addEventListener("click", function () {
     let item = checklistInput.value;
@@ -396,7 +276,7 @@ function displayPlans() {
         let li = document.createElement("li");
         li.innerHTML =
             '<article class="saved-card hover-card">' +
-            '<div class="card-content saved-info">' +
+            '<div class="saved-info">' +
             '<h3></h3>' +
             '<p><img src="../res/icons/12_ic_calendar.svg" alt="날짜"><span></span></p>' +
             '<p><img src="../res/icons/12_ic_location_filled.svg" alt="장소"><span></span></p>' +
@@ -414,11 +294,19 @@ function displayPlans() {
     }
 }
 
+function clearForm() {
+    let inputs = planForm.querySelectorAll("input");
+
+    for (let i = 0; i < inputs.length; i++) {
+        inputs[i].value = "";
+    }
+}
+
 function resetPlan() {
     selectedIndex = -1;
     deletePlanButton.disabled = true;
     showTab(0);
-    planForm.reset();
+    clearForm();
     scheduleDays.innerHTML = "";
     checklistList.innerHTML = "";
     addDay();
@@ -455,7 +343,7 @@ savePlanButton.addEventListener("click", function () {
 function loadPlan(plan) {
     deletePlanButton.disabled = false;
     showTab(0);
-    planForm.reset();
+    clearForm();
     document.getElementById("trip-title").value = plan.title;
     document.getElementById("trip-region").value = plan.region;
     document.getElementById("start-date").value = plan.startDate;
@@ -521,5 +409,29 @@ planForm.addEventListener("submit", function (event) {
     event.preventDefault();
 });
 
-resetPlan();
-displayPlans();
+fetch("../data/12_웹벤져스_plan.json")
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data) {
+        defaultChecklist = data.defaultChecklist;
+
+        if (localStorage.getItem("savedPlans") === null) {
+            savedPlans = data.samplePlans;
+            localStorage.setItem("savedPlans", JSON.stringify(savedPlans));
+        }
+
+        resetPlan();
+        displayPlans();
+    })
+    .catch(function (error) {
+        console.log("여행 계획 데이터를 불러오지 못했습니다.", error);
+
+        resetPlan();
+        displayPlans();
+
+        if (savedPlans.length === 0) {
+            savedList.innerHTML =
+                '<li class="saved-empty">여행 계획 정보를 불러오지 못했습니다. 새로고침해주세요.</li>';
+        }
+    });
