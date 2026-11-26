@@ -1,4 +1,4 @@
-const tabs = ["places", "stays", "plans", "diaries"];
+const tabs = ["places", "attractions", "stays", "plans", "diaries"];
 
 for (let i = 0; i < tabs.length; i++) {
     let button = document.getElementById("tab-" + tabs[i]);
@@ -124,6 +124,96 @@ function removeFavorite() {
     localStorage.setItem("favoritePlaces", JSON.stringify(favoritePlaces));
 
     showFavorites();
+}
+
+let attractions = [];
+const attractionList = document.getElementById("attraction-list");
+const attractionMessage = document.getElementById("attraction-message");
+
+fetch("../data/12_kyoto_places.json")
+    .then(response => {
+        return response.json();
+    })
+    .then(result => {
+        attractions = result.places;
+        showFavoriteAttractions();
+    })
+    .catch(error => {
+        console.log("명소 데이터를 불러오지 못했습니다.", error);
+
+        attractionMessage.innerText = "명소 정보를 불러오지 못했습니다. 새로고침해주세요.";
+    });
+
+function showFavoriteAttractions() {
+    let favoriteAttractions = [];
+    let saved = localStorage.getItem("mvt_favorite_places");
+
+    if (saved !== null) {
+        favoriteAttractions = JSON.parse(saved);
+    }
+
+    attractionList.innerHTML = "";
+    let count = 0;
+
+    for (let i = 0; i < attractions.length; i++) {
+        let attraction = attractions[i];
+        let isFavorite = false;
+
+        for (let j = 0; j < favoriteAttractions.length; j++) {
+            if (favoriteAttractions[j] === attraction.id) {
+                isFavorite = true;
+            }
+        }
+
+        if (isFavorite) {
+            let card = document.createElement("article");
+            card.setAttribute("class", "place-card hover-card");
+
+            card.innerHTML =
+                '<a class="card-content" href="12_웹벤져스_detail.html">' +
+                '<img src="' + attraction.images[0].src + '" alt="' + attraction.images[0].alt + '">' +
+                '<div class="place-info"><h3></h3><span class="country"></span><p></p></div>' +
+                '</a>' +
+                '<button type="button" class="favorite-button">' +
+                '<img src="../res/icons/12_ic_favorite_filled.svg" alt="찜 취소"></button>';
+
+            card.querySelector("h3").innerText = attraction.nameKo;
+            card.querySelector(".country").innerText = attraction.location;
+            card.querySelector("p").innerText = attraction.nameEn;
+
+            let button = card.querySelector("button");
+            button.value = attraction.id;
+            button.addEventListener("click", removeFavoriteAttraction);
+
+            attractionList.appendChild(card);
+            count++;
+        }
+    }
+
+    if (count === 0) {
+        attractionMessage.style.display = "block";
+        attractionMessage.innerText = "찜한 명소가 없습니다.";
+    } else {
+        attractionMessage.style.display = "none";
+    }
+}
+
+function removeFavoriteAttraction() {
+    let attractionId = this.value;
+    let favoriteAttractions = [];
+    let saved = localStorage.getItem("mvt_favorite_places");
+
+    if (saved !== null) {
+        favoriteAttractions = JSON.parse(saved);
+    }
+
+    favoriteAttractions = favoriteAttractions.filter(function (id) {
+        return id !== attractionId;
+    });
+
+    localStorage.setItem("mvt_favorite_places", JSON.stringify(favoriteAttractions));
+
+    showFavoriteAttractions();
 }
 
 let stays = [];
