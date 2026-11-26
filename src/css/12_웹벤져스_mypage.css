@@ -176,7 +176,7 @@ main h1 {
 .profile {
     display: flex;
     align-items: center;
-    padding: 28px;
+    padding: 28px 32px;
     margin: 28px 0;
     background-color: #E5F2ED;
     border-radius: 12px;
@@ -188,6 +188,7 @@ main h1 {
     justify-content: center;
     width: 64px;
     height: 64px;
+    margin-left: 30px;
     margin-right: 20px;
     border-radius: 50%;
     background-color: white;
@@ -199,13 +200,64 @@ main h1 {
 }
 
 .profile h2 {
-    font-size: 22px;
+    font-size: 24px;
     margin-bottom: 6px;
 }
 
 .profile p {
+    font-size: 18px;
     color: #337768;
     margin-bottom: 0;
+}
+
+.dday {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 372px;
+    height: 165px;
+    margin-left: auto;
+    margin-right: 18px;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.profile .dday-label {
+    margin: 0 0 6px;
+    font-size: 14px;
+}
+
+.dday:hover .dday-count {
+    text-decoration: underline;
+}
+
+.profile .dday-title {
+    margin: 6px 0 8px;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+}
+
+.dday-count {
+    display: block;
+    font-size: 36px;
+    line-height: 1.3;
+    color: #337768;
+}
+
+.profile .dday-date {
+    margin: 0;
+    font-size: 15px;
+    color: gray;
+}
+
+.dday-date img {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    vertical-align: middle;
 }
 
 .mypage-tabs {

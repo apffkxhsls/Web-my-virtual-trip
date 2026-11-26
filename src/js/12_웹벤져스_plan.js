@@ -441,6 +441,22 @@ planForm.addEventListener("submit", function (event) {
     event.preventDefault();
 });
 
+function openSelectedPlan() {
+    let planIndex = sessionStorage.getItem("selectedPlanIndex");
+
+    if (planIndex === null) {
+        return;
+    }
+
+    sessionStorage.removeItem("selectedPlanIndex");
+    planIndex = parseInt(planIndex);
+
+    if (planIndex >= 0 && planIndex < savedPlans.length) {
+        selectedIndex = planIndex;
+        loadPlan(savedPlans[selectedIndex]);
+    }
+}
+
 fetch("../data/12_웹벤져스_plan.json")
     .then(function (response) {
         return response.json();
@@ -455,12 +471,14 @@ fetch("../data/12_웹벤져스_plan.json")
 
         resetPlan();
         displayPlans();
+        openSelectedPlan();
     })
     .catch(function (error) {
         console.log("여행 계획 데이터를 불러오지 못했습니다.", error);
 
         resetPlan();
         displayPlans();
+        openSelectedPlan();
 
         if (savedPlans.length === 0) {
             savedList.innerHTML =

@@ -350,5 +350,77 @@ function showPlans() {
     }
 }
 
+let ddayPlanIndex = -1;
+
+function showDday() {
+    let plans = [];
+    let saved = localStorage.getItem("savedPlans");
+
+    if (saved !== null) {
+        plans = JSON.parse(saved);
+    }
+
+    let now = new Date();
+    let month = now.getMonth() + 1;
+    let date = now.getDate();
+
+    if (month < 10) {
+        month = "0" + month;
+    }
+    if (date < 10) {
+        date = "0" + date;
+    }
+
+    let today = now.getFullYear() + "-" + month + "-" + date;
+    let nextPlan = null;
+    ddayPlanIndex = -1;
+
+    for (let i = 0; i < plans.length; i++) {
+        let plan = plans[i];
+
+        if (plan.endDate >= today) {
+            if (nextPlan === null || plan.startDate < nextPlan.startDate) {
+                nextPlan = plan;
+                ddayPlanIndex = i;
+            }
+        }
+    }
+
+    let title = document.getElementById("dday-title");
+    let count = document.getElementById("dday-count");
+    let dateLine = document.getElementById("dday-date");
+    let period = document.getElementById("dday-period");
+
+    if (nextPlan === null) {
+        count.innerText = "-";
+        title.innerText = "새로운 여행을 계획해보세요";
+        dateLine.style.display = "none";
+        return;
+    }
+
+    title.innerText = nextPlan.title;
+    period.innerText = nextPlan.startDate + " ~ " + nextPlan.endDate;
+    dateLine.style.display = "block";
+
+    if (nextPlan.startDate > today) {
+        let start = new Date(nextPlan.startDate).getTime();
+        let base = new Date(today).getTime();
+        let days = (start - base) / (1000 * 60 * 60 * 24);
+
+        count.innerText = "D-" + days;
+    } else if (nextPlan.startDate === today) {
+        count.innerText = "D-Day";
+    } else {
+        count.innerText = "여행 중";
+    }
+}
+
+document.getElementById("dday").addEventListener("click", function () {
+    if (ddayPlanIndex !== -1) {
+        sessionStorage.setItem("selectedPlanIndex", ddayPlanIndex);
+    }
+});
+
 showTab(0);
 showPlans();
+showDday();
