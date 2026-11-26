@@ -72,7 +72,7 @@ function displayStays(data) {
             '<h3>' + stay.name + '</h3>' +
             '<p class="stay-features">' + stay.features + '</p>' +
             '<p class="stay-capacity">' +
-            stay.baseGuests + '인 기준 - 최대 ' +
+            '기준 ' + stay.baseGuests + '인 / 최대 ' +
             stay.maxGuests + '인' +
             '</p>' +
             '<p class="stay-price">' +
