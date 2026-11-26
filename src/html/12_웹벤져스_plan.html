@@ -13,34 +13,35 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navigation" aria-label="주요 메뉴">
+    <!-- 로고 및 네비게이션 바 -->
+    <header class="site-header">
+        <nav class="navigation">
             <a href="12_웹벤져스_main.html" class="logo-link">
                 <img src="../res/images/12_logo.png" id="logo" alt="MyVirtualTrip 로고">
             </a>
             <div class="nav-right">
                 <div class="category-nav">
                     <a class="cat-item" href="../html/12_웹벤져스_region.html">
-                        <span>🗺️ 지역별</span>
+                        <span>지역별</span>
                     </a>
                     <a class="cat-item" href="../html/12_웹벤져스_theme.html">
-                        <span>🎞️ 테마별</span>
+                        <span>테마별</span>
                     </a>
                     <a class="cat-item" href="../html/12_웹벤져스_stay.html">
-                        <span>🏩 숙박</span>
+                        <span>숙박</span>
                     </a>
                     <a class="cat-item" href="../html/12_웹벤져스_flight.html">
-                        <span>✈️ 항공</span>
+                        <span>항공</span>
                     </a>
-                    <a class="cat-item cat-item-active" href="../html/12_웹벤져스_plan.html">
-                        <span>✍🏻 여행 계획</span>
+                    <a class="cat-item" href="../html/12_웹벤져스_plan.html">
+                        <span>여행 계획</span>
                     </a>
                     <a class="cat-item" href="../html/12_웹벤져스_diary.html">
-                        <span>🗂️ 여행 기록</span>
+                        <span>여행 기록</span>
                     </a>
                 </div>
                 <form class="search" action="#" method="get">
-                    <input type="search" name="all-search" placeholder="여행지, 명소, 숙소 등" aria-label="여행지, 명소, 숙소 검색">
+                    <input type="search" name="all-search" placeholder="여행지, 명소, 숙소 등">
                     <button type="submit">
                         <img src="../res/icons/12_ic_search.svg" alt="검색 아이콘">
                     </button>
@@ -53,48 +54,14 @@
     <main>
         <div class="plan-layout">
 
-            <!-- 작성한 계획 목록 -->
             <aside class="plan-sidebar">
                 <section class="saved-section">
                     <h2>작성한 계획 목록 보기</h2>
+                    <button type="button" id="new-plan-button" class="new-plan-button">
+                        + 새 계획 작성
+                    </button>
 
-                    <ul class="saved-list">
-                        <li>
-                            <article class="saved-card">
-                                <img src="../res/images/12_theme-shanghai.jpg" alt="상하이의 야경">
-
-                                <div class="saved-info">
-                                    <h3>상하이 여행</h3>
-                                    <p>📅 2026.12.22 ~ 2026.12.25</p>
-                                    <p>📍 중국 상하이</p>
-                                </div>
-                            </article>
-                        </li>
-
-                        <li>
-                            <article class="saved-card">
-                                <img src="../res/images/12_theme-nature.jpg" alt="나이아가라의 폭포">
-
-                                <div class="saved-info">
-                                    <h3>나이아가라</h3>
-                                    <p>📅 2027.01.10 ~ 2027.01.13</p>
-                                    <p>📍 캐나다 나이아가라</p>
-                                </div>
-                            </article>
-                        </li>
-
-                        <li>
-                            <article class="saved-card">
-                                <img src="../res/images/12_theme-activity.jpg" alt="퀸스타운에서의 스카이다이빙">
-
-                                <div class="saved-info">
-                                    <h3>캐나다 스카이다이빙!!</h3>
-                                    <p>📅 2028.03.05 ~ 2028.03.09</p>
-                                    <p>📍 뉴질랜드 퀸스타운</p>
-                                </div>
-                            </article>
-                        </li>
-                    </ul>
+                    <ul class="saved-list" id="saved-list"></ul>
 
 
                 </section>
@@ -107,196 +74,153 @@
                         나만의 여행을 계획해보세요
                     </p>
 
+                    <div class="plan-tabs">
+                        <button type="button" id="tab-schedule" class="plan-tab active">
+                            여행 일정
+                        </button>
+
+                        <button type="button" id="tab-expense" class="plan-tab">
+                            예상 지출
+                        </button>
+
+                        <button type="button" id="tab-checklist" class="plan-tab">
+                            체크리스트
+                        </button>
+                    </div>
+
                     <form class="plan-form">
-                        <h2>기본 정보</h2>
+                        <section class="schedule-section plan-panel" id="schedule">
+                            <h2>기본 정보</h2>
 
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="trip-title">여행 제목</label>
-                                <input type="text" id="trip-title" name="trip-title" placeholder="예: 인생 첫 혼자 여행">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="trip-region">여행 지역</label>
-                                <input type="text" id="trip-region" name="trip-region" placeholder="예: 일본 오사카">
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="start-date">출발일</label>
-                                <input type="date" id="start-date" name="start-date">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="end-date">도착일</label>
-                                <input type="date" id="end-date" name="end-date">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="travelers">동행 인원</label>
-                                <input type="number" id="travelers" name="travelers" min="1" placeholder="1">
-                            </div>
-                        </div>
-
-                        <fieldset class="theme-fieldset">
-                            <legend>여행 테마 선택</legend>
-
-                            <div class="theme-options">
-                                <div class="theme-option">
-                                    <input type="checkbox" name="trip-theme" id="nature" value="nature">
-                                    <label for="nature">🌿 자연</label>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="trip-title">여행 제목</label>
+                                    <input type="text" id="trip-title" name="trip-title" placeholder="예: 인생 첫 혼자 여행">
                                 </div>
 
-                                <div class="theme-option">
-                                    <input type="checkbox" name="trip-theme" id="history" value="history">
-                                    <label for="history">🏛️ 역사</label>
-                                </div>
-
-                                <div class="theme-option">
-                                    <input type="checkbox" name="trip-theme" id="food" value="food">
-                                    <label for="food">🍜 먹방</label>
-                                </div>
-
-                                <div class="theme-option">
-                                    <input type="checkbox" name="trip-theme" id="sea" value="sea">
-                                    <label for="sea">🏖️ 바다</label>
-                                </div>
-
-                                <div class="theme-option">
-                                    <input type="checkbox" name="trip-theme" id="activity" value="activity">
-                                    <label for="activity">🚴 액티비티</label>
-                                </div>
-
-                                <div class="theme-option">
-                                    <input type="checkbox" name="trip-theme" id="trendy" value="trendy">
-                                    <label for="trendy">✨ 요즘</label>
-                                </div>
-
-                                <div class="theme-option">
-                                    <input type="checkbox" name="trip-theme" id="friends" value="friends">
-                                    <label for="friends">👫 친구</label>
-                                </div>
-
-                                <div class="theme-option">
-                                    <input type="checkbox" name="trip-theme" id="solo" value="solo">
-                                    <label for="solo">🎒 혼여행</label>
+                                <div class="form-group">
+                                    <label for="trip-region">여행 지역</label>
+                                    <input type="text" id="trip-region" name="trip-region" placeholder="예: 일본 오사카">
                                 </div>
                             </div>
-                        </fieldset>
 
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="start-date">출발일</label>
+                                    <input type="date" id="start-date" name="start-date">
+                                </div>
 
-                        <section class="schedule-section">
-                            <h2>날짜별 여행 일정</h2>
+                                <div class="form-group">
+                                    <label for="end-date">도착일</label>
+                                    <input type="date" id="end-date" name="end-date">
+                                </div>
 
-                            <section class="day-section" aria-labelledby="day1-heading">
-                                <header class="day-header">
-                                    <h3 id="day1-heading">DAY 1</h3>
+                                <div class="form-group">
+                                    <label for="travelers">동행 인원</label>
+                                    <input type="number" id="travelers" name="travelers" min="1" placeholder="1">
+                                </div>
+                            </div>
 
-                                    <div class="day-date">
-                                        <label for="day1-date">여행 날짜</label>
-                                        <input type="date" id="day1-date" name="day1-date">
-                                    </div>
-                                </header>
+                            <div class="schedule-detail">
+                                <h2>날짜별 여행 일정</h2>
 
-                                <table class="schedule-table">
-                                    <caption class="visually-hidden">DAY 1 여행 일정</caption>
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">시간</th>
-                                            <th scope="col">방문 장소</th>
-                                            <th scope="col">일정 내용</th>
-                                        </tr>
-                                    </thead>
+                                <div id="schedule-days"></div>
 
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <input type="time" name="day1-time1" aria-label="DAY 1 일정 1 시간">
-                                            </td>
-                                            <td>
-                                                <input type="text" name="day1-place1" placeholder="방문 장소"
-                                                    aria-label="DAY 1 일정 1 방문 장소">
-                                            </td>
-                                            <td>
-                                                <input type="text" name="day1-memo1" placeholder="일정 내용"
-                                                    aria-label="DAY 1 일정 1 내용">
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>
-                                                <input type="time" name="day1-time2" aria-label="DAY 1 일정 2 시간">
-                                            </td>
-                                            <td>
-                                                <input type="text" name="day1-place2" placeholder="방문 장소"
-                                                    aria-label="DAY 1 일정 2 방문 장소">
-                                            </td>
-                                            <td>
-                                                <input type="text" name="day1-memo2" placeholder="일정 내용"
-                                                    aria-label="DAY 1 일정 2 내용">
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-
-                                <button type="button" class="add-schedule-button">
-                                    + 일정 추가하기
+                                <button type="button" class="add-day-button" id="add-day-button">
+                                    + 날짜 추가하기
                                 </button>
-                            </section>
-
-                            <button type="button" class="add-day-button">
-                                + 날짜 추가하기
-                            </button>
+                            </div>
                         </section>
 
-
-                        <section class="expense-section">
+                        <section class="expense-section plan-panel" id="expense">
                             <h2>예상 지출</h2>
+
+                            <div class="form-group budget-group">
+                                <label for="budget">목표 예산</label>
+                                <input type="number" id="budget" min="0" placeholder="목표 예산을 입력하세요 (원)">
+                            </div>
+                            <div class="budget-summary">
+                                <div class="budget-row">
+                                    <h3>최종 예상 지출</h3>
+                                    <strong id="total-cost">0원</strong>
+                                </div>
+                                <div class="budget-row">
+                                    <span>목표 예산 대비</span>
+                                </div>
+                                <div class="budget-bar">
+                                    <div id="budget-fill"></div>
+                                </div>
+                                <div class="budget-row budget-range">
+                                    <span>0원</span><span id="budget-limit">0원</span>
+                                </div>
+                                <div class="budget-row">
+                                    <span id="budget-status">남은 예산</span>
+                                    <strong id="remaining-budget">0원</strong>
+                                </div>
+                            </div>
+                            <h3 class="expense-title">세부 예상 지출</h3>
 
                             <ul class="expense-list">
                                 <li class="expense-item">
-                                    <label for="transport">🚆 교통비</label>
+                                    <label for="transport">교통비</label>
                                     <div class="expense-input">
-                                        <input type="number" id="transport" min="0" step="1000" placeholder="0">
+                                        <input type="number" id="transport" min="0" placeholder="0">
                                         <span>원</span>
                                     </div>
                                 </li>
 
                                 <li class="expense-item">
-                                    <label for="food-cost">🍽️ 식비</label>
+                                    <label for="food-cost">식비</label>
                                     <div class="expense-input">
-                                        <input type="number" id="food-cost" min="0" step="1000" placeholder="0">
+                                        <input type="number" id="food-cost" min="0" placeholder="0">
                                         <span>원</span>
                                     </div>
                                 </li>
 
                                 <li class="expense-item">
-                                    <label for="stay-cost">🏨 숙박비</label>
+                                    <label for="stay-cost">숙박비</label>
                                     <div class="expense-input">
-                                        <input type="number" id="stay-cost" min="0" step="1000" placeholder="0">
+                                        <input type="number" id="stay-cost" min="0" placeholder="0">
                                         <span>원</span>
                                     </div>
                                 </li>
 
                                 <li class="expense-item">
-                                    <label for="other-cost">🧳 기타</label>
+                                    <label for="other-cost">기타</label>
                                     <div class="expense-input">
-                                        <input type="number" id="other-cost" min="0" step="1000" placeholder="0">
+                                        <input type="number" id="other-cost" min="0" placeholder="0">
                                         <span>원</span>
                                     </div>
                                 </li>
                             </ul>
                         </section>
 
+                        <section class="checklist-section plan-panel" id="checklist">
+                            <div class="checklist-header">
+                                <h2>여행 체크리스트</h2>
+                            </div>
+                            <ul class="checklist-list" id="checklist-list"></ul>
+
+                            <div class="checklist-add">
+                                <input type="text" id="checklist-input" placeholder="준비할 항목을 입력하세요">
+                                <button type="button" id="add-checklist-button">추가</button>
+                            </div>
+                        </section>
+
                         <div class="save-area">
-                            <button type="button" class="save-button">
+                            <p class="save-notice">계획을 저장하지 않고 다른 페이지로 이동하거나 다른 계획을 선택하면 입력한 내용이 사라질 수 있습니다.</p>
+                            <button type="button" class="save-button" id="save-plan-button">
                                 계획 저장
+                            </button>
+                            <button type="button" class="delete-plan-button" id="delete-plan-button" disabled>
+                                계획 삭제
                             </button>
                         </div>
 
                     </form>
                 </section>
+
+
             </div>
 
         </div>
@@ -351,6 +275,8 @@
             </form>
         </div>
     </footer>
+
+    <script src="../js/12_웹벤져스_plan.js"></script>
 </body>
 
 </html>
