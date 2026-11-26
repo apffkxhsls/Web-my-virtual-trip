@@ -12,21 +12,27 @@ select {
     font-size: 16px;
 }
 
-body>header {
+/* ==== 로고 및 네비게이션 바 ====  */
+.site-header {
     position: sticky;
     top: 0;
     z-index: 100;
 }
 
 .navigation {
-    justify-content: center;
+    justify-content: space-between;
     background-color: white;
     border-bottom: 1px solid #EEEEEF;
     display: flex;
     align-items: stretch;
-    padding: 0 24px;
+    padding: 0 40px;
     height: 72px;
     gap: 24px;
+    /*아이템 사이의 간격 지정 */
+}
+
+.logo-link {
+    padding-top: 8px;
 }
 
 #logo {
@@ -35,20 +41,20 @@ body>header {
     margin: auto 0;
 }
 
-.logo-link {
-    padding-top: 8px;
-}
-
 .nav-right {
     display: flex;
     align-items: stretch;
     gap: 16px;
+    flex-grow: 1;
 }
 
+/* 카테고리 네비게이션 */
 .category-nav {
     display: flex;
     align-items: stretch;
-    gap: 16px;
+    justify-content: center;
+    flex-grow: 1;
+    gap: 40px;
     padding: 0px 24px;
 }
 
@@ -58,18 +64,14 @@ body>header {
     align-items: center;
     gap: 4px;
     padding: 8px 12px;
-    font-size: 17px;
+    font-size: 20px;
     font-weight: 500;
     white-space: nowrap;
     text-decoration: none;
     color: black;
     border-bottom: 4px solid transparent;
+    /*transparent는 투명색*/
     margin-bottom: -1px;
-}
-
-.cat-item-active {
-    border-bottom: 4px solid #3377689b;
-    font-weight: 600;
 }
 
 .cat-item:hover,
@@ -78,9 +80,13 @@ body>header {
     font-weight: 600;
 }
 
+
+/* 검색 아이콘 */
 .search {
     display: flex;
     align-items: center;
+    width: 260px;
+    height: 27px;
     border: 1px solid #B1B3B4;
     border-radius: 20px;
     padding: 6px 14px;
@@ -89,14 +95,15 @@ body>header {
 }
 
 .search img {
-    width: 15px;
-    cursor: pointer;
+    width: 23px;
+    cursor: pointer
 }
 
 .search input {
+    flex-grow: 1;
     border: none;
     outline: none;
-    font-size: 13px;
+    font-size: 15px;
     width: 180px;
 }
 
@@ -108,8 +115,9 @@ body>header {
     align-items: center;
 }
 
+/* 로그아웃 버튼 */
 .logout {
-    background: #8DC5AC;
+    background: #C3E4D9;
     color: black;
     border-radius: 8px;
     padding: 8px 16px;
@@ -121,7 +129,7 @@ body>header {
 }
 
 .logout:hover {
-    background: #69A998;
+    background: #9ACEB7;
 }
 
 main {
@@ -130,9 +138,106 @@ main {
     padding: 32px 0 50px;
 }
 
+.form-group input,
+.schedule-table input,
+.day-date input,
+.expense-input input,
+.checklist-add input {
+    border: 1px solid #B1B3B4;
+    font-size: 14px;
+}
+
+.form-group input,
+.day-date input,
+.expense-input input,
+.checklist-add input,
+.add-schedule-button,
+.add-day-button,
+.new-plan-button,
+.save-button,
+.checklist-add button {
+    border-radius: 7px;
+}
+
+.form-group input,
+.schedule-table input,
+.day-date input,
+.expense-input input {
+    box-sizing: border-box;
+}
+
+.add-schedule-button,
+.add-day-button,
+.new-plan-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.plan-tab,
+.save-button {
+    font-weight: bold;
+}
+
+.new-plan-button,
+.save-button,
+.checklist-add button {
+    background-color: #8DC5AC;
+}
+
+.budget-row,
+.expense-item,
+.checklist-header,
+.checklist-list li,
+.day-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.day-date,
+.expense-input {
+    display: flex;
+    align-items: center;
+}
+
+.delete-day-button,
+.expense-input span {
+    margin-left: 12px;
+}
+
+.saved-list,
+.checklist-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.plan-form,
+.saved-section,
+.saved-card {
+    background-color: white;
+    border: 1px solid #EEEEEE;
+    box-sizing: border-box;
+}
+
+.budget-bar,
+#budget-fill {
+    border-radius: 10px;
+}
+
+.checklist-list li {
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.save-notice,
+.saved-empty {
+    color: gray;
+}
+
 .plan-layout {
     display: flex;
-    align-items: stretch;
 }
 
 .plan-sidebar {
@@ -159,23 +264,53 @@ main {
     margin-bottom: 12px;
 }
 
-.plan-content h2 {
-    font-size: 25px;
-    margin-bottom: 12px;
-}
-
 .section-description {
     font-size: 15px;
-    color: black;
     margin-bottom: 30px;
+}
+
+.plan-tabs {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.plan-tab {
+    flex-grow: 1;
+    margin-right: 12px;
+    padding: 14px 20px;
+    background-color: white;
+    border: 1px solid #EEEEEE;
+    border-radius: 8px;
+    color: black;
+    font-size: 15px;
+    transition: background-color 0.2s;
+}
+
+.plan-tab:last-child {
+    margin-right: 0;
+}
+
+.plan-tab:hover {
+    background-color: #F0F7F4;
+}
+
+.plan-tabs .active {
+    background-color: #C3E4D9;
+    border-color: #337768;
+    color: #337768;
+}
+
+.plan-panel {
+    display: none;
+}
+
+#schedule {
+    display: block;
 }
 
 .plan-form {
     padding: 35px;
-    background-color: white;
-    border: 1px solid #EEEEEE;
     border-radius: 14px;
-    box-sizing: border-box;
 }
 
 .plan-form h2 {
@@ -210,10 +345,6 @@ main {
     height: 45px;
     padding: 12px;
     background-color: white;
-    border: 1px solid #B1B3B4;
-    border-radius: 7px;
-    box-sizing: border-box;
-    font-size: 14px;
 }
 
 .plan-content input:active {
@@ -224,42 +355,8 @@ main {
     border-color: #69A998;
 }
 
-.theme-fieldset {
-    margin: 35px 0 0;
-    padding: 0;
-    border: none;
-}
-
-.theme-fieldset legend {
-    font-size: 23px;
-    font-weight: bold;
-    margin-bottom: 8px;
-}
-
-.theme-options {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.theme-option {
-    margin-right: 12px;
-    margin-bottom: 6px;
-    padding: 13px 20px;
-    background-color: white;
-    border: 1px solid #EEEEEE;
-    border-radius: 25px;
-}
-
-.theme-option input {
-    margin-right: 7px;
-}
-
-.theme-option:hover {
-    border-color: #69A998;
-}
-
-.schedule-section {
-    margin-top: 25px;
+.schedule-detail {
+    margin-top: 35px;
     padding-top: 35px;
     border-top: 1px solid #EEEEEE;
 }
@@ -269,13 +366,13 @@ main {
 }
 
 .day-section h3 {
-    display: inline-block;
     padding: 9px 17px;
     margin-bottom: 0;
     background-color: #337768;
     border-radius: 6px;
     color: white;
     font-size: 16px;
+    display: inline-block;
 }
 
 .schedule-table {
@@ -298,45 +395,64 @@ main {
 }
 
 .schedule-table th:first-child {
-    width: 22%;
+    width: 20%;
 }
 
 .schedule-table th:nth-child(2) {
-    width: 30%;
+    width: 27%;
 }
 
 .schedule-table th:nth-child(3) {
-    width: 48%;
+    width: 43%;
+}
+
+.schedule-table th:nth-child(4) {
+    width: 10%;
+}
+
+.schedule-table th:nth-child(4),
+.schedule-table td:nth-child(4) {
+    text-align: center;
 }
 
 .schedule-table input {
     width: 100%;
     min-width: 0;
     padding: 11px;
+    border-radius: 6px;
+}
+
+.delete-schedule-button,
+.delete-day-button,
+.delete-checklist-button {
+    padding: 8px 12px;
+    background-color: white;
     border: 1px solid #B1B3B4;
     border-radius: 6px;
-    box-sizing: border-box;
-    font-size: 14px;
+    color: gray;
+    font-size: 13px;
+}
+
+.delete-schedule-button:hover,
+.delete-day-button:hover,
+.delete-checklist-button:hover {
+    background-color: #FDECEC;
+    border-color: #D98C8C;
+    color: #C05050;
 }
 
 .add-schedule-button {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
     margin-top: 12px;
-    padding: 12px;
     background-color: white;
     border: 1px dashed #69A998;
-    border-radius: 7px;
     color: #337768;
-    font-size: 14px;
-    font-weight: bold;
 }
 
 .add-schedule-button:hover {
     background-color: #9ACEB7;
-    border: 1px dashed #69A998;
 }
 
 .add-schedule-button:active {
@@ -345,56 +461,19 @@ main {
 }
 
 .day-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     margin-bottom: 15px;
-}
-
-.day-date {
-    display: flex;
-    align-items: center;
-}
-
-.day-date label {
-    margin-right: 12px;
-    font-size: 14px;
-    font-weight: bold;
 }
 
 .day-date input {
     height: 40px;
     padding: 8px 12px;
-    border: 1px solid #B1B3B4;
-    border-radius: 7px;
-    box-sizing: border-box;
-    font-size: 14px;
-}
-
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
 }
 
 .add-day-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 12px;
     background-color: #C3E4D9;
     border: 1px solid #8DC5AC;
-    border-radius: 7px;
     color: #337768;
-    font-size: 14px;
-    font-weight: bold;
+    display: block;
 }
 
 .add-day-button:hover {
@@ -402,30 +481,76 @@ main {
     border-color: #69A998;
 }
 
-.add-day-button:active {
-    background-color: #8DC5AC;
-    border-color: #337768;
+.budget-group {
+    margin: 0 0 25px;
 }
 
-.expense-section {
-    margin-top: 25px;
-    padding-top: 35px;
-    border-top: 1px solid #EEEEEE;
+.budget-summary {
+    padding: 25px;
+    margin-bottom: 30px;
+    background-color: #F4F8F6;
+    border-radius: 10px;
+}
+
+.budget-row {
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.budget-row:last-child {
+    margin-bottom: 0;
+}
+
+.budget-row h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+#total-cost {
+    font-size: 26px;
+}
+
+#total-cost,
+#remaining-budget {
+    color: #337768;
+    font-weight: bold;
+}
+
+.budget-bar {
+    width: 100%;
+    height: 15px;
+    background-color: #DEE5E1;
+    overflow: hidden;
+}
+
+#budget-fill {
+    width: 0%;
+    height: 100%;
+    background-color: #69A998;
+    transition: width 0.3s ease;
+}
+
+.budget-range {
+    margin-top: 8px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    color: gray;
+}
+
+.expense-title {
+    font-size: 18px;
+    margin-bottom: 15px;
 }
 
 .expense-list {
     margin: 0;
     padding: 5px 20px;
-    background-color: white;
     border: 1px solid #EEEEEE;
     border-radius: 10px;
     list-style: none;
 }
 
 .expense-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     padding: 8px 0;
     border-top: 1px solid #EEEEEE;
 }
@@ -439,25 +564,68 @@ main {
     font-weight: bold;
 }
 
-.expense-input {
-    display: flex;
-    align-items: center;
+.expense-input,
+.saved-empty {
+    font-size: 14px;
 }
 
 .expense-input input {
     width: 150px;
     height: 35px;
-    margin-right: 12px;
     padding: 8px;
-    border: 1px solid #B1B3B4;
-    border-radius: 7px;
-    box-sizing: border-box;
-    font-size: 14px;
     text-align: right;
 }
 
-.expense-input span {
-    font-size: 14px;
+.checklist-header {
+    margin-bottom: 25px;
+}
+
+.plan-form .checklist-header h2 {
+    margin: 0;
+}
+
+.checklist-list li {
+    padding: 15px 0;
+    font-size: 15px;
+}
+
+.checklist-list label {
+    display: flex;
+    align-items: center;
+}
+
+.checklist-list label span {
+    margin-left: 10px;
+}
+
+.checklist-done {
+    color: gray;
+}
+
+.checklist-add {
+    display: flex;
+    margin-top: 24px;
+}
+
+.checklist-add input {
+    flex-grow: 1;
+    padding: 12px;
+}
+
+.checklist-add button {
+    margin-left: 12px;
+    padding: 12px 24px;
+    border: none;
+}
+
+.checklist-add button:hover,
+.new-plan-button:hover {
+    background-color: #69A998;
+}
+
+.save-notice {
+    font-size: 13px;
+    margin-bottom: 15px;
 }
 
 .save-area {
@@ -467,12 +635,9 @@ main {
 
 .save-button {
     padding: 15px 65px;
-    background-color: #8DC5AC;
     border: 1px solid #8DC5AC;
-    border-radius: 7px;
     color: black;
     font-size: 16px;
-    font-weight: bold;
 }
 
 .save-button:hover {
@@ -485,14 +650,29 @@ main {
     border: 1px solid #337768;
 }
 
+.delete-plan-button {
+    padding: 15px 35px;
+    margin-left: 10px;
+    border: 1px solid #B1B3B4;
+    border-radius: 7px;
+    background-color: white;
+    font-weight: bold;
+}
+
+.delete-plan-button:hover {
+    background-color: #FDECEC;
+}
+
+.delete-plan-button:disabled {
+    color: gray;
+    background-color: white;
+}
+
 .saved-section {
     flex-grow: 1;
     width: 100%;
     padding: 22px 16px;
-    background-color: white;
-    border: 1px solid #EEEEEE;
     border-radius: 12px;
-    box-sizing: border-box;
 }
 
 .saved-section h2 {
@@ -500,45 +680,28 @@ main {
     margin: 0 0 22px;
 }
 
+.new-plan-button {
+    margin-bottom: 22px;
+    border: none;
+}
+
 .saved-list {
     display: flex;
     flex-direction: column;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.saved-list li {
-    width: 100%;
 }
 
 .saved-card {
-    display: flex;
-    flex-direction: column;
     width: 100%;
     margin-bottom: 16px;
-    border: 1px solid #EEEEEE;
     border-radius: 12px;
-    box-sizing: border-box;
-    background-color: white;
     overflow: hidden;
-}
-
-.saved-card:hover {
-    border-color: #69A998;
-    background-color: white;
+    display: flex;
+    flex-direction: column;
 }
 
 .saved-card:active {
     border-color: #337768;
     background-color: #C3E4D9;
-}
-
-.saved-card img {
-    display: block;
-    width: 100%;
-    height: 115px;
-    object-fit: cover;
 }
 
 .saved-info {
@@ -551,10 +714,23 @@ main {
 }
 
 .saved-info p {
+    display: flex;
+    align-items: center;
     font-size: 12px;
-    color: black;
     line-height: 1.6;
     margin: 0 0 7px;
+}
+
+.saved-info img {
+    display: block;
+    margin-right: 5px;
+    width: 15px;
+    height: 15px;
+    object-fit: contain;
+}
+
+.hover-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 footer {
@@ -567,7 +743,6 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    gap: 80px;
     padding-bottom: 32px;
     border-bottom: 1px solid #EEEEEF;
 }
@@ -593,12 +768,15 @@ footer {
     border: 1px solid #B1B3B4;
     border-radius: 4px;
     background: white;
-    cursor: pointer;
     font-size: 14px;
 }
 
 .footer-support button:hover {
     background: #EEEEEF;
+}
+
+.footer-item {
+    margin-left: 80px;
 }
 
 .footer-item h4 {
@@ -613,7 +791,14 @@ footer {
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+}
+
+.footer-list li {
+    margin-bottom: 10px;
+}
+
+.footer-list li:last-child {
+    margin-bottom: 0;
 }
 
 .footer-list a {
@@ -641,7 +826,14 @@ footer {
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 24px;
+}
+
+.footer-legal li {
+    margin-right: 24px;
+}
+
+.footer-legal li:last-child {
+    margin-right: 0;
 }
 
 .footer-legal a {
@@ -670,5 +862,4 @@ footer {
     border-radius: 6px;
     padding: 8px 14px;
     font-size: 13px;
-    cursor: pointer;
 }
