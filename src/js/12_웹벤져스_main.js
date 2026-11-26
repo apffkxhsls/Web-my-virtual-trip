@@ -2,11 +2,6 @@ const regionList = document.querySelector('.region-card-list');
 const themeList = document.querySelector('.theme-card-list');
 const stayList = document.querySelector('.stay-card-list');
 
-const regionPrev = document.querySelector('.region-prev');
-const regionNext = document.querySelector('.region-next');
-
-let currentRegion = 3;
-
 
 fetch('../data/12_웹벤져스_main.json')
     .then(response => response.json())
@@ -27,7 +22,9 @@ fetch('../data/12_웹벤져스_main.json')
                     </div>
                 </a>
             </article>`).join('');
-        setRegionSlider();
+        items = document.querySelectorAll('.region-card');
+        totalItems = items.length;
+        updateCarousel();
 
         // 인기있는 여행 테마 TOP 5
         themeList.innerHTML = data.themeList.map(item => `
@@ -69,60 +66,68 @@ fetch('../data/12_웹벤져스_main.json')
 
 // 지금 떠나기 좋은 여행지 섹션 캐러셀
 
-function setRegionSlider() {
-    const cards = document.querySelectorAll('.region-card');
-    const totalRegions = cards.length;
-    const half = Math.floor(totalRegions / 2);
+let currentIndex = 3;
+let items = [];
+let totalItems = 0;
 
-    const widths = [380, 260, 220, 180];
-    const heights = [480, 420, 380, 340];
-    const distances = [0, 240, 360, 450];
+const widths = [380, 260, 220, 180];
+const heights = [480, 420, 380, 340];
+const distances = [0, 240, 360, 450];
 
-    function showRegion() {
-        for (let i = 0; i < totalRegions; i++) {
-            let offset = i - currentRegion;
-            if (offset > half) {
-                offset = offset - totalRegions;
-            }
-            if (offset < -half) {
-                offset = offset + totalRegions;
-            }
+const Next = document.getElementById('nextBtn');
+const Prev = document.getElementById('prevBtn');
 
-            let step = offset;
-            if (step < 0) {
-                step = -offset;
-            }
+Next.addEventListener('click', nextPage);
+Prev.addEventListener('click', previousPage);
 
-            let x = distances[step];
-            if (offset < 0) {
-                x = -x;
-            }
-
-            cards[i].style.width = widths[step] + 'px';
-            cards[i].style.height = heights[step] + 'px';
-            cards[i].style.left = (600 + x - widths[step] / 2) + 'px';
-            cards[i].style.top = (500 - heights[step]) / 2 + 'px';
-            cards[i].style.zIndex = 10 - step;
-        }
+function nextPage() {
+    if (currentIndex < totalItems - 1) {
+        currentIndex++;
+    } else {
+        currentIndex = 0;
     }
+    updateCarousel();
+}
 
-    regionNext.addEventListener('click', () => {
-        currentRegion++;
-        if (currentRegion > totalRegions - 1) {
-            currentRegion = 0;
+function previousPage() {
+    if (currentIndex > 0) {
+        currentIndex--;
+    } else {
+        currentIndex = totalItems - 1;
+    }
+    updateCarousel();
+}
+
+function updateCarousel() {
+    const half = Math.floor(totalItems / 2);
+
+    for (let i = 0; i < totalItems; i++) {
+
+        // currentIndex를 기준으로 각 아이템의 위치를 계산
+        let offset = i - currentIndex;
+        if (offset > half) { 
+            offset = offset - totalItems; //
         }
-        showRegion();
-    });
-
-    regionPrev.addEventListener('click', () => {
-        currentRegion--;
-        if (currentRegion < 0) {
-            currentRegion = totalRegions - 1;
+        if (offset < -half) {
+            offset = offset + totalItems;
         }
-        showRegion();
-    });
 
-    showRegion();
+        let step = offset;
+        if (step < 0) {
+            step = -offset;
+        }
+
+        let x = distances[step];
+        if (offset < 0) {
+            x = -x;
+        }
+
+        items[i].style.width = widths[step] + 'px';
+        items[i].style.height = heights[step] + 'px';
+        items[i].style.left = (600 + x - widths[step] / 2) + 'px';
+        items[i].style.top = (500 - heights[step]) / 2 + 'px';
+        items[i].style.zIndex = 10 - step;
+    }
 }
 
 // 하트 이모지 버튼 찜 기능
