@@ -197,3 +197,12 @@ function setHeartButtons() {
         hearts[i].addEventListener("click", toggleFavorite);
     }
 }
+
+// 히어로 섹션 검색 기능
+const exploreForm = document.querySelector('.explore');
+
+exploreForm.addEventListener('submit', () => {
+    sessionStorage.setItem('searchPlace', document.getElementById('explore-place').value);
+    sessionStorage.setItem('searchDate', document.getElementById('explore-date').value);
+    sessionStorage.setItem('searchTheme', document.getElementById('explore-theme').value);
+});
