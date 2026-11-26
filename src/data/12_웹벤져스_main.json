@@ -15,11 +15,11 @@
     { "id": "resort", "title": "휴양 여행", "desc": "아름다운 풍경 속에서 편안하게 쉬어가는 여행", "views": "3.1K", "image": "../res/images/12_theme-resort.jpg", "alt": "휴양 테마 사진" }
   ],
     "stayList": [
-    { "id": "stay-jeju-pension", "name": "제주의 펜션", "price": "총액 ₩600,000", "rating": "★ 4.5", "image": "../res/images/12_stay.jpg", "alt": "숙소 사진", "link": "#" },
-    { "id": "stay-sokcho-house", "name": "속초의 집", "price": "총액 ₩575,000", "rating": "★ 4.8", "image": "../res/images/12_stay.jpg", "alt": "숙소 사진", "link": "#" },
-    { "id": "stay-seogwipo-pension", "name": "서귀포시의 펜션", "price": "총액 ₩480,000", "rating": "★ 4.9", "image": "../res/images/12_stay.jpg", "alt": "숙소 사진", "link": "#" },
-    { "id": "stay-jeju-house", "name": "제주의 집", "price": "총액 ₩765,000", "rating": "★ 5.0", "image": "../res/images/12_stay.jpg", "alt": "숙소 사진", "link": "#" },
-    { "id": "stay-namwon-pension", "name": "남원의 펜션", "price": "총액 ₩427,500", "rating": "★ 4.5", "image": "../res/images/12_stay.jpg", "alt": "숙소 사진", "link": "#" },
-    { "id": "stay-busan-room", "name": "부산의 방", "price": "총액 ₩176,000", "rating": "★ 4.2", "image": "../res/images/12_stay.jpg", "alt": "숙소 사진", "link": "#" }
+    { "id": 1, "name": "제주 바다풍경 펜션", "price": "85,000", "rating": "4.7", "image": "../res/images/12_stay.jpg", "alt": "숙소 사진", "bookingUrl": "https://jejuseaps.kr/index.html" },
+    { "id": 2, "name": "그랜드 하얏트 서울", "price": "44,000", "rating": "4.8", "image": "../res/images/12_stay.jpg", "alt": "숙소 사진", "link": "#", "bookingUrl": "https://www.hyatt.com/grand-hyatt/en-US/selrs-grand-hyatt-seoul" },
+    { "id": 3, "name": "신라 스테이 해운대", "price": "200,000", "rating": "4.5", "image": "../res/images/12_stay.jpg", "alt": "숙소 사진", "link": "#", "bookingUrl": "https://www.shillahotels.com/en/shillastay/haeundae/index.do" },
+    { "id": 4, "name": "웨스터 조선 서울", "price": "500,000", "rating": "4.9", "image": "../res/images/12_stay.jpg", "alt": "숙소 사진", "link": "#",  "bookingUrl": "https://www.marriott.com/en-us/hotels/selwi-the-westin-josun-seoul/overview/" },
+    { "id": 5, "name": "그랜드 앰퍼러 호텔", "price": "150,000", "rating": "4.3", "image": "../res/images/12_stay.jpg", "alt": "숙소 사진", "link": "#", "bookingUrl": "https://www.grandemperor.com/" },
+    { "id": 6, "name": "호텔 리츠 파리", "price": "400,000", "rating": "5.0", "image": "../res/images/12_stay.jpg", "alt": "숙소 사진", "link": "#","bookingUrl": "https://www.ritzparis.com/fr" }
   ]
 }

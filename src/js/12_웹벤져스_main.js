@@ -7,11 +7,6 @@ const regionNext = document.querySelector('.region-next');
 
 let currentRegion = 3;
 
-let favoritePlaces = [];
-const savedFavorites = localStorage.getItem("favoritePlaces");
-if (savedFavorites !== null) {
-    favoritePlaces = JSON.parse(savedFavorites);
-}
 
 fetch('../data/12_웹벤져스_main.json')
     .then(response => response.json())
@@ -19,7 +14,7 @@ fetch('../data/12_웹벤져스_main.json')
         // 지금 떠나기 좋은 여행지
         regionList.innerHTML = data.regionList.map(item => `
             <article class="region-card">
-                <button type="button" class="${getHeartClass(item.id)}" value="${item.id}">
+                <button type="button" class="${getHeartClass(item.id, 'favoritePlaces')}" name="favoritePlaces" value="${item.id}">
                     <img class="favorite" src="../res/icons/12_ic_favorite.svg" alt="좋아요 아이콘">
                     <img class="favorite-filled" src="../res/icons/12_ic_favorite_filled.svg" alt="좋아요 누른 아이콘">
                 </button>
@@ -49,20 +44,19 @@ fetch('../data/12_웹벤져스_main.json')
                 </div>
             </article>`).join('');
 
-        // 제주의 인기 숙소
-        // 추후 숙소 상세 페이지와 정보 연결 필요 
+        // 세계의 인기 숙소
         stayList.innerHTML = data.stayList.map(item => `
             <article class="stay-card">
-                <button type="button" class="${getHeartClass(item.id)}" value="${item.id}">
+                <button type="button" class="${getHeartClass(item.id, 'favoriteStays')}" name="favoriteStays" value="${item.id}">
                     <img class="favorite" src="../res/icons/12_ic_favorite.svg" alt="좋아요 아이콘">
                     <img class="favorite-filled" src="../res/icons/12_ic_favorite_filled.svg" alt="좋아요 누른 아이콘">
                 </button>
-                <a href="${item.link}">  
+                <a href="${item.bookingUrl}">  
                     <img class="stay-img" src="${item.image}" alt="${item.alt}">
                     <div class="stay-info">
                         <p class="stay-name">${item.name}</p>
-                        <p class="stay-price">${item.price}</p>
-                        <p class="stay-rating">${item.rating}</p>
+                        <p class="stay-price">${item.price}/1박</p>
+                        <p class="stay-rating">★ ${item.rating}</p>
                     </div>
                 </a>
             </article>`).join('');
@@ -133,9 +127,18 @@ function setRegionSlider() {
 
 // 하트 이모지 버튼 찜 기능
 
-function getHeartClass(id) {
-    for (let i = 0; i < favoritePlaces.length; i++) {
-        if (favoritePlaces[i] === id) {
+function getSavedList(key) {
+    const saved = localStorage.getItem(key);
+    if (saved !== null) {
+        return JSON.parse(saved);
+    }
+    return [];
+}
+
+function getHeartClass(id, key) {
+    const list = getSavedList(key);
+    for (let i = 0; i < list.length; i++) {
+        if (list[i] === id) {
             return "heart-btn is-favorite";
         }
     }
@@ -143,37 +146,37 @@ function getHeartClass(id) {
 }
 
 function toggleFavorite() {
-    const placeId = this.value;
-    const saved = localStorage.getItem("favoritePlaces");
-    favoritePlaces = [];
-    if (saved !== null) {
-        favoritePlaces = JSON.parse(saved);
+    let placeId = this.value;
+    const key = this.getAttribute("name");
+    if (key == "favoriteStays") {
+        placeId = parseInt(placeId);
     }
+    let list = getSavedList(key);
 
     let isFavorite = false;
-    for (let i = 0; i < favoritePlaces.length; i++) {
-        if (favoritePlaces[i] === placeId) {
+    for (let i = 0; i < list.length; i++) {
+        if (list[i] === placeId) {
             isFavorite = true;
         }
     }
 
     if (isFavorite) {
         const newList = [];
-        for (let i = 0; i < favoritePlaces.length; i++) {
-            if (favoritePlaces[i] !== placeId) {
-                newList.push(favoritePlaces[i]);
+        for (let i = 0; i < list.length; i++) {
+            if (list[i] !== placeId) {
+                newList.push(list[i]);
             }
         }
-        favoritePlaces = newList;
+        list = newList;
     } else {
-        favoritePlaces.push(placeId);
+        list.push(placeId);
     }
 
-    localStorage.setItem("favoritePlaces", JSON.stringify(favoritePlaces));
+    localStorage.setItem(key, JSON.stringify(list));
 
     const hearts = document.querySelectorAll(".heart-btn");
     for (let i = 0; i < hearts.length; i++) {
-        if (hearts[i].value === placeId) {
+        if (hearts[i].value === this.value && hearts[i].getAttribute("name") === key) {
             if (isFavorite) {
                 hearts[i].setAttribute("class", "heart-btn");
             } else {
