@@ -294,7 +294,7 @@ main h2 {
 .banner-button {
     display: inline-block;
     padding: 13px 22px;
-    background-color: #8DC5AC;
+    background-color: #C3E4D9;
     border-radius: 7px;
     color: black;
     font-size: 15px;
@@ -302,7 +302,7 @@ main h2 {
 }
 
 .banner-button:hover {
-    background-color: #69A998;
+    background-color: #9ACEB7;
 }
 
 .places-section {
