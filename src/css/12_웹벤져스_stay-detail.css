@@ -249,6 +249,17 @@ main>a:hover {
     margin: 0;
 }
 
+.detail-icon-row {
+    display: flex;
+    align-items: center;
+}
+
+.detail-icon-row img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
 #detail-favorite-button {
     width: 40px;
     height: 40px;
