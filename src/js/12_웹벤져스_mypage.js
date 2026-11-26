@@ -310,13 +310,29 @@ function removeFavoriteStay() {
     showFavoriteStays();
 }
 
-function showPlans() {
-    let plans = [];
-    let saved = localStorage.getItem("savedPlans");
+let samplePlans = [];
+
+function getAllPlans() {
+    let allPlans = [];
+    let myPlans = [];
+    let saved = localStorage.getItem("myPlans");
 
     if (saved !== null) {
-        plans = JSON.parse(saved);
+        myPlans = JSON.parse(saved);
     }
+
+    for (let i = 0; i < samplePlans.length; i++) {
+        allPlans.push({ plan: samplePlans[i], type: "sample", index: i });
+    }
+    for (let i = 0; i < myPlans.length; i++) {
+        allPlans.push({ plan: myPlans[i], type: "my", index: i });
+    }
+
+    return allPlans;
+}
+
+function showPlans() {
+    let plans = getAllPlans();
 
     let list = document.getElementById("plan-list");
     let message = document.getElementById("plan-message");
@@ -330,7 +346,8 @@ function showPlans() {
     }
 
     for (let i = 0; i < plans.length; i++) {
-        let plan = plans[i];
+        let item = plans[i];
+        let plan = item.plan;
         let card = document.createElement("article");
 
         card.setAttribute("class", "plan-card hover-card");
@@ -346,19 +363,19 @@ function showPlans() {
         details[0].innerText = plan.region;
         details[1].innerText = plan.startDate + " ~ " + plan.endDate;
 
+        card.querySelector("a").addEventListener("click", function () {
+            sessionStorage.setItem("selectedPlanType", item.type);
+            sessionStorage.setItem("selectedPlanIndex", item.index);
+        });
+
         list.appendChild(card);
     }
 }
 
-let ddayPlanIndex = -1;
+let ddayPlan = null;
 
 function showDday() {
-    let plans = [];
-    let saved = localStorage.getItem("savedPlans");
-
-    if (saved !== null) {
-        plans = JSON.parse(saved);
-    }
+    let plans = getAllPlans();
 
     let now = new Date();
     let month = now.getMonth() + 1;
@@ -373,15 +390,15 @@ function showDday() {
 
     let today = now.getFullYear() + "-" + month + "-" + date;
     let nextPlan = null;
-    ddayPlanIndex = -1;
+    ddayPlan = null;
 
     for (let i = 0; i < plans.length; i++) {
-        let plan = plans[i];
+        let plan = plans[i].plan;
 
         if (plan.endDate >= today) {
             if (nextPlan === null || plan.startDate < nextPlan.startDate) {
                 nextPlan = plan;
-                ddayPlanIndex = i;
+                ddayPlan = plans[i];
             }
         }
     }
@@ -416,11 +433,26 @@ function showDday() {
 }
 
 document.getElementById("dday").addEventListener("click", function () {
-    if (ddayPlanIndex !== -1) {
-        sessionStorage.setItem("selectedPlanIndex", ddayPlanIndex);
+    if (ddayPlan !== null) {
+        sessionStorage.setItem("selectedPlanType", ddayPlan.type);
+        sessionStorage.setItem("selectedPlanIndex", ddayPlan.index);
     }
 });
 
+fetch("../data/12_웹벤져스_plan.json")
+    .then(response => {
+        return response.json();
+    })
+    .then(result => {
+        samplePlans = result.samplePlans;
+        showPlans();
+        showDday();
+    })
+    .catch(error => {
+        console.log("여행 계획 데이터를 불러오지 못했습니다.", error);
+
+        showPlans();
+        showDday();
+    });
+
 showTab(0);
-showPlans();
-showDday();
