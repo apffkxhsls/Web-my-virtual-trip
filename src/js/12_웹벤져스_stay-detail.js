@@ -29,10 +29,17 @@ fetch("../data/12_웹벤져스_stay.json")
             ratingText = selectedStay.rating + ".0";
         }
 
+        let viewIcon = "12_ic_beach.svg";
+        let viewText = "오션뷰";
+
+        if (selectedStay.features.indexOf("시티뷰") !== -1) {
+            viewIcon = "12_ic_city.svg";
+            viewText = "시티뷰";
+        }
+
         detail.innerHTML =
             '<img class="detail-image" src="' + selectedStay.image +
             '" alt="' + selectedStay.name + ' 객실">' +
-
             '<div class="detail-layout">' +
             '<section class="detail-info">' +
             '<p>' + selectedStay.location + '</p>' +
@@ -40,16 +47,30 @@ fetch("../data/12_웹벤져스_stay.json")
             '<h1>' + selectedStay.name + '</h1>' +
             '<button type="button" id="detail-favorite-button"></button>' +
             '</div>' +
-            '<p>평점: ' + ratingText + ' / 5.0</p>' +
-            '<p>' + selectedStay.features + '</p>' +
-            '<p>' + selectedStay.baseGuests + '인 기준 - 최대 ' +
-            selectedStay.maxGuests + '인</p>' +
+            '<p class="detail-icon-row">' +
+            '<img src="../res/icons/12_ic_star.svg" alt="평점">' +
+            '<span>' + ratingText + ' / 5.0</span>' +
+            '</p>' +
+            '<div class="detail-features">' +
+            '<p class="detail-icon-row">' +
+            '<img src="../res/icons/' + viewIcon + '" alt="">' +
+            '<span>' + viewText + '</span>' +
+            '</p>' +
+            '<p class="detail-icon-row">' +
+            '<img src="../res/icons/12_ic_parking.svg" alt="">' +
+            '<span>무료 주차</span>' +
+            '</p>' +
+            '</div>' +
+            '<p class="detail-icon-row">' +
+            '<img src="../res/icons/12_ic_group.svg" alt="숙박 인원">' +
+            '<span>기준 ' + selectedStay.baseGuests + '인 / 최대 ' +
+            selectedStay.maxGuests + '인</span>' +
+            '</p>' +
             '<div class="detail-description">' +
             '<h2>숙소 소개</h2>' +
             '<p>' + selectedStay.description + '</p>' +
             '</div>' +
             '</section>' +
-
             '<aside class="detail-booking">' +
             '<h2>숙박 요금</h2>' +
             '<p><strong>' +
