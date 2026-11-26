@@ -260,6 +260,15 @@ main>a:hover {
     margin-right: 8px;
 }
 
+.detail-features {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.detail-features p {
+    margin-right: 24px;
+}
+
 #detail-favorite-button {
     width: 40px;
     height: 40px;
