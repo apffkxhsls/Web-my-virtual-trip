@@ -693,19 +693,15 @@ main {
 .saved-card {
     width: 100%;
     margin-bottom: 16px;
-    border: none;
+    border: 1px solid #EEEEEE;
     border-radius: 12px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
 }
 
-.saved-card:hover {
-    background-color: #C3E4D9;
-}
-
 .saved-card.selected-card {
-    border: 2px solid #9ACEB7;
+    border: 1px solid #337768;
 }
 
 .saved-info {
