@@ -201,14 +201,14 @@ main>a:hover {
     margin-top: 20px;
     padding: 14px 20px;
     border-radius: 8px;
-    background-color: #8DC5AC;
+    background: #C3E4D9;
     color: black;
     text-align: center;
     text-decoration: none;
 }
 
 .booking-link:hover {
-    background-color: #69A998;
+    background: #9ACEB7;
 }
 
 .back-link {
@@ -247,6 +247,26 @@ main>a:hover {
 
 .detail-title-row h1 {
     margin: 0;
+}
+
+.detail-icon-row {
+    display: flex;
+    align-items: center;
+}
+
+.detail-icon-row img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.detail-features {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.detail-features p {
+    margin-right: 24px;
 }
 
 #detail-favorite-button {

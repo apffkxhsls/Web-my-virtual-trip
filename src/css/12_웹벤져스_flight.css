@@ -214,12 +214,12 @@ main {
     border: none;
     border-radius: 8px;
     margin-bottom: 16px;
-    background-color: #8DC5AC;
+    background: #C3E4D9;
     color: black;
 }
 
 .search-button:hover {
-    background-color: #69A998;
+    background: #9ACEB7
 }
 
 .flight-layout {
@@ -310,6 +310,10 @@ main {
     box-sizing: border-box;
     margin-bottom: 20px;
     flex-wrap: wrap;
+}
+
+.flight-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .flight-card:last-child {
@@ -419,7 +423,7 @@ main {
     height: 42px;
     border: none;
     border-radius: 8px;
-    background-color: #8DC5AC;
+    background: #C3E4D9;
     color: black;
     display: flex;
     align-items: center;
@@ -428,7 +432,7 @@ main {
 }
 
 .select-button:hover {
-    background-color: #69A998;
+    background: #9ACEB7;
 }
 
 .flight-notice {
