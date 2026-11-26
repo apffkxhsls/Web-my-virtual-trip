@@ -55,30 +55,36 @@
         <section class="home-container">
             <h1>지금, 나만의 여행지로 떠나보세요</h1>
             <div class="search-card">
-                <form class="explore">
+                <form class="explore" method="get" action="../html/12_웹벤져스_search.html">
                     <div class="explore-field">
                         <img src="../res/icons/12_ic_location.svg" alt="장소 아이콘">
-                        <input type="text" list="explore-data" placeholder="장소" name="place">
-                        <datalist id="explore-data">
-                            <option value="국내"></option>
-                            <option value="아시아"></option>
-                            <option value="대양주"></option>
-                            <option value="유럽"></option>
-                            <option value="미주"></option>
-                            <option value="중동·아프리카"></option>
-                        </datalist>
+                        <select name="place" size="1" id="explore-place" required>
+                            <option value="">지역을 선택해주세요</option>
+                            <option value="국내">국내</option>
+                            <option value="아시아">아시아</option>
+                            <option value="대양주">대양주</option>
+                            <option value="유럽">유럽</option>
+                            <option value="미주">미주</option>
+                            <option value="중동·아프리카">중동·아프리카</option>
+                        </select>
                     </div>
                     <div class="explore-divider"></div>
                     <div class="explore-field">
                         <img src="../res/icons/12_ic_calendar.svg" alt="날짜 아이콘">
-                        <input type="date" name="date">
+                        <input type="date" id="explore-date" name="date">
                     </div>
                     <div class="explore-divider"></div>
                     <div class="explore-field">
-                        <img src="../res/icons/12_ic_personnel.svg" alt="인원 아이콘">
-                        <span>인원</span>
-                        <input type="number" name="people" placeholder="인원" min="1" value="1">
-                        <span>명</span>
+                        <img src="../res/icons/12_ic_theme.svg" alt="테마 아이콘">
+                        <select name="theme" size="1" id="explore-theme">
+                            <option value="">테마를 선택해주세요</option>
+                            <option value="자연">자연</option>
+                            <option value="역사">역사</option>
+                            <option value="먹방">먹방</option>
+                            <option value="액티비티">액티비티</option>
+                            <option value="휴양">휴양</option>
+                            <option value="요즘">요즘</option>
+                        </select>
                     </div>
                     <button type="submit" class="explore-btn">검색</button>
                 </form>
