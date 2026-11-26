@@ -116,7 +116,7 @@ header {
 }
 
 .logout:hover {
-    background: #9ACEB7;
+    background: #9ACEB7
 }
 
 button,
@@ -211,12 +211,12 @@ main {
     margin-bottom: 16px;
     border: none;
     border-radius: 8px;
-    background-color: #8DC5AC;
+    background: #C3E4D9;
     color: black;
 }
 
 .search-button:hover {
-    background-color: #69A998;
+    background: #9ACEB7
 }
 
 .stay-layout {
