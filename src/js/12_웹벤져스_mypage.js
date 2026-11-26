@@ -1,4 +1,4 @@
-const tabs = ["places", "stays", "flights", "plans", "diaries"];
+const tabs = ["places", "stays", "plans", "diaries"];
 
 for (let i = 0; i < tabs.length; i++) {
     let button = document.getElementById("tab-" + tabs[i]);
@@ -124,6 +124,100 @@ function removeFavorite() {
     localStorage.setItem("favoritePlaces", JSON.stringify(favoritePlaces));
 
     showFavorites();
+}
+
+let stays = [];
+const stayList = document.getElementById("stay-list");
+const stayMessage = document.getElementById("stays-message");
+
+fetch("../data/12_웹벤져스_stay.json")
+    .then(response => {
+        return response.json();
+    })
+    .then(result => {
+        stays = result;
+        showFavoriteStays();
+    })
+    .catch(error => {
+        console.log("숙소 데이터를 불러오지 못했습니다.", error);
+
+        stayMessage.innerText = "숙소 정보를 불러오지 못했습니다. 새로고침해주세요.";
+    });
+
+function showFavoriteStays() {
+    let favoriteStays = [];
+    let saved = localStorage.getItem("favoriteStays");
+
+    if (saved !== null) {
+        favoriteStays = JSON.parse(saved);
+    }
+
+    stayList.innerHTML = "";
+    let count = 0;
+
+    for (let i = 0; i < stays.length; i++) {
+        let stay = stays[i];
+        let isFavorite = false;
+
+        for (let j = 0; j < favoriteStays.length; j++) {
+            if (favoriteStays[j] === stay.id) {
+                isFavorite = true;
+            }
+        }
+
+        if (isFavorite) {
+            let card = document.createElement("article");
+            card.setAttribute("class", "place-card hover-card");
+
+            card.innerHTML =
+                '<a class="card-content" href="12_웹벤져스_stay-detail.html">' +
+                '<img src="' + stay.image + '" alt="' + stay.name + '">' +
+                '<div class="place-info"><h3></h3><span class="country"></span><p></p></div>' +
+                '</a>' +
+                '<button type="button" class="favorite-button">' +
+                '<img src="../res/icons/12_ic_favorite_filled.svg" alt="찜 취소"></button>';
+
+            card.querySelector("h3").innerText = stay.name;
+            card.querySelector(".country").innerText = stay.location;
+            card.querySelector("p").innerText = stay.price + "원 / 1박";
+
+            card.querySelector("a").addEventListener("click", function () {
+                sessionStorage.setItem("selectedStayId", "stay-" + stay.id);
+            });
+
+            let button = card.querySelector("button");
+            button.value = stay.id;
+            button.addEventListener("click", removeFavoriteStay);
+
+            stayList.appendChild(card);
+            count++;
+        }
+    }
+
+    if (count === 0) {
+        stayMessage.style.display = "block";
+        stayMessage.innerText = "찜한 숙소가 없습니다.";
+    } else {
+        stayMessage.style.display = "none";
+    }
+}
+
+function removeFavoriteStay() {
+    let stayId = parseInt(this.value);
+    let favoriteStays = [];
+    let saved = localStorage.getItem("favoriteStays");
+
+    if (saved !== null) {
+        favoriteStays = JSON.parse(saved);
+    }
+
+    favoriteStays = favoriteStays.filter(function (id) {
+        return id !== stayId;
+    });
+
+    localStorage.setItem("favoriteStays", JSON.stringify(favoriteStays));
+
+    showFavoriteStays();
 }
 
 function showPlans() {
