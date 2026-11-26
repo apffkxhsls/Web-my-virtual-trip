@@ -1,0 +1,127 @@
+{
+    "samplePlans": [
+        {
+            "title": "크리스마스 상하이 여행",
+            "region": "중국 상하이",
+            "startDate": "2026-12-25",
+            "endDate": "2026-12-29",
+            "travelers": "2",
+            "days": [
+                {
+                    "date": "2026-12-25",
+                    "schedules": [
+                        {
+                            "time": "12:00",
+                            "place": "푸동 공항",
+                            "memo": "상하이 도착"
+                        },
+                        {
+                            "time": "18:00",
+                            "place": "와이탄",
+                            "memo": "야경 감상"
+                        }
+                    ]
+                },
+                {
+                    "date": "2026-12-26",
+                    "schedules": [
+                        {
+                            "time": "10:00",
+                            "place": "예원",
+                            "memo": "정원 관람"
+                        },
+                        {
+                            "time": "15:00",
+                            "place": "난징동루",
+                            "memo": "거리 구경"
+                        }
+                    ]
+                },
+                {
+                    "date": "2026-12-27",
+                    "schedules": [
+                        {
+                            "time": "09:00",
+                            "place": "상하이 디즈니랜드",
+                            "memo": "놀이공원 방문"
+                        }
+                    ]
+                },
+                {
+                    "date": "2026-12-28",
+                    "schedules": [
+                        {
+                            "time": "10:00",
+                            "place": "우캉루",
+                            "memo": "산책"
+                        },
+                        {
+                            "time": "14:00",
+                            "place": "신톈디",
+                            "memo": "거리 구경"
+                        },
+                        {
+                            "time": "19:00",
+                            "place": "동방명주",
+                            "memo": "야경 감상"
+                        }
+                    ]
+                },
+                {
+                    "date": "2026-12-29",
+                    "schedules": [
+                        {
+                            "time": "10:00",
+                            "place": "푸동 공항",
+                            "memo": "출국"
+                        }
+                    ]
+                }
+            ],
+            "expense": {
+                "budget": "2000000",
+                "transport": "700000",
+                "food": "300000",
+                "stay": "480000",
+                "other": "320000"
+            },
+            "checklist": [
+                {
+                    "text": "여권 준비",
+                    "checked": true
+                },
+                {
+                    "text": "항공권 예약",
+                    "checked": true
+                },
+                {
+                    "text": "숙소 예약",
+                    "checked": true
+                },
+                {
+                    "text": "여행자 보험 가입",
+                    "checked": true
+                },
+                {
+                    "text": "환전",
+                    "checked": false
+                },
+                {
+                    "text": "유심 준비",
+                    "checked": false
+                },
+                {
+                    "text": "짐 챙기기",
+                    "checked": false
+                }
+            ]
+        }
+    ],
+    "defaultChecklist": [
+        "여권 준비",
+        "항공권 예약",
+        "숙소 예약",
+        "여행자 보험 가입",
+        "환전"
+    ]
+}
