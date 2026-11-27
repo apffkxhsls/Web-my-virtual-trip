@@ -24,7 +24,13 @@ fetch('../data/12_웹벤져스_region.json')
         console.error('에러 발생:', error.message);
     });
 
-researchForm.addEventListener('submit', () => {
+researchForm.addEventListener('submit', (event) => {
+    if (placeSelect.value === '') {
+        alert('여행할 지역을 선택해 주세요!');
+        event.preventDefault();
+        return;
+    }
+
     sessionStorage.setItem('searchPlace', placeSelect.value);
     sessionStorage.setItem('searchDate', dateInput.value);
     sessionStorage.setItem('searchTheme', themeSelect.value);

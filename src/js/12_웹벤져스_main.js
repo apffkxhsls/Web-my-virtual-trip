@@ -199,14 +199,21 @@ function setHeartButtons() {
 
 // 히어로 섹션 검색 기능
 const exploreForm = document.querySelector('.explore');
+exploreForm.addEventListener('submit', (event) => {
+    const place = document.getElementById('explore-place').value;
 
-exploreForm.addEventListener('submit', () => {
-    sessionStorage.setItem('searchPlace', document.getElementById('explore-place').value);
+    if (place === '') {
+        alert('여행할 지역을 선택해 주세요!');
+        event.preventDefault();
+        return;
+    }
+
+    sessionStorage.setItem('searchPlace', place);
     sessionStorage.setItem('searchDate', document.getElementById('explore-date').value);
     sessionStorage.setItem('searchTheme', document.getElementById('explore-theme').value);
 });
 
-// 히어로 섹션 검색 폼 날짜 최소 기한 설정
+// 히어로 섹션 검색 폼 날짜 최소값 설정
 setMinDate(document.getElementById('explore-date'));
 
 function setMinDate(input) {
