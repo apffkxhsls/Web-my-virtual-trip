@@ -133,7 +133,6 @@ function hasValue(list, value) {
     return false;
 }
 
-/* ===== 찜 기능 (favoritePlaces) ===== */
 function getSavedList() {
     const saved = localStorage.getItem('favoritePlaces');
     if (saved !== null) {
@@ -177,4 +176,22 @@ function setHeartButtons() {
     for (let i = 0; i < hearts.length; i++) {
         hearts[i].addEventListener('click', toggleFavorite);
     }
+}
+
+setMinDate(dateInput);
+
+function setMinDate(input) {
+    const today = new Date();
+    const year = today.getFullYear();
+    let month = today.getMonth() + 1;
+    let day = today.getDate();
+
+    if (month < 10) {
+        month = '0' + month;
+    }
+    if (day < 10) {
+        day = '0' + day;
+    }
+
+    input.setAttribute('min', `${year}-${month}-${day}`);
 }

@@ -103,7 +103,6 @@ function updateCarousel() {
 
     for (let i = 0; i < totalItems; i++) {
 
-        // currentIndex를 기준으로 각 아이템의 위치를 계산
         let offset = i - currentIndex;
         if (offset > half) { 
             offset = offset - totalItems; //
@@ -206,3 +205,22 @@ exploreForm.addEventListener('submit', () => {
     sessionStorage.setItem('searchDate', document.getElementById('explore-date').value);
     sessionStorage.setItem('searchTheme', document.getElementById('explore-theme').value);
 });
+
+// 히어로 섹션 검색 폼 날짜 최소 기한 설정
+setMinDate(document.getElementById('explore-date'));
+
+function setMinDate(input) {
+    const today = new Date();
+    const year = today.getFullYear();
+    let month = today.getMonth() + 1;
+    let day = today.getDate();
+
+    if (month < 10) {
+        month = '0' + month;
+    }
+    if (day < 10) {
+        day = '0' + day;
+    }
+
+    input.setAttribute('min', `${year}-${month}-${day}`);
+}
