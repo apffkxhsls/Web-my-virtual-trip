@@ -296,7 +296,7 @@ footer {
 }
 
 .research-field label {
-    font-size: 14px;
+    font-size: 18px;
     font-weight: bold;
 }
 
@@ -304,34 +304,35 @@ footer {
 .research-field input {
     box-sizing: border-box;
     width: 100%;
-    height: 40px;
+    height: 52px;
     margin-top: 8px;
     padding: 0 12px;
     border: 1px solid #B1B3B4;
     border-radius: 8px;
     background-color: white;
     font-family: "Asta Sans", sans-serif;
-    font-size: 14px;
+    font-size: 18px;
 }
 
-.research-field select:hover,
-.research-field input:hover {
-    border: 1px solid #337768;
+.research-field img {
+    width: 22px;
+    height: 22px;
+    margin-right: 6px;
 }
 
 .research-btn {
-    height: 40px;
-    padding: 0 28px;
+    height: 52px;
+    padding: 0 36px;
     border: none;
     border-radius: 8px;
     background-color: #C3E4D9;
     font-family: "Asta Sans", sans-serif;
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 18px;
 }
 
 .research-btn:hover {
     background-color: #9ACEB7;
+    cursor: pointer;
 }
 
 /* ===== 검색 결과 섹션 ===== */
@@ -417,25 +418,25 @@ footer {
 }
 
 .city-name {
-    margin: 0 0 4px;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 700;
+    margin: 0 0 4px;
 }
 
 .city-location {
-    margin: 0 0 12px;
-    font-size: 14px;
+    font-size: 13px;
     color: gray;
+    margin: 0 0 8px;
 }
 
 .city-tags {
-    margin-right: 6px;
-    padding: 4px 10px;
+    background-color: #C3E4D9;
+    border: 1px solid #EEEEEF;
     border-radius: 15px;
-    background-color: #EAF5F0;
-    color: #337768;
     font-size: 13px;
-    font-weight: 600;
+    color: rgb(62, 61, 61);
+    padding: 2px 8px;
+    margin-right: 6px;
 }
 
 
