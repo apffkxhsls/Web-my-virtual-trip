@@ -213,11 +213,7 @@ editButton.addEventListener("click", function () {
 
 deleteButton.addEventListener("click", function () {
     if (confirm("여행 기록을 삭제하시겠습니까?")) {
-        const records = JSON.parse(localStorage.getItem(diaryRecordsKey));
-        const index = findDiaryRecord(records, recordId);
-        if (index >= 0) {
-            saveDiaryRecords(records.slice(0, index).concat(records.slice(index + 1)));
-        }
+        deleteDiaryRecord(recordId);
         sessionStorage.removeItem(diaryViewIdKey);
         window.open("12_웹벤져스_diary.html", "_self");
     }

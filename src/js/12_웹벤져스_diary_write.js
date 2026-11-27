@@ -1,6 +1,7 @@
 const diaryPage = "12_웹벤져스_diary.html";
 const diaryViewPage = "12_웹벤져스_diary_view.html";
 const editingId = parseInt(sessionStorage.getItem(diaryEditIdKey));
+let originalRecord = null;
 const saveButton = document.getElementById("editor-save");
 const form = document.getElementById("diary-editor");
 const startInput = document.getElementById("trip-start");
@@ -407,6 +408,20 @@ function saveRecord() {
             return;
         }
     }
+    const record = buildDiaryRecord();
+    if (!saveDiaryRecord(record, originalRecord)) {
+        alert("수정할 여행 기록을 찾을 수 없습니다.");
+        return;
+    }
+    if (editingId) {
+        sessionStorage.setItem(diaryViewIdKey, editingId);
+        leaveEditor(diaryViewPage);
+        return;
+    }
+    leaveEditor();
+}
+
+function buildDiaryRecord() {
     const photos = collectPhotos();
     const days = [];
     let content = "";
@@ -426,37 +441,14 @@ function saveRecord() {
         }
     }
 
-    const records = JSON.parse(localStorage.getItem(diaryRecordsKey));
-    const index = findDiaryRecord(records, editingId);
-    if (editingId && index < 0) {
-        alert("수정할 여행 기록을 찾을 수 없습니다.");
-        return;
-    }
-    let id = new Date().getTime();
-    for (let i = 0; i < records.length; i++) {
-        if (records[i].id >= id) {
-            id = records[i].id + 1;
-        }
-    }
     const expenses = readExpenses();
     const total = expenseTotal(expenses);
-    const record = {
-        id: id, title: draft.title, location: draft.location,
+    return {
+        id: editingId, title: draft.title, location: draft.location,
         startDate: draft.startDate, endDate: draft.endDate, companions: draft.companions,
         coverImage: photos[0] || "", photos: photos,
         days: days, content: content, rating: draft.rating, expense: total, expenseEntered: total !== null, expenses: expenses
     };
-    if (index >= 0) {
-        record.id = editingId;
-        records[index] = record;
-        saveDiaryRecords(records);
-        sessionStorage.setItem(diaryViewIdKey, editingId);
-        leaveEditor(diaryViewPage);
-        return;
-    }
-    records.push(record);
-    saveDiaryRecords(records);
-    leaveEditor();
 }
 
 showDateTabs();
@@ -587,7 +579,7 @@ function fillEditor(record) {
     companionsInput.value = record.companions || "";
     draft.coverImage = record.coverImage || "";
     draft.rating = record.rating || 0;
-    draft.days = record.days || [];
+    draft.days = JSON.parse(JSON.stringify(record.days || []));
     const photos = record.photos || [];
     for (let i = 0; i < photos.length; i++) {
         if (photos[i] !== draft.coverImage) {
@@ -617,6 +609,8 @@ loadDiaryRecords(function (records) {
             return;
         }
         fillEditor(records[index]);
+        readForm();
+        originalRecord = buildDiaryRecord();
     }
     saveButton.removeAttribute("disabled");
 }, function () {
