@@ -20,7 +20,7 @@
             </a>
             <div class="nav-right">
                 <div class="category-nav">
-                    <a class="cat-item cat-item-active" href="../html/12_웹벤져스_region.html">
+                    <a class="cat-item" href="../html/12_웹벤져스_region.html">
                         <span>지역별</span>
                     </a>
                     <a class="cat-item" href="../html/12_웹벤져스_theme.html">
@@ -57,242 +57,89 @@
         <!-- 대륙별 지역 선택 -->
         <section class="continent-select">
             <div class="continent-list">
-                <a href="#" class="continent-card">
+                <button type="button" class="continent-card" value="국내">
                     <div class="continent-circle">
-                        <span class="continent-img">🏠</span>
+                        <img class="continent-icon" src="../res/icons/12_ic_korea.svg" alt="국내 아이콘">
                     </div>
                     <span class="continent-label">국내</span>
-                </a>
-                <a href="#" class="continent-card">
+                </button>
+                <button type="button" class="continent-card" value="아시아">
                     <div class="continent-circle" id="asiacard">
-                        <span class="continent-img">🌏</span>
+                        <img class="continent-icon" src="../res/icons/12_ic_asia.svg" alt="아시아 아이콘">
                     </div>
                     <span class="continent-label">아시아</span>
-                </a>
-                <a href="#" class="continent-card">
+                </button>
+                <button type="button" class="continent-card" value="대양주">
                     <div class="continent-circle">
-                        <span class="continent-img">🏝️</span>
+                        <img class="continent-icon" src="../res/icons/12_ic_oceania.svg" alt="대양주 아이콘">
                     </div>
                     <span class="continent-label">대양주</span>
-                </a>
-                <a href="#" class="continent-card">
+                </button>
+                <button type="button" class="continent-card" value="유럽">
                     <div class="continent-circle">
-                        <span class="continent-img">🏰</span>
+                        <img class="continent-icon" src="../res/icons/12_ic_europe.svg" alt="유럽 아이콘">
                     </div>
                     <span class="continent-label">유럽</span>
-                </a>
-                <a href="#" class="continent-card">
+                </button>
+                <button type="button" class="continent-card" value="미주">
                     <div class="continent-circle">
-                        <span class="continent-img">🗽</span>
+                        <img class="continent-icon" src="../res/icons/12_ic_america.svg" alt="미주 아이콘">
                     </div>
                     <span class="continent-label">미주</span>
-                </a>
-                <a href="#" class="continent-card">
+                </button>
+                <button type="button" class="continent-card" value="중동·아프리카">
                     <div class="continent-circle">
-                        <span class="continent-img">🐪</span>
+                        <img class="continent-icon" src="../res/icons/12_ic_mideast.svg" alt="중동·아프리카 아이콘">
                     </div>
                     <span class="continent-label">중동·아프리카</span>
-                </a>
+                </button>
             </div>
         </section>
 
         <!-- 나라 선택 후 인기 및 추천 도시 섹션 -->
         <section class="country-select">
-            <h2 class="country-desc">아시아의 인기 도시를 알려드릴게요!</h2>
+            <h2 class="country-desc">국내의 인기 도시를 알려드릴게요!</h2>
             <div class="country-layout">
                 <!-- 왼쪽: 나라 선택 패널 -->
                 <aside class="country-panel">
                     <p class="panel-desc">나라를 선택하면 해당 나라의 인기/추천 도시를 알려드려요.</p>
                     <div class="region-group">
-                        <div class="chip-list">
-                            <a class="chip" id="japanchip" href="#">일본</a>
-                            <a class="chip" href="#">중국</a>
-                            <a class="chip" href="#">홍콩</a>
-                            <a class="chip" href="#">대만</a>
-                            <a class="chip" href="#">마카오</a>
-                            <a class="chip" href="#">베트남</a>
-                            <a class="chip" href="#">태국</a>
-                            <a class="chip" href="#">필리핀</a>
-                            <a class="chip" href="#">인도네시아</a>
-                            <a class="chip" href="#">싱가포르</a>
-                            <a class="chip" href="#">말레이시아</a>
-                            <a class="chip" href="#">몽골</a>
-                        </div>
+                        <div class="chip-list"></div>
                     </div>
                 </aside>
                 <!-- 오른쪽: 도시 카드 -->
                 <div class="city-panel" id="japan">
-                    <h3 class="city-panel-title">일본의 인기 도시</h3>
-                    <div class="city-card-list">
-                        <article class="city-card">
-                            <button class="heart-btn">
-                                <img class="favorite" src="../res/icons/12_ic_favorite.svg" alt="좋아요 아이콘">
-                                <img class="favorite-filled" src="../res/icons/12_ic_favorite_filled.svg" alt="좋아요 누른 아이콘">
-                            </button>
-                            <a href="#">
-                                <img class="city-img" src="../res/images/12_theme-history.jpg" alt="일본 도시 사진">
-                                <div class="city-info">
-                                    <p class="city-name">오사카</p>
-                                    <p class="city-location">일본</p>
-                                    <div>
-                                        <span class="city-tags">#먹방</span>
-                                        <span class="city-tags">#쇼핑</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </article>
-                        <article class="city-card">
-                            <button class="heart-btn">
-                                <img class="favorite" src="../res/icons/12_ic_favorite.svg" alt="좋아요 아이콘">
-                                <img class="favorite-filled" src="../res/icons/12_ic_favorite_filled.svg" alt="좋아요 누른 아이콘">
-                            </button>
-                            <a href="#">
-                                <img class="city-img" src="../res/images/12_theme-history.jpg" alt="일본 도시 사진">
-                                <div class="city-info">
-                                    <p class="city-name">도쿄</p>
-                                    <p class="city-location">일본</p>
-                                    <div>
-                                        <span class="city-tags">#쇼핑</span>
-                                        <span class="city-tags">#도시</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </article>
-                        <article class="city-card">
-                            <button class="heart-btn">
-                                <img class="favorite" src="../res/icons/12_ic_favorite.svg" alt="좋아요 아이콘">
-                                <img class="favorite-filled" src="../res/icons/12_ic_favorite_filled.svg" alt="좋아요 누른 아이콘">
-                            </button>
-                            <a href="#">
-                                <img class="city-img" src="../res/images/12_theme-history.jpg" alt="일본 도시 사진">
-                                <div class="city-info">
-                                    <p class="city-name">후쿠오카</p>
-                                    <p class="city-location">일본</p>
-                                    <div>
-                                        <span class="city-tags">#먹방</span>
-                                        <span class="city-tags">#온천</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </article>
-                    </div>
-                    <h3 class="city-panel-title">일본의 추천 도시</h3>
-                    <div class="city-card-list">
-                        <article class="city-card">
-                            <button class="heart-btn">
-                                <img class="favorite" src="../res/icons/12_ic_favorite.svg" alt="좋아요 아이콘">
-                                <img class="favorite-filled" src="../res/icons/12_ic_favorite_filled.svg" alt="좋아요 누른 아이콘">
-                            </button>
-                            <a href="#">
-                                <img class="city-img" src="../res/images/12_theme-history.jpg" alt="일본 도시 사진">
-                                <div class="city-info">
-                                    <p class="city-name">삿포로</p>
-                                    <p class="city-location">일본</p>
-                                    <div>
-                                        <span class="city-tags">#자연</span>
-                                        <span class="city-tags">#먹방</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </article>
-                        <article class="city-card">
-                            <button class="heart-btn">
-                                <img class="favorite" src="../res/icons/12_ic_favorite.svg" alt="좋아요 아이콘">
-                                <img class="favorite-filled" src="../res/icons/12_ic_favorite_filled.svg" alt="좋아요 누른 아이콘">
-                            </button>
-                            <a href="#">
-                                <img class="city-img" src="../res/images/12_theme-history.jpg" alt="일본 도시 사진">
-                                <div class="city-info">
-                                    <p class="city-name">오키나와</p>
-                                    <p class="city-location">일본</p>
-                                    <div>
-                                        <span class="city-tags">#휴양</span>
-                                        <span class="city-tags">#액티비티</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </article>
-                        <article class="city-card">
-                            <button class="heart-btn">
-                                <img class="favorite" src="../res/icons/12_ic_favorite.svg" alt="좋아요 아이콘">
-                                <img class="favorite-filled" src="../res/icons/12_ic_favorite_filled.svg" alt="좋아요 누른 아이콘">
-                            </button>
-                            <a href="../html/12_웹벤져스_detail.html">
-                                <img class="city-img" src="../res/images/12_theme-history.jpg" alt="일본 도시 사진">
-                                <div class="city-info">
-                                    <p class="city-name">교토</p>
-                                    <p class="city-location">일본</p>
-                                    <div>
-                                        <span class="city-tags">#역사</span>
-                                        <span class="city-tags">#자연</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </article>
-                    </div>
+                    <h3 class="city-panel-title">수도권의 인기 도시</h3>
+                    <div class="city-card-list"></div>
+                    <button type="button" class="more-btn">
+                        더보기
+                        <img class="more-icon" src="../res/icons/12_ic_chevron_down.svg"></button>
+                    </button>
+
+                    <h3 class="city-panel-title">수도권의 추천 도시</h3>
+                    <div class="city-card-list"></div>
+                    <button type="button" class="more-btn">
+                        더보기
+                        <img class="more-icon" src="../res/icons/12_ic_chevron_down.svg"></button>
+                    </button>
                 </div>
             </div>
         </section>
         <!-- 축제 및 행사 섹션 -->
         <section class="festival-section">
-            <h3 class="festival-title">일본의 축제 및 행사</h3>
-            <div class="festival-list">
-                <article class="festival-card">
-                    <div class="festival-poster">
-                        <img src="../res/images/12_festival.jpg" alt="축제 포스터">
-                    </div>
-                    <div class="ticket-divider"></div>
-                    <div class="festival-info">
-                        <div class="festival-top">
-                            <p class="festival-name">삿포로 눈 축제</p>
-                            <p class="festival-city">홋카이도 삿포로</p>
-                        </div>
-                        <div class="festival-detail">
-                            <div class="detail-item">
-                                <span class="detail-label">날짜</span>
-                                <span class="detail-value">2월 초</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">장소</span>
-                                <span class="detail-value">오도리 공원</span>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article class="festival-card">
-                    <div class="festival-poster">
-                        <img src="../res/images/12_festival.jpg" alt="축제 포스터">
-                    </div>
-                    <div class="ticket-divider"></div>
-                    <div class="festival-info">
-                        <div class="festival-top">
-                            <p class="festival-name">기온 마쓰리</p>
-                            <p class="festival-city">교토</p>
-                        </div>
-                        <div class="festival-detail">
-                            <div class="detail-item">
-                                <span class="detail-label">날짜</span>
-                                <span class="detail-value">7월</span>
-                            </div>
-                            <div class="detail-item">
-                                <span class="detail-label">장소</span>
-                                <span class="detail-value">야사카 신사 일대</span>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </div>
+            <h3 class="festival-title">수도권의 축제 및 행사</h3>
+            <div class="festival-list"></div>
         </section>
 
         <!-- 숙소 및 항공권 바로가기 배너 -->
         <section class="hotel-air">
             <div class="hotel-air-banner">
                 <a href="../html/12_웹벤져스_stay.html" class="shortcut-card" id="hotelcard">
-                    <p class="shortcut-desc">일본의 인기있는 숙소를 만나보세요!</p>
+                    <p class="shortcut-desc">수도권의 인기있는 숙소를 만나보세요!</p>
                     <span class="shortcut-text">숙소 바로가기 ▶</span>
                 </a>
                 <a href="../html/12_웹벤져스_flight.html" class="shortcut-card" id="aircard">
-                    <p class="shortcut-desc">일본으로 가는 가장 저렴한 항공권을 찾아보세요!</p>
+                    <p class="shortcut-desc">수도권으로 가는 가장 저렴한 항공권을 찾아보세요!</p>
                     <span class="shortcut-text">항공 바로가기 ▶</span>
                 </a>
             </div>
@@ -357,4 +204,5 @@
             </form>
         </div>
     </footer>
+    <script src="../js/12_웹벤져스_region.js"></script>
 </body>
