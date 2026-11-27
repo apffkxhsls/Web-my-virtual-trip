@@ -218,66 +218,14 @@ body > header:first-child {
     height: 100%;
 }
 
-.about-lightbox {
-    display: none;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 110;
-    align-items: center;
-    justify-content: center;
-    padding: 56px 24px 24px;
-}
-
-.lightbox-shade, .place-modal-shade {
+.place-modal-shade {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     background-color: #000000;
-}
-
-.lightbox-shade {
-    opacity: 0.8;
-}
-
-.place-modal-shade {
     opacity: 0.66;
-}
-
-.about-lightbox-photo {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 94%;
-    height: 92%;
-    max-width: 920px;
-}
-
-.about-lightbox-photo img {
-    max-width: 100%;
-    max-height: 100%;
-}
-
-.about-lightbox-close {
-    position: absolute;
-    z-index: 1;
-    top: 24px;
-    right: 64px;
-    width: 48px;
-    height: 48px;
-    border: 0;
-    background-color: transparent;
-    color: #ffffff;
-}
-
-.about-lightbox-close img {
-    width: 36px;
-    height: 36px;
 }
 
 .places, .restaurants {
@@ -363,10 +311,12 @@ body > header:first-child {
     color: #777777;
 }
 
-.place-status {
+#city-detail {
     display: none;
-    margin-bottom: 16px;
-    color: #252525;
+}
+
+#city-status {
+    padding: 32px 0;
 }
 
 .place-modal {
@@ -630,6 +580,8 @@ body > header:first-child {
     width: 46%;
     min-width: 240px;
     margin-top: 50px;
+    padding: 1px;
+    border-radius: 10px;
 }
 
 .restaurant-text {
@@ -714,30 +666,6 @@ body > header:first-child {
     overflow: hidden;
 }
 
-.fill-98 {
-    width: 98%;
-}
-
-.fill-96 {
-    width: 96%;
-}
-
-.fill-90 {
-    width: 90%;
-}
-
-.fill-100 {
-    width: 100%;
-}
-
-.fill-84 {
-    width: 84%;
-}
-
-.fill-92 {
-    width: 92%;
-}
-
 .card-link {
     position: relative;
     display: flex;
@@ -759,12 +687,8 @@ body > header:first-child {
     border-radius: 10px;
 }
 
-.card-link:hover h3,
-.card-link:hover p,
-.card-link:focus h3,
-.card-link:focus p,
-.more-button:hover .more-text {
-    text-decoration: underline;
+.place-card:hover, .restaurant-item:hover, .more-button:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .press-shade {

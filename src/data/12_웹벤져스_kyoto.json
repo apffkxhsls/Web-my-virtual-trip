@@ -1,4 +1,33 @@
 {
+    "nameKo": "교토",
+    "nameEn": "kyoto",
+    "country": "JAPAN",
+    "hero": {
+        "image": {
+            "src": "../res/images/12_theme-history.jpg",
+            "alt": "교토 배너 이미지"
+        },
+        "summary": "전통과 여유가 공존하는 도시,\n교토에서 특별한 하루를 만나보세요"
+    },
+    "about": {
+        "subtitle": "전통과 여유가 공존하는 도시, 교토",
+        "description": "천년의 역사를 간직한 일본의 교토는 전통문화와 아름다운 사찰, 고즈넉한 거리로 유명한 도시입니다. 계절마다 다른 매력을 선사하며, 일본 특유의 감성과 여유로운 분위기를 느낄 수 있는 특별한 여행지입니다.",
+        "images": [
+            {
+                "src": "../res/images/12_theme-history.jpg",
+                "alt": "교토 이미지"
+            },
+            {
+                "src": "../res/images/12_theme-history.jpg",
+                "alt": "교토 이미지"
+            },
+            {
+                "src": "../res/images/12_theme-history.jpg",
+                "alt": "교토 이미지"
+            }
+        ]
+    },
+    "placesSubtitle": "교토에서 놓치지 말아야 할 특별한 명소들",
     "places": [
         {
             "id": "fushimi-inari",
@@ -23,7 +52,12 @@
                     "src": "../res/images/12_fushimi-inari-torii.jpg",
                     "alt": "후시미 이나리 신사의 현판이 걸린 붉은 도리이와 숲길"
                 }
-            ]
+            ],
+            "summary": "붉은 도리이가 이어지는 교토의 대표 명소",
+            "cardImage": {
+                "src": "../res/images/12_theme-history.jpg",
+                "alt": "교토 명소 이미지"
+            }
         },
         {
             "id": "kiyomizudera",
@@ -48,7 +82,12 @@
                     "src": "../res/images/12_fushimi-inari-torii.jpg",
                     "alt": "후시미 이나리 신사의 현판이 걸린 붉은 도리이와 숲길"
                 }
-            ]
+            ],
+            "summary": "교토 시내를 한눈에 내려다볼 수 있는 역사적인 사찰",
+            "cardImage": {
+                "src": "../res/images/12_theme-history.jpg",
+                "alt": "교토 명소 이미지"
+            }
         },
         {
             "id": "kinkakuji",
@@ -73,7 +112,12 @@
                     "src": "../res/images/12_fushimi-inari-torii.jpg",
                     "alt": "후시미 이나리 신사의 붉은 도리이와 숲길"
                 }
-            ]
+            ],
+            "summary": "황금빛 누각과 아름다운 연못이 어우러진 사찰",
+            "cardImage": {
+                "src": "../res/images/12_theme-history.jpg",
+                "alt": "교토 명소 이미지"
+            }
         },
         {
             "id": "ninenzaka-sannenzaka",
@@ -98,7 +142,12 @@
                     "src": "../res/images/12_fushimi-inari-torii.jpg",
                     "alt": "후시미 이나리 신사의 현판이 걸린 붉은 도리이와 숲길"
                 }
-            ]
+            ],
+            "summary": "전통 가옥과 아기자기한 상점이 이어지는 거리",
+            "cardImage": {
+                "src": "../res/images/12_theme-history.jpg",
+                "alt": "교토 명소 이미지"
+            }
         },
         {
             "id": "gion",
@@ -123,7 +172,12 @@
                     "src": "../res/images/12_fushimi-inari-torii.jpg",
                     "alt": "후시미 이나리 신사의 현판이 걸린 붉은 도리이와 숲길"
                 }
-            ]
+            ],
+            "summary": "교토의 전통적인 분위기를 느낄 수 있는 거리",
+            "cardImage": {
+                "src": "../res/images/12_theme-history.jpg",
+                "alt": "교토 명소 이미지"
+            }
         },
         {
             "id": "ginkakuji",
@@ -148,7 +202,12 @@
                     "src": "../res/images/12_fushimi-inari-torii.jpg",
                     "alt": "후시미 이나리 신사의 현판이 걸린 붉은 도리이와 숲길"
                 }
-            ]
+            ],
+            "summary": "고즈넉한 정원과 자연이 조화를 이루는 사찰",
+            "cardImage": {
+                "src": "../res/images/12_theme-history.jpg",
+                "alt": "교토 명소 이미지"
+            }
         },
         {
             "id": "nijo-castle",
@@ -173,7 +232,12 @@
                     "src": "../res/images/12_fushimi-inari-torii.jpg",
                     "alt": "후시미 이나리 신사의 현판이 걸린 붉은 도리이와 숲길"
                 }
-            ]
+            ],
+            "summary": "화려한 건축과 정원에 역사가 담긴 성",
+            "cardImage": {
+                "src": "../res/images/12_theme-history.jpg",
+                "alt": "교토 명소 이미지"
+            }
         },
         {
             "id": "philosophers-path",
@@ -198,7 +262,103 @@
                     "src": "../res/images/12_fushimi-inari-torii.jpg",
                     "alt": "후시미 이나리 신사의 현판이 걸린 붉은 도리이와 숲길"
                 }
-            ]
+            ],
+            "summary": "벚나무가 늘어선 운치 있는 산책로",
+            "cardImage": {
+                "src": "../res/images/12_theme-history.jpg",
+                "alt": "교토 명소 이미지"
+            }
+        }
+    ],
+    "restaurantsSubtitle": "교토의 맛과 분위기를 즐길 수 있는 공간들",
+    "restaurants": [
+        {
+            "name": "교토 돈카츠 카츠다 산조 카와라마치",
+            "address": "Ebisucho, 435-4 和牛館三条 1F",
+            "category": "돈카츠 전문점",
+            "rating": "4.9",
+            "image": {
+                "src": "../res/images/12_theme-food.jpg",
+                "alt": "교토 맛집 이미지"
+            },
+            "mapUrl": "https://www.google.co.kr/maps/place/%EA%B5%90%ED%86%A0+%EB%8F%88%EC%B9%B4%EC%B8%A0+%EC%B9%B4%EC%B8%A0%EB%8B%A4+%EC%82%B0%EC%A1%B0+%EC%B9%B4%EC%99%80%EB%9D%BC%EB%A7%88%EC%B9%98/@35.0091555,135.7691765,17z/data=!3m1!4b1!4m6!3m5!1s0x600109f3ba721083:0x4f0764e3438f2e49!8m2!3d35.0091555!4d135.7691765!16s%2Fg%2F11w9dcn96r?hl=ko&entry=ttu&g_ep=EgoyMDI2MTEyMi4wIKXMDSoASAFQAw%3D%3D"
+        },
+        {
+            "name": "교토 시조 쿠온",
+            "address": "420 Komusubidanacho",
+            "category": "우동 전문점",
+            "rating": "4.5",
+            "image": {
+                "src": "../res/images/12_theme-food.jpg",
+                "alt": "교토 맛집 이미지"
+            },
+            "mapUrl": "https://www.google.co.kr/maps/place/%EA%B5%90%ED%86%A0+%EC%8B%9C%EC%A1%B0+%EC%BF%A0%EC%98%A8/@35.0048433,135.7567539,17z/data=!3m1!4b1!4m6!3m5!1s0x6001092301082db5:0xb824f49e7cd731dc!8m2!3d35.0048433!4d135.7567539!16s%2Fg%2F1tfl032s?hl=ko&entry=ttu&g_ep=EgoyMDI2MTEyMi4wIKXMDSoASAFQAw%3D%3D"
+        },
+        {
+            "name": "교토 와규 스키야키 샤브샤브 토미노우에",
+            "address": "三条通寺町東入 Ishibashicho, 14-11 1F",
+            "category": "샤브샤브 전문점",
+            "rating": "5.0",
+            "image": {
+                "src": "../res/images/12_theme-food.jpg",
+                "alt": "교토 맛집 이미지"
+            },
+            "mapUrl": "https://www.google.co.kr/maps/place/%EA%B5%90%ED%86%A0+%EC%99%80%EA%B7%9C+%EC%8A%A4%ED%82%A4%EC%95%BC%ED%82%A4+%EC%83%A4%EB%B8%8C%EC%83%A4%EB%B8%8C+%ED%86%A0%EB%AF%B8%EB%85%B8%EC%9A%B0%EC%97%90+%EC%82%B0%EC%A1%B0+%EA%B0%80%EC%99%80%EB%9D%BC%EB%A7%88%EC%B9%98%EC%A0%90/@35.0048433,135.7567539,15z/data=!4m10!1m2!2m1!1z6rWQ7YagIOyZgOq3nCDsiqTtgqTslbztgqQ!3m6!1s0x6001090044f618f3:0x526c486e23dee9a5!8m2!3d35.0086713!4d135.7683635!15sChrqtZDthqAg7JmA6recIOyKpO2CpOyVvO2CpFocIhrqtZDthqAg7JmA6recIOyKpO2CpOyVvO2CpJIBI3NoYWJ1X3NoYWJ1X2FuZF9zdWtpeWFraV9yZXN0YXVyYW504AEA!16s%2Fg%2F11ytp_n47s?hl=ko&entry=ttu&g_ep=EgoyMDI2MTEyMi4wIKXMDSoASAFQAw%3D%3D"
+        },
+        {
+            "name": "텐동 마키노",
+            "address": "寺町通下る Nakasujicho, 481-3",
+            "category": "튀김덮밥 전문점",
+            "rating": "4.2",
+            "image": {
+                "src": "../res/images/12_theme-food.jpg",
+                "alt": "교토 맛집 이미지"
+            },
+            "mapUrl": "https://www.google.co.kr/maps/place/%ED%85%90%EB%8F%99+%EB%A7%88%ED%82%A4%EB%85%B8/@35.007003,135.767002,17z/data=!3m1!4b1!4m6!3m5!1s0x60010893e8cc08df:0x116e1acf7e72364e!8m2!3d35.007003!4d135.767002!16s%2Fg%2F11c20fjyx0?hl=ko&entry=ttu&g_ep=EgoyMDI2MTEyMi4wIKXMDSoASAFQAw%3D%3D"
+        },
+        {
+            "name": "가츠쿠라 산조",
+            "address": "Ishibashicho, 16 三条通寺町東入ル",
+            "category": "돈까스 전문점",
+            "rating": "4.5",
+            "image": {
+                "src": "../res/images/12_theme-food.jpg",
+                "alt": "교토 맛집 이미지"
+            },
+            "mapUrl": "https://www.google.co.kr/maps/place/%EA%B0%80%EC%B8%A0%EC%BF%A0%EB%9D%BC+%EC%82%B0%EC%A1%B0/@35.0088672,135.7677105,17z/data=!3m1!4b1!4m6!3m5!1s0x600108924bc95555:0xfcd90d86e34ea515!8m2!3d35.0088672!4d135.7677105!16s%2Fg%2F1tqyfd9h?hl=ko&entry=ttu&g_ep=EgoyMDI2MTEyMi4wIKXMDSoASAFQAw%3D%3D"
+        },
+        {
+            "name": "차오차오교자",
+            "address": "117番地 Ishiyacho",
+            "category": "이자카야",
+            "rating": "4.6",
+            "image": {
+                "src": "../res/images/12_theme-food.jpg",
+                "alt": "교토 맛집 이미지"
+            },
+            "mapUrl": "https://www.google.co.kr/maps/place/%EC%B0%A8%EC%98%A4%EC%B0%A8%EC%98%A4%EA%B5%90%EC%9E%90/@35.0088672,135.7677105,17z/data=!4m6!3m5!1s0x600108934e45f8a7:0x2a048fba9a836b57!8m2!3d35.0084706!4d135.7705683!16s%2Fg%2F1ydp7_36b?hl=ko&entry=ttu&g_ep=EgoyMDI2MTEyMi4wIKXMDSoASAFQAw%3D%3D"
+        },
+        {
+            "name": "규카츠 교토가츠규 폰토쵸 본점",
+            "address": "188 Zaimokucho",
+            "category": "일식당 및 일정식집",
+            "rating": "4.8",
+            "image": {
+                "src": "../res/images/12_theme-food.jpg",
+                "alt": "교토 맛집 이미지"
+            },
+            "mapUrl": "https://www.google.co.kr/maps/place/%EA%B7%9C%EC%B9%B4%EC%B8%A0+%EA%B5%90%ED%86%A0%EA%B0%80%EC%B8%A0%EA%B7%9C+%ED%8F%B0%ED%86%A0%EC%B5%B8+%EB%B3%B8%EC%A0%90/@35.0070151,135.7684623,17z/data=!3m2!4b1!5s0x60010894b52014f5:0x3041aec836dd7ede!4m6!3m5!1s0x60010894b53f74b7:0x4d8d6addee097c86!8m2!3d35.0070151!4d135.7710372!16s%2Fg%2F11b8_rmml0?hl=ko&entry=ttu&g_ep=EgoyMDI2MTEyMi4wIKXMDSoASAFQAw%3D%3D"
+        },
+        {
+            "name": "토 덴푸라 덴노메시 산조 가와라마치점",
+            "address": "三条寺町東入Ishibashicho, 14-11 2F",
+            "category": "튀김",
+            "rating": "4.9",
+            "image": {
+                "src": "../res/images/12_theme-food.jpg",
+                "alt": "교토 맛집 이미지"
+            },
+            "mapUrl": "https://www.google.com/maps/place/%ED%86%A0+%EB%8D%B4%ED%91%B8%EB%9D%BC+%ED%85%90%EB%85%B8%EB%A9%94%EC%8B%9C+%EC%82%B0%EC%A1%B0+%EA%B0%80%EC%99%80%EB%9D%BC%EB%A7%88%EC%B9%98%EC%A0%90/@35.0086713,135.7683635,17z/data=!3m1!4b1!4m6!3m5!1s0x600109c359f04cf5:0xa6bc03a7956872d5!8m2!3d35.0086713!4d135.7683635!16s%2Fg%2F11yr8bvd6h?entry=ttu&g_ep=EgoyMDI2MTEyMi4wIKXMDSoASAFQAw%3D%3D"
         }
     ]
 }

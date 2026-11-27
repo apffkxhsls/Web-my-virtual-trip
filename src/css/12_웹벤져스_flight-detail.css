@@ -197,14 +197,14 @@ main>a:hover {
     margin-top: 20px;
     padding: 14px 20px;
     border-radius: 8px;
-    background-color: #8DC5AC;
+    background: #C3E4D9;
     color: black;
     text-align: center;
     text-decoration: none;
 }
 
 .flight-booking-link:hover {
-    background-color: #69A998;
+    background: #9ACEB7;
 }
 
 .back-link {
