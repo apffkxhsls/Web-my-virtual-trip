@@ -1,0 +1,443 @@
+[
+    {
+        "id": 1,
+        "title": "봄날의 교토 여행",
+        "location": "일본, 교토",
+        "startDate": "2024-03-27",
+        "endDate": "2024-04-01",
+        "companions": "아빠",
+        "coverImage": "../res/images/12_theme-history.jpg",
+        "photos": [
+            "../res/images/12_theme-history.jpg",
+            "../res/images/12_fushimi-inari.jpg",
+            "../res/images/12_fushimi-inari-fox.png",
+            "../res/images/12_fushimi-inari-torii.jpg",
+            "../res/images/12_theme-food.jpg"
+        ],
+        "days": [
+            {
+                "date": "2024-03-27",
+                "weather": "맑음",
+                "mood": 5,
+                "note": "아침 일찍 기요미즈데라에 올라 벚꽃을 봤다. 해가 기울 무렵 기온의 골목을 천천히 걸었다.",
+                "places": [
+                    {
+                        "name": "기요미즈데라",
+                        "visited": true
+                    },
+                    {
+                        "name": "기온 거리",
+                        "visited": true
+                    },
+                    {
+                        "name": "니시키 시장",
+                        "visited": false
+                    }
+                ]
+            },
+            {
+                "date": "2024-03-28",
+                "weather": "흐림",
+                "mood": 4,
+                "note": "후시미 이나리 신사의 도리이 사이를 걸었다. 사람이 적은 구간까지 가니 숲 소리가 또렷하게 들렸다.",
+                "places": [
+                    {
+                        "name": "후시미 이나리 신사",
+                        "visited": true
+                    }
+                ]
+            },
+            {
+                "date": "2024-03-29",
+                "weather": "비",
+                "mood": 3,
+                "note": "비가 와서 니시키 시장에서 간식을 먹고 가까운 찻집에서 쉬었다.",
+                "places": [
+                    {
+                        "name": "니시키 시장",
+                        "visited": true
+                    }
+                ]
+            },
+            {
+                "date": "2024-03-30",
+                "weather": "맑음",
+                "mood": 5,
+                "note": "아라시야마에서 대나무 숲을 지나 강가에 앉아 점심을 먹었다.",
+                "places": [
+                    {
+                        "name": "아라시야마 대나무 숲",
+                        "visited": true
+                    },
+                    {
+                        "name": "도게츠교",
+                        "visited": true
+                    }
+                ]
+            },
+            {
+                "date": "2024-03-31",
+                "weather": "맑음",
+                "mood": 4,
+                "note": "철학의 길을 따라 산책하다가 벤치에 앉아 여행 사진을 정리했다.",
+                "places": [
+                    {
+                        "name": "철학의 길",
+                        "visited": true
+                    },
+                    {
+                        "name": "은각사",
+                        "visited": true
+                    }
+                ]
+            },
+            {
+                "date": "2024-04-01",
+                "weather": "흐림",
+                "mood": 4,
+                "note": "교토역에서 가족에게 줄 선물을 고르고 이번 여행에서 가장 좋았던 장소를 서로 이야기했다.",
+                "places": [
+                    {
+                        "name": "교토역",
+                        "visited": true
+                    }
+                ]
+            }
+        ],
+        "content": "아침 일찍 기요미즈데라에 올라 벚꽃을 봤다. 해가 기울 무렵 기온의 골목을 천천히 걸었다.\n후시미 이나리 신사의 도리이 사이를 걸었다. 사람이 적은 구간까지 가니 숲 소리가 또렷하게 들렸다.\n비가 와서 니시키 시장에서 간식을 먹고 가까운 찻집에서 쉬었다.\n아라시야마에서 대나무 숲을 지나 강가에 앉아 점심을 먹었다.\n철학의 길을 따라 산책하다가 벤치에 앉아 여행 사진을 정리했다.\n교토역에서 가족에게 줄 선물을 고르고 이번 여행에서 가장 좋았던 장소를 서로 이야기했다.\n",
+        "rating": 4,
+        "expense": 1270000,
+        "expenses": {
+            "transport": 420000,
+            "food": 310000,
+            "stay": 450000,
+            "other": 90000
+        }
+    },
+    {
+        "id": 2,
+        "title": "오사카 가족여행",
+        "location": "일본, 오사카",
+        "startDate": "2026-01-15",
+        "endDate": "2026-01-19",
+        "companions": "우리가족",
+        "coverImage": "../res/images/12_diary_image.webp",
+        "photos": [
+            "../res/images/12_diary_image.webp",
+            "../res/images/12_theme-activity.jpg"
+        ],
+        "days": [
+            {
+                "date": "2026-01-15",
+                "weather": "맑음",
+                "mood": 4,
+                "note": "숙소에 짐을 두고 도톤보리 강가를 걸었다. 따뜻한 타코야키를 나눠 먹으며 첫날을 마무리했다.",
+                "places": [
+                    {
+                        "name": "도톤보리",
+                        "visited": true
+                    }
+                ]
+            },
+            {
+                "date": "2026-01-16",
+                "weather": "흐림",
+                "mood": 5,
+                "note": "오사카성 공원을 한 바퀴 돌았다. 가족사진은 성이 보이는 다리 위에서 찍었다.",
+                "places": [
+                    {
+                        "name": "오사카성",
+                        "visited": true
+                    },
+                    {
+                        "name": "오사카성 공원",
+                        "visited": true
+                    }
+                ]
+            },
+            {
+                "date": "2026-01-17",
+                "weather": "비",
+                "mood": 4,
+                "note": "비가 내려 실내에서 시간을 보내기로 했다. 수족관의 큰 수조 앞에서 한참 머물렀다.",
+                "places": [
+                    {
+                        "name": "가이유칸",
+                        "visited": true
+                    },
+                    {
+                        "name": "덴포잔 대관람차",
+                        "visited": false
+                    }
+                ]
+            },
+            {
+                "date": "2026-01-18",
+                "weather": "맑음",
+                "mood": 5,
+                "note": "시장 구경을 하다가 가족마다 먹고 싶은 간식이 달라 한 가지씩 골라 나눠 먹었다.",
+                "places": [
+                    {
+                        "name": "구로몬 시장",
+                        "visited": true
+                    },
+                    {
+                        "name": "신사이바시",
+                        "visited": true
+                    }
+                ]
+            },
+            {
+                "date": "2026-01-19",
+                "weather": "맑음",
+                "mood": 4,
+                "note": "아침에 우메다에서 선물을 사고 공항으로 향했다.",
+                "places": [
+                    {
+                        "name": "우메다",
+                        "visited": true
+                    }
+                ]
+            }
+        ],
+        "content": "숙소에 짐을 두고 도톤보리 강가를 걸었다. 따뜻한 타코야키를 나눠 먹으며 첫날을 마무리했다.\n오사카성 공원을 한 바퀴 돌았다. 가족사진은 성이 보이는 다리 위에서 찍었다.\n비가 내려 실내에서 시간을 보내기로 했다. 수족관의 큰 수조 앞에서 한참 머물렀다.\n시장 구경을 하다가 가족마다 먹고 싶은 간식이 달라 한 가지씩 골라 나눠 먹었다.\n아침에 우메다에서 선물을 사고 공항으로 향했다.\n",
+        "rating": 5,
+        "expense": 4850000,
+        "expenses": {
+            "transport": 1550000,
+            "food": 900000,
+            "stay": 1800000,
+            "other": 600000
+        }
+    },
+    {
+        "id": 3,
+        "title": "친구랑 후쿠오카",
+        "location": "일본, 후쿠오카",
+        "startDate": "2026-07-13",
+        "endDate": "2026-07-16",
+        "companions": "규린",
+        "coverImage": "../res/images/12_theme-food.jpg",
+        "photos": [
+            "../res/images/12_theme-food.jpg"
+        ],
+        "days": [
+            {
+                "date": "2026-07-13",
+                "weather": "흐림",
+                "mood": 4,
+                "note": "하카타에 도착해 짐을 풀고 친구와 라멘을 먹었다.",
+                "places": [
+                    {
+                        "name": "하카타역",
+                        "visited": true
+                    },
+                    {
+                        "name": "하카타 라멘집",
+                        "visited": true
+                    }
+                ]
+            },
+            {
+                "date": "2026-07-14",
+                "weather": "맑음",
+                "mood": 5,
+                "note": "오호리 공원에서 호수 둘레를 걸었다. 더울 때마다 그늘에 들러 쉬었다.",
+                "places": [
+                    {
+                        "name": "오호리 공원",
+                        "visited": true
+                    },
+                    {
+                        "name": "마이즈루 공원",
+                        "visited": true
+                    }
+                ]
+            },
+            {
+                "date": "2026-07-15",
+                "weather": "비",
+                "mood": 4,
+                "note": "텐진 지하상가를 둘러보고 카페에서 엽서를 썼다.",
+                "places": [
+                    {
+                        "name": "텐진 지하상가",
+                        "visited": true
+                    },
+                    {
+                        "name": "모모치 해변",
+                        "visited": false
+                    }
+                ]
+            },
+            {
+                "date": "2026-07-16",
+                "weather": "맑음",
+                "mood": 5,
+                "note": "출발 전 다자이후에 들러 산책하고 역 앞에서 간식을 샀다.",
+                "places": [
+                    {
+                        "name": "다자이후",
+                        "visited": true
+                    }
+                ]
+            }
+        ],
+        "content": "하카타에 도착해 짐을 풀고 친구와 라멘을 먹었다.\n오호리 공원에서 호수 둘레를 걸었다. 더울 때마다 그늘에 들러 쉬었다.\n텐진 지하상가를 둘러보고 카페에서 엽서를 썼다.\n출발 전 다자이후에 들러 산책하고 역 앞에서 간식을 샀다.\n",
+        "rating": 5,
+        "expense": 970000,
+        "expenses": {
+            "transport": 350000,
+            "food": 230000,
+            "stay": 300000,
+            "other": 90000
+        }
+    },
+    {
+        "id": 4,
+        "title": "디즈니월드",
+        "location": "미국, 플로리다",
+        "startDate": "2017-07-12",
+        "endDate": "2017-07-15",
+        "companions": "가족",
+        "coverImage": "../res/images/12_theme-activity.jpg",
+        "photos": [
+            "../res/images/12_theme-activity.jpg"
+        ],
+        "days": [
+            {
+                "date": "2017-07-12",
+                "weather": "맑음",
+                "mood": 4,
+                "note": "숙소에 도착해 다음 날 가장 먼저 보고 싶은 곳을 지도에 표시했다.",
+                "places": [
+                    {
+                        "name": "숙소",
+                        "visited": true
+                    }
+                ]
+            },
+            {
+                "date": "2017-07-13",
+                "weather": "맑음",
+                "mood": 5,
+                "note": "매직 킹덤에서 퍼레이드를 봤다. 저녁까지 기다렸다가 성 앞에서 가족사진을 남겼다.",
+                "places": [
+                    {
+                        "name": "매직 킹덤",
+                        "visited": true
+                    }
+                ]
+            },
+            {
+                "date": "2017-07-14",
+                "weather": "비",
+                "mood": 3,
+                "note": "오후에 소나기가 내렸지만 실내 전시를 둘러보며 일정을 이어갔다.",
+                "places": [
+                    {
+                        "name": "엡콧",
+                        "visited": true
+                    },
+                    {
+                        "name": "야외 공연",
+                        "visited": false
+                    }
+                ]
+            },
+            {
+                "date": "2017-07-15",
+                "weather": "흐림",
+                "mood": 4,
+                "note": "체크아웃 전에 기념품을 정리했다. 공항에서 가족과 사진을 돌아봤다.",
+                "places": [
+                    {
+                        "name": "올랜도 국제공항",
+                        "visited": true
+                    }
+                ]
+            }
+        ],
+        "content": "숙소에 도착해 다음 날 가장 먼저 보고 싶은 곳을 지도에 표시했다.\n매직 킹덤에서 퍼레이드를 봤다. 저녁까지 기다렸다가 성 앞에서 가족사진을 남겼다.\n오후에 소나기가 내렸지만 실내 전시를 둘러보며 일정을 이어갔다.\n체크아웃 전에 기념품을 정리했다. 공항에서 가족과 사진을 돌아봤다.\n",
+        "rating": 4,
+        "expense": 0,
+        "expenses": {
+            "transport": 0,
+            "food": 0,
+            "stay": 0,
+            "other": 0
+        }
+    },
+    {
+        "id": 5,
+        "title": "철원 DMZ 투어",
+        "location": "대한민국, 철원",
+        "startDate": "2026-08-07",
+        "endDate": "2026-08-09",
+        "companions": "우리가족",
+        "coverImage": "../res/images/12_stay-banner.jpg",
+        "photos": [
+            "../res/images/12_stay-banner.jpg",
+            "../res/images/12_theme-nature.jpg"
+        ],
+        "days": [
+            {
+                "date": "2026-08-07",
+                "weather": "맑음",
+                "mood": 4,
+                "note": "철원에 도착해 숙소 근처를 산책하고 다음 날 투어 집결 장소를 확인했다.",
+                "places": [
+                    {
+                        "name": "철원읍",
+                        "visited": true
+                    },
+                    {
+                        "name": "숙소",
+                        "visited": true
+                    }
+                ]
+            },
+            {
+                "date": "2026-08-08",
+                "weather": "흐림",
+                "mood": 5,
+                "note": "해설을 들으며 전망대와 노동당사 주변을 둘러봤다. 해설에서 기억하고 싶은 내용을 일기에 적었다.",
+                "places": [
+                    {
+                        "name": "철원 평화전망대",
+                        "visited": true
+                    },
+                    {
+                        "name": "철원 노동당사",
+                        "visited": true
+                    }
+                ]
+            },
+            {
+                "date": "2026-08-09",
+                "weather": "비",
+                "mood": 4,
+                "note": "빗줄기가 가늘어졌을 때 폭포 가까이까지 걸어갔다. 점심을 먹고 집으로 돌아왔다.",
+                "places": [
+                    {
+                        "name": "직탕폭포",
+                        "visited": true
+                    },
+                    {
+                        "name": "한탄강 산책로",
+                        "visited": false
+                    }
+                ]
+            }
+        ],
+        "content": "철원에 도착해 숙소 근처를 산책하고 다음 날 투어 집결 장소를 확인했다.\n해설을 들으며 전망대와 노동당사 주변을 둘러봤다. 해설에서 기억하고 싶은 내용을 일기에 적었다.\n빗줄기가 가늘어졌을 때 폭포 가까이까지 걸어갔다. 점심을 먹고 집으로 돌아왔다.\n",
+        "rating": 4,
+        "expense": 542000,
+        "expenses": {
+            "transport": 150000,
+            "food": 112000,
+            "stay": 200000,
+            "other": 80000
+        }
+    }
+]
