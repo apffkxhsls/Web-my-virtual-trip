@@ -353,20 +353,24 @@ main h1 {
     display: block;
 }
 
-#favorite-list .place-card {
+#favorite-list .place-card,
+#attraction-list .place-card {
     width: 23.5%;
     margin-right: 2%;
 }
 
-#favorite-list .place-card:nth-child(3n) {
+#favorite-list .place-card:nth-child(3n),
+#attraction-list .place-card:nth-child(3n) {
     margin-right: 2%;
 }
 
-#favorite-list .place-card:nth-child(4n) {
+#favorite-list .place-card:nth-child(4n),
+#attraction-list .place-card:nth-child(4n) {
     margin-right: 0;
 }
 
-#favorite-list .place-card .card-content img {
+#favorite-list .place-card .card-content img,
+#attraction-list .place-card .card-content img {
     height: 150px;
 }
 
@@ -376,9 +380,43 @@ main h1 {
 }
 
 .place-info h3,
+.place-info h4,
 .plan-info h3 {
     font-size: 19px;
-    margin-bottom: 8px;
+    margin: 0 0 8px;
+}
+
+.attraction-group {
+    margin-bottom: 18px;
+}
+
+.group-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.group-heading h3 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.group-count {
+    margin-left: 8px;
+    color: #337768;
+    font-size: 14px;
+}
+
+.group-heading a {
+    color: gray;
+    font-size: 14px;
+}
+
+.group-heading a:hover {
+    color: #337768;
 }
 
 .country {

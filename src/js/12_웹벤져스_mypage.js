@@ -152,10 +152,13 @@ function removeFavorite() {
 }
 
 let attractions = [];
+let attractionCities = [];
 const attractionList = document.getElementById("attraction-list");
 const attractionMessage = document.getElementById("attraction-message");
 
 function addCityPlaces(city, data) {
+    attractionCities.push({ id: city, name: data.nameKo, country: data.country });
+
     for (let i = 0; i < data.places.length; i++) {
         let place = data.places[i];
         place.city = city;
@@ -206,38 +209,44 @@ function showFavoriteAttractions() {
     attractionList.innerHTML = "";
     let count = 0;
 
-    for (let i = 0; i < attractions.length; i++) {
-        let attraction = attractions[i];
-        let isFavorite = false;
+    for (let c = 0; c < attractionCities.length; c++) {
+        let city = attractionCities[c];
+        let group = document.createElement("div");
+        group.setAttribute("class", "attraction-group");
+        group.innerHTML =
+            '<div class="group-heading"><h3><span class="group-name"></span><span class="group-count"></span></h3>' +
+            '<a href="12_웹벤져스_detail.html?city=' + city.id + '"></a></div>' +
+            '<div class="places-grid"></div>';
+        group.querySelector(".group-name").innerText = city.name;
+        group.querySelector("a").innerText = city.name + " 상세 보기 →";
 
-        for (let j = 0; j < favoriteAttractions.length; j++) {
-            if (favoriteAttractions[j] === attraction.id) {
-                isFavorite = true;
+        let grid = group.querySelector(".places-grid");
+        let cityCount = 0;
+
+        for (let i = 0; i < attractions.length; i++) {
+            let attraction = attractions[i];
+            let isFavorite = false;
+
+            if (attraction.city !== city.id) {
+                continue;
+            }
+
+            for (let j = 0; j < favoriteAttractions.length; j++) {
+                if (favoriteAttractions[j] === attraction.id) {
+                    isFavorite = true;
+                }
+            }
+
+            if (isFavorite) {
+                grid.appendChild(makeAttractionCard(attraction));
+                cityCount++;
             }
         }
 
-        if (isFavorite) {
-            let card = document.createElement("article");
-            card.setAttribute("class", "place-card hover-card");
-
-            card.innerHTML =
-                '<a class="card-content" href="12_웹벤져스_detail.html?city=' + attraction.city + '">' +
-                '<img src="' + attraction.images[0].src + '" alt="' + attraction.images[0].alt + '">' +
-                '<div class="place-info"><h3></h3><span class="country"></span><p></p></div>' +
-                '</a>' +
-                '<button type="button" class="favorite-button">' +
-                '<img src="../res/icons/12_ic_favorite_filled.svg" alt="찜 취소"></button>';
-
-            card.querySelector("h3").innerText = attraction.nameKo;
-            card.querySelector(".country").innerText = attraction.location;
-            card.querySelector("p").innerText = attraction.nameEn;
-
-            let button = card.querySelector("button");
-            button.value = attraction.id;
-            button.addEventListener("click", removeFavoriteAttraction);
-
-            attractionList.appendChild(card);
-            count++;
+        if (cityCount > 0) {
+            group.querySelector(".group-count").innerText = cityCount + "곳";
+            attractionList.appendChild(group);
+            count += cityCount;
         }
     }
 
@@ -247,6 +256,29 @@ function showFavoriteAttractions() {
     } else {
         attractionMessage.style.display = "none";
     }
+}
+
+function makeAttractionCard(attraction) {
+    let card = document.createElement("article");
+    card.setAttribute("class", "place-card hover-card");
+
+    card.innerHTML =
+        '<a class="card-content" href="12_웹벤져스_detail.html?city=' + attraction.city + '">' +
+        '<img src="' + attraction.images[0].src + '" alt="' + attraction.images[0].alt + '">' +
+        '<div class="place-info"><h4></h4><span class="country"></span><p></p></div>' +
+        '</a>' +
+        '<button type="button" class="favorite-button">' +
+        '<img src="../res/icons/12_ic_favorite_filled.svg" alt="찜 취소"></button>';
+
+    card.querySelector("h4").innerText = attraction.nameKo;
+    card.querySelector(".country").innerText = attraction.location;
+    card.querySelector("p").innerText = attraction.nameEn;
+
+    let button = card.querySelector("button");
+    button.value = attraction.id;
+    button.addEventListener("click", removeFavoriteAttraction);
+
+    return card;
 }
 
 function removeFavoriteAttraction() {
