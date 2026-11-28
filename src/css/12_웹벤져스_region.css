@@ -452,14 +452,16 @@ body {
     margin-bottom: 8px;
 }
 
-.detail-label {
-    display: inline-block;
-    background-color: #EEEEEF;
-    border-radius: 5px;
-    padding: 3px 10px;
-    margin: 4px;
-    color: gray;
-    font-size: 16px;
+.detail-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.detail-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
 }
 
 .detail-value {
