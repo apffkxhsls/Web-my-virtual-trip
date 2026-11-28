@@ -1,20 +1,33 @@
-a, article, body, div, h1, h2, h3, header, img, main, p, section, span, nav, form, input, button, footer, h4, ul, li, select {
-    box-sizing: border-box;
-}
-
 body {
     margin: 0;
     font-family: "Asta Sans", sans-serif;
     color: #252525;
     background-color: #ffffff;
+}
+
+.site-header,
+.site-header *,
+.site-footer,
+.site-footer *,
+.detail-diary-page,
+.detail-diary-page * {
+    box-sizing: border-box;
+}
+
+.detail-diary-page {
     word-break: keep-all;
 }
 
-h1, h2, h3, p {
+.detail-diary-page h1,
+.detail-diary-page h2,
+.detail-diary-page h3,
+.detail-diary-page p {
     margin: 0;
 }
 
-img {
+.site-header img,
+.site-footer img,
+.detail-diary-page img {
     display: block;
     object-fit: cover;
     color: #777777;
@@ -320,7 +333,8 @@ img {
     color: gray;
 }
 
-.footer-list a:hover, .footer-legal a:hover {
+.footer-list a:hover,
+.footer-legal a:hover {
     color: #000000;
     text-decoration: underline;
 }
