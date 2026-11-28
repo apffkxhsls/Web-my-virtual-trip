@@ -17,14 +17,58 @@ h1, h2, h3, p {
 img {
     display: block;
     object-fit: cover;
-    background-color: #eeefed;
     color: #777777;
     font-size: 13px;
 }
 
 .ui-icon {
-    background-color: transparent;
     object-fit: contain;
+}
+
+.photo-lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 110;
+    align-items: center;
+    justify-content: center;
+    padding: 56px 24px 24px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.photo-lightbox-frame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 94%;
+    height: 92%;
+    max-width: 920px;
+}
+
+.photo-lightbox-frame img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.photo-lightbox-close {
+    position: absolute;
+    z-index: 1;
+    top: 24px;
+    right: 64px;
+    width: 48px;
+    height: 48px;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.photo-lightbox-close img {
+    width: 36px;
+    height: 36px;
 }
 
 .page-width {
@@ -111,7 +155,7 @@ img {
 }
 
 .cat-item:hover, .cat-item:active, .cat-item-active {
-    border-bottom: 4px solid rgba(51, 119, 104, 0.61);
+    border-bottom: 4px solid #83aca3;
     font-weight: 600;
 }
 
@@ -127,12 +171,10 @@ img {
 .search img {
     width: 15px;
     background-color: transparent;
-    cursor: pointer;
 }
 
 .search input {
     border: none;
-    outline: none;
     font-family: "Asta Sans", sans-serif;
     font-size: 13px;
     width: 180px;
@@ -153,7 +195,6 @@ img {
     border-radius: 8px;
     padding: 8px 16px;
     margin: auto 0;
-    cursor: pointer;
     font-family: "Asta Sans", sans-serif;
     font-size: 14px;
     white-space: nowrap;
@@ -199,7 +240,6 @@ img {
     border: 1px solid #b1b3b4;
     border-radius: 4px;
     background: #ffffff;
-    cursor: pointer;
     font-family: "Asta Sans", sans-serif;
     font-size: 14px;
 }
@@ -291,5 +331,4 @@ img {
     padding: 8px 14px;
     font-family: "Asta Sans", sans-serif;
     font-size: 13px;
-    cursor: pointer;
 }
