@@ -103,12 +103,6 @@ img {
     z-index: 100;
 }
 
-.header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
 .navigation {
     box-sizing: content-box;
     justify-content: space-between;

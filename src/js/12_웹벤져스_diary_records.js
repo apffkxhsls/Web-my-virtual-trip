@@ -1,6 +1,7 @@
 const diaryChangesKey = "mvt_diary_changes";
 const diaryViewIdKey = "mvt_diary_view_id";
 const diaryEditIdKey = "mvt_diary_edit_id";
+const diaryEditDayKey = "mvt_diary_edit_day";
 const oldDiaryImage = "../res/images/12_diary_image.jpg";
 const diaryFallbackImage = "../res/images/12_diary_image.webp";
 

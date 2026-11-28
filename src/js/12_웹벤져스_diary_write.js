@@ -213,7 +213,7 @@ function renderPlaces() {
 
 function showVisitHeart(button, icon, visited, number) {
     if (visited) {
-        icon.setAttribute("src", "../res/icons/12_ic_favorite_filled_gray.svg");
+        icon.setAttribute("src", "../res/icons/12_ic_favorite_filled.svg");
         icon.setAttribute("alt", "장소 " + number + " 방문 표시 해제");
     } else {
         icon.setAttribute("src", "../res/icons/12_ic_favorite_gray.svg");
@@ -430,8 +430,9 @@ function buildDiaryRecord() {
         if (day !== null) {
             const places = [];
             for (let j = 0; j < day.places.length; j++) {
-                if (hasText(day.places[j].name)) {
-                    places.push(day.places[j]);
+                const place = day.places[j];
+                if (hasText(place.name)) {
+                    places.push({name: place.name, visited: place.visited});
                 }
             }
             days.push({date: day.date, weather: day.weather, mood: day.mood, note: day.note, places: places});
@@ -467,19 +468,48 @@ form.addEventListener("keydown", function (event) {
     }
 });
 
+function editorSnapshot() {
+    readForm();
+    const days = [];
+    for (let i = 0; i < draft.days.length; i++) {
+        const day = draft.days[i];
+        const places = [];
+        for (let j = 0; j < day.places.length; j++) {
+            if (hasText(day.places[j].name)) {
+                places.push(day.places[j]);
+            }
+        }
+        if (day.weather || day.mood || day.note || places.length > 0) {
+            days.push({date: day.date, weather: day.weather, mood: day.mood, note: day.note, places: places});
+        }
+    }
+    const expenses = [];
+    for (let i = 0; i < expenseCategories.length; i++) {
+        expenses.push(document.getElementById("expense-" + expenseCategories[i]).value);
+    }
+    return JSON.stringify({
+        title: draft.title, location: draft.location, companions: draft.companions,
+        startDate: draft.startDate, endDate: draft.endDate, rating: draft.rating,
+        coverImage: draft.coverImage, photos: draft.photos, days: days, expenses: expenses
+    });
+}
+
+let initialEditorSnapshot = editorSnapshot();
+
 function confirmLeaving(event, destination) {
     event.preventDefault();
     let leaveMessage = "저장하지 않고 나가시겠습니까?";
     if (editingId) {
         leaveMessage = "변경사항이 사라집니다. 그래도 나가시겠습니까?";
     }
-    if (confirm(leaveMessage)) {
+    if (editorSnapshot() === initialEditorSnapshot || confirm(leaveMessage)) {
         leaveEditor(destination);
     }
 }
 
 function leaveEditor(destination) {
     sessionStorage.removeItem(diaryEditIdKey);
+    sessionStorage.removeItem(diaryEditDayKey);
     titleInput.value = "";
     locationInput.value = "";
     startInput.value = "";
@@ -608,9 +638,11 @@ loadDiaryRecords(function (records) {
             message.innerText = "수정할 여행 기록을 찾을 수 없습니다.";
             return;
         }
+        dayIndex = parseInt(sessionStorage.getItem(diaryEditDayKey), 10) || 0;
         fillEditor(records[index]);
         readForm();
         originalRecord = buildDiaryRecord();
+        initialEditorSnapshot = editorSnapshot();
     }
     saveButton.removeAttribute("disabled");
 }, function () {
