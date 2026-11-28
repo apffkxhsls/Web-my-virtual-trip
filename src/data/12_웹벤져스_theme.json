@@ -1,6 +1,6 @@
 [
     {
-        "id": "niagara",
+        "id": "niagara-falls",
         "theme": "nature",
         "name": "나이아가라",
         "country": "캐나다",
@@ -70,7 +70,7 @@
         "link": ""
     },
     {
-        "id": "hongkong",
+        "id": "hong-kong",
         "theme": "food",
         "name": "홍콩",
         "country": "홍콩",
@@ -140,7 +140,7 @@
         "link": ""
     },
     {
-        "id": "newyork",
+        "id": "new-york",
         "theme": "trendy",
         "name": "뉴욕",
         "country": "미국",
