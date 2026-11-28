@@ -31,7 +31,6 @@ const savePlanButton = document.getElementById("save-plan-button");
 const planForm = document.querySelector(".plan-form");
 let selectedIndex = -1;
 const deletePlanButton = document.getElementById("delete-plan-button");
-let samplePlans = [];
 let savedPlans = [];
 const savedMyPlans = localStorage.getItem("myPlans");
 
@@ -270,18 +269,12 @@ function getPlanData() {
     return plan;
 }
 
-function createPlanItem(plan, isSample) {
+function createPlanItem(plan) {
     let li = document.createElement("li");
-    let badge = "";
-
-    if (isSample) {
-        badge = '<p class="saved-badge">예시 계획</p>';
-    }
 
     li.innerHTML =
         '<article class="saved-card hover-card">' +
         '<div class="saved-info">' +
-        badge +
         '<h3></h3>' +
         '<p><img src="../res/icons/12_ic_calendar.svg" alt="날짜"><span></span></p>' +
         '<p><img src="../res/icons/12_ic_location_filled.svg" alt="장소"><span></span></p>' +
@@ -292,12 +285,6 @@ function createPlanItem(plan, isSample) {
     details[0].innerText = plan.startDate + " ~ " + plan.endDate;
     details[1].innerText = plan.region;
     return li;
-}
-
-function openSamplePlan(index) {
-    selectedIndex = -1;
-    loadPlan(samplePlans[index]);
-    deletePlanButton.disabled = true;
 }
 
 function showSelectedCard(card) {
@@ -312,23 +299,13 @@ function showSelectedCard(card) {
 
 function displayPlans() {
     savedList.innerHTML = "";
-    if (samplePlans.length === 0 && savedPlans.length === 0) {
+    if (savedPlans.length === 0) {
         savedList.innerHTML = '<li class="saved-empty">저장된 여행 계획이 없습니다.</li>';
         return;
     }
 
-    for (let i = 0; i < samplePlans.length; i++) {
-        let li = createPlanItem(samplePlans[i], true);
-        let card = li.querySelector("article");
-        card.addEventListener("click", function () {
-            openSamplePlan(i);
-            showSelectedCard(card);
-        });
-        savedList.appendChild(li);
-    }
-
     for (let i = 0; i < savedPlans.length; i++) {
-        let li = createPlanItem(savedPlans[i], false);
+        let li = createPlanItem(savedPlans[i]);
         let card = li.querySelector("article");
         card.addEventListener("click", function () {
             selectedIndex = i;
@@ -487,24 +464,19 @@ planForm.addEventListener("submit", function (event) {
 });
 
 function openSelectedPlan() {
-    let planType = sessionStorage.getItem("selectedPlanType");
     let planIndex = sessionStorage.getItem("selectedPlanIndex");
 
-    if (planType === null || planIndex === null) {
+    if (planIndex === null) {
         return;
     }
 
-    planIndex = Number(planIndex);
-    sessionStorage.removeItem("selectedPlanType");
+    planIndex = parseInt(planIndex);
     sessionStorage.removeItem("selectedPlanIndex");
 
-    if (planType === "sample" && planIndex >= 0 && planIndex < samplePlans.length) {
-        openSamplePlan(planIndex);
-        showSelectedCard(savedList.querySelectorAll(".saved-card")[planIndex]);
-    } else if (planType === "my" && planIndex >= 0 && planIndex < savedPlans.length) {
+    if (planIndex >= 0 && planIndex < savedPlans.length) {
         selectedIndex = planIndex;
         loadPlan(savedPlans[planIndex]);
-        showSelectedCard(savedList.querySelectorAll(".saved-card")[samplePlans.length + planIndex]);
+        showSelectedCard(savedList.querySelectorAll(".saved-card")[planIndex]);
     }
 }
 
@@ -514,7 +486,11 @@ fetch("../data/12_웹벤져스_plan.json")
     })
     .then(function (data) {
         defaultChecklist = data.defaultChecklist;
-        samplePlans = data.samplePlans;
+
+        if (localStorage.getItem("myPlans") === null) {
+            savedPlans = data.samplePlans;
+            localStorage.setItem("myPlans", JSON.stringify(savedPlans));
+        }
 
         resetPlan();
         displayPlans();
