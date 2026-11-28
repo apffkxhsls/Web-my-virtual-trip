@@ -77,6 +77,7 @@ header {
 
 /* 검색 아이콘 */
 .search {
+    font-family: "Asta Sans", sans-serif;
     display: flex;
     align-items: center;
     width: 260px;
@@ -97,7 +98,8 @@ header {
     flex-grow: 1;
     border: none;
     outline: none;
-    font-size: 15px;
+    font-size: 16px;
+    font-family: "Asta Sans", sans-serif;
     width: 180px;
 }
 
@@ -109,22 +111,45 @@ header {
     align-items: center;
 }
 
+/* 프로필 버튼 */
+.profile-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    margin: auto 0;
+    padding: 0;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+}
+
+.profile-btn:hover {
+    background-color: #dadee1;
+}
+
+.profile-btn img {
+    width: 27px;
+}
+
 /* 로그아웃 버튼 */
 .logout {
+    font-family: "Asta Sans", sans-serif;
     background: #C3E4D9;
     color: black;
     border-radius: 8px;
     padding: 8px 16px;
     margin: auto 0;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 16px;
     white-space: nowrap;
     border: none;
 }
 
 .logout:hover {
-    background: #9ACEB7
-;
+    background: #9ACEB7;
 }
 
 /* ===== 히어로 섹션 ===== */
