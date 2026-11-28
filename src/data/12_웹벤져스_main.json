@@ -1,11 +1,11 @@
 {   "regionList": [
-    { "id": "daejeon", "meta": "국내", "name": "대전", "rating": "4.8/5 | 리뷰 157,136개", "image": "../res/images/12_diary_image.jpg", "alt": "지역별 사진", "link": "#" },
-    { "id": "kyoto", "meta": "일본", "name": "교토", "rating": "4.6/5 | 리뷰 125,300개", "image": "../res/images/12_theme-activity.jpg", "alt": "지역별 사진", "link": "../html/12_웹벤져스_detail.html" },
+    { "id": "daejeon", "meta": "국내", "name": "대전", "rating": "4.8/5 | 리뷰 157,136개", "image": "../res/images/12_stay.jpg", "alt": "지역별 사진", "link": "#" },
+    { "id": "kyoto", "meta": "일본", "name": "교토", "rating": "4.6/5 | 리뷰 125,300개", "image": "../res/images/12_theme-activity.jpg", "alt": "지역별 사진", "link": "../html/12_웹벤져스_detail.html?=city=kyoto" },
     { "id": "shanghai", "meta": "중국", "name": "상하이", "rating": "3.4/5 | 리뷰 221,200개", "image": "../res/images/12_theme-food.jpg", "alt": "지역별 사진", "link": "#" },
     { "id": "switzerland", "meta": "유럽", "name": "스위스", "rating": "4.9/5 | 리뷰 92,104개", "image": "../res/images/12_theme-history.jpg", "alt": "지역별 사진", "link": "#" },
     { "id": "danang", "meta": "아시아", "name": "다낭", "rating": "4.7/5 | 리뷰 138,420개", "image": "../res/images/12_theme-resort.jpg", "alt": "지역별 사진", "link": "#" },
     { "id": "sydney", "meta": "대양주", "name": "시드니", "rating": "4.6/5 | 리뷰 98,750개", "image": "../res/images/12_theme-nature.jpg", "alt": "지역별 사진", "link": "#" },
-    { "id": "busan", "meta": "국내", "name": "부산", "rating": "4.9/5 | 리뷰 144,530개", "image": "../res/images/12_theme-shanghai.jpg", "alt": "지역별 사진", "link": "#" }
+    { "id": "busan", "meta": "국내", "name": "부산", "rating": "4.9/5 | 리뷰 144,530개", "image": "../res/images/12_theme-shanghai.jpg", "alt": "지역별 사진", "link": "../html/12_웹벤져스_detail.html?city=busan" }
   ],
   "themeList": [
     { "id": "nature", "title": "자연 여행", "desc": "아름다운 풍경 속에서 즐기는 여유로운 여행", "views": "1.5K", "image": "../res/images/12_theme-nature.jpg", "alt": "자연 테마 사진" },
