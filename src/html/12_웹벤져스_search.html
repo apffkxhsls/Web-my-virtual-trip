@@ -1,0 +1,156 @@
+<!-- 웹프 기말고사 검색 결과 페이지 / 2516078 심현희 -->
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyVirtualTrip | 검색 결과</title>
+    <meta name="author" content="심현희">
+    <link rel="stylesheet" href="../css/12_웹벤져스_search.css">
+</head>
+
+<body>
+    <!-- 로고 및 네비게이션 바 -->
+    <header>
+        <nav class="navigation">
+            <a href="12_웹벤져스_main.html" class="logo-link">
+                <img src="../res/images/12_logo.png" id="logo" alt="MyVirtualTrip 로고">
+            </a>
+            <div class="nav-right">
+                <div class="category-nav">
+                    <a class="cat-item" href="../html/12_웹벤져스_region.html">
+                        <span>지역별</span>
+                    </a>
+                    <a class="cat-item" href="../html/12_웹벤져스_theme.html">
+                        <span>테마별</span>
+                    </a>
+                    <a class="cat-item" href="../html/12_웹벤져스_stay.html">
+                        <span>숙박</span>
+                    </a>
+                    <a class="cat-item" href="../html/12_웹벤져스_flight.html">
+                        <span>항공</span>
+                    </a>
+                    <a class="cat-item" href="../html/12_웹벤져스_plan.html">
+                        <span>여행 계획</span>
+                    </a>
+                    <a class="cat-item" href="../html/12_웹벤져스_diary.html">
+                        <span>여행 기록</span>
+                    </a>
+                </div>
+                <form class="search" action="#" method="get">
+                    <input type="search" name="all-search" placeholder="여행지, 명소, 숙소 등">
+                    <button type="submit">
+                        <img src="../res/icons/12_ic_search.svg" alt="검색 아이콘">
+                    </button>
+                </form>
+                <button type="button" class="logout">로그아웃</button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="search-heading">
+            <h1 class="result-title">맞춤 여행지 추천</h1>
+            <p class="section-description">선택한 지역, 테마, 날짜에 맞춰 적절한 여행지를 알려드릴게요!</p>
+        </section>
+
+        <!-- 재검색 섹션 -->
+        <section class="research-section">
+            <form class="research" method="get" action="12_웹벤져스_search.html">
+                <div class="research-field">
+                    <img src="../res/icons/12_ic_location.svg" alt="장소 아이콘">
+                    <label for="research-place">지역</label>
+                    <select name="place" size="1" id="research-place">
+                        <option value="">지역을 선택해주세요</option>
+                        <option value="국내">국내</option>
+                        <option value="아시아">아시아</option>
+                        <option value="대양주">대양주</option>
+                        <option value="유럽">유럽</option>
+                        <option value="미주">미주</option>
+                        <option value="중동·아프리카">중동·아프리카</option>
+                    </select>
+                </div>
+                <div class="research-field">
+                    <img src="../res/icons/12_ic_calendar.svg" alt="날짜 아이콘">
+                    <label for="research-date">여행 날짜</label>
+                    <input type="date" id="research-date" name="date">
+                </div>
+                <div class="research-field">
+                    <img src="../res/icons/12_ic_theme.svg" alt="테마 아이콘">
+                    <label for="research-theme">테마</label>
+                    <select name="theme" size="1" id="research-theme">
+                        <option value="">테마 전체</option>
+                        <option value="자연">자연</option>
+                        <option value="역사">역사</option>
+                        <option value="먹방">먹방</option>
+                        <option value="액티비티">액티비티</option>
+                        <option value="휴양">휴양</option>
+                        <option value="요즘">요즘</option>
+                    </select>
+                </div>
+                <button type="submit" class="research-btn">검색</button>
+            </form>
+        </section>
+
+    </main>
+    
+    <!-- 검색 결과 섹션 -->
+    <section class="result-section">
+        <div class="result-cardlist"></div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <div class="footer-up">
+            <div class="footer-support">
+                <h3>고객지원실 운영안내</h3>
+                <p>채팅상담 연중무휴 24시간</p>
+                <p>유선상담 연중무휴 09:00-18:00</p>
+                <p>유선상담 1670-8208</p>
+                <button>고객지원실</button>
+            </div>
+            <div class="footer-item">
+                <h4>소개</h4>
+                <ul class="footer-list">
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">채용</a></li>
+                    <li><a href="#">공고</a></li>
+                </ul>
+            </div>
+            <div class="footer-item">
+                <h4>파트너</h4>
+                <ul class="footer-list">
+                    <li><a href="#">파트너 홈</a></li>
+                    <li><a href="#">제휴 문의</a></li>
+                    <li><a href="#">광고 문의</a></li>
+                </ul>
+            </div>
+            <div class="footer-item">
+                <h4>지원</h4>
+                <ul class="footer-list">
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">문의내역</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-down">
+            <ul class="footer-legal">
+                <li><a href="#">이용 약관</a></li>
+                <li><a href="#">개인정보 처리방침</a></li>
+                <li><a href="#">취소 및 환불 정책</a></li>
+                <li><a href="#">개발자 센터</a></li>
+            </ul>
+            <form class="language" method="get" action="#">
+                <label for="language">언어</label>
+                <select name="language" id="language" size="1">
+                    <option value="korean">한국어</option>
+                    <option value="english">영어</option>
+                </select>
+            </form>
+        </div>
+    </footer>
+    <script src="../js/12_웹벤져스_search.js"></script>
+</body>
+
+</html>
