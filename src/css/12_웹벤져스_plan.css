@@ -144,7 +144,7 @@ main {
 .expense-input input,
 .checklist-add input {
     border: 1px solid #B1B3B4;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .form-group input,
@@ -171,7 +171,7 @@ main {
 .new-plan-button {
     width: 100%;
     padding: 12px;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: bold;
 }
 
@@ -260,12 +260,12 @@ main {
 }
 
 .plan-content h1 {
-    font-size: 30px;
+    font-size: 31px;
     margin-bottom: 12px;
 }
 
 .section-description {
-    font-size: 15px;
+    font-size: 16px;
     margin-bottom: 30px;
 }
 
@@ -282,7 +282,7 @@ main {
     border: 1px solid #EEEEEE;
     border-radius: 8px;
     color: black;
-    font-size: 15px;
+    font-size: 16px;
     transition: background-color 0.2s;
 }
 
@@ -314,7 +314,7 @@ main {
 }
 
 .plan-form h2 {
-    font-size: 23px;
+    font-size: 24px;
     margin-bottom: 25px;
 }
 
@@ -336,7 +336,7 @@ main {
 .form-group label {
     display: block;
     margin-bottom: 10px;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: bold;
 }
 
@@ -371,7 +371,7 @@ main {
     background-color: #337768;
     border-radius: 6px;
     color: white;
-    font-size: 16px;
+    font-size: 17px;
     display: inline-block;
 }
 
@@ -390,7 +390,7 @@ main {
 .schedule-table th {
     background-color: #C3E4D9;
     color: #337768;
-    font-size: 14px;
+    font-size: 15px;
     text-align: left;
 }
 
@@ -430,7 +430,7 @@ main {
     border: 1px solid #B1B3B4;
     border-radius: 6px;
     color: gray;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 .delete-schedule-button:hover,
@@ -494,7 +494,7 @@ main {
 
 .budget-row {
     margin-bottom: 12px;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .budget-row:last-child {
@@ -503,11 +503,11 @@ main {
 
 .budget-row h3 {
     margin: 0;
-    font-size: 18px;
+    font-size: 19px;
 }
 
 #total-cost {
-    font-size: 26px;
+    font-size: 27px;
 }
 
 #total-cost,
@@ -533,12 +533,12 @@ main {
 .budget-range {
     margin-top: 8px;
     margin-bottom: 20px;
-    font-size: 12px;
+    font-size: 13px;
     color: gray;
 }
 
 .expense-title {
-    font-size: 18px;
+    font-size: 19px;
     margin-bottom: 15px;
 }
 
@@ -560,13 +560,13 @@ main {
 }
 
 .expense-item label {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: bold;
 }
 
 .expense-input,
 .saved-empty {
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .expense-input input {
@@ -586,7 +586,7 @@ main {
 
 .checklist-list li {
     padding: 15px 0;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 .checklist-list label {
@@ -624,7 +624,7 @@ main {
 }
 
 .save-notice {
-    font-size: 13px;
+    font-size: 14px;
     margin-bottom: 15px;
 }
 
@@ -637,7 +637,7 @@ main {
     padding: 15px 65px;
     border: 1px solid #8DC5AC;
     color: black;
-    font-size: 16px;
+    font-size: 17px;
 }
 
 .save-button:hover {
@@ -701,7 +701,7 @@ main {
 }
 
 .saved-card.selected-card {
-    border: 1px solid #337768;
+    border: 2px solid #337768;
 }
 
 .saved-info {
