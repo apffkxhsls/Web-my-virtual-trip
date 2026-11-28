@@ -383,11 +383,8 @@ main h1 {
 
 .country {
     display: inline-block;
-    padding: 5px 9px;
-    background-color: #C3E4D9;
     color: #337768;
-    border-radius: 5px;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bold;
 }
 

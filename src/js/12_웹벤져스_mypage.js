@@ -335,29 +335,19 @@ function removeFavoriteStay() {
     showFavoriteStays();
 }
 
-let samplePlans = [];
-
-function getAllPlans() {
-    let allPlans = [];
-    let myPlans = [];
+function getPlans() {
+    let plans = [];
     let saved = localStorage.getItem("myPlans");
 
     if (saved !== null) {
-        myPlans = JSON.parse(saved);
+        plans = JSON.parse(saved);
     }
 
-    for (let i = 0; i < samplePlans.length; i++) {
-        allPlans.push({ plan: samplePlans[i], type: "sample", index: i });
-    }
-    for (let i = 0; i < myPlans.length; i++) {
-        allPlans.push({ plan: myPlans[i], type: "my", index: i });
-    }
-
-    return allPlans;
+    return plans;
 }
 
 function showPlans() {
-    let plans = getAllPlans();
+    let plans = getPlans();
 
     let list = document.getElementById("plan-list");
     let message = document.getElementById("plan-message");
@@ -371,8 +361,7 @@ function showPlans() {
     }
 
     for (let i = 0; i < plans.length; i++) {
-        let item = plans[i];
-        let plan = item.plan;
+        let plan = plans[i];
         let card = document.createElement("article");
 
         card.setAttribute("class", "plan-card hover-card");
@@ -389,18 +378,17 @@ function showPlans() {
         details[1].innerText = plan.startDate + " ~ " + plan.endDate;
 
         card.querySelector("a").addEventListener("click", function () {
-            sessionStorage.setItem("selectedPlanType", item.type);
-            sessionStorage.setItem("selectedPlanIndex", item.index);
+            sessionStorage.setItem("selectedPlanIndex", i);
         });
 
         list.appendChild(card);
     }
 }
 
-let ddayPlan = null;
+let ddayPlanIndex = -1;
 
 function showDday() {
-    let plans = getAllPlans();
+    let plans = getPlans();
 
     let now = new Date();
     let month = now.getMonth() + 1;
@@ -415,15 +403,15 @@ function showDday() {
 
     let today = now.getFullYear() + "-" + month + "-" + date;
     let nextPlan = null;
-    ddayPlan = null;
+    ddayPlanIndex = -1;
 
     for (let i = 0; i < plans.length; i++) {
-        let plan = plans[i].plan;
+        let plan = plans[i];
 
         if (plan.endDate >= today) {
             if (nextPlan === null || plan.startDate < nextPlan.startDate) {
                 nextPlan = plan;
-                ddayPlan = plans[i];
+                ddayPlanIndex = i;
             }
         }
     }
@@ -458,9 +446,8 @@ function showDday() {
 }
 
 document.getElementById("dday").addEventListener("click", function () {
-    if (ddayPlan !== null) {
-        sessionStorage.setItem("selectedPlanType", ddayPlan.type);
-        sessionStorage.setItem("selectedPlanIndex", ddayPlan.index);
+    if (ddayPlanIndex !== -1) {
+        sessionStorage.setItem("selectedPlanIndex", ddayPlanIndex);
     }
 });
 
@@ -469,7 +456,10 @@ fetch("../data/12_웹벤져스_plan.json")
         return response.json();
     })
     .then(result => {
-        samplePlans = result.samplePlans;
+        if (localStorage.getItem("myPlans") === null) {
+            localStorage.setItem("myPlans", JSON.stringify(result.samplePlans));
+        }
+
         showPlans();
         showDday();
     })
