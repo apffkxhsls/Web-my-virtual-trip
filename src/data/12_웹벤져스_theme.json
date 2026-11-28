@@ -27,7 +27,7 @@
         "image": "../res/images/12_theme-history.jpg",
         "alt": "일본 교토의 사찰",
         "description": "일본의 전통 사찰과 오래된 거리를 둘러보는 도시",
-        "link": "12_웹벤져스_detail.html"
+        "link": "12_웹벤져스_detail.html?city=kyoto"
     },
     {
         "id": "boston",
@@ -127,7 +127,7 @@
         "image": "../res/images/12_theme-shanghai.jpg",
         "alt": "중국 상하이의 야경",
         "description": "화려한 야경과 함께 즐기는 트렌디한 여행",
-        "link": ""
+        "link": "12_웹벤져스_detail.html?city=shanghai"
     },
     {
         "id": "miyakojima",
