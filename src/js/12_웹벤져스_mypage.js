@@ -218,7 +218,8 @@ function showFavoriteAttractions() {
             '<a href="12_웹벤져스_detail.html?city=' + city.id + '"></a></div>' +
             '<div class="places-grid"></div>';
         group.querySelector(".group-name").innerText = city.name;
-        group.querySelector("a").innerText = city.name + " 상세 보기 →";
+        group.querySelector("a").innerText = city.name + " 둘러보기 →";
+        group.querySelector("a").setAttribute("title", city.name + " 상세 페이지로 이동하기");
 
         let grid = group.querySelector(".places-grid");
         let cityCount = 0;
@@ -345,13 +346,15 @@ function showFavoriteStays() {
             card.innerHTML =
                 '<a class="card-content" href="12_웹벤져스_stay-detail.html">' +
                 '<img src="' + stay.image + '" alt="' + stay.name + '">' +
-                '<div class="place-info"><h3></h3><span class="country"></span><p></p></div>' +
+                '<div class="place-info"><h3></h3>' +
+                '<span class="country card-location"><img src="../res/icons/12_ic_location_filled.svg" alt="지역"><span></span></span>' +
+                '<p></p></div>' +
                 '</a>' +
                 '<button type="button" class="favorite-button">' +
                 '<img src="../res/icons/12_ic_favorite_filled.svg" alt="찜 취소"></button>';
 
             card.querySelector("h3").innerText = stay.name;
-            card.querySelector(".country").innerText = stay.location;
+            card.querySelector(".card-location span").innerText = stay.location;
             card.querySelector("p").innerText = stay.price + "원 / 1박";
 
             card.querySelector("a").addEventListener("click", function () {
@@ -527,5 +530,51 @@ fetch("../data/12_웹벤져스_plan.json")
         showPlans();
         showDday();
     });
+
+function showDiaries(diaries) {
+    let list = document.getElementById("diary-list");
+    let message = document.getElementById("diaries-message");
+
+    list.innerHTML = "";
+
+    if (diaries.length === 0) {
+        message.style.display = "block";
+        message.innerText = "작성한 여행 기록이 없습니다.";
+    } else {
+        message.style.display = "none";
+    }
+
+    for (let i = 0; i < diaries.length; i++) {
+        let diary = diaries[i];
+        let card = document.createElement("article");
+        card.setAttribute("class", "place-card hover-card");
+
+        let image = diary.coverImage;
+        if (!image) {
+            image = diaryFallbackImage;
+        }
+
+        card.innerHTML =
+            '<a class="card-content" href="12_웹벤져스_diary_view.html">' +
+            '<img src="' + image + '" alt="' + diary.title + ' 대표 사진">' +
+            '<div class="place-info"><h3></h3>' +
+            '<span class="country card-location"><img src="../res/icons/12_ic_location_filled.svg" alt="지역"><span></span></span>' +
+            '<p></p></div></a>';
+
+        card.querySelector("h3").innerText = diary.title;
+        card.querySelector(".card-location span").innerText = diary.location;
+        card.querySelector("p").innerText = diary.startDate + " ~ " + diary.endDate;
+
+        card.querySelector("a").addEventListener("click", function () {
+            sessionStorage.setItem(diaryViewIdKey, diary.id);
+        });
+
+        list.appendChild(card);
+    }
+}
+
+loadDiaryRecords(showDiaries, function () {
+    document.getElementById("diaries-message").innerText = "여행 기록을 불러오지 못했습니다. 새로고침해주세요.";
+});
 
 showTab(0);
