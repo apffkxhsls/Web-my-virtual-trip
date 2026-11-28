@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>여행 기록 보기 | My Virtual Trip</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Asta+Sans:wght@400;500;600;700&amp;display=swap">
+    <link rel="stylesheet" href="../css/12_웹벤져스_common.css">
+    <link rel="stylesheet" href="../css/12_웹벤져스_diary.css">
+    <link rel="stylesheet" href="../css/12_웹벤져스_diary_view.css">
+</head>
+<body>
+    <header>
+        <nav class="navigation">
+            <a href="12_웹벤져스_main.html" class="logo-link">
+                <img src="../res/images/12_logo.png" id="logo" alt="MyVirtualTrip 로고">
+            </a>
+            <div class="nav-right">
+                <div class="category-nav">
+                    <a class="cat-item" href="../html/12_웹벤져스_region.html">
+                        <span>지역별</span>
+                    </a>
+                    <a class="cat-item" href="../html/12_웹벤져스_theme.html">
+                        <span>테마별</span>
+                    </a>
+                    <a class="cat-item" href="../html/12_웹벤져스_stay.html">
+                        <span>숙박</span>
+                    </a>
+                    <a class="cat-item" href="../html/12_웹벤져스_flight.html">
+                        <span>항공</span>
+                    </a>
+                    <a class="cat-item" href="../html/12_웹벤져스_plan.html">
+                        <span>여행 계획</span>
+                    </a>
+                    <a class="cat-item cat-item-active" href="../html/12_웹벤져스_diary.html">
+                        <span>여행 기록</span>
+                    </a>
+                </div>
+                <form class="search" action="#" method="get">
+                    <input type="search" name="all-search" placeholder="여행지, 명소, 숙소 등">
+                    <button type="submit">
+                        <img src="../res/icons/12_ic_search.svg" alt="검색 아이콘">
+                    </button>
+                </form>
+                <button type="button" class="logout">로그아웃</button>
+            </div>
+        </nav>
+    </header>
+    <main class="page-width diary-view">
+        <header class="record-header">
+            <div class="section-header">
+                <a class="record-back" href="12_웹벤져스_diary.html">
+                    <img class="ui-icon" src="../res/icons/12_ic_chevron_left.svg" alt="">
+                    여행 기록 목록으로 돌아가기
+                </a>
+                <h1 id="record-title">여행 기록 보기</h1>
+            </div>
+            <div class="record-actions">
+                <button type="button" id="record-delete" disabled>삭제</button>
+                <button type="button" id="record-edit" disabled>수정하기</button>
+            </div>
+        </header>
+
+        <section class="record-card record-overview" aria-label="여행 기본 정보">
+            <div class="record-cover" id="record-cover">대표 사진</div>
+            <dl class="record-details">
+                <div class="record-field">
+                    <dt><img class="ui-icon" src="../res/icons/12_ic_location_filled.svg" alt="">여행지</dt>
+                    <dd id="record-location"></dd>
+                </div>
+                <div class="record-field">
+                    <dt><img class="ui-icon" src="../res/icons/12_ic_calendar.svg" alt="">여행 기간</dt>
+                    <dd><span id="record-period"></span><strong id="record-duration"></strong></dd>
+                </div>
+                <div class="record-field">
+                    <dt><img class="ui-icon" src="../res/icons/12_ic_diary_companions.svg" alt="">함께한 사람</dt>
+                    <dd id="record-companions"></dd>
+                </div>
+                <div class="record-field">
+                    <dt><img class="ui-icon" src="../res/icons/12_ic_currency.svg" alt="">여행 경비</dt>
+                    <dd id="record-expense"></dd>
+                </div>
+                <div class="record-field">
+                    <dt><img class="ui-icon" src="../res/icons/12_ic_mood_heart.svg" alt="">여행 만족도</dt>
+                    <dd class="record-rating" id="record-rating"></dd>
+                </div>
+            </dl>
+        </section>
+
+        <div class="record-days" id="record-days" aria-label="여행 일차">
+            <button type="button" class="record-day-current" disabled>Day 1</button>
+        </div>
+        <div class="record-day-cards">
+            <section class="record-card record-visits">
+                <h3 id="record-visits-title">Day 1 방문한 명소 &amp; 맛집</h3>
+                <ul id="record-places"></ul>
+            </section>
+            <section class="record-card record-journal">
+                <h3 id="record-journal-title">Day 1 일기</h3>
+                <div class="record-day-info">
+                    <p>날씨 <span id="record-weather"></span></p>
+                    <p>오늘의 기분 <span id="record-mood"></span></p>
+                </div>
+                <p id="record-note" class="record-note"></p>
+            </section>
+        </div>
+
+        <section class="record-card record-budget">
+            <header class="record-card-header">
+                <h3>여행 지출</h3>
+                <p>총액 <strong id="record-total"></strong></p>
+            </header>
+            <div class="record-cost"><span>교통비</span><div class="record-cost-track"><div id="record-bar-transport"></div></div><strong id="record-cost-transport"></strong></div>
+            <div class="record-cost"><span>식비</span><div class="record-cost-track"><div id="record-bar-food"></div></div><strong id="record-cost-food"></strong></div>
+            <div class="record-cost"><span>숙박비</span><div class="record-cost-track"><div id="record-bar-stay"></div></div><strong id="record-cost-stay"></strong></div>
+            <div class="record-cost"><span>기타</span><div class="record-cost-track"><div id="record-bar-other"></div></div><strong id="record-cost-other"></strong></div>
+        </section>
+
+        <section class="record-card">
+            <header class="record-card-header">
+                <h3>여행 사진</h3>
+                <p id="record-photo-count"></p>
+            </header>
+            <input class="photo-view-toggle" type="checkbox" id="photo-view-toggle" aria-label="여행 사진 크게 보기">
+            <div class="record-photos" id="record-photos">
+                <label class="record-photo" for="photo-view-toggle">사진 크게 보기</label>
+            </div>
+            <section class="record-photo-modal" aria-label="여행 사진 크게 보기">
+                <header class="photo-view-header">
+                    <h3 id="photo-view-title">여행 사진</h3>
+                    <p id="photo-view-count"></p>
+                    <label class="photo-view-close" for="photo-view-toggle" title="확대 사진 닫기">
+                        <img class="ui-icon" src="../res/icons/12_ic_close_white.svg" alt="닫기">
+                    </label>
+                </header>
+                <div class="photo-view-body">
+                    <button type="button" class="photo-view-arrow" id="photo-view-prev" aria-label="이전 사진" disabled>
+                        <img class="ui-icon" src="../res/icons/12_ic_chevron_left.svg" alt="">
+                    </button>
+                    <div class="photo-view-frame" id="photo-view-frame">여행 사진</div>
+                    <button type="button" class="photo-view-arrow" id="photo-view-next" aria-label="다음 사진" disabled>
+                        <img class="ui-icon" src="../res/icons/12_ic_chevron_right.svg" alt="">
+                    </button>
+                </div>
+                <div class="photo-view-thumbnails" id="photo-view-thumbnails" aria-label="사진 목록">
+                    <button type="button" class="photo-view-selected" aria-label="첫 번째 사진" disabled></button>
+                </div>
+            </section>
+        </section>
+    </main>
+    <script src="../js/12_웹벤져스_diary_records.js"></script>
+    <script src="../js/12_웹벤져스_diary_view.js"></script>
+</body>
+</html>

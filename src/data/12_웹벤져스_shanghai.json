@@ -1,0 +1,284 @@
+{
+    "nameKo": "상하이",
+    "nameEn": "shanghai",
+    "country": "CHINA",
+    "hero": {
+        "image": {
+            "src": "../res/images/12_theme-shanghai.jpg",
+            "alt": "상하이 루자쭈이의 고층 건물과 강변 풍경"
+        },
+        "summary": "황푸강 양쪽으로 펼쳐지는 두 개의 풍경,\n상하이의 강변에서 골목까지 걸어보세요"
+    },
+    "about": {
+        "subtitle": "와이탄의 석조 건물과 푸둥의 마천루가 마주 보는 도시",
+        "description": "상하이에서는 황푸강 하나를 사이에 두고 와이탄의 오래된 건물과 루자쭈이의 전망탑을 함께 볼 수 있습니다. 강변에서 벗어나면 예원의 연못과 바위 정원, 톈쯔팡의 좁은 골목, 우캉루의 가로수가 차례로 다른 표정의 동네를 보여줍니다.",
+        "images": [
+            {
+                "src": "../res/images/12_theme-shanghai.jpg",
+                "alt": "상하이 루자쭈이의 고층 건물과 강변 풍경"
+            },
+            {
+                "src": "../res/images/12_theme-shanghai.jpg",
+                "alt": "상하이 루자쭈이의 고층 건물과 강변 풍경"
+            },
+            {
+                "src": "../res/images/12_theme-shanghai.jpg",
+                "alt": "상하이 루자쭈이의 고층 건물과 강변 풍경"
+            }
+        ]
+    },
+    "placesSubtitle": "상하이에서 둘러볼 명소",
+    "places": [
+        {
+            "id": "shanghai-bund",
+            "nameKo": "와이탄",
+            "nameEn": "The Bund",
+            "description": "강을 향해 서면 동방명주를 비롯한 루자쭈이의 고층 건물이, 뒤를 돌아보면 와이탄의 석조 건물들이 보입니다. 강변 길을 따라 걸으며 두 강변의 건축 양식을 비교해 보세요.",
+            "location": "상하이 황푸구",
+            "admission": "산책로 무료",
+            "summary": "건너편 푸둥의 스카이라인이 펼쳐지는 강변 산책로",
+            "mapUrl": "https://www.google.com/maps/search/?api=1&query=Shanghai%20%E5%A4%96%E6%BB%A9",
+            "cardImage": {
+                "src": "../res/images/12_theme-shanghai.jpg",
+                "alt": "상하이 루자쭈이의 고층 건물과 강변 풍경"
+            },
+            "images": [
+                {
+                    "src": "../res/images/12_theme-shanghai.jpg",
+                    "alt": "상하이 루자쭈이의 고층 건물과 강변 풍경"
+                }
+            ]
+        },
+        {
+            "id": "shanghai-yu-garden",
+            "nameKo": "예원",
+            "nameEn": "Yu Garden",
+            "description": "담과 문으로 나뉜 공간을 통과할 때마다 연못, 회랑, 기암의 배치가 달라집니다. 주변 상점가와 정원 입구가 구분돼 있어 정원을 보려면 매표 입구를 찾아가는 것이 좋습니다.",
+            "location": "상하이 황푸구",
+            "admission": "정원 유료",
+            "summary": "연못과 정자가 작은 길로 연결된 중국식 정원",
+            "mapUrl": "https://www.google.com/maps/search/?api=1&query=Shanghai%20%E8%B1%AB%E5%9B%AD",
+            "cardImage": {
+                "src": "../res/images/12_theme-shanghai.jpg",
+                "alt": "상하이 루자쭈이의 고층 건물과 강변 풍경"
+            },
+            "images": [
+                {
+                    "src": "../res/images/12_theme-shanghai.jpg",
+                    "alt": "상하이 루자쭈이의 고층 건물과 강변 풍경"
+                }
+            ]
+        },
+        {
+            "id": "shanghai-nanjing-road",
+            "nameKo": "난징둥루 보행가",
+            "nameEn": "Nanjing Road Pedestrian Street",
+            "description": "인민광장 쪽에서 동쪽으로 걸으면 번화한 상점가를 거쳐 와이탄에 닿습니다. 낮에는 건물의 간판과 쇼윈도를, 저녁에는 거리의 조명을 감상하기 좋은 코스입니다.",
+            "location": "상하이 황푸구",
+            "admission": "거리 산책 무료",
+            "summary": "상점과 백화점을 지나 와이탄까지 이어지는 거리",
+            "mapUrl": "https://www.google.com/maps/search/?api=1&query=Shanghai%20%E5%8D%97%E4%BA%AC%E8%B7%AF%E6%AD%A5%E8%A1%8C%E8%A1%97",
+            "cardImage": {
+                "src": "../res/images/12_theme-shanghai.jpg",
+                "alt": "상하이 루자쭈이의 고층 건물과 강변 풍경"
+            },
+            "images": [
+                {
+                    "src": "../res/images/12_theme-shanghai.jpg",
+                    "alt": "상하이 루자쭈이의 고층 건물과 강변 풍경"
+                }
+            ]
+        },
+        {
+            "id": "shanghai-xintiandi",
+            "nameKo": "신톈디",
+            "nameEn": "Xintiandi",
+            "description": "벽돌집과 석조 문틀이 이어진 골목 사이로 식당과 카페가 자리합니다. 넓은 대로에서 안쪽 골목으로 들어가면 상하이의 전통 주거 건축이 어떻게 활용되고 있는지 볼 수 있습니다.",
+            "location": "상하이 황푸구",
+            "admission": "거리 산책 무료",
+            "summary": "스쿠먼 양식의 골목에서 만나는 카페와 상점",
+            "mapUrl": "https://www.google.com/maps/search/?api=1&query=Shanghai%20%E6%96%B0%E5%A4%A9%E5%9C%B0",
+            "cardImage": {
+                "src": "../res/images/12_theme-shanghai.jpg",
+                "alt": "상하이 루자쭈이의 고층 건물과 강변 풍경"
+            },
+            "images": [
+                {
+                    "src": "../res/images/12_theme-shanghai.jpg",
+                    "alt": "상하이 루자쭈이의 고층 건물과 강변 풍경"
+                }
+            ]
+        },
+        {
+            "id": "shanghai-tianzifang",
+            "nameKo": "톈쯔팡",
+            "nameEn": "Tianzifang",
+            "description": "타이캉루 안쪽에 좁은 골목들이 여러 갈래로 이어집니다. 벽돌 건물 아래 공방과 상점을 둘러보며 걷기 좋으며, 주민 생활 공간과 맞닿은 구역에서는 조용히 관람해 주세요.",
+            "location": "상하이 황푸구",
+            "admission": "거리 산책 무료",
+            "summary": "공방과 작은 가게가 모인 타이캉루 골목",
+            "mapUrl": "https://www.google.com/maps/search/?api=1&query=Shanghai%20%E7%94%B0%E5%AD%90%E5%9D%8A",
+            "cardImage": {
+                "src": "../res/images/12_theme-shanghai.jpg",
+                "alt": "상하이 루자쭈이의 고층 건물과 강변 풍경"
+            },
+            "images": [
+                {
+                    "src": "../res/images/12_theme-shanghai.jpg",
+                    "alt": "상하이 루자쭈이의 고층 건물과 강변 풍경"
+                }
+            ]
+        },
+        {
+            "id": "shanghai-oriental-pearl",
+            "nameKo": "동방명주",
+            "nameEn": "Oriental Pearl Tower",
+            "description": "와이탄 맞은편에 서 있는 방송탑으로 크기가 다른 구형 구조물이 특징입니다. 전망층에서 황푸강이 휘어지는 모습과 맞은편 와이탄 건물들을 내려다볼 수 있습니다.",
+            "location": "상하이 푸둥신구",
+            "admission": "전망대 유료",
+            "summary": "둥근 전망층으로 알아볼 수 있는 루자쭈이의 탑",
+            "mapUrl": "https://www.google.com/maps/search/?api=1&query=Shanghai%20%E4%B8%9C%E6%96%B9%E6%98%8E%E7%8F%A0%E5%B9%BF%E6%92%AD%E7%94%B5%E8%A7%86%E5%A1%94",
+            "cardImage": {
+                "src": "../res/images/12_theme-shanghai.jpg",
+                "alt": "상하이 루자쭈이의 고층 건물과 강변 풍경"
+            },
+            "images": [
+                {
+                    "src": "../res/images/12_theme-shanghai.jpg",
+                    "alt": "상하이 루자쭈이의 고층 건물과 강변 풍경"
+                }
+            ]
+        },
+        {
+            "id": "shanghai-wukang-road",
+            "nameKo": "우캉루",
+            "nameEn": "Wukang Road",
+            "description": "우캉다러우 주변에서 시작해 주택가 쪽으로 걸으면 길을 덮는 가로수와 서로 다른 양식의 건물을 만납니다. 건물 외관을 감상하거나 길가의 작은 카페에서 쉬어 가기 좋습니다.",
+            "location": "상하이 쉬후이구",
+            "admission": "거리 산책 무료",
+            "summary": "가로수와 오래된 주택을 따라 걷는 거리",
+            "mapUrl": "https://www.google.com/maps/search/?api=1&query=Shanghai%20%E6%AD%A6%E5%BA%B7%E8%B7%AF",
+            "cardImage": {
+                "src": "../res/images/12_theme-shanghai.jpg",
+                "alt": "상하이 루자쭈이의 고층 건물과 강변 풍경"
+            },
+            "images": [
+                {
+                    "src": "../res/images/12_theme-shanghai.jpg",
+                    "alt": "상하이 루자쭈이의 고층 건물과 강변 풍경"
+                }
+            ]
+        },
+        {
+            "id": "shanghai-waibaidu",
+            "nameKo": "와이바이두교",
+            "nameEn": "Waibaidu Bridge",
+            "description": "와이탄 북쪽에서 쑤저우허를 건너는 다리입니다. 보행로에서 철제 구조 사이로 강과 건물들을 바라볼 수 있고, 다리를 건넌 뒤에는 쑤저우허 강변 산책을 이어갈 수 있습니다.",
+            "location": "상하이 쑤저우허 하구",
+            "admission": "도보 통행 무료",
+            "summary": "쑤저우허와 황푸강이 만나는 곳의 철교",
+            "mapUrl": "https://www.google.com/maps/search/?api=1&query=Shanghai%20%E5%A4%96%E7%99%BD%E6%B8%A1%E6%A1%A5",
+            "cardImage": {
+                "src": "../res/images/12_theme-shanghai.jpg",
+                "alt": "상하이 루자쭈이의 고층 건물과 강변 풍경"
+            },
+            "images": [
+                {
+                    "src": "../res/images/12_theme-shanghai.jpg",
+                    "alt": "상하이 루자쭈이의 고층 건물과 강변 풍경"
+                }
+            ]
+        }
+    ],
+    "restaurantsSubtitle": "상하이에서 만나는 지역 음식과 식당",
+    "restaurants": [
+        {
+            "name": "난샹만터우뎬",
+            "address": "황푸구 위위안루 85",
+            "category": "샤오룽바오",
+            "rating": null,
+            "image": {
+                "src": "../res/images/12_theme-food.jpg",
+                "alt": "음식 테마 예시 사진"
+            },
+            "mapUrl": "https://www.google.com/maps/search/?api=1&query=Shanghai%20Nanxiang%20Steamed%20Bun"
+        },
+        {
+            "name": "다후춘 쓰촨중루점",
+            "address": "황푸구 쓰촨중루 136",
+            "category": "성젠바오",
+            "rating": null,
+            "image": {
+                "src": "../res/images/12_theme-food.jpg",
+                "alt": "음식 테마 예시 사진"
+            },
+            "mapUrl": "https://www.google.com/maps/search/?api=1&query=Shanghai%20Da%20Hu%20Chun%20136%20Middle%20Sichuan%20Road"
+        },
+        {
+            "name": "란신 진셴루점",
+            "address": "황푸구 진셴루 130",
+            "category": "상하이 가정식",
+            "rating": null,
+            "image": {
+                "src": "../res/images/12_theme-food.jpg",
+                "alt": "음식 테마 예시 사진"
+            },
+            "mapUrl": "https://www.google.com/maps/search/?api=1&query=Shanghai%20Lan%20Xin%20130%20Jinxian%20Road"
+        },
+        {
+            "name": "라이라이 샤오룽",
+            "address": "황푸구 톈진루 506",
+            "category": "딤섬",
+            "rating": null,
+            "image": {
+                "src": "../res/images/12_theme-food.jpg",
+                "alt": "음식 테마 예시 사진"
+            },
+            "mapUrl": "https://www.google.com/maps/search/?api=1&query=Shanghai%20Qiao%20Ai%20Lai%20Lai%20Xiao%20Long%20506%20Tianjin%20Road"
+        },
+        {
+            "name": "춘",
+            "address": "황푸구 진셴루 124",
+            "category": "상하이 요리",
+            "rating": null,
+            "image": {
+                "src": "../res/images/12_theme-food.jpg",
+                "alt": "음식 테마 예시 사진"
+            },
+            "mapUrl": "https://www.google.com/maps/search/?api=1&query=Shanghai%20Chun%20124%20Jinxian%20Road"
+        },
+        {
+            "name": "마오룽",
+            "address": "황푸구 진셴루 134",
+            "category": "상하이 요리",
+            "rating": null,
+            "image": {
+                "src": "../res/images/12_theme-food.jpg",
+                "alt": "음식 테마 예시 사진"
+            },
+            "mapUrl": "https://www.google.com/maps/search/?api=1&query=Shanghai%20Mao%20Long%20134%20Jinxian%20Road"
+        },
+        {
+            "name": "폴뤽스",
+            "address": "황푸구 타이창루 181룽 신톈디 베이리 5호",
+            "category": "프랑스 요리",
+            "rating": null,
+            "image": {
+                "src": "../res/images/12_theme-food.jpg",
+                "alt": "음식 테마 예시 사진"
+            },
+            "mapUrl": "https://www.google.com/maps/search/?api=1&query=Shanghai%20Polux%20Xintiandi"
+        },
+        {
+            "name": "더 레이크사이드 베지",
+            "address": "쉬후이구 루이핑루 230, 2층",
+            "category": "채식 요리",
+            "rating": null,
+            "image": {
+                "src": "../res/images/12_theme-food.jpg",
+                "alt": "음식 테마 예시 사진"
+            },
+            "mapUrl": "https://www.google.com/maps/search/?api=1&query=Shanghai%20The%20Lakeside%20Veggie%20230%20Ruiping%20Road"
+        }
+    ]
+}

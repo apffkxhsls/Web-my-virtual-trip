@@ -1,0 +1,465 @@
+.diary-editor {
+    width: 100%;
+    max-width: 1200px;
+    padding: 32px 0 50px;
+}
+
+.navigation .cat-item-active {
+    border-bottom: 4px solid #3377689b;
+    font-weight: 600;
+}
+
+.editor-header, .editor-actions, .editor-overview,
+.editor-fields, .editor-dates, .editor-day-tabs, .editor-columns,
+.editor-options, .editor-picker-heading, .editor-photo-list,
+.editor-visit-row, .editor-expense-row, .editor-rating {
+    display: flex;
+    align-items: center;
+}
+
+.editor-header, .editor-picker-heading {
+    justify-content: space-between;
+}
+
+.editor-picker-heading {
+    margin-bottom: 24px;
+}
+
+.editor-header h1 {
+    color: #378476;
+    font-size: 30px;
+    line-height: 1.3;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.editor-header .section-header {
+    margin-bottom: 0;
+}
+
+.diary-editor h2, .editor-picker-heading h2 {
+    font-size: 17px;
+}
+
+.editor-actions {
+    justify-content: flex-end;
+    position: relative;
+    top: 5px;
+}
+
+.editor-actions button + button {
+    margin-left: 8px;
+}
+
+.editor-card {
+    border: 1px solid #eeeeef;
+    border-radius: 16px;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+.editor-overview, .editor-fields, .editor-columns {
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.editor-overview {
+    margin-top: 24px;
+}
+
+.editor-cover {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    min-width: 160px;
+    min-height: 240px;
+    margin: 0 24px 8px 0;
+    border: 1px solid #eeeeef;
+    border-radius: 12px;
+}
+
+.editor-cover, #add-photo {
+    background-color: #fafaf9;
+}
+
+#cover-image, #remove-cover, .has-cover #choose-cover {
+    display: none;
+}
+
+.has-cover #cover-image, .has-cover #remove-cover {
+    display: block;
+}
+
+#cover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+}
+
+#choose-cover {
+    border: 0;
+    background: transparent;
+    font-size: 18px;
+}
+
+.editor-fields {
+    width: 58%;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.editor-field {
+    display: block;
+    margin-bottom: 14px;
+    color: #000000;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.editor-required {
+    color: #c62828;
+}
+
+.editor-title { width: 100%; }
+.editor-period { width: 66%; }
+.editor-destination { width: 30%; }
+
+.diary-editor input, .diary-editor select, .diary-editor textarea {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    padding: 10px;
+    border: 1px solid #b1b3b4;
+    border-radius: 9px;
+    background-color: #ffffff;
+    color: #000000;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.editor-field input, .editor-dates {
+    margin-top: 6px;
+}
+
+.diary-editor input:hover, .diary-editor textarea:hover {
+    border-color: #69a998;
+}
+
+.diary-editor input:focus, .diary-editor textarea:focus,
+.diary-editor input:active, .diary-editor textarea:active {
+    outline: none;
+    border-color: #337768;
+}
+
+.editor-dates {
+    flex-wrap: wrap;
+    gap: 4px 12px;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.editor-dates input {
+    width: 150px;
+    max-width: 100%;
+    margin: 0;
+}
+
+#trip-duration {
+    margin-left: 2px;
+    margin-right: 5px;
+    color: #24594f;
+    font-size: 15px;
+}
+
+.editor-options, .editor-day-tabs,
+.editor-photo-list, .editor-expense-row {
+    flex-wrap: wrap;
+}
+
+.diary-editor button, .editor-photo-picker button {
+    padding: 10px 13px;
+    border: 1px solid #eeeeef;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #252525;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.diary-editor .editor-primary, .editor-day-tabs button {
+    border-color: #337768;
+    background-color: #337768;
+    color: #ffffff;
+}
+
+.editor-rating {
+    margin-top: 6px;
+}
+
+.editor-rating button {
+    width: 20%;
+    max-width: 28px;
+    padding: 2px;
+    border: 0;
+    background: transparent;
+}
+
+.editor-rating img {
+    width: 100%;
+    height: auto;
+}
+
+.editor-day-tabs {
+    margin-bottom: 10px;
+}
+
+.editor-day-tabs button, .editor-options button {
+    margin: 0 6px 6px 0;
+}
+
+.diary-editor .editor-day-current {
+    border-color: #24594f;
+    background-color: #24594f;
+}
+
+.editor-columns {
+    justify-content: space-between;
+}
+
+.editor-visits, .editor-day-note {
+    min-height: 330px;
+    margin-bottom: 18px;
+}
+
+.editor-visits {
+    width: 32%;
+    min-width: 220px;
+    margin-right: 2%;
+}
+
+.editor-day-note {
+    width: 65%;
+    min-width: 250px;
+    flex-grow: 1;
+}
+
+#trip-places {
+    margin-top: 22px;
+}
+
+.editor-visit-row {
+    margin-bottom: 7px;
+}
+
+.diary-editor .editor-visit-heart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    min-width: 16px;
+    height: 16px;
+    margin: 0 15px 0 0;
+    padding: 0;
+    border: 0;
+}
+
+.editor-visit-heart img {
+    width: 16px;
+    height: 16px;
+}
+
+.editor-visit-row input {
+    border-width: 0 0 1px;
+    border-radius: 0;
+    padding: 5px 3px;
+}
+
+.editor-label, .editor-expense-row label {
+    color: #000000;
+}
+
+.editor-expense-row label {
+    font-size: 15px;
+}
+
+.editor-label {
+    margin: 14px 0 6px;
+    font-size: 16px;
+}
+
+.editor-options button {
+    padding: 6px;
+    border-radius: 50%;
+    border-color: transparent;
+}
+
+.editor-options img {
+    width: 24px;
+    height: 24px;
+}
+
+.editor-options .editor-icon-active {
+    border-color: #378476;
+    background-color: #eeefed;
+}
+
+#day-note {
+    min-height: 145px;
+    margin-top: 8px;
+    resize: none;
+}
+
+.editor-trip-card {
+    margin: 12px 0 28px;
+}
+
+.editor-expenses {
+    margin-top: 20px;
+}
+
+.editor-expense-row {
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.editor-expense-row label {
+    width: 58px;
+}
+
+.editor-expense-row input {
+    width: 20%;
+    min-width: 70px;
+    margin-right: 8px;
+    text-align: right;
+}
+
+.editor-cost-track {
+    flex-grow: 1;
+    min-width: 25px;
+    height: 5px;
+    margin: 0 16px 0 8px;
+    border-radius: 5px;
+    background-color: #eeefed;
+}
+
+.editor-cost-bar { height: 5px; border-radius: 5px; background-color: #378476; }
+.editor-trip-total { text-align: right; margin-top: 16px; }
+.editor-trip-total strong { margin-left: 8px; }
+
+.editor-trip-photos {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 9px;
+    margin-top: 16px;
+}
+
+.editor-trip-thumbnail, #add-photo {
+    width: 94px;
+    height: 94px;
+}
+
+.editor-trip-thumbnail {
+    position: relative;
+}
+
+.editor-trip-thumbnail img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 9px;
+}
+
+.diary-editor .photo-remove {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background-color: #252525;
+    color: white;
+    font-size: 18px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.editor-trip-thumbnail:hover .photo-remove, .editor-cover:hover .photo-remove, .photo-remove:focus {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+@media (hover: none) {
+    .diary-editor .photo-remove {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
+#add-photo {
+    border-color: #d8d6d1;
+}
+
+#editor-message { margin: 14px 0; color: #24594f; font-size: 13px; }
+
+.editor-photo-picker {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: #eeefed;
+    z-index: 105;
+}
+
+.editor-picker-card { width: 88%; max-width: 540px; max-height: 85%; overflow: auto; }
+#close-photo-picker {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    font-size: 26px;
+    line-height: 1;
+}
+
+#photo-options button {
+    box-sizing: border-box;
+    width: 31%;
+    margin: 0 2% 10px 0;
+    padding: 0;
+    border: 3px solid transparent;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+#photo-options .selected-photo {
+    border: 3px solid #378476;
+}
+
+#photo-options img {
+    display: block;
+    width: 100%;
+    height: 82px;
+    object-fit: cover;
+}
+
+#apply-photos {
+    display: block;
+    margin: 8px 0 0 auto;
+    background-color: #24594f;
+    color: white;
+}
