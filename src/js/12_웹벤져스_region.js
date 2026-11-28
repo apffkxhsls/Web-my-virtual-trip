@@ -247,11 +247,11 @@ function showFestivals() {
                 </div>
                 <div class="festival-detail">
                     <div class="detail-item">
-                        <span class="detail-label">날짜</span>
+                        <img class="detail-icon" src="../res/icons/12_ic_calendar.svg" alt="날짜">
                         <span class="detail-value">${festival.date}</span>
                     </div>
                     <div class="detail-item">
-                        <span class="detail-label">장소</span>
+                        <img class="detail-icon" src="../res/icons/12_ic_location.svg" alt="장소">
                         <span class="detail-value">${festival.place}</span>
                     </div>
                 </div>
