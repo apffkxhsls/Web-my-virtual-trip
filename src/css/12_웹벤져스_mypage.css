@@ -1,0 +1,619 @@
+body {
+    margin: 0;
+    background-color: white;
+    color: black;
+    font-family: "Asta Sans", sans-serif;
+}
+
+button,
+input,
+select {
+    font-family: "Asta Sans", sans-serif;
+    font-size: 16px;
+}
+
+/* ==== 로고 및 네비게이션 바 ====  */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navigation {
+    justify-content: space-between;
+    background-color: white;
+    border-bottom: 1px solid #EEEEEF;
+    display: flex;
+    align-items: stretch;
+    padding: 0 40px;
+    height: 72px;
+    gap: 24px;
+    /*아이템 사이의 간격 지정 */
+}
+
+.logo-link {
+    padding-top: 8px;
+}
+
+#logo {
+    height: 50px;
+    width: auto;
+    margin: auto 0;
+}
+
+.nav-right {
+    display: flex;
+    align-items: stretch;
+    gap: 16px;
+    flex-grow: 1;
+}
+
+/* 카테고리 네비게이션 */
+.category-nav {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-grow: 1;
+    gap: 40px;
+    padding: 0px 24px;
+}
+
+.cat-item {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 12px;
+    font-size: 20px;
+    font-weight: 500;
+    white-space: nowrap;
+    text-decoration: none;
+    color: black;
+    border-bottom: 4px solid transparent;
+    /*transparent는 투명색*/
+    margin-bottom: -1px;
+}
+
+.cat-item:hover,
+.cat-item:active {
+    border-bottom: 4px solid #3377689b;
+    font-weight: 600;
+}
+
+
+/* 검색 아이콘 */
+.search {
+    display: flex;
+    align-items: center;
+    width: 260px;
+    height: 27px;
+    border: 1px solid #B1B3B4;
+    border-radius: 20px;
+    padding: 6px 14px;
+    margin: auto 0;
+    gap: 8px;
+}
+
+.search img {
+    width: 23px;
+    cursor: pointer
+}
+
+.search input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    width: 180px;
+}
+
+.search button {
+    background: none;
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+/* 로그아웃 버튼 */
+.logout {
+    background: #C3E4D9;
+    color: black;
+    border-radius: 8px;
+    padding: 8px 16px;
+    margin: auto 0;
+    cursor: pointer;
+    font-size: 14px;
+    white-space: nowrap;
+    border: none;
+}
+
+.logout:hover {
+    background: #9ACEB7;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 24px 60px;
+}
+
+main a {
+    color: #337768;
+    text-decoration: none;
+}
+
+main h1,
+main h2,
+main h3,
+main p {
+    margin-top: 0;
+}
+
+main h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.section-description {
+    color: gray;
+    font-size: 15px;
+}
+
+.mypage-user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto 0;
+    width: 80px;
+}
+
+.mypage-user img {
+    width: 28px;
+    height: 28px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    padding: 28px 32px;
+    margin: 28px 0;
+    background-color: #E5F2ED;
+    border-radius: 12px;
+}
+
+.profile-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    margin-left: 30px;
+    margin-right: 20px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.profile-icon img {
+    width: 34px;
+    height: 34px;
+}
+
+.profile h2 {
+    font-size: 24px;
+    margin-bottom: 6px;
+}
+
+.profile p {
+    font-size: 18px;
+    color: #337768;
+    margin-bottom: 0;
+}
+
+.dday {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 372px;
+    height: 165px;
+    margin-left: auto;
+    margin-right: 18px;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.profile .dday-label {
+    margin: 0 0 6px;
+    font-size: 14px;
+}
+
+.dday:hover .dday-count {
+    text-decoration: underline;
+}
+
+.profile .dday-title {
+    margin: 6px 0 8px;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+}
+
+.dday-count {
+    display: block;
+    font-size: 36px;
+    line-height: 1.3;
+    color: #337768;
+}
+
+.profile .dday-date {
+    margin: 0;
+    font-size: 15px;
+    color: gray;
+}
+
+.dday-date img {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.mypage-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #EEEEEE;
+    margin-bottom: 28px;
+}
+
+.mypage-tab {
+    flex-grow: 1;
+    padding: 16px 10px;
+    font-size: 16px;
+    background: white;
+    color: gray;
+    border: none;
+    border-bottom: 3px solid transparent;
+}
+
+.mypage-tabs .active,
+.mypage-tab:hover {
+    border-bottom-color: #337768;
+    color: #337768;
+    font-weight: bold;
+}
+
+.mypage-panel {
+    display: none;
+    min-height: 300px;
+}
+
+#places {
+    display: block;
+}
+
+.panel-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.panel-heading h2 {
+    font-size: 22px;
+    margin: 0;
+}
+
+.panel-heading a {
+    font-size: 16px;
+}
+
+.panel-heading a:hover {
+    color: #24594f;
+}
+
+.places-grid,
+.plan-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.place-card,
+.plan-card {
+    width: 32%;
+    margin-right: 18px;
+    margin-bottom: 18px;
+    position: relative;
+    border: 1px solid #EEEEEE;
+    border-radius: 12px;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: white;
+}
+
+.place-card:nth-child(3n),
+.plan-card:nth-child(3n) {
+    margin-right: 0;
+}
+
+.hover-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-content {
+    display: block;
+    color: black;
+}
+
+.place-card .card-content img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+#favorite-list .place-card,
+#attraction-list .place-card,
+#stay-list .place-card,
+#diary-list .place-card {
+    width: 23.5%;
+    margin-right: 2%;
+}
+
+#favorite-list .place-card:nth-child(3n),
+#attraction-list .place-card:nth-child(3n),
+#stay-list .place-card:nth-child(3n),
+#diary-list .place-card:nth-child(3n) {
+    margin-right: 2%;
+}
+
+#favorite-list .place-card:nth-child(4n),
+#attraction-list .place-card:nth-child(4n),
+#stay-list .place-card:nth-child(4n),
+#diary-list .place-card:nth-child(4n) {
+    margin-right: 0;
+}
+
+#favorite-list .place-card .card-content > img,
+#attraction-list .place-card .card-content > img,
+#stay-list .place-card .card-content > img,
+#diary-list .place-card .card-content > img {
+    height: 150px;
+}
+
+.place-info,
+.plan-info {
+    padding: 18px;
+}
+
+.place-info h3,
+.place-info h4,
+.plan-info h3 {
+    font-size: 19px;
+    margin: 0 0 8px;
+}
+
+.attraction-group {
+    margin-bottom: 18px;
+}
+
+.group-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.group-heading h3 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.group-count {
+    margin-left: 8px;
+    color: #337768;
+    font-size: 14px;
+}
+
+.group-heading a {
+    color: gray;
+    font-size: 14px;
+}
+
+.group-heading a:hover {
+    color: #337768;
+}
+
+.country {
+    display: inline-block;
+    color: #337768;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.place-card .card-location img {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+
+.card-location span {
+    vertical-align: middle;
+}
+
+.place-info p,
+.plan-info p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 10px 0 0;
+}
+
+.favorite-button {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 1;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border: none;
+    background: transparent;
+}
+
+.favorite-button img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.plan-info p img {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
+.empty {
+    padding: 50px 20px;
+    border: 1px dashed #B1B3B4;
+    border-radius: 12px;
+    color: gray;
+    text-align: center;
+    margin: 0;
+}
+
+footer {
+    color: gray;
+    border-top: 1px solid #EEEEEF;
+    padding: 40px 0 24px;
+}
+
+.footer-up {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #EEEEEF;
+}
+
+.footer-support {
+    margin-right: auto;
+}
+
+.footer-support h3 {
+    font-size: 18px;
+    margin: 0 0 12px;
+    font-weight: 700;
+}
+
+.footer-support p {
+    font-size: 14px;
+    margin: 4px 0;
+}
+
+.footer-support button {
+    margin-top: 16px;
+    padding: 8px 20px;
+    border: 1px solid #B1B3B4;
+    border-radius: 4px;
+    background: white;
+    font-size: 14px;
+}
+
+.footer-support button:hover {
+    background: #EEEEEF;
+}
+
+.footer-item {
+    margin-left: 80px;
+}
+
+.footer-item h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 12px;
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-list li {
+    margin-bottom: 10px;
+}
+
+.footer-list li:last-child {
+    margin-bottom: 0;
+}
+
+.footer-list a {
+    font-size: 14px;
+    text-decoration: none;
+    color: gray;
+}
+
+.footer-list a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.footer-down {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.footer-legal {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.footer-legal li {
+    margin-right: 24px;
+}
+
+.footer-legal li:last-child {
+    margin-right: 0;
+}
+
+.footer-legal a {
+    font-size: 14px;
+    color: gray;
+    text-decoration: none;
+}
+
+.footer-legal a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.language {
+    font-size: 13px;
+    color: gray;
+}
+
+.language label {
+    margin-right: 5px;
+    font-size: 13px;
+}
+
+.language select {
+    border: 1px solid #B1B3B4;
+    border-radius: 6px;
+    padding: 8px 14px;
+    font-size: 13px;
+}
