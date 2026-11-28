@@ -109,7 +109,7 @@
     { "id": "gangjin", "name": "강진", "country": "전라도", "continent": "국내", "type": "recommend", "tags": ["역사", "먹방"] },
     { "id": "buan", "name": "부안", "country": "전라도", "continent": "국내", "type": "recommend", "tags": ["휴양", "자연"] },
 
-    { "id": "busan", "name": "부산", "country": "경상도", "continent": "국내", "type": "popular", "tags": ["휴양", "먹방"], "link": "../html/12_웹벤져스_detail.html" },
+    { "id": "busan", "name": "부산", "country": "경상도", "continent": "국내", "type": "popular", "tags": ["휴양", "먹방"], "link": "../html/12_웹벤져스_detail.html?city=busan" },
     { "id": "gyeongju", "name": "경주", "country": "경상도", "continent": "국내", "type": "popular", "tags": ["역사", "요즘"] },
     { "id": "daegu", "name": "대구", "country": "경상도", "continent": "국내", "type": "popular", "tags": ["요즘", "먹방"] },
     { "id": "tongyeong", "name": "통영", "country": "경상도", "continent": "국내", "type": "popular", "tags": ["휴양", "요즘"] },
@@ -158,7 +158,7 @@
     { "id": "hakodate", "name": "하코다테", "country": "일본", "continent": "아시아", "type": "popular", "tags": ["요즘", "먹방"] },
     { "id": "sapporo", "name": "삿포로", "country": "일본", "continent": "아시아", "type": "recommend", "tags": ["자연", "먹방"] },
     { "id": "okinawa", "name": "오키나와", "country": "일본", "continent": "아시아", "type": "recommend", "tags": ["휴양", "액티비티"] },
-    { "id": "kyoto", "name": "교토", "country": "일본", "continent": "아시아", "type": "recommend", "tags": ["역사", "자연"], "link": "../html/12_웹벤져스_detail.html" },
+    { "id": "kyoto", "name": "교토", "country": "일본", "continent": "아시아", "type": "recommend", "tags": ["역사", "자연"], "link": "../html/12_웹벤져스_detail.html?city=kyoto" },
     { "id": "kanazawa", "name": "가나자와", "country": "일본", "continent": "아시아", "type": "recommend", "tags": ["역사", "먹방"] },
     { "id": "hakone", "name": "하코네", "country": "일본", "continent": "아시아", "type": "recommend", "tags": ["휴양", "자연"] },
     { "id": "nagasaki", "name": "나가사키", "country": "일본", "continent": "아시아", "type": "recommend", "tags": ["역사", "요즘"] },
@@ -167,7 +167,7 @@
     { "id": "nikko", "name": "닛코", "country": "일본", "continent": "아시아", "type": "recommend", "tags": ["자연", "역사"] },
 
     { "id": "beijing", "name": "베이징", "country": "중국", "continent": "아시아", "type": "popular", "tags": ["역사", "먹방"] },
-    { "id": "shanghai", "name": "상하이", "country": "중국", "continent": "아시아", "type": "popular", "tags": ["요즘", "먹방"], "link": "../html/12_웹벤져스_detail.html"},
+    { "id": "shanghai", "name": "상하이", "country": "중국", "continent": "아시아", "type": "popular", "tags": ["요즘", "먹방"], "link": "../html/12_웹벤져스_detail.html?city=shanghai"},
     { "id": "qingdao", "name": "칭다오", "country": "중국", "continent": "아시아", "type": "popular", "tags": ["휴양", "먹방"] },
     { "id": "xian", "name": "시안", "country": "중국", "continent": "아시아", "type": "popular", "tags": ["역사", "먹방"] },
     { "id": "chengdu", "name": "청두", "country": "중국", "continent": "아시아", "type": "popular", "tags": ["먹방", "자연"] },

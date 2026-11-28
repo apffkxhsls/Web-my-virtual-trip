@@ -103,7 +103,6 @@ function updateCarousel() {
 
     for (let i = 0; i < totalItems; i++) {
 
-        // currentIndex를 기준으로 각 아이템의 위치를 계산
         let offset = i - currentIndex;
         if (offset > half) { 
             offset = offset - totalItems; //
@@ -200,9 +199,35 @@ function setHeartButtons() {
 
 // 히어로 섹션 검색 기능
 const exploreForm = document.querySelector('.explore');
+exploreForm.addEventListener('submit', (event) => {
+    const place = document.getElementById('explore-place').value;
 
-exploreForm.addEventListener('submit', () => {
-    sessionStorage.setItem('searchPlace', document.getElementById('explore-place').value);
+    if (place === '') {
+        alert('여행할 지역을 선택해 주세요!');
+        event.preventDefault();
+        return;
+    }
+
+    sessionStorage.setItem('searchPlace', place);
     sessionStorage.setItem('searchDate', document.getElementById('explore-date').value);
     sessionStorage.setItem('searchTheme', document.getElementById('explore-theme').value);
 });
+
+// 히어로 섹션 검색 폼 날짜 최소값 설정
+setMinDate(document.getElementById('explore-date'));
+
+function setMinDate(input) {
+    const today = new Date();
+    const year = today.getFullYear();
+    let month = today.getMonth() + 1;
+    let day = today.getDate();
+
+    if (month < 10) {
+        month = '0' + month;
+    }
+    if (day < 10) {
+        day = '0' + day;
+    }
+
+    input.setAttribute('min', `${year}-${month}-${day}`);
+}
