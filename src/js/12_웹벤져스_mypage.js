@@ -155,18 +155,44 @@ let attractions = [];
 const attractionList = document.getElementById("attraction-list");
 const attractionMessage = document.getElementById("attraction-message");
 
-fetch("../data/12_kyoto_places.json")
+function addCityPlaces(city, data) {
+    for (let i = 0; i < data.places.length; i++) {
+        let place = data.places[i];
+        place.city = city;
+        attractions.push(place);
+    }
+}
+
+fetch("../data/12_웹벤져스_kyoto.json")
     .then(response => {
         return response.json();
     })
     .then(result => {
-        attractions = result.places;
+        addCityPlaces("kyoto", result);
+        return fetch("../data/12_웹벤져스_shanghai.json");
+    })
+    .then(response => {
+        return response.json();
+    })
+    .then(result => {
+        addCityPlaces("shanghai", result);
+        return fetch("../data/12_웹벤져스_busan.json");
+    })
+    .then(response => {
+        return response.json();
+    })
+    .then(result => {
+        addCityPlaces("busan", result);
         showFavoriteAttractions();
     })
     .catch(error => {
         console.log("명소 데이터를 불러오지 못했습니다.", error);
 
-        attractionMessage.innerText = "명소 정보를 불러오지 못했습니다. 새로고침해주세요.";
+        if (attractions.length > 0) {
+            showFavoriteAttractions();
+        } else {
+            attractionMessage.innerText = "명소 정보를 불러오지 못했습니다. 새로고침해주세요.";
+        }
     });
 
 function showFavoriteAttractions() {
@@ -195,7 +221,7 @@ function showFavoriteAttractions() {
             card.setAttribute("class", "place-card hover-card");
 
             card.innerHTML =
-                '<a class="card-content" href="12_웹벤져스_detail.html">' +
+                '<a class="card-content" href="12_웹벤져스_detail.html?city=' + attraction.city + '">' +
                 '<img src="' + attraction.images[0].src + '" alt="' + attraction.images[0].alt + '">' +
                 '<div class="place-info"><h3></h3><span class="country"></span><p></p></div>' +
                 '</a>' +
