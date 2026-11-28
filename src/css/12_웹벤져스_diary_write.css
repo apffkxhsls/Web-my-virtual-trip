@@ -187,7 +187,7 @@
     font-size: 14px;
 }
 
-.diary-editor .editor-primary, .editor-day-tabs button {
+.diary-editor .editor-primary {
     border-color: #337768;
     background-color: #337768;
     color: #ffffff;
@@ -221,6 +221,7 @@
 .diary-editor .editor-day-current {
     border-color: #24594f;
     background-color: #24594f;
+    color: #ffffff;
 }
 
 .editor-columns {

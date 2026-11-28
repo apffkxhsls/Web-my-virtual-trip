@@ -2,7 +2,7 @@
     padding: 32px 0 64px;
 }
 
-.record-header, .record-actions, .record-back, .record-overview,
+.record-header, .record-actions, .record-overview,
 .record-field, .record-field dt, .record-rating, .record-days,
 .record-day-cards, .record-day-info, .record-card-header, .record-cost,
 .record-photos, .photo-view-header, .photo-view-body, .photo-view-thumbnails {
@@ -27,18 +27,21 @@
 }
 
 .record-back {
-    gap: 6px;
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
     color: #337768;
     font-size: 16px;
     text-decoration: none;
 }
 
 .record-back img {
-    width: 8px;
-    height: 12px;
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
 }
 
-.record-back:hover, .record-back:active {
+.record-back:hover {
     color: #24594f;
 }
 

@@ -9,6 +9,7 @@ const previousButton = document.getElementById("photo-view-prev");
 const nextButton = document.getElementById("photo-view-next");
 let photos = [];
 let photoIndex = 0;
+let selectedDayIndex = 0;
 
 function setRecordText(id, value) {
     document.getElementById(id).innerText = value;
@@ -33,6 +34,7 @@ function showDayIcon(id, filename, label) {
 }
 
 function showDay(record, date, index) {
+    selectedDayIndex = index;
     const tabs = document.querySelectorAll("#record-days button");
     for (let i = 0; i < tabs.length; i++) {
         tabs[i].setAttribute("class", i === index ? "record-day-current" : "");
@@ -208,6 +210,7 @@ function showRecord(record) {
 
 editButton.addEventListener("click", function () {
     sessionStorage.setItem(diaryEditIdKey, recordId);
+    sessionStorage.setItem(diaryEditDayKey, selectedDayIndex);
     window.open("12_웹벤져스_diary_write.html", "_self");
 });
 

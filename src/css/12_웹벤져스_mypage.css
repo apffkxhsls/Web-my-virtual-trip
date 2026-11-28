@@ -134,6 +134,7 @@ main h1 {
 }
 
 .dday-date img {
+    display: inline-block;
     width: 16px;
     height: 16px;
     margin-right: 5px;
@@ -352,6 +353,7 @@ main h1 {
 }
 
 .plan-info p img {
+    display: inline-block;
     width: 16px;
     height: 16px;
     vertical-align: middle;
