@@ -119,17 +119,6 @@ function showResults(data) {
     setHeartButtons();
 }
 
-function getConditionText() {
-    let text = searchPlace;
-    if (searchMonth !== 0) {
-        text = text + ` · ${searchMonth}월`;
-    }
-    if (searchTheme !== '') {
-        text = text + ` · #${searchTheme}`;
-    }
-    return text;
-}
-
 function hasValue(list, value) {
     for (let i = 0; i < list.length; i++) {
         if (list[i] === value) {
