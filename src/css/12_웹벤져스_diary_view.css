@@ -1,0 +1,395 @@
+.diary-view {
+    padding: 32px 0 64px;
+}
+
+.navigation .cat-item-active {
+    border-bottom: 4px solid #3377689b;
+    font-weight: 600;
+}
+
+.record-header, .record-actions, .record-back, .record-overview,
+.record-field, .record-field dt, .record-rating, .record-days,
+.record-day-cards, .record-day-info, .record-card-header, .record-cost,
+.record-photos, .photo-view-header, .photo-view-body, .photo-view-thumbnails {
+    display: flex;
+    align-items: center;
+}
+
+.record-header, .record-card-header, .photo-view-header {
+    justify-content: space-between;
+}
+
+.record-header .section-header {
+    margin-bottom: 0;
+}
+
+.record-header h1 {
+    margin-top: 8px;
+    color: #378476;
+    font-size: 30px;
+    line-height: 1.3;
+    font-weight: 500;
+}
+
+.record-back {
+    gap: 6px;
+    color: #337768;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.record-back img {
+    width: 8px;
+    height: 12px;
+}
+
+.record-back:hover, .record-back:active {
+    color: #24594f;
+}
+
+.record-actions, .record-days {
+    gap: 8px;
+}
+
+.record-actions {
+    position: relative;
+    top: 4px;
+}
+
+.record-actions button, .record-days button {
+    padding: 10px 13px;
+    border: 1px solid #eeeeef;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #252525;
+    font-family: inherit;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+#record-delete {
+    color: #c62828;
+}
+
+#record-edit, .record-days .record-day-current {
+    border-color: #337768;
+    background-color: #337768;
+    color: #ffffff;
+}
+
+.record-card {
+    margin-top: 24px;
+    padding: 20px;
+    border: 1px solid #337768;
+    border-radius: 16px;
+    background-color: #ffffff;
+}
+
+.record-card h3 {
+    font-size: 17px;
+}
+
+.record-overview {
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.record-cover, .record-photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #eeefed;
+    color: #555555;
+}
+
+.record-cover {
+    width: 40%;
+    min-width: 210px;
+    height: 240px;
+}
+
+.record-cover img, .record-photo img, .photo-view-thumbnails img {
+    width: 100%;
+}
+
+.record-cover img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.record-details {
+    flex-grow: 1;
+    margin: 0;
+}
+
+.record-field {
+    margin: 12px 0;
+    gap: 12px;
+    font-size: 17px;
+}
+
+.record-field dt {
+    min-width: 116px;
+    gap: 8px;
+    color: #555555;
+}
+
+.record-field dd {
+    margin: 0;
+}
+
+.record-field img {
+    width: 16px;
+    height: 16px;
+}
+
+.record-rating {
+    gap: 4px;
+}
+
+#record-duration {
+    margin-left: 8px;
+    color: #24594f;
+}
+
+.record-days {
+    flex-wrap: wrap;
+    margin-top: 28px;
+}
+
+.record-day-cards {
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 16px;
+    margin-top: 12px;
+}
+
+.record-day-cards .record-card {
+    min-height: 215px;
+    margin-top: 0;
+}
+
+.record-visits {
+    width: 38%;
+    min-width: 210px;
+}
+
+.record-journal {
+    flex-grow: 1;
+    width: 56%;
+    min-width: 235px;
+}
+
+#record-places {
+    padding: 0;
+    list-style: none;
+}
+
+#record-places li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 0;
+    border-bottom: 1px solid #eeeeef;
+}
+
+#record-places img {
+    width: 14px;
+    height: 14px;
+}
+
+.record-day-info {
+    gap: 20px;
+    margin: 14px 0;
+    color: #000000;
+    font-size: 16px;
+}
+
+.record-day-info img {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.record-note {
+    min-height: 100px;
+    padding: 14px;
+    border-radius: 10px;
+    background-color: #f0f5f2;
+    font-size: 16px;
+    line-height: 1.6;
+    white-space: pre-wrap;
+}
+
+.record-card-header {
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+#record-places, .record-cost {
+    font-size: 15px;
+}
+
+.record-card-header p, #photo-view-count {
+    font-size: 14px;
+}
+
+#record-total {
+    font-size: 17px;
+}
+
+.record-cost {
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.record-cost span {
+    width: 48px;
+}
+
+.record-cost strong {
+    width: 84px;
+    text-align: right;
+}
+
+.record-cost-track {
+    flex-grow: 1;
+    height: 6px;
+    border-radius: 4px;
+    background-color: #eeefed;
+}
+
+.record-cost-track div {
+    width: 0;
+    height: 100%;
+    border-radius: 4px;
+    background-color: #378476;
+}
+
+.record-photos {
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.record-photo {
+    width: 15.5%;
+    min-width: 95px;
+    height: 110px;
+    padding: 0;
+    border: 0;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.record-photo img, .photo-view-thumbnails img {
+    height: 100%;
+}
+
+.photo-view-toggle {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.photo-view-toggle:focus + .record-photos .record-photo {
+    outline: 2px solid #378476;
+}
+
+.record-photo-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 110;
+    flex-direction: column;
+    padding: 20px 24px;
+    overflow: auto;
+    background-color: #252525;
+    color: #ffffff;
+}
+
+.photo-view-toggle:checked + .record-photos + .record-photo-modal {
+    display: flex;
+}
+
+.photo-view-toggle:focus + .record-photos + .record-photo-modal .photo-view-close {
+    outline: 2px solid #ffffff;
+}
+
+.photo-view-header {
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.photo-view-close {
+    cursor: pointer;
+}
+
+.photo-view-close img {
+    width: 28px;
+    height: 28px;
+}
+
+.photo-view-body {
+    flex-grow: 1;
+    min-height: 180px;
+    gap: 12px;
+}
+
+.photo-view-frame {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    align-self: stretch;
+    width: 0;
+}
+
+.photo-view-frame img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.photo-view-arrow {
+    padding: 9px;
+    border: 0;
+    border-radius: 50%;
+    background-color: #eeefed;
+}
+
+.photo-view-arrow img {
+    width: 14px;
+    height: 17px;
+}
+
+.photo-view-thumbnails {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 14px;
+}
+
+.photo-view-thumbnails button {
+    width: 58px;
+    height: 58px;
+    padding: 0;
+    overflow: hidden;
+    border: 3px solid transparent;
+    border-radius: 8px;
+    background-color: #414a46;
+}
+
+.photo-view-thumbnails .photo-view-selected {
+    border-color: #378476;
+}

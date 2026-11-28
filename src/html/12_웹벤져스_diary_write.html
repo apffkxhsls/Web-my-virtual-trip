@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>여행 기록 작성 | My Virtual Trip</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Asta+Sans:wght@400;500;600;700&amp;display=swap">
+    <link rel="stylesheet" href="../css/12_웹벤져스_common.css">
+    <link rel="stylesheet" href="../css/12_웹벤져스_diary.css">
+    <link rel="stylesheet" href="../css/12_웹벤져스_diary_write.css">
+</head>
+<body>
+    <header>
+        <nav class="navigation">
+            <a href="12_웹벤져스_main.html" class="logo-link">
+                <img src="../res/images/12_logo.png" id="logo" alt="MyVirtualTrip 로고">
+            </a>
+            <div class="nav-right">
+                <div class="category-nav">
+                    <a class="cat-item" href="../html/12_웹벤져스_region.html">
+                        <span>지역별</span>
+                    </a>
+                    <a class="cat-item" href="../html/12_웹벤져스_theme.html">
+                        <span>테마별</span>
+                    </a>
+                    <a class="cat-item" href="../html/12_웹벤져스_stay.html">
+                        <span>숙박</span>
+                    </a>
+                    <a class="cat-item" href="../html/12_웹벤져스_flight.html">
+                        <span>항공</span>
+                    </a>
+                    <a class="cat-item" href="../html/12_웹벤져스_plan.html">
+                        <span>여행 계획</span>
+                    </a>
+                    <a class="cat-item cat-item-active" href="../html/12_웹벤져스_diary.html">
+                        <span>여행 기록</span>
+                    </a>
+                </div>
+                <form class="search" action="#" method="get">
+                    <input type="search" name="all-search" placeholder="여행지, 명소, 숙소 등">
+                    <button type="submit">
+                        <img src="../res/icons/12_ic_search.svg" alt="검색 아이콘">
+                    </button>
+                </form>
+                <button type="button" class="logout">로그아웃</button>
+            </div>
+        </nav>
+    </header>
+    <main class="page-width diary-editor">
+        <form id="diary-editor" novalidate>
+            <header class="editor-header">
+                <div class="section-header">
+                    <h1>Write My Story</h1>
+                    <p>나만의 여행 이야기 기록</p>
+                </div>
+                <div class="editor-actions">
+                    <button type="button" id="editor-close">닫기</button>
+                    <button type="button" class="editor-primary" id="editor-save">저장하기</button>
+                </div>
+            </header>
+
+            <section class="editor-card editor-overview">
+                <div class="editor-cover">
+                    <img id="cover-image" alt="대표 사진">
+                    <button type="button" id="choose-cover">+ 대표 사진 추가</button>
+                    <button type="button" id="remove-cover" class="photo-remove" aria-label="대표 사진 삭제">×</button>
+                </div>
+                <div class="editor-fields">
+                    <label class="editor-field editor-title">여행 제목 <span class="editor-required">*</span>
+                        <input type="text" id="trip-title" required>
+                    </label>
+                    <div class="editor-field editor-period">
+                        <label for="trip-start">여행 기간 <span class="editor-required">*</span></label>
+                        <div class="editor-dates">
+                            <input type="date" id="trip-start" title="시작일" required>
+                            <span>~</span>
+                            <input type="date" id="trip-end" title="종료일" required>
+                            <strong id="trip-duration"></strong>
+                        </div>
+                    </div>
+                    <label class="editor-field editor-destination">여행지 <span class="editor-required">*</span>
+                        <input type="text" id="trip-location" required>
+                    </label>
+                    <label class="editor-field editor-period">함께한 사람
+                        <input type="text" id="trip-companions">
+                    </label>
+                    <div class="editor-field editor-destination">
+                        <span id="rating-label">여행 만족도 <span class="editor-required">*</span></span>
+                        <div id="trip-rating" class="editor-rating" role="group" aria-labelledby="rating-label"></div>
+                    </div>
+                </div>
+            </section>
+
+            <p id="editor-message"></p>
+            <div class="editor-day-tabs" id="day-tabs"></div>
+            <div class="editor-columns" id="day-editor">
+                <section class="editor-card editor-visits">
+                    <h2 id="day-visits-title">Day 1 방문한 명소 &amp; 맛집</h2>
+                    <div id="trip-places"></div>
+                    <button type="button" id="add-place">+ 추가하기</button>
+                </section>
+                <section class="editor-card editor-day-note">
+                    <h2 id="day-title">Day 1 일기</h2>
+                    <p class="editor-label">날씨</p>
+                    <div class="editor-options" id="day-weather"></div>
+                    <p class="editor-label">오늘의 기분</p>
+                    <div class="editor-options" id="day-mood"></div>
+                    <textarea id="day-note" title="오늘의 일기" placeholder="오늘 하루는 어땠나요?"></textarea>
+                </section>
+            </div>
+            <section class="editor-card editor-trip-card">
+                <h2>여행 지출</h2>
+                <div class="editor-expenses">
+                    <div class="editor-expense-row">
+                        <label for="expense-transport">교통비</label>
+                        <div class="editor-cost-track"><div class="editor-cost-bar" id="bar-transport"></div></div>
+                        <input type="text" id="expense-transport">
+                        <span>원</span>
+                    </div>
+                    <div class="editor-expense-row">
+                        <label for="expense-food">식비</label>
+                        <div class="editor-cost-track"><div class="editor-cost-bar" id="bar-food"></div></div>
+                        <input type="text" id="expense-food">
+                        <span>원</span>
+                    </div>
+                    <div class="editor-expense-row">
+                        <label for="expense-stay">숙박비</label>
+                        <div class="editor-cost-track"><div class="editor-cost-bar" id="bar-stay"></div></div>
+                        <input type="text" id="expense-stay">
+                        <span>원</span>
+                    </div>
+                    <div class="editor-expense-row">
+                        <label for="expense-other">기타</label>
+                        <div class="editor-cost-track"><div class="editor-cost-bar" id="bar-other"></div></div>
+                        <input type="text" id="expense-other">
+                        <span>원</span>
+                    </div>
+                </div>
+                <p class="editor-trip-total">총액 <strong id="trip-total">-</strong></p>
+            </section>
+            <section class="editor-card editor-trip-card">
+                <h2>여행 사진</h2>
+                <div class="editor-trip-photos" id="trip-photos">
+                    <button type="button" id="add-photo" aria-label="여행 사진 추가">+ 사진</button>
+                </div>
+            </section>
+        </form>
+    </main>
+    <div class="editor-photo-picker" id="photo-picker">
+        <div class="editor-card editor-picker-card">
+            <div class="editor-picker-heading">
+                <h2>사진 선택</h2>
+                <button type="button" id="close-photo-picker" title="사진 선택 닫기">×</button>
+            </div>
+            <div class="editor-photo-list" id="photo-options"></div>
+            <button type="button" id="apply-photos">선택 완료</button>
+        </div>
+    </div>
+    <script src="../js/12_웹벤져스_diary_records.js"></script>
+    <script src="../js/12_웹벤져스_diary_write.js"></script>
+</body>
+</html>

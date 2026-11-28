@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="../css/12_웹벤져스_diary.css">
     </head>
     <body>
-        <header class="site-header">
+        <header>
             <nav class="navigation">
                 <a href="12_웹벤져스_main.html" class="logo-link">
                     <img src="../res/images/12_logo.png" id="logo" alt="MyVirtualTrip 로고">
@@ -18,22 +18,22 @@
                 <div class="nav-right">
                     <div class="category-nav">
                         <a class="cat-item" href="../html/12_웹벤져스_region.html">
-                            <span>🗺️ 지역별</span>
+                            <span>지역별</span>
                         </a>
                         <a class="cat-item" href="../html/12_웹벤져스_theme.html">
-                            <span>🎞️ 테마별</span>
+                            <span>테마별</span>
                         </a>
                         <a class="cat-item" href="../html/12_웹벤져스_stay.html">
-                            <span>🏩 숙박</span>
+                            <span>숙박</span>
                         </a>
                         <a class="cat-item" href="../html/12_웹벤져스_flight.html">
-                            <span>✈️ 항공</span>
+                            <span>항공</span>
                         </a>
                         <a class="cat-item" href="../html/12_웹벤져스_plan.html">
-                            <span>✍🏻 여행 계획</span>
+                            <span>여행 계획</span>
                         </a>
-                        <a class="cat-item cat-item-active" href="../html/12_웹벤져스_diary.html">
-                            <span>🗂️ 여행 기록</span>
+                        <a class="cat-item" href="../html/12_웹벤져스_diary.html">
+                            <span>여행 기록</span>
                         </a>
                     </div>
                     <form class="search" action="#" method="get">
@@ -48,41 +48,45 @@
         </header>
         <main class="diary-main">
             <section class="memory-banner">
-                <img class="banner-background" src="../res/images/12_diary_image.jpg" alt="추억 재생 이미지">
+                <img class="banner-background" src="../res/images/12_theme-history.jpg" alt="일본의 전통 거리">
                 <div class="banner-glass"></div>
                 <div class="banner-tint"></div>
                 <div class="banner-content">
                     <div class="banner-track">
-                        <div class="banner-side">
-                            <img src="../res/images/12_diary_image.jpg" alt="추억 재생 이미지">
+                        <div class="banner-side banner-buffer banner-buffer-prev" aria-hidden="true">
+                            <img alt="">
+                            <span class="side-shade"></span>
+                        </div>
+                        <div class="banner-side banner-side-prev">
+                            <img src="../res/images/12_theme-resort.jpg" alt="휴양지 풍경">
                             <span class="side-shade"></span>
                         </div>
                         <article class="banner-feature">
-                            <img class="feature-image" src="../res/images/12_diary_image.jpg" alt="추억 재생 이미지">
+                            <img class="feature-image" src="../res/images/12_theme-history.jpg" alt="일본의 전통 거리">
                             <header class="feature-copy">
-                                <h1>오사카 가족여행</h1>
-                                <p>2026년 1월 15일 ~ 1월 19일</p>
+                                <h1>봄날의 교토 여행</h1>
+                                <p>2024년 3월 27일 ~ 4월 1일</p>
                             </header>
-                            <a class="play-button" href="#" title="여행 추억 재생">
-                                <img class="ui-icon" src="../res/icons/12_ic_play.svg" width="23" height="28" alt="">
-                            </a>
+                            <button type="button" class="play-button" id="diary-banner-play" aria-label="여행 추억 재생" title="여행 추억 재생" disabled>
+                                <img class="ui-icon play-icon" src="../res/icons/12_ic_play.svg" width="23" height="28" alt="">
+                                <span class="pause-icon" aria-hidden="true">Ⅱ</span>
+                            </button>
                         </article>
-                        <div class="banner-side">
-                            <img src="../res/images/12_diary_image.jpg" alt="추억 재생 이미지">
+                        <div class="banner-side banner-side-next">
+                            <img src="../res/images/12_theme-food.jpg" alt="여행 중 만난 음식">
+                            <span class="side-shade"></span>
+                        </div>
+                        <div class="banner-side banner-buffer banner-buffer-next" aria-hidden="true">
+                            <img alt="">
                             <span class="side-shade"></span>
                         </div>
                     </div>
                     <div class="banner-controls">
-                        <a class="arrow-button" href="#" title="이전 추억">
+                        <a class="arrow-button" id="diary-banner-prev" href="#" title="이전 추억">
                             <img class="ui-icon" src="../res/icons/12_ic_chevron_left.svg" width="12" height="20" alt="">
                         </a>
-                        <a class="banner-dot selected" href="#" title="첫 번째 추억"></a>
-                        <a class="banner-dot" href="#" title="두 번째 추억"></a>
-                        <a class="banner-dot" href="#" title="세 번째 추억"></a>
-                        <a class="banner-dot" href="#" title="네 번째 추억"></a>
-                        <a class="banner-dot" href="#" title="다섯 번째 추억"></a>
-                        <a class="banner-dot" href="#" title="여섯 번째 추억"></a>
-                        <a class="arrow-button" href="#" title="다음 추억">
+                        <div class="banner-dots" id="diary-banner-dots"></div>
+                        <a class="arrow-button" id="diary-banner-next" href="#" title="다음 추억">
                             <img class="ui-icon" src="../res/icons/12_ic_chevron_right.svg" width="12" height="20" alt="">
                         </a>
                     </div>
@@ -101,128 +105,8 @@
                         </a>
                     </header>
                     <div class="story-list">
-                        <article class="story-card">
-                            <a class="story-link" href="#">
-                                <img class="story-image" src="../res/images/12_diary_image.jpg" alt="여행 기록 이미지">
-                                <div class="story-info">
-                                    <h3 title="봄날의 교토 여행">봄날의 교토 여행</h3>
-                                    <p class="info-row">
-                                        <img class="ui-icon info-icon" src="../res/icons/12_ic_location_filled.svg" width="16" height="16" alt="여행지">
-                                        <span class="info-text" title="일본, 교토">일본, 교토</span>
-                                    </p>
-                                    <p class="info-row">
-                                        <img class="ui-icon info-icon" src="../res/icons/12_ic_calendar.svg" width="16" height="16" alt="여행 기간">
-                                        <span class="info-text" title="2024. 03. 27 ~ 2024. 04. 01">2024. 03. 27 ~ 2024. 04. 01</span>
-                                    </p>
-                                    <p class="info-row">
-                                        <img class="ui-icon info-icon" src="../res/icons/12_ic_currency.svg" width="16" height="16" alt="금액">
-                                        <span class="info-text">1,270,000</span>
-                                    </p>
-                                    <p class="info-row">
-                                        <img class="ui-icon info-icon" src="../res/icons/12_ic_star.svg" width="16" height="16" alt="평점">
-                                        <span class="info-text">4.5</span>
-                                    </p>
-                                </div>
-                            </a>
-                        </article>
-                        <article class="story-card">
-                            <a class="story-link" href="#">
-                                <img class="story-image" src="../res/images/12_diary_image.jpg" alt="여행 기록 이미지">
-                                <div class="story-info">
-                                    <h3 title="오사카 가족여행">오사카 가족여행</h3>
-                                    <p class="info-row">
-                                        <img class="ui-icon info-icon" src="../res/icons/12_ic_location_filled.svg" width="16" height="16" alt="여행지">
-                                        <span class="info-text" title="일본, 오사카">일본, 오사카</span>
-                                    </p>
-                                    <p class="info-row">
-                                        <img class="ui-icon info-icon" src="../res/icons/12_ic_calendar.svg" width="16" height="16" alt="여행 기간">
-                                        <span class="info-text" title="2026. 01. 15 ~ 2026. 01. 19">2026. 01. 15 ~ 2026. 01. 19</span>
-                                    </p>
-                                    <p class="info-row">
-                                        <img class="ui-icon info-icon" src="../res/icons/12_ic_currency.svg" width="16" height="16" alt="금액">
-                                        <span class="info-text">4,850,000</span>
-                                    </p>
-                                    <p class="info-row">
-                                        <img class="ui-icon info-icon" src="../res/icons/12_ic_star.svg" width="16" height="16" alt="평점">
-                                        <span class="info-text">5.0</span>
-                                    </p>
-                                </div>
-                            </a>
-                        </article>
-                        <article class="story-card">
-                            <a class="story-link" href="#">
-                                <img class="story-image" src="../res/images/12_diary_image.jpg" alt="여행 기록 이미지">
-                                <div class="story-info">
-                                    <h3 title="친구랑 후쿠오카">친구랑 후쿠오카</h3>
-                                    <p class="info-row">
-                                        <img class="ui-icon info-icon" src="../res/icons/12_ic_location_filled.svg" width="16" height="16" alt="여행지">
-                                        <span class="info-text" title="일본, 후쿠오카">일본, 후쿠오카</span>
-                                    </p>
-                                    <p class="info-row">
-                                        <img class="ui-icon info-icon" src="../res/icons/12_ic_calendar.svg" width="16" height="16" alt="여행 기간">
-                                        <span class="info-text" title="2026. 07. 13 ~ 2026. 07. 16">2026. 07. 13 ~ 2026. 07. 16</span>
-                                    </p>
-                                    <p class="info-row">
-                                        <img class="ui-icon info-icon" src="../res/icons/12_ic_currency.svg" width="16" height="16" alt="금액">
-                                        <span class="info-text">970,000</span>
-                                    </p>
-                                    <p class="info-row">
-                                        <img class="ui-icon info-icon" src="../res/icons/12_ic_star.svg" width="16" height="16" alt="평점">
-                                        <span class="info-text">5.0</span>
-                                    </p>
-                                </div>
-                            </a>
-                        </article>
-                        <article class="story-card">
-                            <a class="story-link" href="#">
-                                <img class="story-image" src="../res/images/12_diary_image.jpg" alt="여행 기록 이미지">
-                                <div class="story-info">
-                                    <h3 title="디즈니월드">디즈니월드</h3>
-                                    <p class="info-row">
-                                        <img class="ui-icon info-icon" src="../res/icons/12_ic_location_filled.svg" width="16" height="16" alt="여행지">
-                                        <span class="info-text" title="미국, 플로리다">미국, 플로리다</span>
-                                    </p>
-                                    <p class="info-row">
-                                        <img class="ui-icon info-icon" src="../res/icons/12_ic_calendar.svg" width="16" height="16" alt="여행 기간">
-                                        <span class="info-text" title="2017. 07. 12 ~ 2017. 07. 15">2017. 07. 12 ~ 2017. 07. 15</span>
-                                    </p>
-                                    <p class="info-row">
-                                        <img class="ui-icon info-icon" src="../res/icons/12_ic_currency.svg" width="16" height="16" alt="금액">
-                                        <span class="info-text">—</span>
-                                    </p>
-                                    <p class="info-row">
-                                        <img class="ui-icon info-icon" src="../res/icons/12_ic_star.svg" width="16" height="16" alt="평점">
-                                        <span class="info-text">4.5</span>
-                                    </p>
-                                </div>
-                            </a>
-                        </article>
-                        <article class="story-card">
-                            <a class="story-link" href="#">
-                                <img class="story-image" src="../res/images/12_diary_image.jpg" alt="여행 기록 이미지">
-                                <div class="story-info">
-                                    <h3 title="철원 DMZ 투어">철원 DMZ 투어</h3>
-                                    <p class="info-row">
-                                        <img class="ui-icon info-icon" src="../res/icons/12_ic_location_filled.svg" width="16" height="16" alt="여행지">
-                                        <span class="info-text" title="대한민국, 철원">대한민국, 철원</span>
-                                    </p>
-                                    <p class="info-row">
-                                        <img class="ui-icon info-icon" src="../res/icons/12_ic_calendar.svg" width="16" height="16" alt="여행 기간">
-                                        <span class="info-text" title="2026. 08. 07 ~ 2026. 08. 09">2026. 08. 07 ~ 2026. 08. 09</span>
-                                    </p>
-                                    <p class="info-row">
-                                        <img class="ui-icon info-icon" src="../res/icons/12_ic_currency.svg" width="16" height="16" alt="금액">
-                                        <span class="info-text">542,000</span>
-                                    </p>
-                                    <p class="info-row">
-                                        <img class="ui-icon info-icon" src="../res/icons/12_ic_star.svg" width="16" height="16" alt="평점">
-                                        <span class="info-text">4.9</span>
-                                    </p>
-                                </div>
-                            </a>
-                        </article>
                         <div class="story-card">
-                            <a class="add-story" href="#" title="새 여행 기록 추가">+</a>
+                            <a class="add-story" href="12_웹벤져스_diary_write.html" title="새 여행 기록 추가">+</a>
                         </div>
                     </div>
                 </section>
@@ -231,25 +115,7 @@
                         <h2>Captured Moments</h2>
                         <p>오래도록 간직할 추억들</p>
                     </header>
-                    <div class="moments-top">
-                        <div class="moment-column">
-                            <img class="moment-tall" src="../res/images/12_diary_image.jpg" alt="추억 이미지">
-                            <img class="moment-short" src="../res/images/12_diary_image.jpg" alt="추억 이미지">
-                        </div>
-                        <div class="moment-column">
-                            <img class="moment-short" src="../res/images/12_diary_image.jpg" alt="추억 이미지">
-                            <img class="moment-tall" src="../res/images/12_diary_image.jpg" alt="추억 이미지">
-                        </div>
-                        <div class="moment-column">
-                            <img class="moment-tall" src="../res/images/12_diary_image.jpg" alt="추억 이미지">
-                            <img class="moment-short" src="../res/images/12_diary_image.jpg" alt="추억 이미지">
-                        </div>
-                    </div>
-                    <div class="moments-bottom">
-                        <img class="moment-wide" src="../res/images/12_diary_image.jpg" alt="추억 이미지">
-                        <img class="moment-square" src="../res/images/12_diary_image.jpg" alt="추억 이미지">
-                        <img class="moment-square" src="../res/images/12_diary_image.jpg" alt="추억 이미지">
-                    </div>
+                    <div id="moment-photos"></div>
                     <div class="moments-more">
                         <span class="more-line"></span>
                         <a href="#">더보기</a>
@@ -307,8 +173,19 @@
                 </form>
             </div>
         </footer>
-        <a class="write-button" href="#" title="여행 기록 작성">
+        <a class="write-button" href="12_웹벤져스_diary_write.html" title="여행 기록 작성">
             <img class="ui-icon" src="../res/icons/12_ic_pencil.svg" width="32" height="32" alt="">
         </a>
+        <div class="photo-lightbox" id="moments-lightbox" role="dialog" aria-label="확대 사진">
+            <button type="button" class="photo-lightbox-close" aria-label="확대 사진 닫기">
+                <img class="ui-icon" src="../res/icons/12_ic_close_white.svg" alt="">
+            </button>
+            <div class="photo-lightbox-frame">
+                <img alt="">
+            </div>
+        </div>
+        <script src="../js/12_웹벤져스_photo_lightbox.js"></script>
+        <script src="../js/12_웹벤져스_diary_records.js"></script>
+        <script src="../js/12_웹벤져스_diary.js"></script>
     </body>
 </html>
