@@ -23,13 +23,8 @@ function showTab(index) {
 }
 
 let favoritePlaces = [];
-const savedFavorites = localStorage.getItem("favoritePlaces");
-
-if (savedFavorites !== null) {
-    favoritePlaces = JSON.parse(savedFavorites);
-}
-
 let places = [];
+let regionCities = [];
 const favoriteList = document.getElementById("favorite-list");
 const favoriteMessage = document.getElementById("favorite-message");
 
@@ -39,35 +34,78 @@ fetch("../data/12_웹벤져스_theme.json")
     })
     .then(result => {
         places = result;
+        return fetch("../data/12_웹벤져스_region.json");
+    })
+    .then(response => {
+        return response.json();
+    })
+    .then(result => {
+        regionCities = result.cityList;
         showFavorites();
     })
     .catch(error => {
         console.log("여행지 데이터를 불러오지 못했습니다.", error);
 
-        favoriteMessage.innerText = "여행지 정보를 불러오지 못했습니다. 새로고침해주세요.";
+        if (places.length > 0) {
+            showFavorites();
+        } else {
+            favoriteMessage.innerText = "여행지 정보를 불러오지 못했습니다. 새로고침해주세요.";
+        }
     });
 
+function findPlace(id) {
+    for (let i = 0; i < places.length; i++) {
+        if (places[i].id === id) {
+            return {
+                name: places[i].name,
+                image: places[i].image,
+                alt: places[i].alt,
+                link: places[i].link
+            };
+        }
+    }
+
+    for (let i = 0; i < regionCities.length; i++) {
+        if (regionCities[i].id === id) {
+            let link = "";
+
+            if (regionCities[i].link !== undefined) {
+                link = regionCities[i].link;
+            }
+
+            return {
+                name: regionCities[i].name,
+                image: "../res/images/12_theme-history.jpg",
+                alt: regionCities[i].name + " 사진",
+                link: link
+            };
+        }
+    }
+
+    return null;
+}
+
 function showFavorites() {
+    favoritePlaces = [];
+    let saved = localStorage.getItem("favoritePlaces");
+
+    if (saved !== null) {
+        favoritePlaces = JSON.parse(saved);
+    }
+
     favoriteList.innerHTML = "";
     let count = 0;
 
-    for (let i = 0; i < places.length; i++) {
-        let place = places[i];
-        let isFavorite = false;
+    for (let i = 0; i < favoritePlaces.length; i++) {
+        let place = findPlace(favoritePlaces[i]);
 
-        for (let j = 0; j < favoritePlaces.length; j++) {
-            if (favoritePlaces[j] === place.id) {
-                isFavorite = true;
-            }
-        }
-
-        if (isFavorite) {
+        if (place !== null) {
             let card = document.createElement("article");
             card.setAttribute("class", "place-card hover-card");
 
             let content =
                 '<img src="' + place.image + '" alt="' + place.alt + '">' +
-                '<div class="place-info"><h3></h3><span class="country"></span><p></p></div>';
+                '<div class="place-info"><h3></h3></div>';
 
             if (place.link != "") {
                 card.innerHTML =
@@ -83,11 +121,9 @@ function showFavorites() {
                 '<img src="../res/icons/12_ic_favorite_filled.svg" alt="찜 취소"></button>';
 
             card.querySelector("h3").innerText = place.name;
-            card.querySelector(".country").innerText = place.country;
-            card.querySelector("p").innerText = place.description;
 
             let button = card.querySelector("button");
-            button.value = place.id;
+            button.value = favoritePlaces[i];
             button.addEventListener("click", removeFavorite);
 
             favoriteList.appendChild(card);
@@ -97,12 +133,7 @@ function showFavorites() {
 
     if (count === 0) {
         favoriteMessage.style.display = "block";
-
-        if (favoritePlaces.length === 0) {
-            favoriteMessage.innerText = "찜한 여행지가 없습니다.";
-        } else {
-            favoriteMessage.innerText = "현재 불러올 수 있는 찜한 여행지가 없습니다.";
-        }
+        favoriteMessage.innerText = "찜한 여행지가 없습니다.";
     } else {
         favoriteMessage.style.display = "none";
     }
@@ -110,12 +141,6 @@ function showFavorites() {
 
 function removeFavorite() {
     let placeId = this.value;
-    let saved = localStorage.getItem("favoritePlaces");
-    favoritePlaces = [];
-
-    if (saved !== null) {
-        favoritePlaces = JSON.parse(saved);
-    }
 
     favoritePlaces = favoritePlaces.filter(function (id) {
         return id !== placeId;

@@ -353,6 +353,23 @@ main h1 {
     display: block;
 }
 
+#favorite-list .place-card {
+    width: 23.5%;
+    margin-right: 2%;
+}
+
+#favorite-list .place-card:nth-child(3n) {
+    margin-right: 2%;
+}
+
+#favorite-list .place-card:nth-child(4n) {
+    margin-right: 0;
+}
+
+#favorite-list .place-card .card-content img {
+    height: 150px;
+}
+
 .place-info,
 .plan-info {
     padding: 18px;
