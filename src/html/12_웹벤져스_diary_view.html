@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>여행 기록 보기 | My Virtual Trip</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Asta+Sans:wght@400;500;600;700&amp;display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Asta+Sans:wght@400;500;600;700&amp;display=swap">
     <link rel="stylesheet" href="../css/12_웹벤져스_common.css">
     <link rel="stylesheet" href="../css/12_웹벤져스_diary.css">
     <link rel="stylesheet" href="../css/12_웹벤져스_diary_view.css">
 </head>
+
 <body>
-    <header>
+    <header class="site-header">
         <nav class="navigation">
             <a href="12_웹벤져스_main.html" class="logo-link">
                 <img src="../res/images/12_logo.png" id="logo" alt="MyVirtualTrip 로고">
@@ -110,10 +113,26 @@
                 <h3>여행 지출</h3>
                 <p>총액 <strong id="record-total"></strong></p>
             </header>
-            <div class="record-cost"><span>교통비</span><div class="record-cost-track"><div id="record-bar-transport"></div></div><strong id="record-cost-transport"></strong></div>
-            <div class="record-cost"><span>식비</span><div class="record-cost-track"><div id="record-bar-food"></div></div><strong id="record-cost-food"></strong></div>
-            <div class="record-cost"><span>숙박비</span><div class="record-cost-track"><div id="record-bar-stay"></div></div><strong id="record-cost-stay"></strong></div>
-            <div class="record-cost"><span>기타</span><div class="record-cost-track"><div id="record-bar-other"></div></div><strong id="record-cost-other"></strong></div>
+            <div class="record-cost"><span>교통비</span>
+                <div class="record-cost-track">
+                    <div id="record-bar-transport"></div>
+                </div><strong id="record-cost-transport"></strong>
+            </div>
+            <div class="record-cost"><span>식비</span>
+                <div class="record-cost-track">
+                    <div id="record-bar-food"></div>
+                </div><strong id="record-cost-food"></strong>
+            </div>
+            <div class="record-cost"><span>숙박비</span>
+                <div class="record-cost-track">
+                    <div id="record-bar-stay"></div>
+                </div><strong id="record-cost-stay"></strong>
+            </div>
+            <div class="record-cost"><span>기타</span>
+                <div class="record-cost-track">
+                    <div id="record-bar-other"></div>
+                </div><strong id="record-cost-other"></strong>
+            </div>
         </section>
 
         <section class="record-card">
@@ -151,4 +170,5 @@
     <script src="../js/12_웹벤져스_diary_records.js"></script>
     <script src="../js/12_웹벤져스_diary_view.js"></script>
 </body>
+
 </html>

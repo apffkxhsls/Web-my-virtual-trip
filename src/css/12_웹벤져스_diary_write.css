@@ -4,11 +4,6 @@
     padding: 32px 0 50px;
 }
 
-.navigation .cat-item-active {
-    border-bottom: 4px solid #3377689b;
-    font-weight: 600;
-}
-
 .editor-header, .editor-actions, .editor-overview,
 .editor-fields, .editor-dates, .editor-day-tabs, .editor-columns,
 .editor-options, .editor-picker-heading, .editor-photo-list,

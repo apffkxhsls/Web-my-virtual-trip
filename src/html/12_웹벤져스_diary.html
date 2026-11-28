@@ -1,191 +1,197 @@
 <!DOCTYPE html>
 <html lang="ko">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="박지현">
-        <title>여행 기록 보기 | My Virtual Trip</title>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Asta+Sans:wght@400;500;600;700&amp;display=swap">
-        <link rel="stylesheet" href="../css/12_웹벤져스_common.css">
-        <link rel="stylesheet" href="../css/12_웹벤져스_diary.css">
-    </head>
-    <body>
-        <header>
-            <nav class="navigation">
-                <a href="12_웹벤져스_main.html" class="logo-link">
-                    <img src="../res/images/12_logo.png" id="logo" alt="MyVirtualTrip 로고">
-                </a>
-                <div class="nav-right">
-                    <div class="category-nav">
-                        <a class="cat-item" href="../html/12_웹벤져스_region.html">
-                            <span>지역별</span>
-                        </a>
-                        <a class="cat-item" href="../html/12_웹벤져스_theme.html">
-                            <span>테마별</span>
-                        </a>
-                        <a class="cat-item" href="../html/12_웹벤져스_stay.html">
-                            <span>숙박</span>
-                        </a>
-                        <a class="cat-item" href="../html/12_웹벤져스_flight.html">
-                            <span>항공</span>
-                        </a>
-                        <a class="cat-item" href="../html/12_웹벤져스_plan.html">
-                            <span>여행 계획</span>
-                        </a>
-                        <a class="cat-item" href="../html/12_웹벤져스_diary.html">
-                            <span>여행 기록</span>
-                        </a>
-                    </div>
-                    <form class="search" action="#" method="get">
-                        <input type="search" name="all-search" placeholder="여행지, 명소, 숙소 등">
-                        <button type="submit">
-                            <img src="../res/icons/12_ic_search.svg" alt="검색 아이콘">
-                        </button>
-                    </form>
-                    <button type="button" class="logout">로그아웃</button>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="박지현">
+    <title>여행 기록 보기 | My Virtual Trip</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Asta+Sans:wght@400;500;600;700&amp;display=swap">
+    <link rel="stylesheet" href="../css/12_웹벤져스_common.css">
+    <link rel="stylesheet" href="../css/12_웹벤져스_diary.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="navigation">
+            <a href="12_웹벤져스_main.html" class="logo-link">
+                <img src="../res/images/12_logo.png" id="logo" alt="MyVirtualTrip 로고">
+            </a>
+            <div class="nav-right">
+                <div class="category-nav">
+                    <a class="cat-item" href="../html/12_웹벤져스_region.html">
+                        <span>지역별</span>
+                    </a>
+                    <a class="cat-item" href="../html/12_웹벤져스_theme.html">
+                        <span>테마별</span>
+                    </a>
+                    <a class="cat-item" href="../html/12_웹벤져스_stay.html">
+                        <span>숙박</span>
+                    </a>
+                    <a class="cat-item" href="../html/12_웹벤져스_flight.html">
+                        <span>항공</span>
+                    </a>
+                    <a class="cat-item" href="../html/12_웹벤져스_plan.html">
+                        <span>여행 계획</span>
+                    </a>
+                    <a class="cat-item" href="../html/12_웹벤져스_diary.html">
+                        <span>여행 기록</span>
+                    </a>
                 </div>
-            </nav>
-        </header>
-        <main class="diary-main">
-            <section class="memory-banner">
-                <img class="banner-background" src="../res/images/12_theme-history.jpg" alt="일본의 전통 거리">
-                <div class="banner-glass"></div>
-                <div class="banner-tint"></div>
-                <div class="banner-content">
-                    <div class="banner-track">
-                        <div class="banner-side banner-buffer banner-buffer-prev" aria-hidden="true">
-                            <img alt="">
-                            <span class="side-shade"></span>
-                        </div>
-                        <div class="banner-side banner-side-prev">
-                            <img src="../res/images/12_theme-resort.jpg" alt="휴양지 풍경">
-                            <span class="side-shade"></span>
-                        </div>
-                        <article class="banner-feature">
-                            <img class="feature-image" src="../res/images/12_theme-history.jpg" alt="일본의 전통 거리">
-                            <header class="feature-copy">
-                                <h1>봄날의 교토 여행</h1>
-                                <p>2024년 3월 27일 ~ 4월 1일</p>
-                            </header>
-                            <button type="button" class="play-button" id="diary-banner-play" aria-label="여행 추억 재생" title="여행 추억 재생" disabled>
-                                <img class="ui-icon play-icon" src="../res/icons/12_ic_play.svg" width="23" height="28" alt="">
-                                <span class="pause-icon" aria-hidden="true">Ⅱ</span>
-                            </button>
-                        </article>
-                        <div class="banner-side banner-side-next">
-                            <img src="../res/images/12_theme-food.jpg" alt="여행 중 만난 음식">
-                            <span class="side-shade"></span>
-                        </div>
-                        <div class="banner-side banner-buffer banner-buffer-next" aria-hidden="true">
-                            <img alt="">
-                            <span class="side-shade"></span>
-                        </div>
+                <form class="search" action="#" method="get">
+                    <input type="search" name="all-search" placeholder="여행지, 명소, 숙소 등">
+                    <button type="submit">
+                        <img src="../res/icons/12_ic_search.svg" alt="검색 아이콘">
+                    </button>
+                </form>
+                <button type="button" class="logout">로그아웃</button>
+            </div>
+        </nav>
+    </header>
+    <main class="diary-main">
+        <section class="memory-banner">
+            <img class="banner-background" src="../res/images/12_theme-history.jpg" alt="일본의 전통 거리">
+            <div class="banner-glass"></div>
+            <div class="banner-tint"></div>
+            <div class="banner-content">
+                <div class="banner-track">
+                    <div class="banner-side banner-buffer banner-buffer-prev" aria-hidden="true">
+                        <img alt="">
+                        <span class="side-shade"></span>
                     </div>
-                    <div class="banner-controls">
-                        <a class="arrow-button" id="diary-banner-prev" href="#" title="이전 추억">
-                            <img class="ui-icon" src="../res/icons/12_ic_chevron_left.svg" width="12" height="20" alt="">
-                        </a>
-                        <div class="banner-dots" id="diary-banner-dots"></div>
-                        <a class="arrow-button" id="diary-banner-next" href="#" title="다음 추억">
-                            <img class="ui-icon" src="../res/icons/12_ic_chevron_right.svg" width="12" height="20" alt="">
-                        </a>
+                    <div class="banner-side banner-side-prev">
+                        <img src="../res/images/12_theme-resort.jpg" alt="휴양지 풍경">
+                        <span class="side-shade"></span>
+                    </div>
+                    <article class="banner-feature">
+                        <img class="feature-image" src="../res/images/12_theme-history.jpg" alt="일본의 전통 거리">
+                        <header class="feature-copy">
+                            <h1>봄날의 교토 여행</h1>
+                            <p>2024년 3월 27일 ~ 4월 1일</p>
+                        </header>
+                        <button type="button" class="play-button" id="diary-banner-play" aria-label="여행 추억 재생"
+                            title="여행 추억 재생" disabled>
+                            <img class="ui-icon play-icon" src="../res/icons/12_ic_play.svg" width="23" height="28"
+                                alt="">
+                            <span class="pause-icon" aria-hidden="true">Ⅱ</span>
+                        </button>
+                    </article>
+                    <div class="banner-side banner-side-next">
+                        <img src="../res/images/12_theme-food.jpg" alt="여행 중 만난 음식">
+                        <span class="side-shade"></span>
+                    </div>
+                    <div class="banner-side banner-buffer banner-buffer-next" aria-hidden="true">
+                        <img alt="">
+                        <span class="side-shade"></span>
+                    </div>
+                </div>
+                <div class="banner-controls">
+                    <a class="arrow-button" id="diary-banner-prev" href="#" title="이전 추억">
+                        <img class="ui-icon" src="../res/icons/12_ic_chevron_left.svg" width="12" height="20" alt="">
+                    </a>
+                    <div class="banner-dots" id="diary-banner-dots"></div>
+                    <a class="arrow-button" id="diary-banner-next" href="#" title="다음 추억">
+                        <img class="ui-icon" src="../res/icons/12_ic_chevron_right.svg" width="12" height="20" alt="">
+                    </a>
+                </div>
+            </div>
+        </section>
+        <div class="page-width">
+            <section class="stories">
+                <header class="section-header stories-header">
+                    <div class="heading-copy">
+                        <h2>My Stories</h2>
+                        <p>나의 여행 이야기</p>
+                    </div>
+                    <a class="view-all" href="#">
+                        <span class="view-all-text">전체보기</span>
+                        <span class="view-all-arrow">›</span>
+                    </a>
+                </header>
+                <div class="story-list">
+                    <div class="story-card">
+                        <a class="add-story" href="12_웹벤져스_diary_write.html" title="새 여행 기록 추가">+</a>
                     </div>
                 </div>
             </section>
-            <div class="page-width">
-                <section class="stories">
-                    <header class="section-header stories-header">
-                        <div class="heading-copy">
-                            <h2>My Stories</h2>
-                            <p>나의 여행 이야기</p>
-                        </div>
-                        <a class="view-all" href="#">
-                            <span class="view-all-text">전체보기</span>
-                            <span class="view-all-arrow">›</span>
-                        </a>
-                    </header>
-                    <div class="story-list">
-                        <div class="story-card">
-                            <a class="add-story" href="12_웹벤져스_diary_write.html" title="새 여행 기록 추가">+</a>
-                        </div>
-                    </div>
-                </section>
-                <section class="moments">
-                    <header class="section-header">
-                        <h2>Captured Moments</h2>
-                        <p>오래도록 간직할 추억들</p>
-                    </header>
-                    <div id="moment-photos"></div>
-                    <div class="moments-more">
-                        <span class="more-line"></span>
-                        <a href="#">더보기</a>
-                        <span class="more-line"></span>
-                    </div>
-                </section>
+            <section class="moments">
+                <header class="section-header">
+                    <h2>Captured Moments</h2>
+                    <p>오래도록 간직할 추억들</p>
+                </header>
+                <div id="moment-photos"></div>
+                <div class="moments-more">
+                    <span class="more-line"></span>
+                    <a href="#">더보기</a>
+                    <span class="more-line"></span>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-up">
+            <div class="footer-support">
+                <h3>고객지원실 운영안내</h3>
+                <p>채팅상담 연중무휴 24시간</p>
+                <p>유선상담 연중무휴 09:00-18:00</p>
+                <p>유선상담 1670-8208</p>
+                <button type="button">고객지원실</button>
             </div>
-        </main>
-        <footer class="site-footer">
-            <div class="footer-up">
-                <div class="footer-support">
-                    <h3>고객지원실 운영안내</h3>
-                    <p>채팅상담 연중무휴 24시간</p>
-                    <p>유선상담 연중무휴 09:00-18:00</p>
-                    <p>유선상담 1670-8208</p>
-                    <button type="button">고객지원실</button>
-                </div>
-                <div class="footer-item">
-                    <h4>소개</h4>
-                    <ul class="footer-list">
-                        <li><a href="#">회사소개</a></li>
-                        <li><a href="#">채용</a></li>
-                        <li><a href="#">공고</a></li>
-                    </ul>
-                </div>
-                <div class="footer-item">
-                    <h4>파트너</h4>
-                    <ul class="footer-list">
-                        <li><a href="#">파트너 홈</a></li>
-                        <li><a href="#">제휴 문의</a></li>
-                        <li><a href="#">광고 문의</a></li>
-                    </ul>
-                </div>
-                <div class="footer-item">
-                    <h4>지원</h4>
-                    <ul class="footer-list">
-                        <li><a href="#">공지사항</a></li>
-                        <li><a href="#">문의내역</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-down">
-                <ul class="footer-legal">
-                    <li><a href="#">이용 약관</a></li>
-                    <li><a href="#">개인정보 처리방침</a></li>
-                    <li><a href="#">취소 및 환불 정책</a></li>
-                    <li><a href="#">개발자 센터</a></li>
+            <div class="footer-item">
+                <h4>소개</h4>
+                <ul class="footer-list">
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">채용</a></li>
+                    <li><a href="#">공고</a></li>
                 </ul>
-                <form class="language" method="get" action="#">
-                    <label for="language">언어</label>
-                    <select name="language" id="language" size="1">
-                        <option value="korean">한국어</option>
-                        <option value="english">영어</option>
-                    </select>
-                </form>
             </div>
-        </footer>
-        <a class="write-button" href="12_웹벤져스_diary_write.html" title="여행 기록 작성">
-            <img class="ui-icon" src="../res/icons/12_ic_pencil.svg" width="32" height="32" alt="">
-        </a>
-        <div class="photo-lightbox" id="moments-lightbox" role="dialog" aria-label="확대 사진">
-            <button type="button" class="photo-lightbox-close" aria-label="확대 사진 닫기">
-                <img class="ui-icon" src="../res/icons/12_ic_close_white.svg" alt="">
-            </button>
-            <div class="photo-lightbox-frame">
-                <img alt="">
+            <div class="footer-item">
+                <h4>파트너</h4>
+                <ul class="footer-list">
+                    <li><a href="#">파트너 홈</a></li>
+                    <li><a href="#">제휴 문의</a></li>
+                    <li><a href="#">광고 문의</a></li>
+                </ul>
+            </div>
+            <div class="footer-item">
+                <h4>지원</h4>
+                <ul class="footer-list">
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">문의내역</a></li>
+                </ul>
             </div>
         </div>
-        <script src="../js/12_웹벤져스_photo_lightbox.js"></script>
-        <script src="../js/12_웹벤져스_diary_records.js"></script>
-        <script src="../js/12_웹벤져스_diary.js"></script>
-    </body>
+        <div class="footer-down">
+            <ul class="footer-legal">
+                <li><a href="#">이용 약관</a></li>
+                <li><a href="#">개인정보 처리방침</a></li>
+                <li><a href="#">취소 및 환불 정책</a></li>
+                <li><a href="#">개발자 센터</a></li>
+            </ul>
+            <form class="language" method="get" action="#">
+                <label for="language">언어</label>
+                <select name="language" id="language" size="1">
+                    <option value="korean">한국어</option>
+                    <option value="english">영어</option>
+                </select>
+            </form>
+        </div>
+    </footer>
+    <a class="write-button" href="12_웹벤져스_diary_write.html" title="여행 기록 작성">
+        <img class="ui-icon" src="../res/icons/12_ic_pencil.svg" width="32" height="32" alt="">
+    </a>
+    <div class="photo-lightbox" id="moments-lightbox" role="dialog" aria-label="확대 사진">
+        <button type="button" class="photo-lightbox-close" aria-label="확대 사진 닫기">
+            <img class="ui-icon" src="../res/icons/12_ic_close_white.svg" alt="">
+        </button>
+        <div class="photo-lightbox-frame">
+            <img alt="">
+        </div>
+    </div>
+    <script src="../js/12_웹벤져스_photo_lightbox.js"></script>
+    <script src="../js/12_웹벤져스_diary_records.js"></script>
+    <script src="../js/12_웹벤져스_diary.js"></script>
+</body>
+
 </html>

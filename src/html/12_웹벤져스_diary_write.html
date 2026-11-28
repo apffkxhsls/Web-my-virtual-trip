@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>여행 기록 작성 | My Virtual Trip</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Asta+Sans:wght@400;500;600;700&amp;display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Asta+Sans:wght@400;500;600;700&amp;display=swap">
     <link rel="stylesheet" href="../css/12_웹벤져스_common.css">
     <link rel="stylesheet" href="../css/12_웹벤져스_diary.css">
     <link rel="stylesheet" href="../css/12_웹벤져스_diary_write.css">
 </head>
+
 <body>
-    <header>
+    <header class="site-header">
         <nav class="navigation">
             <a href="12_웹벤져스_main.html" class="logo-link">
                 <img src="../res/images/12_logo.png" id="logo" alt="MyVirtualTrip 로고">
@@ -113,25 +116,33 @@
                 <div class="editor-expenses">
                     <div class="editor-expense-row">
                         <label for="expense-transport">교통비</label>
-                        <div class="editor-cost-track"><div class="editor-cost-bar" id="bar-transport"></div></div>
+                        <div class="editor-cost-track">
+                            <div class="editor-cost-bar" id="bar-transport"></div>
+                        </div>
                         <input type="text" id="expense-transport">
                         <span>원</span>
                     </div>
                     <div class="editor-expense-row">
                         <label for="expense-food">식비</label>
-                        <div class="editor-cost-track"><div class="editor-cost-bar" id="bar-food"></div></div>
+                        <div class="editor-cost-track">
+                            <div class="editor-cost-bar" id="bar-food"></div>
+                        </div>
                         <input type="text" id="expense-food">
                         <span>원</span>
                     </div>
                     <div class="editor-expense-row">
                         <label for="expense-stay">숙박비</label>
-                        <div class="editor-cost-track"><div class="editor-cost-bar" id="bar-stay"></div></div>
+                        <div class="editor-cost-track">
+                            <div class="editor-cost-bar" id="bar-stay"></div>
+                        </div>
                         <input type="text" id="expense-stay">
                         <span>원</span>
                     </div>
                     <div class="editor-expense-row">
                         <label for="expense-other">기타</label>
-                        <div class="editor-cost-track"><div class="editor-cost-bar" id="bar-other"></div></div>
+                        <div class="editor-cost-track">
+                            <div class="editor-cost-bar" id="bar-other"></div>
+                        </div>
                         <input type="text" id="expense-other">
                         <span>원</span>
                     </div>
@@ -159,4 +170,5 @@
     <script src="../js/12_웹벤져스_diary_records.js"></script>
     <script src="../js/12_웹벤져스_diary_write.js"></script>
 </body>
+
 </html>

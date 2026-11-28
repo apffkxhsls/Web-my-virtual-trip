@@ -2,11 +2,6 @@
     padding: 32px 0 64px;
 }
 
-.navigation .cat-item-active {
-    border-bottom: 4px solid #3377689b;
-    font-weight: 600;
-}
-
 .record-header, .record-actions, .record-back, .record-overview,
 .record-field, .record-field dt, .record-rating, .record-days,
 .record-day-cards, .record-day-info, .record-card-header, .record-cost,

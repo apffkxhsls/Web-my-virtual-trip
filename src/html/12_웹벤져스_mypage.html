@@ -9,6 +9,7 @@
     <title>마이페이지 | My Virtual Trip</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Asta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/12_웹벤져스_common.css">
     <link rel="stylesheet" href="../css/12_웹벤져스_mypage.css">
 </head>
 
@@ -56,7 +57,10 @@
         <p class="section-description">나의 여행을 한곳에서 관리해보세요.</p>
         <section class="profile">
             <div class="profile-icon"><img src="../res/icons/12_ic_personnel.svg" alt="사용자"></div>
-            <div><h2>여행자님, 안녕하세요!</h2><p>오늘도 새로운 여행을 꿈꿔보세요.</p></div>
+            <div>
+                <h2>여행자님, 안녕하세요!</h2>
+                <p>오늘도 새로운 여행을 꿈꿔보세요.</p>
+            </div>
             <a class="dday" id="dday" href="12_웹벤져스_plan.html">
                 <p class="dday-label">다가오는 여행</p>
                 <strong class="dday-count" id="dday-count"></strong>
@@ -74,33 +78,43 @@
             <button type="button" id="tab-diaries" class="mypage-tab">나의 여행 기록</button>
         </div>
         <section class="mypage-panel" id="places">
-            <div class="panel-heading"><h2>찜한 여행지</h2><a href="12_웹벤져스_region.html" title="지역별 탐색 페이지로 이동하기">여행지 둘러보기 →</a></div>
+            <div class="panel-heading">
+                <h2>찜한 여행지</h2><a href="12_웹벤져스_region.html" title="지역별 탐색 페이지로 이동하기">여행지 둘러보기 →</a>
+            </div>
             <div class="places-grid" id="favorite-list"></div>
             <p class="empty" id="favorite-message">찜한 여행지를 불러오는 중입니다.</p>
         </section>
         <section class="mypage-panel" id="attractions">
-            <div class="panel-heading"><h2>찜한 명소</h2></div>
+            <div class="panel-heading">
+                <h2>찜한 명소</h2>
+            </div>
             <div id="attraction-list"></div>
             <p class="empty" id="attraction-message">찜한 명소를 불러오는 중입니다.</p>
         </section>
         <section class="mypage-panel" id="stays">
-            <div class="panel-heading"><h2>찜한 숙소</h2><a href="12_웹벤져스_stay.html" title="숙박 페이지로 이동하기">숙소 둘러보기 →</a></div>
+            <div class="panel-heading">
+                <h2>찜한 숙소</h2><a href="12_웹벤져스_stay.html" title="숙박 페이지로 이동하기">숙소 둘러보기 →</a>
+            </div>
             <div class="places-grid" id="stay-list"></div>
             <p class="empty" id="stays-message">찜한 숙소를 불러오는 중입니다.</p>
         </section>
         <section class="mypage-panel" id="plans">
-            <div class="panel-heading"><h2>나의 여행 계획</h2><a href="12_웹벤져스_plan.html" title="여행 계획 페이지로 이동하기">여행 계획 바로가기 →</a></div>
+            <div class="panel-heading">
+                <h2>나의 여행 계획</h2><a href="12_웹벤져스_plan.html" title="여행 계획 페이지로 이동하기">여행 계획 바로가기 →</a>
+            </div>
             <div class="plan-grid" id="plan-list"></div>
             <p class="empty" id="plan-message">저장한 여행 계획이 없습니다.</p>
         </section>
         <section class="mypage-panel" id="diaries">
-            <div class="panel-heading"><h2>나의 여행 기록</h2><a href="12_웹벤져스_diary.html" title="여행 기록 페이지로 이동하기">여행 기록 바로가기 →</a></div>
+            <div class="panel-heading">
+                <h2>나의 여행 기록</h2><a href="12_웹벤져스_diary.html" title="여행 기록 페이지로 이동하기">여행 기록 바로가기 →</a>
+            </div>
             <div class="places-grid" id="diary-list"></div>
             <p class="empty" id="diaries-message">여행 기록을 불러오는 중입니다.</p>
         </section>
     </main>
 
-    <footer>
+    <footer class="site-footer">
         <div class="footer-up">
             <div class="footer-support">
                 <h3>고객지원실 운영안내</h3>
@@ -153,4 +167,5 @@
     <script src="../js/12_웹벤져스_diary_records.js"></script>
     <script src="../js/12_웹벤져스_mypage.js"></script>
 </body>
+
 </html>
